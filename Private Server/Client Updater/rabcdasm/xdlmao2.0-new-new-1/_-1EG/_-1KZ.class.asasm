@@ -1,0 +1,233 @@
+class
+ refid "_-1EG:_-1KZ"
+ instance QName(PackageNamespace("_-1EG"), "_-1KZ")
+  extends QName(PackageNamespace("_-r7"), "_-17v")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0z-")
+  iinit
+   refid "_-1EG:_-1KZ/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     coerce_a
+     subtract_i
+     subtract
+     bitand
+     subtract_i
+     pushscope
+
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iffalse             L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "view") flag METADATA type QName(PackageNamespace("_-1EG"), "_-GX")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "closeDialogs") flag METADATA type QName(PackageNamespace("_-Nj"), "_-0ay")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "initialize") flag OVERRIDE
+   method
+    refid "_-1EG:_-1KZ/initialize"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      negate
+      pushfalse
+      hasnext
+      equals
+      istypelate
+      decrement
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      jump                L21
+
+      decrement_i
+      bitnot
+      divide
+      equals
+      strictequals
+      getlocal3
+L21:
+      iftrue              L36
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "view")
+      getlocal2
+      dup
+      iffalse             L30
+
+      pop
+      getlocal2
+      convert_b
+L30:
+      iftrue              L38
+
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_-1EG:_-1KZ"), "_-0OZ"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-0Bt"), 1
+
+      getlocal2
+      iftrue              L42
+
+L36:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "view")
+L38:
+      getproperty         QName(PackageNamespace("", "#0"), "_-0NB")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1EG:_-1KZ"), "_-0hj")
+      callpropvoid        QName(PackageNamespace("", "#0"), "add"), 1
+
+L42:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-1EG:_-1KZ"), "_-0OZ")
+   method
+    refid "_-1EG:_-1KZ/_-0OZ"
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      jump                L10
+
+      add_i
+      newactivation
+      add
+      getlocal0
+      nextvalue
+      greaterthan
+L10:
+      pushshort           6546
+      pushbyte            80
+      pushtrue
+      callproperty        QName(PackageNamespace("", "#0"), "getRedrawnTextureFromType"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-1EG:_-1KZ"), "_-0hj")
+   method
+    refid "_-1EG:_-1KZ/_-0hj"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      inclocal_i          2
+      declocal            2
+      inclocal            2
+      divide
+      declocal_i          2
+      declocal            2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L19
+
+      pop
+      getlocal3
+      convert_b
+L19:
+      iftrue              L23
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "closeDialogs")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 0
+
+L23:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1EG:_-1KZ/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

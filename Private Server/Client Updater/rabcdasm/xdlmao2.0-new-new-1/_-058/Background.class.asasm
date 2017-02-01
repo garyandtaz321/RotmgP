@@ -1,0 +1,368 @@
+class
+ refid "_-058:Background"
+ instance QName(PackageNamespace("_-058"), "Background")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1Pq")
+  iinit
+   refid "_-058:Background/iinit"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     typeof
+     negate
+     setlocal3
+
+     equals
+     setlocal3
+
+     getlocal1
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L23
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     iftrue              L23
+
+     findproperty        QName(PackageNamespace("", "#0"), "visible")
+     pushfalse
+     initproperty        QName(PackageNamespace("", "#0"), "visible")
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "draw")
+   method
+    refid "_-058:Background/draw"
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-18q")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-058:Background/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    typeof
+    decrement_i
+    setlocal2
+
+    lessequals
+    astypelate
+    nextname
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L26
+
+    jump                L23
+
+    bitor
+    pushwith
+    pushnan
+    bitor
+    nextvalue
+    getlocal0
+L23:
+    pop
+    getlocal1
+    convert_b
+L26:
+    iftrue              L42
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-1iK")
+    pushbyte            0
+    initproperty        QName(PackageNamespace("", "#0"), "_-1iK")
+
+    getlocal2
+    iftrue              L37
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-nc")
+    pushbyte            1
+    initproperty        QName(PackageNamespace("", "#0"), "_-nc")
+
+    getlocal1
+    iffalse             L45
+
+L37:
+    findproperty        QName(PackageNamespace("", "#0"), "_-Ed")
+    pushbyte            2
+    initproperty        QName(PackageNamespace("", "#0"), "_-Ed")
+
+    getlocal2
+    iftrue              L45
+
+L42:
+    findproperty        QName(PackageNamespace("", "#0"), "_-rN")
+    pushbyte            3
+    initproperty        QName(PackageNamespace("", "#0"), "_-rN")
+
+L45:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-1iK") slotid 1 type QName(PackageNamespace("", "#0"), "int") value Integer(0) end
+ trait const QName(PackageNamespace("", "#0"), "_-nc") slotid 2 type QName(PackageNamespace("", "#0"), "int") value Integer(1) end
+ trait const QName(PackageNamespace("", "#0"), "_-Ed") slotid 3 type QName(PackageNamespace("", "#0"), "int") value Integer(2) end
+ trait const QName(PackageNamespace("", "#0"), "_-rN") slotid 4 type QName(PackageNamespace("", "#0"), "int") value Integer(3) end
+ trait method QName(PackageNamespace("", "#0"), "_-05z") flag FINAL dispid 3
+  method
+   refid "_-058:Background/_-05z"
+   param QName(PackageNamespace("", "#0"), "int")
+   returns QName(PackageNamespace("_-058"), "Background")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 8
+    maxscopedepth 9
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     pushtrue
+     setlocal2
+
+     declocal_i          2
+     pop
+     pushfalse
+     inclocal            3
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     jump                L40
+
+L14:
+     label
+     pushnull
+     getlocal            4
+     iftrue              L124
+
+     returnvalue
+
+     getlocal            4
+     iftrue              L38
+
+L21:
+     label
+     findpropstrict      QName(PackageNamespace("_-058"), "StarBackground")
+     constructprop       QName(PackageNamespace("_-058"), "StarBackground"), 0
+     returnvalue
+
+     getlocal3
+     dup
+     iftrue              L31
+
+     pop
+     getlocal0
+     convert_b
+L31:
+     iffalse             L38
+
+L32:
+     label
+     findpropstrict      QName(PackageNamespace("_-058"), "NexusBackground")
+     constructprop       QName(PackageNamespace("_-058"), "NexusBackground"), 0
+     returnvalue
+
+     getlocal            4
+     iftrue              L123
+
+L38:
+     label
+     jump                L123
+
+L40:
+     getlocal1
+     getlocal3
+     dup
+     iftrue              L47
+
+     pop
+     getlocal3
+     convert_b
+L47:
+     iffalse             L122
+
+     setlocal2
+
+     getlocal            4
+     dup
+     iffalse             L62
+
+     jump                L59
+
+     astypelate
+     add_i
+     getlocal1
+     declocal            3
+     getlocal3
+     setlocal2
+
+L59:
+     pop
+     getlocal2
+     convert_b
+L62:
+     iftrue              L115
+
+     getlex              QName(PackageNamespace("", "#0"), "_-1iK")
+     getlocal3
+     dup
+     iftrue              L70
+
+     pop
+     getlocal1
+     convert_b
+L70:
+     iffalse             L113
+
+     getlocal2
+     getlocal            4
+     iftrue              L102
+
+     ifstrictne          L84
+
+     getlocal3
+     dup
+     iftrue              L81
+
+     pop
+     getlocal0
+     convert_b
+L81:
+     iffalse             L115
+
+     pushbyte            0
+     jump                L121
+
+L84:
+     getlex              QName(PackageNamespace("", "#0"), "_-nc")
+     getlocal3
+     iffalse             L116
+
+     getlocal2
+     getlocal3
+     dup
+     iftrue              L101
+
+     pop
+     getlocal0
+     convert_b
+     jump                L101
+
+     kill                2
+     inclocal            3
+     setlocal3
+
+     convert_d
+     increment
+     coerce_s
+L101:
+     iffalse             L114
+
+L102:
+     ifstrictne          L112
+
+     getlocal3
+     dup
+     iftrue              L109
+
+     pop
+     getlocal2
+     convert_b
+L109:
+     iffalse             L115
+
+     pushbyte            1
+     jump                L121
+
+L112:
+     getlex              QName(PackageNamespace("", "#0"), "_-Ed")
+L113:
+     getlocal2
+L114:
+     ifstrictne          L117
+
+L115:
+     pushbyte            2
+L116:
+     jump                L121
+
+L117:
+     jump                L120
+
+     pushbyte            3
+     jump                L121
+
+L120:
+     pushbyte            3
+L121:
+     kill                2
+L122:
+     lookupswitch        L38, [L14, L21, L32, L38]
+
+L123:
+     pushnull
+L124:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,427 @@
+class
+ refid "com.google.analytics.utils:UserAgent"
+ instance QName(PackageNamespace("com.google.analytics.utils"), "UserAgent")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.utils:UserAgent")
+  iinit
+   refid "com.google.analytics.utils:UserAgent/iinit"
+   param QName(PackageNamespace("com.google.analytics.utils"), "Environment")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   flag HAS_OPTIONAL
+   optional Utf8("")
+   optional Utf8("")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_localInfo")
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_localInfo")
+
+     findproperty        QName(PackageNamespace("", "#0"), "applicationProduct")
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "applicationProduct")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_version")
+     getlex              QName(PackageNamespace("com.google.analytics.utils"), "Version")
+     getlocal3
+     callproperty        QName(PackageNamespace("", "#0"), "fromString"), 1
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_version")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait getter QName(PackageNamespace("", "#0"), "tamarinProductToken")
+   method
+    refid "com.google.analytics.utils:UserAgent/tamarinProductToken/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.google.analytics.utils"), "UserAgent")
+      getproperty         QName(PackageNamespace("", "#0"), "minimal")
+      iffalse             L7
+
+      pushstring          ""
+      returnvalue
+
+L7:
+      getlex              QName(PackageNamespace("flash.system"), "System")
+      getproperty         QName(PackageNamespace("", "#0"), "vmVersion")
+      iffalse             L18
+
+      pushstring          "Tamarin/"
+      getlex              QName(PackageNamespace("com.google.analytics.core"), "Utils")
+      getlex              QName(PackageNamespace("flash.system"), "System")
+      getproperty         QName(PackageNamespace("", "#0"), "vmVersion")
+      pushtrue
+      callproperty        QName(PackageNamespace("", "#0"), "trim"), 2
+      add
+      returnvalue
+
+L18:
+      pushstring          ""
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_localInfo") type QName(PackageNamespace("com.google.analytics.utils"), "Environment") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_applicationProduct") type QName(PackageNamespace("", "#0"), "String") end
+  trait getter QName(PackageNamespace("", "#0"), "applicationVersion")
+   method
+    refid "com.google.analytics.utils:UserAgent/applicationVersion/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_version")
+      pushbyte            2
+      callproperty        QName(PackageNamespace("", "#0"), "toString"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "vendorProductToken")
+   method
+    refid "com.google.analytics.utils:UserAgent/vendorProductToken/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          ""
+      setlocal1
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_localInfo")
+      callproperty        QName(PackageNamespace("", "#0"), "isAIR"), 0
+      iffalse             L12
+
+      getlocal1
+      pushstring          "AIR"
+      add
+      setlocal1
+
+      jump                L16
+
+L12:
+      getlocal1
+      pushstring          "FlashPlayer"
+      add
+      setlocal1
+
+L16:
+      getlocal1
+      pushstring          "/"
+      add
+      setlocal1
+
+      getlocal1
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_version")
+      pushbyte            3
+      callproperty        QName(PackageNamespace("", "#0"), "toString"), 1
+      add
+      coerce_s
+      setlocal1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "com.google.analytics.utils:UserAgent/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          ""
+      setlocal1
+
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "applicationProductToken")
+      add
+      coerce_s
+      setlocal1
+
+      getlex              QName(PackageNamespace("", "#0"), "applicationComment")
+      pushstring          ""
+      ifeq                L19
+
+      getlocal1
+      pushstring          " "
+      getlex              QName(PackageNamespace("", "#0"), "applicationComment")
+      add
+      add
+      coerce_s
+      setlocal1
+
+L19:
+      getlex              QName(PackageNamespace("", "#0"), "tamarinProductToken")
+      pushstring          ""
+      ifeq                L29
+
+      getlocal1
+      pushstring          " "
+      getlex              QName(PackageNamespace("", "#0"), "tamarinProductToken")
+      add
+      add
+      coerce_s
+      setlocal1
+
+L29:
+      getlex              QName(PackageNamespace("", "#0"), "vendorProductToken")
+      pushstring          ""
+      ifeq                L39
+
+      getlocal1
+      pushstring          " "
+      getlex              QName(PackageNamespace("", "#0"), "vendorProductToken")
+      add
+      add
+      coerce_s
+      setlocal1
+
+L39:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "applicationComment")
+   method
+    refid "com.google.analytics.utils:UserAgent/applicationComment/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      newarray            0
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal1
+
+      getlocal1
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_localInfo")
+      getproperty         QName(PackageNamespace("", "#0"), "platform")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_localInfo")
+      getproperty         QName(PackageNamespace("", "#0"), "playerType")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlex              QName(PackageNamespace("com.google.analytics.utils"), "UserAgent")
+      getproperty         QName(PackageNamespace("", "#0"), "minimal")
+      iftrue              L24
+
+      getlocal1
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_localInfo")
+      getproperty         QName(PackageNamespace("", "#0"), "operatingSystem")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_localInfo")
+      getproperty         QName(PackageNamespace("", "#0"), "language")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L24:
+      getlex              QName(PackageNamespace("flash.system"), "Capabilities")
+      getproperty         QName(PackageNamespace("", "#0"), "isDebugger")
+      iffalse             L30
+
+      getlocal1
+      pushstring          "DEBUG"
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L30:
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            0
+      ifngt               L42
+
+      pushstring          "("
+      getlocal1
+      pushstring          "; "
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      add
+      pushstring          ")"
+      add
+      returnvalue
+
+L42:
+      pushstring          ""
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace("", "#0"), "applicationVersion")
+   method
+    refid "com.google.analytics.utils:UserAgent/applicationVersion/setter"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_version")
+      getlex              QName(PackageNamespace("com.google.analytics.utils"), "Version")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "fromString"), 1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_version")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_version") type QName(PackageNamespace("com.google.analytics.utils"), "Version") end
+  trait getter QName(PackageNamespace("", "#0"), "applicationProductToken")
+   method
+    refid "com.google.analytics.utils:UserAgent/applicationProductToken/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "applicationProduct")
+      coerce_s
+      setlocal1
+
+      getlex              QName(PackageNamespace("", "#0"), "applicationVersion")
+      pushstring          ""
+      ifeq                L15
+
+      getlocal1
+      pushstring          "/"
+      getlex              QName(PackageNamespace("", "#0"), "applicationVersion")
+      add
+      add
+      coerce_s
+      setlocal1
+
+L15:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace("", "#0"), "applicationProduct")
+   method
+    refid "com.google.analytics.utils:UserAgent/applicationProduct/setter"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_applicationProduct")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_applicationProduct")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "applicationProduct")
+   method
+    refid "com.google.analytics.utils:UserAgent/applicationProduct/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:UserAgent"), "_applicationProduct")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.utils:UserAgent/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace("", "#0"), "minimal")
+    pushfalse
+    setproperty         QName(PackageNamespace("", "#0"), "minimal")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace("", "#0"), "minimal") slotid 1 type QName(PackageNamespace("", "#0"), "Boolean") value False() end
+end ; class

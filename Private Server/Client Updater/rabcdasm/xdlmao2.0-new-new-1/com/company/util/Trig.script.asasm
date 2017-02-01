@@ -1,0 +1,41 @@
+script ; 1047
+ sinit
+  refid "com.company.util:Trig.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Trig", [PackageNamespace("com.company.util")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.company.util:Trig"
+    popscope
+    initproperty        QName(PackageNamespace("com.company.util"), "Trig")
+
+    findpropstrict      Multiname("StaticEnforcer", [PrivateNamespace("*", "com.company.util:Trig")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.company.util:Trig/StaticEnforcer"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "com.company.util:Trig"), "StaticEnforcer")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.company.util"), "Trig")
+  #include "Trig.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "com.company.util:Trig"), "StaticEnforcer")
+  #include "Trig/StaticEnforcer.class.asasm"
+ end ; trait
+end ; script

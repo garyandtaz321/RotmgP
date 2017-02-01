@@ -1,0 +1,234 @@
+class
+ refid "_-JD:_-0FP"
+ instance QName(PackageNamespace("_-JD"), "_-0FP")
+  extends QName(PackageNamespace("_-GI"), "_-1S9")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1OH")
+  iinit
+   refid "_-JD:_-0FP/iinit"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("flash.geom"), "Point")
+   param QName(PackageNamespace("flash.geom"), "Point")
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal            2
+     decrement_i
+     dxnslate
+     rshift
+     inclocal_i          3
+     nextname
+L10:
+     setlocal            4
+
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     dup
+     iffalse             L27
+
+     pop
+     jump                L25
+
+     pushtrue
+     setlocal2
+
+     bitand
+     multiply
+     setlocal            4
+
+     kill                4
+L25:
+     getlocal2
+     convert_b
+L27:
+     iftrue              L37
+
+     getlocal0
+     constructsuper      0
+
+     getlocal            4
+     dup
+     iffalse             L36
+
+     pop
+     getlocal2
+     convert_b
+L36:
+     iftrue              L42
+
+L37:
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "start_")
+
+     getlocal            4
+     iftrue              L47
+
+L42:
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace("", "#0"), "end_")
+
+     getlocal            5
+     iffalse             L50
+
+L47:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "id_")
+
+L50:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "start_") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace("", "#0"), "end_") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace("", "#0"), "id_") type QName(PackageNamespace("", "#0"), "uint") end
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "_-JD:_-0FP/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      setlocal            5
+
+      jump                L10
+
+      kill                3
+      setlocal3
+
+      negate
+      getlocal2
+      newactivation
+      setlocal3
+
+L10:
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      iffalse             L34
+
+      findproperty        QName(PackageNamespace("", "#0"), "x_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "start_")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      initproperty        QName(PackageNamespace("", "#0"), "x_")
+
+      getlocal            6
+      dup
+      iffalse             L33
+
+      pop
+      getlocal3
+      convert_b
+      jump                L33
+
+      greaterequals
+      setlocal2
+
+      subtract_i
+      getlocal1
+      coerce_s
+      declocal_i          4
+L33:
+      iftrue              L39
+
+L34:
+      findproperty        QName(PackageNamespace("", "#0"), "y_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "start_")
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      initproperty        QName(PackageNamespace("", "#0"), "y_")
+
+L39:
+      pushshort           10000
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("_-JD"), "_-04m")
+      jump                L49
+
+      negate_i
+      kill                2
+      pushscope
+
+      pushscope
+
+      inclocal            2
+      increment
+L49:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "id_")
+      pushshort           1500
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "start_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "end_")
+      constructprop       QName(PackageNamespace("_-JD"), "_-04m"), 4
+      coerce              QName(PackageNamespace("_-JD"), "_-04m")
+      setlocal            4
+
+      getlocal            5
+      dup
+      iftrue              L65
+
+      pop
+      getlocal3
+      convert_b
+L65:
+      iffalse             L71
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getlocal            4
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addObj"), 3
+
+L71:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-JD:_-0FP/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

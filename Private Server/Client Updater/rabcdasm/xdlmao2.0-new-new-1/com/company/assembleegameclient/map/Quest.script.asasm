@@ -1,0 +1,29 @@
+script ; 1109
+ sinit
+  refid "com.company.assembleegameclient.map:Quest.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Quest", [PackageNamespace("com.company.assembleegameclient.map")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.company.assembleegameclient.map:Quest"
+    popscope
+    initproperty        QName(PackageNamespace("com.company.assembleegameclient.map"), "Quest")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.company.assembleegameclient.map"), "Quest")
+  #include "Quest.class.asasm"
+ end ; trait
+end ; script

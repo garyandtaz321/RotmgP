@@ -1,0 +1,351 @@
+class
+ refid "com.hurlant.crypto.symmetric:ECBMode"
+ instance QName(PackageNamespace("com.hurlant.crypto.symmetric"), "ECBMode")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("IMode", [PackageNamespace("com.hurlant.crypto.symmetric")])
+  implements Multiname("ICipher", [PackageNamespace("com.hurlant.crypto.symmetric")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Xi")
+  iinit
+   refid "com.hurlant.crypto.symmetric:ECBMode/iinit"
+   param QName(PackageNamespace("com.hurlant.crypto.symmetric"), "ISymmetricKey")
+   param QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IPad")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+
+     getlocal2
+     pushnull
+     ifne                L17
+
+     findpropstrict      QName(PackageNamespace("com.hurlant.crypto.symmetric"), "PKCS5")
+     getlocal1
+     callproperty        QName(Namespace("_-10u"), "getBlockSize"), 0
+     constructprop       QName(PackageNamespace("com.hurlant.crypto.symmetric"), "PKCS5"), 1
+     coerce              QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IPad")
+     setlocal2
+
+     jump                L21
+
+L17:
+     getlocal2
+     getlocal1
+     callproperty        QName(Namespace("_-10u"), "getBlockSize"), 0
+     callpropvoid        QName(Namespace("_-vb"), "setBlockSize"), 1
+
+L21:
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "padding")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key") type QName(PackageNamespace("com.hurlant.crypto.symmetric"), "ISymmetricKey") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "padding") type QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IPad") end
+  trait method QName(PackageNamespace("", "#0"), "getBlockSize")
+   method
+    refid "com.hurlant.crypto.symmetric:ECBMode/getBlockSize"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+      callproperty        QName(Namespace("_-10u"), "getBlockSize"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "encrypt")
+   method
+    refid "com.hurlant.crypto.symmetric:ECBMode/encrypt"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "padding")
+      getlocal1
+      callpropvoid        QName(Namespace("_-vb"), "pad"), 1
+
+      getlocal1
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "position")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+      callproperty        QName(Namespace("_-10u"), "getBlockSize"), 0
+      convert_u
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal            4
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      jump                L47
+
+L26:
+      label
+      getlocal3
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      getlocal1
+      getlocal3
+      pushbyte            0
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "readBytes"), 3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+      getlocal3
+      callpropvoid        QName(Namespace("_-10u"), "encrypt"), 1
+
+      getlocal            4
+      getlocal3
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBytes"), 1
+
+      getlocal            5
+      getlocal2
+      add
+      convert_u
+      setlocal            5
+
+L47:
+      getlocal            5
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L26
+
+      getlocal1
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      getlocal1
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBytes"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "decrypt")
+   method
+    refid "com.hurlant.crypto.symmetric:ECBMode/decrypt"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "position")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+      callproperty        QName(Namespace("_-10u"), "getBlockSize"), 0
+      convert_u
+      setlocal2
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      getlocal2
+      modulo
+      pushbyte            0
+      ifeq                L22
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "Error")
+      pushstring          "ECB mode cipher length must be a multiple of blocksize "
+      getlocal2
+      add
+      constructprop       QName(PackageNamespace("", "#0"), "Error"), 1
+      throw
+L22:
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal            4
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      jump                L55
+
+L34:
+      label
+      getlocal3
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      getlocal1
+      getlocal3
+      pushbyte            0
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "readBytes"), 3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+      getlocal3
+      callpropvoid        QName(Namespace("_-10u"), "decrypt"), 1
+
+      getlocal            4
+      getlocal3
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBytes"), 1
+
+      getlocal            5
+      getlocal2
+      add
+      convert_u
+      setlocal            5
+
+L55:
+      getlocal            5
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L34
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "padding")
+      getlocal            4
+      callpropvoid        QName(Namespace("_-vb"), "unpad"), 1
+
+      getlocal1
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      getlocal1
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBytes"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "dispose")
+   method
+    refid "com.hurlant.crypto.symmetric:ECBMode/dispose"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+      callpropvoid        QName(Namespace("_-10u"), "dispose"), 0
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "padding")
+
+      getlex              QName(PackageNamespace("com.hurlant.util"), "Memory")
+      callpropvoid        QName(PackageNamespace("", "#0"), "gc"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "com.hurlant.crypto.symmetric:ECBMode/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+      callproperty        QName(Namespace("_-10u"), "toString"), 0
+      pushstring          "-ecb"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.crypto.symmetric:ECBMode/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

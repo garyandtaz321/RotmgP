@@ -1,0 +1,466 @@
+class
+ refid "_-GI:ConfettiEffect"
+ instance QName(PackageNamespace("_-GI"), "ConfettiEffect")
+  extends QName(PackageNamespace("_-GI"), "_-1S9")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0X6")
+  iinit
+   refid "_-GI:ConfettiEffect/iinit"
+   param QName(PackageNamespace("_-11j"), "_-1ST")
+   param QName(PackageNamespace("_-11j"), "_-1ST")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   flag HAS_OPTIONAL
+   optional False()
+   body
+    maxstack 6
+    localcount 8
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     setlocal            6
+
+     jump                L10
+
+     inclocal            5
+     bitand
+     getlocal3
+     setlocal            5
+
+     instanceof
+     declocal            3
+L10:
+     setlocal            7
+
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "x_")
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "y_")
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     initproperty        QName(PackageNamespace("", "#0"), "start_")
+
+     getlocal            6
+     dup
+     jump                L32
+
+     getlocal2
+     pop
+     multiply_i
+     getlocal            5
+     setlocal2
+
+     getlocal2
+L32:
+     iftrue              L36
+
+     pop
+     getlocal0
+     convert_b
+L36:
+     iffalse             L67
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal2
+     jump                L47
+
+     kill                5
+     divide
+     add
+     subtract_i
+     pop
+     getlocal0
+L47:
+     getproperty         QName(PackageNamespace("", "#0"), "x_")
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "y_")
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     initproperty        QName(PackageNamespace("", "#0"), "end_")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace("", "#0"), "color_")
+
+     getlocal            7
+     iftrue              L70
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace("", "#0"), "lifetime_")
+
+     getlocal            7
+     dup
+     iffalse             L66
+
+     pop
+     getlocal3
+     convert_b
+L66:
+     iftrue              L70
+
+L67:
+     getlocal0
+     getlocal            5
+     initproperty        QName(PackageNamespace("", "#0"), "_-02s")
+
+L70:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "start_") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace("", "#0"), "end_") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace("", "#0"), "color_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "lifetime_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-02s") type QName(PackageNamespace("", "#0"), "Boolean") value False() end
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "_-GI:ConfettiEffect/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 10
+     localcount 11
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal_i          8
+      kill                9
+      getlocal2
+      getlocal            7
+      add
+      lessequals
+L10:
+      setlocal            9
+
+      setlocal            10
+
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            4
+
+      pushbyte            0
+      setlocal            7
+
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_-GI:ConfettiEffect"), "ConfettiParticle")
+      setlocal            8
+
+      getlocal            9
+      dup
+      iffalse             L27
+
+      pop
+      getlocal1
+      convert_b
+L27:
+      iftrue              L40
+
+      findproperty        QName(PackageNamespace("", "#0"), "x_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "start_")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      initproperty        QName(PackageNamespace("", "#0"), "x_")
+
+      getlocal            9
+      dup
+      iffalse             L39
+
+      pop
+      getlocal2
+      convert_b
+L39:
+      iftrue              L45
+
+L40:
+      findproperty        QName(PackageNamespace("", "#0"), "y_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "start_")
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      initproperty        QName(PackageNamespace("", "#0"), "y_")
+
+L45:
+      pushbyte            5
+      setlocal3
+
+      pushint             65535
+      pushint             16711935
+      pushint             16776960
+      pushint             16777215
+      newarray            4
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal            5
+
+      pushbyte            0
+      setlocal            6
+
+      jump                L219
+
+L57:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-02s")
+      getlocal            9
+      dup
+      iffalse             L66
+
+      pop
+      getlocal2
+      convert_b
+L66:
+      iftrue              L223
+
+      iffalse             L100
+
+      getlocal            10
+      dup
+      iftrue              L74
+
+      pop
+      getlocal0
+      convert_b
+L74:
+      iffalse             L222
+
+      getlocal            5
+      findpropstrict      QName(PackageNamespace("", "#0"), "int")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      getlocal            5
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            1
+      add
+      multiply
+      callproperty        QName(PackageNamespace("", "#0"), "floor"), 1
+      callproperty        QName(PackageNamespace("", "#0"), "int"), 1
+      getproperty         MultinameL([PrivateNamespace("*", "_-GI:ConfettiEffect/update"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-GI:ConfettiEffect"), PackageNamespace("_-GI"), PackageInternalNs("_-GI"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0X6"), StaticProtectedNs("_-0X6"), StaticProtectedNs("_-1vW"), StaticProtectedNs("_-0QL"), StaticProtectedNs("_-1mW")])
+      convert_i
+      getlocal            9
+      iftrue              L130
+
+      setlocal            4
+
+      getlocal            10
+      dup
+      iftrue              L98
+
+      pop
+      getlocal1
+      convert_b
+L98:
+      iffalse             L127
+
+      jump                L127
+
+L100:
+      getlocal0
+      jump                L108
+
+      typeof
+      inclocal_i          5
+      inclocal_i          5
+      subtract
+      newactivation
+      inclocal_i          9
+L108:
+      getproperty         QName(PackageNamespace("", "#0"), "color_")
+      getlocal            10
+      dup
+      iftrue              L115
+
+      pop
+      getlocal3
+      convert_b
+L115:
+      iffalse             L130
+
+      convert_i
+      getlocal            10
+      dup
+      iftrue              L123
+
+      pop
+      getlocal2
+      convert_b
+L123:
+      iffalse             L142
+
+      setlocal            4
+
+      getlocal            9
+      iftrue              L145
+
+L127:
+      pushbyte            3
+      getlocal            9
+      iftrue              L220
+
+L130:
+      findpropstrict      QName(PackageNamespace("", "#0"), "int")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      pushbyte            5
+      multiply
+      callproperty        QName(PackageNamespace("", "#0"), "int"), 1
+      add
+      pushbyte            20
+      multiply
+      convert_i
+      getlocal            10
+      iffalse             L220
+
+L142:
+      setlocal            7
+
+      getlocal            9
+      iftrue              L222
+
+L145:
+      findpropstrict      QName(PrivateNamespace("*", "_-GI:ConfettiEffect"), "ConfettiParticle")
+      pushdouble          1.85
+      getlocal            7
+      getlocal            4
+      pushshort           500
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "lifetime_")
+      multiply
+      getlocal            10
+      dup
+      iftrue              L159
+
+      pop
+      getlocal3
+      convert_b
+L159:
+      iffalse             L177
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      pushshort           500
+      multiply
+      getlocal            9
+      iftrue              L185
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "lifetime_")
+      multiply
+      getlocal            10
+      dup
+      iftrue              L175
+
+      pop
+      getlocal2
+      convert_b
+L175:
+      iffalse             L190
+
+      add
+L177:
+      pushdouble          0.1
+      getlocal            10
+      dup
+      iftrue              L184
+
+      pop
+      getlocal0
+      convert_b
+L184:
+      iffalse             L190
+
+L185:
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      pushdouble          0.1
+      multiply
+      add
+L190:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "start_")
+      getlocal0
+      jump                L200
+
+      getlocal            9
+      declocal_i          2
+      convert_u
+      not
+      nextvalue
+      getlocal2
+L200:
+      getproperty         QName(PackageNamespace("", "#0"), "end_")
+      constructprop       QName(PrivateNamespace("*", "_-GI:ConfettiEffect"), "ConfettiParticle"), 7
+      coerce              QName(PrivateNamespace("*", "_-GI:ConfettiEffect"), "ConfettiParticle")
+      setlocal            8
+
+      getlocal            10
+      iffalse             L218
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getlocal            8
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addObj"), 3
+
+      getlocal            10
+      dup
+      iftrue              L217
+
+      pop
+      getlocal0
+      convert_b
+L217:
+      iffalse             L219
+
+L218:
+      inclocal_i          6
+L219:
+      getlocal            6
+L220:
+      getlocal3
+      iflt                L57
+
+L222:
+      pushfalse
+L223:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-GI:ConfettiEffect/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,178 @@
+class
+ refid "_-1f4:GuildBoardPanel"
+ instance QName(PackageNamespace("_-1f4"), "GuildBoardPanel")
+  extends QName(PackageNamespace("_-1f4"), "_-0l2")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-3r")
+  iinit
+   refid "_-1f4:GuildBoardPanel/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     setlocal2
+
+     divide
+     declocal            2
+     modulo
+     pop
+     negate_i
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iffalse             L27
+
+     getlocal0
+     getlocal1
+     getlex              QName(PackageNamespace("_-6u"), "_-TG")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0eV")
+     getlex              QName(PackageNamespace("_-6u"), "_-TG")
+     getproperty         QName(PackageNamespace("", "#0"), "_-15i")
+     constructsuper      3
+
+L27:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(ProtectedNamespace("_-3r"), "onButtonClick") flag OVERRIDE
+   method
+    refid "_-1f4:GuildBoardPanel/_-3r:onButtonClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      subtract
+      convert_o
+      inclocal_i          2
+      pushscope
+
+      inclocal            3
+      inclocal            2
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "gs_")
+      getproperty         QName(PackageNamespace("", "#0"), "map")
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+      setlocal2
+
+      getlocal3
+      iftrue              L45
+
+      jump                L28
+
+      pushnull
+      pushnan
+      instanceof
+      getlocal3
+      rshift
+      getlocal3
+L28:
+      getlocal2
+      pushnull
+      ifne                L53
+
+      getlocal3
+      jump                L39
+
+      lessequals
+      kill                2
+      setlocal2
+
+      convert_u
+      equals
+      pushfalse
+L39:
+      dup
+      iffalse             L44
+
+      pop
+      getlocal3
+      convert_b
+L44:
+      iftrue              L53
+
+L45:
+      returnvoid
+
+      getlocal            4
+      dup
+      iftrue              L52
+
+      pop
+      getlocal3
+      convert_b
+L52:
+      iffalse             L62
+
+L53:
+      getlex              QName(PackageNamespace("", "#0"), "gs_")
+      findpropstrict      QName(PackageNamespace("_-0Ng"), "_-13o")
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "guildRank_")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "GuildUtil")
+      getproperty         QName(PackageNamespace("", "#0"), "_-15E")
+      greaterequals
+      constructprop       QName(PackageNamespace("_-0Ng"), "_-13o"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L62:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1f4:GuildBoardPanel/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,687 @@
+class
+ refid "_-1f4:TradeRequestPanel"
+ instance QName(PackageNamespace("_-1f4"), "TradeRequestPanel")
+  extends QName(PackageNamespace("_-1f4"), "Panel")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-GP")
+  iinit
+   refid "_-1f4:TradeRequestPanel/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.game"), "_-0p2")
+   param QName(PackageNamespace("", "#0"), "String")
+   body
+    maxstack 7
+    localcount 6
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     coerce_s
+     increment_i
+     setlocal2
+
+     convert_u
+     getlocal2
+     typeof
+L10:
+     setlocal            4
+
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "name_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-0y9"), "_-06T")
+     constructprop       QName(PackageNamespace("_-0y9"), "_-06T"), 0
+     pushbyte            18
+     callproperty        QName(PackageNamespace("", "#0"), "setSize"), 1
+     pushint             16777215
+     callproperty        QName(PackageNamespace("", "#0"), "setColor"), 1
+     getlex              QName(PackageNamespace("", "#0"), "WIDTH")
+     callproperty        QName(PackageNamespace("", "#0"), "setTextWidth"), 1
+     initproperty        QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-ZE")
+
+     getlocal            5
+     dup
+     iftrue              L36
+
+     pop
+     getlocal0
+     convert_b
+L36:
+     iffalse             L70
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-ZE")
+     getlocal            5
+     iffalse             L61
+
+     findpropstrict      QName(PackageNamespace("_-0Mr"), "_-5R")
+     constructprop       QName(PackageNamespace("_-0Mr"), "_-5R"), 0
+     getlex              QName(PackageNamespace("_-6u"), "_-TG")
+     getproperty         QName(PackageNamespace("", "#0"), "_-pR")
+     pushstring          "name"
+     getlocal2
+     newobject           1
+     callproperty        QName(PackageNamespace("", "#0"), "setParams"), 2
+     callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+     getlocal            5
+     dup
+     iftrue              L56
+
+     pop
+     getlocal0
+     convert_b
+L56:
+     iffalse             L145
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-ZE")
+     getlocal            4
+     iftrue              L112
+
+L61:
+     pushtrue
+     getlocal            5
+     dup
+     iftrue              L68
+
+     pop
+     getlocal0
+     convert_b
+L68:
+     iffalse             L80
+
+     callpropvoid        QName(PackageNamespace("", "#0"), "setBold"), 1
+
+L70:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-ZE")
+     getlocal            4
+     dup
+     iffalse             L78
+
+     pop
+     getlocal0
+     convert_b
+L78:
+     iftrue              L112
+
+     pushtrue
+L80:
+     callproperty        QName(PackageNamespace("", "#0"), "setWordWrap"), 1
+     pushtrue
+     callpropvoid        QName(PackageNamespace("", "#0"), "setMultiLine"), 1
+
+     getlocal            4
+     iftrue              L159
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-ZE")
+     getlocal            4
+     iftrue              L96
+
+     getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+     getproperty         QName(PackageNamespace("", "#0"), "CENTER")
+     callpropvoid        QName(PackageNamespace("", "#0"), "setAutoSize"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-ZE")
+     getlocal            5
+     iffalse             L112
+
+L96:
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     dup
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+     jump                L108
+
+     getlocal            4
+     getlocal2
+     declocal_i          3
+     setlocal2
+
+     setlocal3
+
+     multiply_i
+L108:
+     newarray            1
+     setproperty         QName(PackageNamespace("", "#0"), "filters")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-ZE")
+L112:
+     pushbyte            0
+     setproperty         QName(PackageNamespace("", "#0"), "y")
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-ZE")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-1jP")
+     pushbyte            16
+     getlex              QName(PackageNamespace("_-6u"), "_-TG")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0Lt")
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-1jP"), 2
+     initproperty        QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-1IB")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-1IB")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace("", "#0"), "CLICK")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-Rx")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     getlocal            4
+     iftrue              L183
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-1IB")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-1jP")
+     pushbyte            16
+     getlex              QName(PackageNamespace("_-6u"), "_-TG")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0ig")
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-1jP"), 2
+     initproperty        QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-0js")
+
+L145:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-0js")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace("", "#0"), "CLICK")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-105")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     getlocal            5
+     dup
+     iftrue              L158
+
+     pop
+     getlocal3
+     convert_b
+L158:
+     iffalse             L190
+
+L159:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-0js")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
+     pushbyte            20
+     pushshort           1000
+     multiply
+     pushbyte            1
+     constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 2
+     initproperty        QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-0Va")
+
+     getlocal            5
+     iffalse             L190
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-0Va")
+     callpropvoid        QName(PackageNamespace("", "#0"), "start"), 0
+
+     getlocal            4
+     dup
+     iffalse             L182
+
+     pop
+     getlocal2
+     convert_b
+L182:
+     iftrue              L190
+
+L183:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-0Va")
+     getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
+     getproperty         QName(PackageNamespace("", "#0"), "TIMER")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-5N")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+L190:
+     findpropstrict      QName(PackageNamespace("_-07g"), "_-2v")
+     constructprop       QName(PackageNamespace("_-07g"), "_-2v"), 0
+     coerce              QName(PackageNamespace("_-07g"), "_-2v")
+     jump                L200
+
+     getlocal2
+     lshift
+     declocal            4
+     getlocal2
+     inclocal_i          2
+     urshift
+L200:
+     setlocal3
+
+     getlocal            5
+     dup
+     iftrue              L207
+
+     pop
+     getlocal3
+     convert_b
+L207:
+     iffalse             L218
+
+     getlocal3
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-1IB")
+     getproperty         QName(PackageNamespace("", "#0"), "textChanged")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-0js")
+     getproperty         QName(PackageNamespace("", "#0"), "textChanged")
+     callpropvoid        QName(PackageNamespace("", "#0"), "pushArgs"), 2
+
+     getlocal            4
+     iftrue              L223
+
+L218:
+     getlocal3
+     getproperty         QName(PackageNamespace("", "#0"), "complete")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "onComplete")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addOnce"), 1
+
+L223:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "name_") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-ZE") type QName(PackageNamespace("_-0y9"), "_-06T") end
+  trait slot QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-1IB") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-1jP") end
+  trait slot QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-0js") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-1jP") end
+  trait slot QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-0Va") type QName(PackageNamespace("flash.utils"), "Timer") end
+  trait method QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "onComplete")
+   method
+    refid "_-1f4:TradeRequestPanel/onComplete"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      hasnext
+      setlocal3
+
+      convert_d
+      multiply_i
+      pushtrue
+      dup
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iftrue              L19
+
+      pop
+      getlocal2
+      convert_b
+L19:
+      iffalse             L45
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-1IB")
+      getlocal2
+      iftrue              L90
+
+      getlex              QName(PackageNamespace("", "#0"), "WIDTH")
+      pushbyte            4
+      divide
+      getlocal1
+      dup
+      iftrue              L33
+
+      pop
+      getlocal0
+      convert_b
+L33:
+      iffalse             L104
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-1IB")
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      pushbyte            2
+      divide
+      subtract
+      getlocal2
+      iftrue              L106
+
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal1
+      iffalse             L109
+
+L45:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-0js")
+      getlocal2
+      iftrue              L111
+
+      pushbyte            3
+      getlex              QName(PackageNamespace("", "#0"), "WIDTH")
+      multiply
+      getlocal1
+      jump                L60
+
+      negate_i
+      setlocal2
+
+      dup
+      subtract
+      popscope
+      lessthan
+L60:
+      iffalse             L72
+
+      pushbyte            4
+      getlocal2
+      iftrue              L124
+
+      divide
+      getlocal2
+      dup
+      iffalse             L71
+
+      pop
+      getlocal2
+      convert_b
+L71:
+      iftrue              L123
+
+L72:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-0js")
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      pushbyte            2
+      divide
+      subtract
+      getlocal1
+      dup
+      iftrue              L84
+
+      pop
+      getlocal0
+      convert_b
+L84:
+      iffalse             L125
+
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal2
+      iftrue              L109
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-1IB")
+L90:
+      getlex              QName(PackageNamespace("", "#0"), "HEIGHT")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-1IB")
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      subtract
+      getlocal1
+      jump                L103
+
+      negate_i
+      typeof
+      negate
+      getlocal1
+      pushundefined
+      lessthan
+L103:
+      iffalse             L106
+
+L104:
+      pushbyte            4
+      subtract
+L106:
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal2
+      iftrue              L126
+
+L109:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-0js")
+L111:
+      getlex              QName(PackageNamespace("", "#0"), "HEIGHT")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-0js")
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      subtract
+      getlocal2
+      dup
+      iffalse             L122
+
+      pop
+      getlocal2
+      convert_b
+L122:
+      iftrue              L125
+
+L123:
+      pushbyte            4
+L124:
+      subtract
+L125:
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+L126:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-5N")
+   method
+    refid "_-1f4:TradeRequestPanel/_-5N"
+    param QName(PackageNamespace("flash.events"), "TimerEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      kill                2
+      declocal            2
+      greaterthan
+      inclocal            2
+      pushnan
+      getlocal2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L19
+
+      pop
+      getlocal0
+      convert_b
+L19:
+      iftrue              L26
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace("", "#0"), "COMPLETE")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatchEvent"), 1
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-Rx")
+   method
+    refid "_-1f4:TradeRequestPanel/_-Rx"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      getlocal1
+      declocal            2
+      getglobalscope
+      kill                2
+      setlocal2
+
+      greaterequals
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iffalse             L22
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace("", "#0"), "COMPLETE")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatchEvent"), 1
+
+L22:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-1f4:TradeRequestPanel"), "_-105")
+   method
+    refid "_-1f4:TradeRequestPanel/_-105"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      setlocal2
+
+      setlocal2
+
+      declocal_i          2
+      getlocal2
+      swap
+      increment_i
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L22
+
+      getlex              QName(PackageNamespace("", "#0"), "gs_")
+      getproperty         QName(PackageNamespace("", "#0"), "gsc_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "name_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "requestTrade"), 1
+
+      getlocal2
+      iffalse             L28
+
+L22:
+      findpropstrict      QName(PackageNamespace("", "#0"), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace("", "#0"), "COMPLETE")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatchEvent"), 1
+
+L28:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1f4:TradeRequestPanel/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

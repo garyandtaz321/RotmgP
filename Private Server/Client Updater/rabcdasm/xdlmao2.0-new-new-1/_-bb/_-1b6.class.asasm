@@ -1,0 +1,196 @@
+class
+ refid "_-bb:_-1b6"
+ instance QName(PackageNamespace("_-bb"), "_-1b6")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1pG")
+  iinit
+   refid "_-bb:_-1b6/iinit"
+   param QName(PackageNamespace("_-08f"), "Console")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     convert_d
+     kill                2
+     setlocal2
+
+     newactivation
+     inclocal            2
+     bitxor
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iffalse             L26
+
+     jump                L23
+
+     declocal_i          2
+     kill                2
+     checkfilter
+     subtract_i
+     getlocal2
+     istypelate
+L23:
+     pop
+     getlocal1
+     convert_b
+L26:
+     iftrue              L41
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     iffalse             L41
+
+     getlocal0
+     getlocal1
+     initproperty        QName(ProtectedNamespace("_-1pG"), "console")
+
+     getlocal2
+     dup
+     iftrue              L40
+
+     pop
+     getlocal0
+     convert_b
+L40:
+     iffalse             L46
+
+L41:
+     getlocal0
+     getlocal0
+     getproperty         QName(ProtectedNamespace("_-1pG"), "console")
+     getproperty         QName(PackageNamespace("", "#0"), "config")
+     initproperty        QName(ProtectedNamespace("_-1pG"), "config")
+
+L46:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("_-1pG"), "console") type QName(PackageNamespace("_-08f"), "Console") end
+  trait slot QName(ProtectedNamespace("_-1pG"), "config") type QName(PackageNamespace("_-08f"), "_-0Rt") end
+  trait getter QName(ProtectedNamespace("_-1pG"), "remoter")
+   method
+    refid "_-bb:_-1b6/_-1pG:remoter/getter"
+    returns QName(PackageNamespace("_-bb"), "_-0fj")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      pushtrue
+      checkfilter
+      add
+      decrement
+      increment_i
+      bitnot
+L10:
+      getproperty         QName(ProtectedNamespace("_-1pG"), "console")
+      getproperty         QName(PackageNamespace("", "#0"), "remoter")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-1pG"), "report")
+   method
+    refid "_-bb:_-1b6/_-1pG:report"
+    param null
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Utf8("")
+    optional Integer(0)
+    optional True()
+    optional Null()
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal            5
+
+      jump                L10
+
+      pushtrue
+      kill                2
+      convert_b
+      bitnot
+      declocal_i          5
+      declocal_i          3
+L10:
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      dup
+      iftrue              L19
+
+      pop
+      getlocal3
+      convert_b
+L19:
+      iffalse             L27
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-1pG"), "console")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "report"), 4
+
+L27:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-bb:_-1b6/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

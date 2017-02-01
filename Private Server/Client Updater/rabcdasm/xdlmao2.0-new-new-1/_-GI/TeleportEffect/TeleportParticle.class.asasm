@@ -1,0 +1,114 @@
+class
+ refid "_-GI:TeleportEffect/TeleportParticle"
+ instance QName(PrivateNamespace("*", "_-GI:TeleportEffect"), "TeleportParticle")
+  extends QName(PackageNamespace("_-GI"), "Particle")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("TeleportEffect.as$1994:TeleportParticle")
+  iinit
+   refid "_-GI:TeleportEffect/TeleportParticle/iinit"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "int")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+     constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 0
+     initproperty        QName(ProtectedNamespace("TeleportEffect.as$1994:TeleportParticle"), "moveVec_")
+
+     getlocal0
+     getlocal1
+     pushbyte            0
+     getlocal2
+     constructsuper      3
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("TeleportEffect.as$1994:TeleportParticle"), "moveVec_")
+     getlocal3
+     setproperty         QName(PackageNamespace("", "#0"), "z")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace("", "#0"), "timeLeft_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "timeLeft_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(ProtectedNamespace("TeleportEffect.as$1994:TeleportParticle"), "moveVec_") type QName(PackageNamespace("flash.geom"), "Vector3D") end
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "_-GI:TeleportEffect/TeleportParticle/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "timeLeft_")
+      getlocal2
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "timeLeft_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "timeLeft_")
+      pushbyte            0
+      ifnle               L14
+
+      pushfalse
+      returnvalue
+
+L14:
+      findproperty        QName(PackageNamespace("", "#0"), "z_")
+      getlex              QName(PackageNamespace("", "#0"), "z_")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("TeleportEffect.as$1994:TeleportParticle"), "moveVec_")
+      getproperty         QName(PackageNamespace("", "#0"), "z")
+      getlocal2
+      multiply
+      pushdouble          0.008
+      multiply
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "z_")
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-GI:TeleportEffect/TeleportParticle/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,228 @@
+class
+ refid "_-SW:_-1RM"
+ instance QName(PackageNamespace("_-SW"), "_-1RM")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0zg")
+  iinit
+   refid "_-SW:_-1RM/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     greaterthan
+     nextname
+     increment
+     setlocal3
+
+     lessthan
+     convert_d
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iffalse             L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "decode")
+   method
+    refid "_-SW:_-1RM/decode"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      setlocal            5
+
+      coerce_s
+      getlocal2
+      rshift
+      pushtrue
+      inclocal_i          2
+L10:
+      setlocal            5
+
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "RegExp")
+      pushstring          "-"
+      pushstring          "g"
+      construct           2
+      coerce              QName(PackageNamespace("", "#0"), "RegExp")
+      setlocal2
+
+      getlex              QName(PackageNamespace("", "#0"), "RegExp")
+      pushstring          "_"
+      pushstring          "g"
+      construct           2
+      coerce              QName(PackageNamespace("", "#0"), "RegExp")
+      setlocal3
+
+      pushbyte            4
+      getlocal            5
+      dup
+      iffalse             L33
+
+      pop
+      getlocal0
+      convert_b
+L33:
+      iftrue              L40
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            4
+      modulo
+      subtract
+      convert_i
+L40:
+      setlocal            4
+
+      jump                L58
+
+L42:
+      label
+      jump                L50
+
+      setlocal2
+
+      modulo
+      convert_d
+      typeof
+      inclocal_i          2
+      kill                4
+L50:
+      getlocal1
+      getlocal            5
+      iftrue              L107
+
+      pushstring          "="
+      add
+      setlocal1
+
+      getlocal            5
+      iftrue              L86
+
+L58:
+      getlocal            4
+      getlocal            5
+      iftrue              L71
+
+      dup
+      getlocal            5
+      dup
+      iffalse             L68
+
+      pop
+      getlocal3
+      convert_b
+L68:
+      iftrue              L70
+
+      decrement_i
+L70:
+      setlocal            4
+
+L71:
+      iftrue              L42
+
+      getlocal            6
+      dup
+      iftrue              L85
+
+      pop
+      getlocal0
+      jump                L84
+
+      negate_i
+      urshift
+      add
+      convert_i
+      inclocal_i          5
+      inclocal_i          2
+L84:
+      convert_b
+L85:
+      iffalse             L104
+
+L86:
+      getlocal1
+      getlocal            6
+      dup
+      iftrue              L93
+
+      pop
+      getlocal0
+      convert_b
+L93:
+      iffalse             L107
+
+      getlocal2
+      pushstring          "+"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      getlocal3
+      pushstring          "/"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      coerce_s
+      getlocal            5
+      iftrue              L107
+
+      setlocal1
+
+L104:
+      getlex              QName(PackageNamespace("com.hurlant.util"), "Base64")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "decode"), 1
+L107:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-SW:_-1RM/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

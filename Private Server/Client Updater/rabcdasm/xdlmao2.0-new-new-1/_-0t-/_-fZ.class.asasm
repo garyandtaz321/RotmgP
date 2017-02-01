@@ -1,0 +1,113 @@
+class
+ refid "_-0t-:_-fZ"
+ instance QName(PackageNamespace("_-0t-"), "_-fZ")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0cW")
+  iinit
+   refid "_-0t-:_-fZ/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     setlocal2
+
+     getglobalscope
+     kill                2
+     inclocal            2
+     declocal_i          2
+     setlocal2
+
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L25
+
+     getlocal0
+     getlex              QName(PackageNamespace("", "#0"), "_-1o")
+     constructsuper      1
+
+     getlocal3
+     dup
+     iffalse             L24
+
+     pop
+     getlocal3
+     convert_b
+L24:
+     iftrue              L28
+
+L25:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "_-0K1")
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-0K1") type QName(PackageNamespace("", "#0"), "String") end
+ end ; instance
+ cinit
+  refid "_-0t-:_-fZ/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    convert_s
+    equals
+    coerce_a
+    pushscope
+
+    getglobalscope
+    increment
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L19
+
+    pop
+    getlocal1
+    convert_b
+L19:
+    iftrue              L23
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-1o")
+    pushstring          "MAP_TEST_EVENT"
+    initproperty        QName(PackageNamespace("", "#0"), "_-1o")
+
+L23:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-1o") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("MAP_TEST_EVENT") end
+end ; class

@@ -1,0 +1,219 @@
+class
+ refid "_-SA:ProTipText"
+ instance QName(PackageNamespace("_-SA"), "ProTipText")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-zq")
+  iinit
+   refid "_-SA:ProTipText/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     pop
+     not
+     multiply
+     getglobalscope
+     negate_i
+     convert_i
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal1
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-SA:ProTipText"), "text") type QName(PackageNamespace("_-0y9"), "_-06T") end
+  trait method QName(PackageNamespace("", "#0"), "_-15k")
+   method
+    refid "_-SA:ProTipText/_-15k"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 11
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      pushtrue
+      getglobalscope
+      declocal_i          2
+      inclocal_i          2
+      nextvalue
+      convert_i
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_-0y9"), "_-06T")
+      constructprop       QName(PackageNamespace("_-0y9"), "_-06T"), 0
+      pushbyte            18
+      callproperty        QName(PackageNamespace("", "#0"), "setSize"), 1
+      pushint             16777215
+      callproperty        QName(PackageNamespace("", "#0"), "setColor"), 1
+      pushtrue
+      callproperty        QName(PackageNamespace("", "#0"), "setWordWrap"), 1
+      pushtrue
+      callproperty        QName(PackageNamespace("", "#0"), "setMultiLine"), 1
+      pushshort           580
+      callproperty        QName(PackageNamespace("", "#0"), "setTextWidth"), 1
+      pushbyte            100
+      callproperty        QName(PackageNamespace("", "#0"), "setTextHeight"), 1
+      getlex              QName(PackageNamespace("flash.text"), "TextFormatAlign")
+      getproperty         QName(PackageNamespace("", "#0"), "CENTER")
+      callproperty        QName(PackageNamespace("", "#0"), "setHorizontalAlign"), 1
+      initproperty        QName(PrivateNamespace("*", "_-SA:ProTipText"), "text")
+
+      getlocal2
+      dup
+      iftrue              L38
+
+      pop
+      getlocal3
+      convert_b
+L38:
+      iffalse             L92
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-SA:ProTipText"), "text")
+      getlocal2
+      jump                L49
+
+      getlocal2
+      declocal_i          2
+      setlocal2
+
+      coerce_a
+      dup
+      declocal            2
+L49:
+      dup
+      iftrue              L54
+
+      pop
+      getlocal1
+      convert_b
+L54:
+      iffalse             L90
+
+      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+      pushbyte            0
+      dup
+      dup
+      pushbyte            1
+      pushbyte            4
+      dup
+      pushbyte            2
+      constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 7
+      newarray            1
+      setproperty         QName(PackageNamespace("", "#0"), "filters")
+
+      getlocal3
+      iftrue              L100
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-SA:ProTipText"), "text")
+      getlocal2
+      iffalse             L90
+
+      findpropstrict      QName(PackageNamespace("_-0Mr"), "_-5R")
+      constructprop       QName(PackageNamespace("_-0Mr"), "_-5R"), 0
+      jump                L81
+
+      getlocal2
+      declocal_i          2
+      pushwith
+      setlocal2
+
+      declocal            2
+      rshift
+L81:
+      getlex              QName(PackageNamespace("_-6u"), "_-TG")
+      getproperty         QName(PackageNamespace("", "#0"), "_-11o")
+      pushstring          "tip"
+      getlocal1
+      newobject           1
+      callproperty        QName(PackageNamespace("", "#0"), "setParams"), 2
+      callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-SA:ProTipText"), "text")
+L90:
+      pushshort           -290
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+L92:
+      findproperty        QName(PackageNamespace("", "#0"), "mouseEnabled")
+      pushfalse
+      initproperty        QName(PackageNamespace("", "#0"), "mouseEnabled")
+
+      getlocal3
+      iftrue              L100
+
+      findproperty        QName(PackageNamespace("", "#0"), "mouseChildren")
+      pushfalse
+      initproperty        QName(PackageNamespace("", "#0"), "mouseChildren")
+
+L100:
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-SA:ProTipText"), "text")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-SA:ProTipText/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

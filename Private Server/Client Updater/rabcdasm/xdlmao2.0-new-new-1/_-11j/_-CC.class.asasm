@@ -1,0 +1,215 @@
+class
+ refid "_-11j:_-CC"
+ instance QName(PackageNamespace("_-11j"), "_-CC")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-to")
+  iinit
+   refid "_-11j:_-CC/iinit"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     decrement
+     pushnull
+     getlocal3
+     convert_s
+     decrement
+     instanceof
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iftrue              L19
+
+     pop
+     getlocal1
+     convert_b
+L19:
+     iffalse             L26
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-11j"), "_-0g1")
+     constructprop       QName(PackageNamespace("_-11j"), "_-0g1"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "_-0K8")
+
+     getlocal2
+     iftrue              L28
+
+L26:
+     getlocal0
+     constructsuper      0
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "objectType_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-0K8") type QName(PackageNamespace("_-11j"), "_-0g1") end
+  trait method QName(PackageNamespace("", "#0"), "parseFromInput")
+   method
+    refid "_-11j:_-CC/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      astypelate
+      pushtrue
+      getlocal0
+      declocal_i          2
+      declocal            2
+      multiply_i
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L26
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedShort"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "objectType_")
+
+      getlocal2
+      dup
+      iftrue              L25
+
+      pop
+      getlocal0
+      convert_b
+L25:
+      iffalse             L30
+
+L26:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0K8")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "parseFromInput"), 1
+
+L30:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "_-11j:_-CC/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      bitor
+      pushscope
+
+      bitxor
+      dxnslate
+      pushnull
+      rshift
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      pushstring          "objectType_: "
+      getlocal1
+      jump                L23
+
+      dxnslate
+      pop
+      add_i
+      convert_s
+      instanceof
+      multiply_i
+L23:
+      dup
+      iffalse             L28
+
+      pop
+      getlocal1
+      convert_b
+L28:
+      iftrue              L46
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "objectType_")
+      add
+      getlocal2
+      dup
+      iftrue              L38
+
+      pop
+      getlocal0
+      convert_b
+L38:
+      iffalse             L46
+
+      pushstring          " status_: "
+      add
+      getlocal2
+      iffalse             L46
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0K8")
+      add
+L46:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-11j:_-CC/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

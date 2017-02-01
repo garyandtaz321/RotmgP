@@ -1,0 +1,2196 @@
+class
+ refid "com.hurlant.crypto.symmetric:BlowFishKey"
+ instance QName(PackageNamespace("com.hurlant.crypto.symmetric"), "BlowFishKey")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("ISymmetricKey", [PackageNamespace("com.hurlant.crypto.symmetric")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-07K")
+  iinit
+   refid "com.hurlant.crypto.symmetric:BlowFishKey/iinit"
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "key")
+
+     getlocal0
+     getlocal1
+     callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "setKey"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0") type QName(PackageNamespace("", "#0"), "Array") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1") type QName(PackageNamespace("", "#0"), "Array") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2") type QName(PackageNamespace("", "#0"), "Array") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S3") type QName(PackageNamespace("", "#0"), "Array") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P") type QName(PackageNamespace("", "#0"), "Array") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "key") type QName(PackageNamespace("flash.utils"), "ByteArray") value Null() end
+  trait method QName(PackageNamespace("", "#0"), "getBlockSize")
+   method
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/getBlockSize"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BLOCK_SIZE")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "decrypt")
+   method
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/decrypt"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "decryptBlock"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "dispose")
+   method
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/dispose"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      jump                L19
+
+L9:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0")
+      getlocal1
+      pushbyte            0
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+L19:
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L9
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      jump                L38
+
+L28:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1")
+      getlocal1
+      pushbyte            0
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+L38:
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L28
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      jump                L57
+
+L47:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2")
+      getlocal1
+      pushbyte            0
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+L57:
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L47
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      jump                L76
+
+L66:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S3")
+      getlocal1
+      pushbyte            0
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+L76:
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S3")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L66
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      jump                L95
+
+L85:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getlocal1
+      pushbyte            0
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+L95:
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L85
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0")
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1")
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2")
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S3")
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      jump                L129
+
+L119:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "key")
+      getlocal1
+      pushbyte            0
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+L129:
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "key")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L119
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "key")
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "key")
+
+      getlex              QName(PackageNamespace("com.hurlant.util"), "Memory")
+      callpropvoid        QName(PackageNamespace("", "#0"), "gc"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "encrypt")
+   method
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/encrypt"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "encryptBlock"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "F")
+   method
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/F"
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0")
+      getlocal1
+      pushbyte            24
+      urshift
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1")
+      getlocal1
+      pushbyte            16
+      urshift
+      pushshort           255
+      bitand
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      add
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2")
+      getlocal1
+      pushbyte            8
+      urshift
+      pushshort           255
+      bitand
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      bitxor
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S3")
+      getlocal1
+      pushshort           255
+      bitand
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "processTable")
+   method
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/processTable"
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "Array")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      convert_u
+      setlocal            4
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      jump                L94
+
+L13:
+      label
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      bitxor
+      convert_u
+      setlocal1
+
+      pushbyte            1
+      convert_u
+      setlocal            6
+
+      jump                L58
+
+L26:
+      label
+      getlocal2
+      getlocal0
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "F"), 1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      bitxor
+      bitxor
+      convert_u
+      setlocal2
+
+      getlocal1
+      getlocal0
+      getlocal2
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "F"), 1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getlocal            6
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      bitxor
+      bitxor
+      convert_u
+      setlocal1
+
+      getlocal            6
+      pushbyte            2
+      add
+      convert_u
+      setlocal            6
+
+L58:
+      getlocal            6
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+      iflt                L26
+
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      bitxor
+      convert_u
+      setlocal2
+
+      getlocal3
+      getlocal            5
+      getlocal2
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+
+      getlocal3
+      getlocal            5
+      pushbyte            1
+      add
+      getlocal1
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+
+      getlocal1
+      convert_u
+      setlocal2
+
+      getlocal3
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      convert_u
+      setlocal1
+
+      getlocal            5
+      pushbyte            2
+      add
+      convert_u
+      setlocal            5
+
+L94:
+      getlocal            5
+      getlocal            4
+      iflt                L13
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "setKey")
+   method
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/setKey"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      getlocal0
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS0")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0")
+
+      getlocal0
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS1")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1")
+
+      getlocal0
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS2")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2")
+
+      getlocal0
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS3")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S3")
+
+      getlocal0
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KP")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      convert_u
+      setlocal2
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L91
+
+L39:
+      label
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      jump                L74
+
+L47:
+      label
+      getlocal            5
+      pushbyte            8
+      lshift
+      getlocal1
+      getlocal3
+      convert_d
+      dup
+      increment
+      convert_u
+      setlocal3
+
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      pushshort           255
+      bitand
+      bitor
+      convert_u
+      setlocal            5
+
+      getlocal3
+      getlocal2
+      ifnge               L70
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+L70:
+      getlocal            6
+      increment
+      convert_u
+      setlocal            6
+
+L74:
+      getlocal            6
+      pushbyte            4
+      iflt                L47
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getlocal            4
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      getlocal            5
+      bitxor
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+
+      getlocal            4
+      increment
+      convert_u
+      setlocal            4
+
+L91:
+      getlocal            4
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P_SZ")
+      iflt                L39
+
+      getlocal0
+      pushbyte            0
+      dup
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "processTable"), 3
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P_SZ")
+      pushbyte            2
+      subtract
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P_SZ")
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0")
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "processTable"), 3
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK")
+      pushbyte            2
+      subtract
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK")
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1")
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "processTable"), 3
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK")
+      pushbyte            2
+      subtract
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK")
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2")
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "processTable"), 3
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK")
+      pushbyte            2
+      subtract
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK")
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S3")
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "processTable"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "encryptBlock")
+   method
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/encryptBlock"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      getlocal2
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BytesTo32bits"), 2
+      convert_u
+      setlocal            5
+
+      getlocal0
+      getlocal1
+      getlocal2
+      pushbyte            4
+      add
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BytesTo32bits"), 2
+      convert_u
+      setlocal            6
+
+      getlocal            5
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      bitxor
+      convert_u
+      setlocal            5
+
+      pushbyte            1
+      convert_u
+      setlocal            7
+
+      jump                L60
+
+L28:
+      label
+      getlocal            6
+      getlocal0
+      getlocal            5
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "F"), 1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getlocal            7
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      bitxor
+      bitxor
+      convert_u
+      setlocal            6
+
+      getlocal            5
+      getlocal0
+      getlocal            6
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "F"), 1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getlocal            7
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      bitxor
+      bitxor
+      convert_u
+      setlocal            5
+
+      getlocal            7
+      pushbyte            2
+      add
+      convert_u
+      setlocal            7
+
+L60:
+      getlocal            7
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+      iflt                L28
+
+      getlocal            6
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      bitxor
+      convert_u
+      setlocal            6
+
+      getlocal0
+      getlocal            6
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "Bits32ToBytes"), 3
+
+      getlocal0
+      getlocal            5
+      getlocal3
+      getlocal            4
+      pushbyte            4
+      add
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "Bits32ToBytes"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "decryptBlock")
+   method
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/decryptBlock"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      getlocal2
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BytesTo32bits"), 2
+      convert_u
+      setlocal            5
+
+      getlocal0
+      getlocal1
+      getlocal2
+      pushbyte            4
+      add
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BytesTo32bits"), 2
+      convert_u
+      setlocal            6
+
+      getlocal            5
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      bitxor
+      convert_u
+      setlocal            5
+
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+      convert_u
+      setlocal            7
+
+      jump                L61
+
+L30:
+      label
+      getlocal            6
+      getlocal0
+      getlocal            5
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "F"), 1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getlocal            7
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      bitxor
+      bitxor
+      convert_u
+      setlocal            6
+
+      getlocal            5
+      getlocal0
+      getlocal            6
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "F"), 1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getlocal            7
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      bitxor
+      bitxor
+      convert_u
+      setlocal            5
+
+      getlocal            7
+      pushbyte            2
+      subtract
+      convert_u
+      setlocal            7
+
+L61:
+      getlocal            7
+      pushbyte            0
+      ifgt                L30
+
+      getlocal            6
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      bitxor
+      convert_u
+      setlocal            6
+
+      getlocal0
+      getlocal            6
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "Bits32ToBytes"), 3
+
+      getlocal0
+      getlocal            5
+      getlocal3
+      getlocal            4
+      pushbyte            4
+      add
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "Bits32ToBytes"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BytesTo32bits")
+   method
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/BytesTo32bits"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      pushshort           255
+      bitand
+      pushbyte            24
+      lshift
+      getlocal1
+      getlocal2
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      pushshort           255
+      bitand
+      pushbyte            16
+      lshift
+      bitor
+      getlocal1
+      getlocal2
+      pushbyte            2
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      pushshort           255
+      bitand
+      pushbyte            8
+      lshift
+      bitor
+      getlocal1
+      getlocal2
+      pushbyte            3
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+      pushshort           255
+      bitand
+      bitor
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "Bits32ToBytes")
+   method
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/Bits32ToBytes"
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal2
+      getlocal3
+      pushbyte            3
+      add
+      getlocal1
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+
+      getlocal2
+      getlocal3
+      pushbyte            2
+      add
+      getlocal1
+      pushbyte            8
+      rshift
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+
+      getlocal2
+      getlocal3
+      pushbyte            1
+      add
+      getlocal1
+      pushbyte            16
+      rshift
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+
+      getlocal2
+      getlocal3
+      getlocal1
+      pushbyte            24
+      rshift
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07K"), StaticProtectedNs("_-07K")])
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "blowfish"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.crypto.symmetric:BlowFishKey/cinit"
+  body
+   maxstack 257
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KP")
+    pushint             608135816
+    pushdouble          2242054355
+    pushint             320440878
+    pushint             57701188
+    pushdouble          2752067618
+    pushint             698298832
+    pushint             137296536
+    pushdouble          3964562569
+    pushint             1160258022
+    pushint             953160567
+    pushdouble          3193202383
+    pushint             887688300
+    pushdouble          3232508343
+    pushdouble          3380367581
+    pushint             1065670069
+    pushdouble          3041331479
+    pushdouble          2450970073
+    pushdouble          2306472731
+    newarray            18
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KP")
+
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS0")
+    pushdouble          3509652390
+    pushdouble          2564797868
+    pushint             805139163
+    pushdouble          3491422135
+    pushdouble          3101798381
+    pushint             1780907670
+    pushdouble          3128725573
+    pushdouble          4046225305
+    pushint             614570311
+    pushdouble          3012652279
+    pushint             134345442
+    pushdouble          2240740374
+    pushint             1667834072
+    pushint             1901547113
+    pushdouble          2757295779
+    pushdouble          4103290238
+    pushint             227898511
+    pushint             1921955416
+    pushint             1904987480
+    pushdouble          2182433518
+    pushint             2069144605
+    pushdouble          3260701109
+    pushdouble          2620446009
+    pushint             720527379
+    pushdouble          3318853667
+    pushint             677414384
+    pushdouble          3393288472
+    pushdouble          3101374703
+    pushdouble          2390351024
+    pushint             1614419982
+    pushint             1822297739
+    pushdouble          2954791486
+    pushdouble          3608508353
+    pushdouble          3174124327
+    pushint             2024746970
+    pushint             1432378464
+    pushdouble          3864339955
+    pushdouble          2857741204
+    pushint             1464375394
+    pushint             1676153920
+    pushint             1439316330
+    pushint             715854006
+    pushdouble          3033291828
+    pushint             289532110
+    pushdouble          2706671279
+    pushint             2087905683
+    pushdouble          3018724369
+    pushint             1668267050
+    pushint             732546397
+    pushint             1947742710
+    pushdouble          3462151702
+    pushdouble          2609353502
+    pushdouble          2950085171
+    pushint             1814351708
+    pushint             2050118529
+    pushint             680887927
+    pushint             999245976
+    pushint             1800124847
+    pushdouble          3300911131
+    pushint             1713906067
+    pushint             1641548236
+    pushdouble          4213287313
+    pushint             1216130144
+    pushint             1575780402
+    pushdouble          4018429277
+    pushdouble          3917837745
+    pushdouble          3693486850
+    pushdouble          3949271944
+    pushint             596196993
+    pushdouble          3549867205
+    pushint             258830323
+    pushdouble          2213823033
+    pushint             772490370
+    pushdouble          2760122372
+    pushint             1774776394
+    pushdouble          2652871518
+    pushint             566650946
+    pushdouble          4142492826
+    pushint             1728879713
+    pushdouble          2882767088
+    pushint             1783734482
+    pushdouble          3629395816
+    pushdouble          2517608232
+    pushdouble          2874225571
+    pushint             1861159788
+    pushint             326777828
+    pushdouble          3124490320
+    pushint             2130389656
+    pushdouble          2716951837
+    pushint             967770486
+    pushint             1724537150
+    pushdouble          2185432712
+    pushdouble          2364442137
+    pushint             1164943284
+    pushint             2105845187
+    pushint             998989502
+    pushdouble          3765401048
+    pushdouble          2244026483
+    pushint             1075463327
+    pushint             1455516326
+    pushint             1322494562
+    pushint             910128902
+    pushint             469688178
+    pushint             1117454909
+    pushint             936433444
+    pushdouble          3490320968
+    pushdouble          3675253459
+    pushint             1240580251
+    pushint             122909385
+    pushdouble          2157517691
+    pushint             634681816
+    pushdouble          4142456567
+    pushdouble          3825094682
+    pushdouble          3061402683
+    pushdouble          2540495037
+    pushint             79693498
+    pushdouble          3249098678
+    pushint             1084186820
+    pushint             1583128258
+    pushint             426386531
+    pushint             1761308591
+    pushint             1047286709
+    pushint             322548459
+    pushint             995290223
+    pushint             1845252383
+    pushdouble          2603652396
+    pushdouble          3431023940
+    pushdouble          2942221577
+    pushdouble          3202600964
+    pushdouble          3727903485
+    pushint             1712269319
+    pushint             422464435
+    pushdouble          3234572375
+    pushint             1170764815
+    pushdouble          3523960633
+    pushdouble          3117677531
+    pushint             1434042557
+    pushint             442511882
+    pushdouble          3600875718
+    pushint             1076654713
+    pushint             1738483198
+    pushdouble          4213154764
+    pushdouble          2393238008
+    pushdouble          3677496056
+    pushint             1014306527
+    pushdouble          4251020053
+    pushint             793779912
+    pushdouble          2902807211
+    pushint             842905082
+    pushdouble          4246964064
+    pushint             1395751752
+    pushint             1040244610
+    pushdouble          2656851899
+    pushdouble          3396308128
+    pushint             445077038
+    pushdouble          3742853595
+    pushdouble          3577915638
+    pushint             679411651
+    pushdouble          2892444358
+    pushdouble          2354009459
+    pushint             1767581616
+    pushdouble          3150600392
+    pushdouble          3791627101
+    pushdouble          3102740896
+    pushint             284835224
+    pushdouble          4246832056
+    pushint             1258075500
+    pushint             768725851
+    pushdouble          2589189241
+    pushdouble          3069724005
+    pushdouble          3532540348
+    pushint             1274779536
+    pushdouble          3789419226
+    pushdouble          2764799539
+    pushint             1660621633
+    pushdouble          3471099624
+    pushdouble          4011903706
+    pushint             913787905
+    pushdouble          3497959166
+    pushint             737222580
+    pushdouble          2514213453
+    pushdouble          2928710040
+    pushdouble          3937242737
+    pushint             1804850592
+    pushdouble          3499020752
+    pushdouble          2949064160
+    pushdouble          2386320175
+    pushdouble          2390070455
+    pushdouble          2415321851
+    pushdouble          4061277028
+    pushdouble          2290661394
+    pushdouble          2416832540
+    pushint             1336762016
+    pushint             1754252060
+    pushdouble          3520065937
+    pushdouble          3014181293
+    pushint             791618072
+    pushdouble          3188594551
+    pushdouble          3933548030
+    pushdouble          2332172193
+    pushdouble          3852520463
+    pushdouble          3043980520
+    pushint             413987798
+    pushdouble          3465142937
+    pushdouble          3030929376
+    pushdouble          4245938359
+    pushint             2093235073
+    pushdouble          3534596313
+    pushint             375366246
+    pushdouble          2157278981
+    pushdouble          2479649556
+    pushint             555357303
+    pushdouble          3870105701
+    pushint             2008414854
+    pushdouble          3344188149
+    pushdouble          4221384143
+    pushdouble          3956125452
+    pushint             2067696032
+    pushdouble          3594591187
+    pushdouble          2921233993
+    pushint             2428461
+    pushint             544322398
+    pushint             577241275
+    pushint             1471733935
+    pushint             610547355
+    pushdouble          4027169054
+    pushint             1432588573
+    pushint             1507829418
+    pushint             2025931657
+    pushdouble          3646575487
+    pushint             545086370
+    pushint             48609733
+    pushdouble          2200306550
+    pushint             1653985193
+    pushint             298326376
+    pushint             1316178497
+    pushdouble          3007786442
+    pushint             2064951626
+    pushint             458293330
+    pushdouble          2589141269
+    pushdouble          3591329599
+    pushdouble          3164325604
+    pushint             727753846
+    pushdouble          2179363840
+    pushint             146436021
+    pushint             1461446943
+    pushdouble          4069977195
+    pushint             705550613
+    pushdouble          3059967265
+    pushdouble          3887724982
+    pushdouble          4281599278
+    pushdouble          3313849956
+    pushint             1404054877
+    pushdouble          2845806497
+    pushint             146425753
+    pushint             1854211946
+    newarray            256
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS0")
+
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS1")
+    pushint             1266315497
+    pushdouble          3048417604
+    pushdouble          3681880366
+    pushdouble          3289982499
+    pushdouble          2909710000
+    pushint             1235738493
+    pushdouble          2632868024
+    pushdouble          2414719590
+    pushdouble          3970600049
+    pushint             1771706367
+    pushint             1449415276
+    pushdouble          3266420449
+    pushint             422970021
+    pushint             1963543593
+    pushdouble          2690192192
+    pushdouble          3826793022
+    pushint             1062508698
+    pushint             1531092325
+    pushint             1804592342
+    pushdouble          2583117782
+    pushdouble          2714934279
+    pushdouble          4024971509
+    pushint             1294809318
+    pushdouble          4028980673
+    pushint             1289560198
+    pushdouble          2221992742
+    pushint             1669523910
+    pushint             35572830
+    pushint             157838143
+    pushint             1052438473
+    pushint             1016535060
+    pushint             1802137761
+    pushint             1753167236
+    pushint             1386275462
+    pushdouble          3080475397
+    pushdouble          2857371447
+    pushint             1040679964
+    pushint             2145300060
+    pushdouble          2390574316
+    pushint             1461121720
+    pushdouble          2956646967
+    pushdouble          4031777805
+    pushdouble          4028374788
+    pushint             33600511
+    pushdouble          2920084762
+    pushint             1018524850
+    pushint             629373528
+    pushdouble          3691585981
+    pushdouble          3515945977
+    pushint             2091462646
+    pushdouble          2486323059
+    pushint             586499841
+    pushint             988145025
+    pushint             935516892
+    pushdouble          3367335476
+    pushdouble          2599673255
+    pushdouble          2839830854
+    pushint             265290510
+    pushdouble          3972581182
+    pushdouble          2759138881
+    pushdouble          3795373465
+    pushint             1005194799
+    pushint             847297441
+    pushint             406762289
+    pushint             1314163512
+    pushint             1332590856
+    pushint             1866599683
+    pushdouble          4127851711
+    pushint             750260880
+    pushint             613907577
+    pushint             1450815602
+    pushdouble          3165620655
+    pushdouble          3734664991
+    pushdouble          3650291728
+    pushdouble          3012275730
+    pushdouble          3704569646
+    pushint             1427272223
+    pushint             778793252
+    pushint             1343938022
+    pushdouble          2676280711
+    pushint             2052605720
+    pushint             1946737175
+    pushdouble          3164576444
+    pushdouble          3914038668
+    pushdouble          3967478842
+    pushdouble          3682934266
+    pushint             1661551462
+    pushdouble          3294938066
+    pushdouble          4011595847
+    pushint             840292616
+    pushdouble          3712170807
+    pushint             616741398
+    pushint             312560963
+    pushint             711312465
+    pushint             1351876610
+    pushint             322626781
+    pushint             1910503582
+    pushint             271666773
+    pushdouble          2175563734
+    pushint             1594956187
+    pushint             70604529
+    pushdouble          3617834859
+    pushint             1007753275
+    pushint             1495573769
+    pushdouble          4069517037
+    pushdouble          2549218298
+    pushdouble          2663038764
+    pushint             504708206
+    pushdouble          2263041392
+    pushdouble          3941167025
+    pushdouble          2249088522
+    pushint             1514023603
+    pushint             1998579484
+    pushint             1312622330
+    pushint             694541497
+    pushdouble          2582060303
+    pushdouble          2151582166
+    pushint             1382467621
+    pushint             776784248
+    pushdouble          2618340202
+    pushdouble          3323268794
+    pushdouble          2497899128
+    pushdouble          2784771155
+    pushint             503983604
+    pushdouble          4076293799
+    pushint             907881277
+    pushint             423175695
+    pushint             432175456
+    pushint             1378068232
+    pushdouble          4145222326
+    pushdouble          3954048622
+    pushdouble          3938656102
+    pushdouble          3820766613
+    pushdouble          2793130115
+    pushdouble          2977904593
+    pushint             26017576
+    pushdouble          3274890735
+    pushdouble          3194772133
+    pushint             1700274565
+    pushint             1756076034
+    pushdouble          4006520079
+    pushdouble          3677328699
+    pushint             720338349
+    pushint             1533947780
+    pushint             354530856
+    pushint             688349552
+    pushdouble          3973924725
+    pushint             1637815568
+    pushint             332179504
+    pushdouble          3949051286
+    pushint             53804574
+    pushdouble          2852348879
+    pushdouble          3044236432
+    pushint             1282449977
+    pushdouble          3583942155
+    pushdouble          3416972820
+    pushdouble          4006381244
+    pushint             1617046695
+    pushdouble          2628476075
+    pushdouble          3002303598
+    pushint             1686838959
+    pushint             431878346
+    pushdouble          2686675385
+    pushint             1700445008
+    pushint             1080580658
+    pushint             1009431731
+    pushint             832498133
+    pushdouble          3223435511
+    pushdouble          2605976345
+    pushdouble          2271191193
+    pushdouble          2516031870
+    pushint             1648197032
+    pushdouble          4164389018
+    pushdouble          2548247927
+    pushint             300782431
+    pushint             375919233
+    pushint             238389289
+    pushdouble          3353747414
+    pushdouble          2531188641
+    pushint             2019080857
+    pushint             1475708069
+    pushint             455242339
+    pushdouble          2609103871
+    pushint             448939670
+    pushdouble          3451063019
+    pushint             1395535956
+    pushdouble          2413381860
+    pushint             1841049896
+    pushint             1491858159
+    pushint             885456874
+    pushdouble          4264095073
+    pushdouble          4001119347
+    pushint             1565136089
+    pushdouble          3898914787
+    pushint             1108368660
+    pushint             540939232
+    pushint             1173283510
+    pushdouble          2745871338
+    pushdouble          3681308437
+    pushdouble          4207628240
+    pushdouble          3343053890
+    pushdouble          4016749493
+    pushint             1699691293
+    pushint             1103962373
+    pushdouble          3625875870
+    pushdouble          2256883143
+    pushdouble          3830138730
+    pushint             1031889488
+    pushdouble          3479347698
+    pushint             1535977030
+    pushdouble          4236805024
+    pushdouble          3251091107
+    pushint             2132092099
+    pushint             1774941330
+    pushint             1199868427
+    pushint             1452454533
+    pushint             157007616
+    pushdouble          2904115357
+    pushint             342012276
+    pushint             595725824
+    pushint             1480756522
+    pushint             206960106
+    pushint             497939518
+    pushint             591360097
+    pushint             863170706
+    pushdouble          2375253569
+    pushdouble          3596610801
+    pushint             1814182875
+    pushint             2094937945
+    pushdouble          3421402208
+    pushint             1082520231
+    pushdouble          3463918190
+    pushdouble          2785509508
+    pushint             435703966
+    pushdouble          3908032597
+    pushint             1641649973
+    pushdouble          2842273706
+    pushdouble          3305899714
+    pushint             1510255612
+    pushdouble          2148256476
+    pushdouble          2655287854
+    pushdouble          3276092548
+    pushdouble          4258621189
+    pushint             236887753
+    pushdouble          3681803219
+    pushint             274041037
+    pushint             1734335097
+    pushdouble          3815195456
+    pushdouble          3317970021
+    pushint             1899903192
+    pushint             1026095262
+    pushdouble          4050517792
+    pushint             356393447
+    pushdouble          2410691914
+    pushdouble          3873677099
+    pushdouble          3682840055
+    newarray            256
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS1")
+
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS2")
+    pushdouble          3913112168
+    pushdouble          2491498743
+    pushdouble          4132185628
+    pushdouble          2489919796
+    pushint             1091903735
+    pushint             1979897079
+    pushdouble          3170134830
+    pushdouble          3567386728
+    pushdouble          3557303409
+    pushint             857797738
+    pushint             1136121015
+    pushint             1342202287
+    pushint             507115054
+    pushdouble          2535736646
+    pushint             337727348
+    pushdouble          3213592640
+    pushint             1301675037
+    pushdouble          2528481711
+    pushint             1895095763
+    pushint             1721773893
+    pushdouble          3216771564
+    pushint             62756741
+    pushint             2142006736
+    pushint             835421444
+    pushdouble          2531993523
+    pushint             1442658625
+    pushdouble          3659876326
+    pushdouble          2882144922
+    pushint             676362277
+    pushint             1392781812
+    pushint             170690266
+    pushdouble          3921047035
+    pushint             1759253602
+    pushdouble          3611846912
+    pushint             1745797284
+    pushint             664899054
+    pushint             1329594018
+    pushdouble          3901205900
+    pushdouble          3045908486
+    pushint             2062866102
+    pushdouble          2865634940
+    pushdouble          3543621612
+    pushdouble          3464012697
+    pushint             1080764994
+    pushint             553557557
+    pushdouble          3656615353
+    pushdouble          3996768171
+    pushint             991055499
+    pushint             499776247
+    pushint             1265440854
+    pushint             648242737
+    pushdouble          3940784050
+    pushint             980351604
+    pushdouble          3713745714
+    pushint             1749149687
+    pushdouble          3396870395
+    pushdouble          4211799374
+    pushdouble          3640570775
+    pushint             1161844396
+    pushdouble          3125318951
+    pushint             1431517754
+    pushint             545492359
+    pushdouble          4268468663
+    pushdouble          3499529547
+    pushint             1437099964
+    pushdouble          2702547544
+    pushdouble          3433638243
+    pushdouble          2581715763
+    pushdouble          2787789398
+    pushint             1060185593
+    pushint             1593081372
+    pushdouble          2418618748
+    pushdouble          4260947970
+    pushint             69676912
+    pushdouble          2159744348
+    pushint             86519011
+    pushdouble          2512459080
+    pushdouble          3838209314
+    pushint             1220612927
+    pushdouble          3339683548
+    pushint             133810670
+    pushint             1090789135
+    pushint             1078426020
+    pushint             1569222167
+    pushint             845107691
+    pushdouble          3583754449
+    pushdouble          4072456591
+    pushint             1091646820
+    pushint             628848692
+    pushint             1613405280
+    pushdouble          3757631651
+    pushint             526609435
+    pushint             236106946
+    pushint             48312990
+    pushdouble          2942717905
+    pushdouble          3402727701
+    pushint             1797494240
+    pushint             859738849
+    pushint             992217954
+    pushdouble          4005476642
+    pushdouble          2243076622
+    pushdouble          3870952857
+    pushdouble          3732016268
+    pushint             765654824
+    pushdouble          3490871365
+    pushdouble          2511836413
+    pushint             1685915746
+    pushdouble          3888969200
+    pushint             1414112111
+    pushdouble          2273134842
+    pushdouble          3281911079
+    pushdouble          4080962846
+    pushint             172450625
+    pushdouble          2569994100
+    pushint             980381355
+    pushdouble          4109958455
+    pushdouble          2819808352
+    pushdouble          2716589560
+    pushdouble          2568741196
+    pushdouble          3681446669
+    pushdouble          3329971472
+    pushint             1835478071
+    pushint             660984891
+    pushdouble          3704678404
+    pushdouble          4045999559
+    pushdouble          3422617507
+    pushdouble          3040415634
+    pushint             1762651403
+    pushint             1719377915
+    pushdouble          3470491036
+    pushdouble          2693910283
+    pushdouble          3642056355
+    pushdouble          3138596744
+    pushint             1364962596
+    pushint             2073328063
+    pushint             1983633131
+    pushint             926494387
+    pushdouble          3423689081
+    pushdouble          2150032023
+    pushdouble          4096667949
+    pushint             1749200295
+    pushdouble          3328846651
+    pushint             309677260
+    pushint             2016342300
+    pushint             1779581495
+    pushdouble          3079819751
+    pushint             111262694
+    pushint             1274766160
+    pushint             443224088
+    pushint             298511866
+    pushint             1025883608
+    pushdouble          3806446537
+    pushint             1145181785
+    pushint             168956806
+    pushdouble          3641502830
+    pushdouble          3584813610
+    pushint             1689216846
+    pushdouble          3666258015
+    pushdouble          3200248200
+    pushint             1692713982
+    pushdouble          2646376535
+    pushdouble          4042768518
+    pushint             1618508792
+    pushint             1610833997
+    pushdouble          3523052358
+    pushdouble          4130873264
+    pushint             2001055236
+    pushdouble          3610705100
+    pushdouble          2202168115
+    pushdouble          4028541809
+    pushdouble          2961195399
+    pushint             1006657119
+    pushint             2006996926
+    pushdouble          3186142756
+    pushint             1430667929
+    pushdouble          3210227297
+    pushint             1314452623
+    pushdouble          4074634658
+    pushdouble          4101304120
+    pushdouble          2273951170
+    pushint             1399257539
+    pushdouble          3367210612
+    pushdouble          3027628629
+    pushint             1190975929
+    pushint             2062231137
+    pushdouble          2333990788
+    pushdouble          2221543033
+    pushdouble          2438960610
+    pushint             1181637006
+    pushint             548689776
+    pushdouble          2362791313
+    pushdouble          3372408396
+    pushdouble          3104550113
+    pushdouble          3145860560
+    pushint             296247880
+    pushint             1970579870
+    pushdouble          3078560182
+    pushdouble          3769228297
+    pushint             1714227617
+    pushdouble          3291629107
+    pushdouble          3898220290
+    pushint             166772364
+    pushint             1251581989
+    pushint             493813264
+    pushint             448347421
+    pushint             195405023
+    pushdouble          2709975567
+    pushint             677966185
+    pushdouble          3703036547
+    pushint             1463355134
+    pushdouble          2715995803
+    pushint             1338867538
+    pushint             1343315457
+    pushdouble          2802222074
+    pushdouble          2684532164
+    pushint             233230375
+    pushdouble          2599980071
+    pushint             2000651841
+    pushdouble          3277868038
+    pushint             1638401717
+    pushdouble          4028070440
+    pushdouble          3237316320
+    pushint             6314154
+    pushint             819756386
+    pushint             300326615
+    pushint             590932579
+    pushint             1405279636
+    pushdouble          3267499572
+    pushdouble          3150704214
+    pushdouble          2428286686
+    pushdouble          3959192993
+    pushdouble          3461946742
+    pushint             1862657033
+    pushint             1266418056
+    pushint             963775037
+    pushint             2089974820
+    pushdouble          2263052895
+    pushint             1917689273
+    pushint             448879540
+    pushdouble          3550394620
+    pushdouble          3981727096
+    pushint             150775221
+    pushdouble          3627908307
+    pushint             1303187396
+    pushint             508620638
+    pushdouble          2975983352
+    pushdouble          2726630617
+    pushint             1817252668
+    pushint             1876281319
+    pushint             1457606340
+    pushint             908771278
+    pushdouble          3720792119
+    pushdouble          3617206836
+    pushdouble          2455994898
+    pushint             1729034894
+    pushint             1080033504
+    newarray            256
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS2")
+
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS3")
+    pushint             976866871
+    pushdouble          3556439503
+    pushdouble          2881648439
+    pushint             1522871579
+    pushint             1555064734
+    pushint             1336096578
+    pushdouble          3548522304
+    pushdouble          2579274686
+    pushdouble          3574697629
+    pushdouble          3205460757
+    pushdouble          3593280638
+    pushdouble          3338716283
+    pushdouble          3079412587
+    pushint             564236357
+    pushdouble          2993598910
+    pushint             1781952180
+    pushint             1464380207
+    pushdouble          3163844217
+    pushdouble          3332601554
+    pushint             1699332808
+    pushint             1393555694
+    pushint             1183702653
+    pushdouble          3581086237
+    pushint             1288719814
+    pushint             691649499
+    pushdouble          2847557200
+    pushdouble          2895455976
+    pushdouble          3193889540
+    pushdouble          2717570544
+    pushint             1781354906
+    pushint             1676643554
+    pushdouble          2592534050
+    pushdouble          3230253752
+    pushint             1126444790
+    pushdouble          2770207658
+    pushdouble          2633158820
+    pushdouble          2210423226
+    pushdouble          2615765581
+    pushdouble          2414155088
+    pushdouble          3127139286
+    pushint             673620729
+    pushdouble          2805611233
+    pushint             1269405062
+    pushdouble          4015350505
+    pushdouble          3341807571
+    pushdouble          4149409754
+    pushint             1057255273
+    pushint             2012875353
+    pushdouble          2162469141
+    pushdouble          2276492801
+    pushdouble          2601117357
+    pushint             993977747
+    pushdouble          3918593370
+    pushdouble          2654263191
+    pushint             753973209
+    pushint             36408145
+    pushdouble          2530585658
+    pushint             25011837
+    pushdouble          3520020182
+    pushint             2088578344
+    pushint             530523599
+    pushdouble          2918365339
+    pushint             1524020338
+    pushint             1518925132
+    pushdouble          3760827505
+    pushdouble          3759777254
+    pushint             1202760957
+    pushdouble          3985898139
+    pushdouble          3906192525
+    pushint             674977740
+    pushdouble          4174734889
+    pushint             2031300136
+    pushint             2019492241
+    pushdouble          3983892565
+    pushdouble          4153806404
+    pushdouble          3822280332
+    pushint             352677332
+    pushdouble          2297720250
+    pushint             60907813
+    pushint             90501309
+    pushdouble          3286998549
+    pushint             1016092578
+    pushdouble          2535922412
+    pushdouble          2839152426
+    pushint             457141659
+    pushint             509813237
+    pushdouble          4120667899
+    pushint             652014361
+    pushint             1966332200
+    pushdouble          2975202805
+    pushint             55981186
+    pushdouble          2327461051
+    pushint             676427537
+    pushdouble          3255491064
+    pushdouble          2882294119
+    pushdouble          3433927263
+    pushint             1307055953
+    pushint             942726286
+    pushint             933058658
+    pushdouble          2468411793
+    pushdouble          3933900994
+    pushdouble          4215176142
+    pushint             1361170020
+    pushint             2001714738
+    pushdouble          2830558078
+    pushdouble          3274259782
+    pushint             1222529897
+    pushint             1679025792
+    pushdouble          2729314320
+    pushdouble          3714953764
+    pushint             1770335741
+    pushint             151462246
+    pushdouble          3013232138
+    pushint             1682292957
+    pushint             1483529935
+    pushint             471910574
+    pushint             1539241949
+    pushint             458788160
+    pushdouble          3436315007
+    pushint             1807016891
+    pushdouble          3718408830
+    pushint             978976581
+    pushint             1043663428
+    pushdouble          3165965781
+    pushint             1927990952
+    pushdouble          4200891579
+    pushdouble          2372276910
+    pushdouble          3208408903
+    pushdouble          3533431907
+    pushint             1412390302
+    pushdouble          2931980059
+    pushdouble          4132332400
+    pushint             1947078029
+    pushdouble          3881505623
+    pushdouble          4168226417
+    pushdouble          2941484381
+    pushint             1077988104
+    pushint             1320477388
+    pushint             886195818
+    pushint             18198404
+    pushdouble          3786409000
+    pushdouble          2509781533
+    pushint             112762804
+    pushdouble          3463356488
+    pushint             1866414978
+    pushint             891333506
+    pushint             18488651
+    pushint             661792760
+    pushint             1628790961
+    pushdouble          3885187036
+    pushdouble          3141171499
+    pushint             876946877
+    pushdouble          2693282273
+    pushint             1372485963
+    pushint             791857591
+    pushdouble          2686433993
+    pushdouble          3759982718
+    pushdouble          3167212022
+    pushdouble          3472953795
+    pushdouble          2716379847
+    pushint             445679433
+    pushdouble          3561995674
+    pushdouble          3504004811
+    pushdouble          3574258232
+    pushint             54117162
+    pushdouble          3331405415
+    pushdouble          2381918588
+    pushdouble          3769707343
+    pushdouble          4154350007
+    pushint             1140177722
+    pushdouble          4074052095
+    pushint             668550556
+    pushdouble          3214352940
+    pushint             367459370
+    pushint             261225585
+    pushdouble          2610173221
+    pushdouble          4209349473
+    pushdouble          3468074219
+    pushdouble          3265815641
+    pushint             314222801
+    pushdouble          3066103646
+    pushdouble          3808782860
+    pushint             282218597
+    pushdouble          3406013506
+    pushdouble          3773591054
+    pushint             379116347
+    pushint             1285071038
+    pushint             846784868
+    pushdouble          2669647154
+    pushdouble          3771962079
+    pushdouble          3550491691
+    pushdouble          2305946142
+    pushint             453669953
+    pushint             1268987020
+    pushdouble          3317592352
+    pushdouble          3279303384
+    pushdouble          3744833421
+    pushdouble          2610507566
+    pushdouble          3859509063
+    pushint             266596637
+    pushdouble          3847019092
+    pushint             517658769
+    pushdouble          3462560207
+    pushdouble          3443424879
+    pushint             370717030
+    pushdouble          4247526661
+    pushdouble          2224018117
+    pushdouble          4143653529
+    pushdouble          4112773975
+    pushdouble          2788324899
+    pushdouble          2477274417
+    pushint             1456262402
+    pushdouble          2901442914
+    pushint             1517677493
+    pushint             1846949527
+    pushdouble          2295493580
+    pushdouble          3734397586
+    pushdouble          2176403920
+    pushint             1280348187
+    pushint             1908823572
+    pushdouble          3871786941
+    pushint             846861322
+    pushint             1172426758
+    pushdouble          3287448474
+    pushdouble          3383383037
+    pushint             1655181056
+    pushdouble          3139813346
+    pushint             901632758
+    pushint             1897031941
+    pushdouble          2986607138
+    pushdouble          3066810236
+    pushdouble          3447102507
+    pushint             1393639104
+    pushint             373351379
+    pushint             950779232
+    pushint             625454576
+    pushdouble          3124240540
+    pushdouble          4148612726
+    pushint             2007998917
+    pushint             544563296
+    pushdouble          2244738638
+    pushdouble          2330496472
+    pushint             2058025392
+    pushint             1291430526
+    pushint             424198748
+    pushint             50039436
+    pushint             29584100
+    pushdouble          3605783033
+    pushdouble          2429876329
+    pushdouble          2791104160
+    pushint             1057563949
+    pushdouble          3255363231
+    pushdouble          3075367218
+    pushdouble          3463963227
+    pushint             1469046755
+    pushint             985887462
+    newarray            256
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS3")
+
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+    pushbyte            16
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BLOCK_SIZE")
+    pushbyte            8
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BLOCK_SIZE")
+
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK")
+    pushshort           256
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK")
+
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P_SZ")
+    getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+    pushbyte            2
+    add
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P_SZ")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KP") slotid 1 type QName(PackageNamespace("", "#0"), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS0") slotid 2 type QName(PackageNamespace("", "#0"), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS1") slotid 3 type QName(PackageNamespace("", "#0"), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS2") slotid 4 type QName(PackageNamespace("", "#0"), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS3") slotid 5 type QName(PackageNamespace("", "#0"), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS") slotid 6 type QName(PackageNamespace("", "#0"), "uint") value Integer(16) end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BLOCK_SIZE") slotid 7 type QName(PackageNamespace("", "#0"), "uint") value Integer(8) end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK") slotid 8 type QName(PackageNamespace("", "#0"), "uint") value Integer(256) end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P_SZ") slotid 9 type QName(PackageNamespace("", "#0"), "uint") value Double(18) end
+end ; class

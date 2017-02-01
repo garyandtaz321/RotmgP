@@ -1,0 +1,29 @@
+script ; 1470
+ sinit
+  refid "_-1N-:MysteryBoxInfo.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("MysteryBoxInfo", [PackageNamespace("_-1N-")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-1N-:MysteryBoxInfo"
+    popscope
+    initproperty        QName(PackageNamespace("_-1N-"), "MysteryBoxInfo")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-1N-"), "MysteryBoxInfo")
+  #include "MysteryBoxInfo.class.asasm"
+ end ; trait
+end ; script

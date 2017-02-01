@@ -1,0 +1,192 @@
+class
+ refid "_-0PF:_-0YT"
+ instance QName(PackageNamespace("_-0PF"), "_-0YT")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  implements Multiname("_-0jp", [PackageNamespace("_-0ld")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0X0")
+  iinit
+   refid "_-0PF:_-0YT/iinit"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     popscope
+     subtract_i
+     newactivation
+     negate
+     getlocal2
+     pop
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iftrue              L25
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     iftrue              L30
+
+L25:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.util"), "_-1hw")
+     getlocal0
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.util"), "_-1hw"), 1
+     initproperty        QName(PackageNamespace("", "#0"), "_-0FE")
+
+L30:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-0FE") type QName(PackageNamespace("com.company.assembleegameclient.util"), "_-1hw") end
+  trait method QName(ProtectedNamespace("_-0X0"), "_-0Hr")
+   method
+    refid "_-0PF:_-0YT/_-0X0:_-0Hr"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      lshift
+      modulo
+      rshift
+      equals
+      typeof
+      negate_i
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      iftrue              L70
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0FE")
+      callproperty        QName(PackageNamespace("", "#0"), "_-216"), 0
+      getlocal1
+      iftrue              L36
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      subtract
+      jump                L32
+
+      typeof
+      negate_i
+      dxnslate
+      convert_u
+      equals
+      decrement
+L32:
+      getlocal2
+      iffalse             L36
+
+      pushdouble          0.5
+      multiply
+L36:
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal2
+      iffalse             L70
+
+      getlocal0
+      jump                L47
+
+      nextname
+      nextvalue
+      pop
+      setlocal2
+
+      greaterthan
+      setlocal3
+
+L47:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0FE")
+      callproperty        QName(PackageNamespace("", "#0"), "_-0Ct"), 0
+      getlocal1
+      dup
+      iffalse             L56
+
+      pop
+      getlocal2
+      convert_b
+L56:
+      iftrue              L69
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      subtract
+      getlocal2
+      dup
+      iftrue              L66
+
+      pop
+      getlocal0
+      convert_b
+L66:
+      iffalse             L69
+
+      pushdouble          0.5
+      multiply
+L69:
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+L70:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0PF:_-0YT/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

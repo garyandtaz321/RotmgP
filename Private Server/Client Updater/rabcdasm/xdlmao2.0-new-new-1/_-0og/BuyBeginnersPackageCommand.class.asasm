@@ -1,0 +1,427 @@
+class
+ refid "_-0og:BuyBeginnersPackageCommand"
+ instance QName(PackageNamespace("_-0og"), "BuyBeginnersPackageCommand")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Dv")
+  iinit
+   refid "_-0og:BuyBeginnersPackageCommand/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     equals
+     decrement
+     coerce_a
+     dup
+     astypelate
+     rshift
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iffalse             L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "account") flag METADATA type QName(PackageNamespace("_-1PE"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "model") flag METADATA type QName(PackageNamespace("_-1Yg"), "_-1Fn")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-nU") flag METADATA type QName(PackageNamespace("_-Nj"), "_-M4")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-0kI") flag METADATA type QName(PackageNamespace("_-0hi"), "_-0PT")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-0DK") flag METADATA type QName(PackageNamespace("_-1xN"), "_-Q2")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "execute")
+   method
+    refid "_-0og:BuyBeginnersPackageCommand/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      swap
+      newactivation
+      negate
+      hasnext
+      convert_u
+      decrement_i
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      iftrue              L34
+
+      jump                L23
+
+      pushwith
+      greaterthan
+      increment
+      coerce_s
+      subtract
+      rshift
+L23:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "account")
+      callproperty        QName(Namespace("_-1lo"), "_-vD"), 0
+      iffalse             L44
+
+      getlocal1
+      dup
+      iffalse             L33
+
+      pop
+      getlocal0
+      convert_b
+L33:
+      iftrue              L46
+
+L34:
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-0og:BuyBeginnersPackageCommand"), "_-1XY"), 0
+
+      getlocal2
+      dup
+      iftrue              L42
+
+      pop
+      getlocal2
+      convert_b
+L42:
+      iffalse             L46
+
+      jump                L46
+
+L44:
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-0og:BuyBeginnersPackageCommand"), "_-NO"), 0
+
+L46:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0og:BuyBeginnersPackageCommand"), "_-1XY")
+   method
+    refid "_-0og:BuyBeginnersPackageCommand/_-1XY"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      lshift
+      newactivation
+      istypelate
+      urshift
+      pushtrue
+      rshift
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L66
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "account")
+      getlocal2
+      iftrue              L51
+
+      getlex              QName(PackageNamespace("_-1fj"), "_-0Iw")
+      istypelate
+      getlocal2
+      iftrue              L34
+
+      jump                L30
+
+      setlocal2
+
+      rshift
+      newactivation
+      greaterequals
+      hasnext
+      newactivation
+L30:
+      dup
+      iftrue              L53
+
+      getlocal2
+      iftrue              L53
+
+L34:
+      pop
+      getlocal1
+      jump                L43
+
+      lshift
+      decrement_i
+      convert_i
+      bitand
+      subtract_i
+      popscope
+L43:
+      dup
+      iftrue              L48
+
+      pop
+      getlocal2
+      convert_b
+L48:
+      iffalse             L63
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "account")
+L51:
+      getlex              QName(PackageNamespace("_-yh"), "_-10")
+      istypelate
+L53:
+      iffalse             L64
+
+      getlocal2
+      iftrue              L63
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-nU")
+      findpropstrict      QName(PackageNamespace("_-0tB"), "_-0mY")
+      constructprop       QName(PackageNamespace("_-0tB"), "_-0mY"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+      getlocal2
+      iftrue              L66
+
+L63:
+      jump                L66
+
+L64:
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-0og:BuyBeginnersPackageCommand"), "_-1Nj"), 0
+
+L66:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0og:BuyBeginnersPackageCommand"), "_-1Nj")
+   method
+    refid "_-0og:BuyBeginnersPackageCommand/_-1Nj"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal_i          2
+      decrement
+      decrement_i
+      increment_i
+      hasnext
+      increment_i
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-1PE"), "_-0Q8")
+      jump                L22
+
+      multiply_i
+      setlocal2
+
+      increment_i
+      getlocal2
+      kill                2
+      getlocal2
+L22:
+      constructprop       QName(PackageNamespace("_-1PE"), "_-0Q8"), 0
+      coerce              QName(PackageNamespace("_-1PE"), "_-0Q8")
+      setlocal1
+
+      getlocal2
+      iftrue              L43
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "model")
+      callproperty        QName(PackageNamespace("", "#0"), "_-0ku"), 0
+      setproperty         QName(PackageNamespace("", "#0"), "offer")
+
+      getlocal3
+      dup
+      iftrue              L38
+
+      pop
+      getlocal3
+      convert_b
+L38:
+      iffalse             L43
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0DK")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+L43:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0og:BuyBeginnersPackageCommand"), "_-NO")
+   method
+    refid "_-0og:BuyBeginnersPackageCommand/_-NO"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      pushtrue
+      convert_d
+      typeof
+      nextvalue
+      pushtrue
+      setlocal3
+
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iffalse             L20
+
+      pop
+      getlocal1
+      convert_b
+L20:
+      iftrue              L27
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-nU")
+      findpropstrict      QName(PackageNamespace("_-04g"), "_-GE")
+      getlex              QName(PrivateNamespace("*", "_-0og:BuyBeginnersPackageCommand"), "_-1GH")
+      constructprop       QName(PackageNamespace("_-04g"), "_-GE"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+L27:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0og:BuyBeginnersPackageCommand/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    lessequals
+    getlocal1
+    checkfilter
+    convert_d
+    urshift
+    getglobalscope
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    iffalse             L20
+
+    findproperty        QName(PrivateNamespace("*", "_-0og:BuyBeginnersPackageCommand"), "_-1GH")
+    getlex              QName(PackageNamespace("_-6u"), "_-TG")
+    getproperty         QName(PackageNamespace("", "#0"), "_-0O7")
+    initproperty        QName(PrivateNamespace("*", "_-0og:BuyBeginnersPackageCommand"), "_-1GH")
+
+L20:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_-0og:BuyBeginnersPackageCommand"), "_-1GH") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("BuyBeginnersPackageCommand.registerDialog") end
+end ; class

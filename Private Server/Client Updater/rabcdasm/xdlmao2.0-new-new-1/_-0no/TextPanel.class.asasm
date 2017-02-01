@@ -1,0 +1,358 @@
+class
+ refid "_-0no:TextPanel"
+ instance QName(PackageNamespace("_-0no"), "TextPanel")
+  extends QName(PackageNamespace("_-1f4"), "Panel")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-zY")
+  iinit
+   refid "_-0no:TextPanel/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     kill                2
+     setlocal2
+
+     declocal            2
+     inclocal_i          2
+     kill                2
+     equals
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iffalse             L23
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal3
+     iffalse             L23
+
+     getlocal0
+     callpropvoid        QName(PrivateNamespace("*", "_-0no:TextPanel"), "_-bj"), 0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-0no:TextPanel"), "textField") type QName(PackageNamespace("_-0y9"), "_-06T") end
+  trait slot QName(PrivateNamespace("*", "_-0no:TextPanel"), "_-lJ") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PrivateNamespace("*", "_-0no:TextPanel"), "_-uN") type QName(PackageNamespace("", "#0"), "Number") end
+  trait method QName(PackageNamespace("", "#0"), "init")
+   method
+    refid "_-0no:TextPanel/init"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal_i          2
+      convert_b
+      dup
+      getlocal2
+      declocal            2
+      declocal            2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L20
+
+      pop
+      getlocal0
+      convert_b
+L20:
+      iftrue              L68
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:TextPanel"), "textField")
+      getlocal2
+      dup
+      iffalse             L29
+
+      pop
+      getlocal2
+      convert_b
+L29:
+      iftrue              L53
+
+      findpropstrict      QName(PackageNamespace("_-0Mr"), "_-5R")
+      constructprop       QName(PackageNamespace("_-0Mr"), "_-5R"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "setParams"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+      jump                L42
+
+      negate_i
+      inclocal            2
+      declocal_i          2
+      inclocal            2
+      getlocal2
+      inclocal            2
+L42:
+      getlocal2
+      dup
+      iffalse             L48
+
+      pop
+      getlocal3
+      convert_b
+L48:
+      iftrue              L68
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:TextPanel"), "textField")
+      getlocal2
+      iftrue              L87
+
+L53:
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+      getproperty         QName(PackageNamespace("", "#0"), "CENTER")
+      callproperty        QName(PackageNamespace("", "#0"), "setAutoSize"), 1
+      getlex              QName(PackageNamespace("_-0y9"), "_-06T")
+      getproperty         QName(PackageNamespace("", "#0"), "MIDDLE")
+      callpropvoid        QName(PackageNamespace("", "#0"), "setVerticalAlign"), 1
+
+      getlocal3
+      iffalse             L91
+
+      jump                L68
+
+      getlocal2
+      negate
+      inclocal            2
+      increment_i
+      getlocal2
+      inclocal            2
+L68:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:TextPanel"), "textField")
+      getlocal2
+      iftrue              L87
+
+      getlex              QName(PackageNamespace("", "#0"), "WIDTH")
+      pushbyte            2
+      divide
+      getlocal2
+      dup
+      iffalse             L81
+
+      pop
+      getlocal2
+      convert_b
+L81:
+      iftrue              L90
+
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal2
+      iftrue              L91
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:TextPanel"), "textField")
+L87:
+      getlex              QName(PackageNamespace("", "#0"), "HEIGHT")
+      pushbyte            2
+      divide
+L90:
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+L91:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0no:TextPanel"), "_-bj")
+   method
+    refid "_-0no:TextPanel/_-bj"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      swap
+      hasnext
+      pushtrue
+      modulo
+      getlocal3
+      pushundefined
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iftrue              L20
+
+      pop
+      getlocal0
+      convert_b
+L20:
+      iffalse             L95
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_-0y9"), "_-06T")
+      constructprop       QName(PackageNamespace("_-0y9"), "_-06T"), 0
+      pushbyte            16
+      callproperty        QName(PackageNamespace("", "#0"), "setSize"), 1
+      pushint             16777215
+      callproperty        QName(PackageNamespace("", "#0"), "setColor"), 1
+      initproperty        QName(PrivateNamespace("*", "_-0no:TextPanel"), "textField")
+
+      getlocal2
+      dup
+      iftrue              L35
+
+      pop
+      getlocal2
+      convert_b
+L35:
+      iffalse             L80
+
+      getlocal0
+      jump                L44
+
+      getlocal1
+      pushnan
+      convert_s
+      pushundefined
+      not
+      getlocal0
+L44:
+      getproperty         QName(PrivateNamespace("*", "_-0no:TextPanel"), "textField")
+      getlocal2
+      iffalse             L82
+
+      pushtrue
+      callpropvoid        QName(PackageNamespace("", "#0"), "setBold"), 1
+
+      getlocal1
+      iftrue              L91
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:TextPanel"), "textField")
+      getlocal1
+      dup
+      iffalse             L59
+
+      pop
+      getlocal0
+      convert_b
+L59:
+      iftrue              L82
+
+      findpropstrict      QName(PackageNamespace("_-0Mr"), "_-5R")
+      constructprop       QName(PackageNamespace("_-0Mr"), "_-5R"), 0
+      getlex              QName(PackageNamespace("_-6u"), "_-TG")
+      getproperty         QName(PackageNamespace("", "#0"), "_-042")
+      callproperty        QName(PackageNamespace("", "#0"), "setParams"), 1
+      jump                L72
+
+      setlocal2
+
+      not
+      pushfalse
+      convert_o
+      decrement
+      pushwith
+L72:
+      callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+      getlocal1
+      dup
+      iffalse             L79
+
+      pop
+      getlocal0
+      convert_b
+L79:
+      iftrue              L95
+
+L80:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:TextPanel"), "textField")
+L82:
+      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+      pushbyte            0
+      dup
+      dup
+      constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+      newarray            1
+      setproperty         QName(PackageNamespace("", "#0"), "filters")
+
+      getlocal1
+      iftrue              L95
+
+L91:
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:TextPanel"), "textField")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L95:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0no:TextPanel/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

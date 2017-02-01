@@ -1,0 +1,124 @@
+class
+ refid "_-0gF:_-Ww"
+ instance QName(PackageNamespace("_-0gF"), "_-Ww")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0gJ")
+  iinit
+   refid "_-0gF:_-Ww/iinit"
+   param QName(PackageNamespace("_-14-"), "_-0kz")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     setlocal2
+
+     setlocal2
+
+     negate_i
+     pushnan
+     getlocal2
+     declocal            2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     jump                L21
+
+     inclocal_i          2
+     declocal            2
+     subtract_i
+     getlocal2
+     declocal            2
+     pushscope
+
+L21:
+     getlocal2
+     dup
+     iffalse             L27
+
+     pop
+     getlocal0
+     convert_b
+L27:
+     iftrue              L38
+
+     getlocal0
+     getlex              QName(PackageNamespace("", "#0"), "NAMERESULTEVENT")
+     constructsuper      1
+
+     getlocal2
+     dup
+     iffalse             L37
+
+     pop
+     getlocal1
+     convert_b
+L37:
+     iftrue              L41
+
+L38:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "_-1Xe")
+
+L41:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-1Xe") type QName(PackageNamespace("_-14-"), "_-0kz") end
+ end ; instance
+ cinit
+  refid "_-0gF:_-Ww/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    add
+    multiply_i
+    pushnan
+    add
+    getlocal3
+    coerce_s
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    iftrue              L19
+
+    findproperty        QName(PackageNamespace("", "#0"), "NAMERESULTEVENT")
+    pushstring          "NAMERESULTEVENT"
+    initproperty        QName(PackageNamespace("", "#0"), "NAMERESULTEVENT")
+
+L19:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "NAMERESULTEVENT") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("NAMERESULTEVENT") end
+end ; class

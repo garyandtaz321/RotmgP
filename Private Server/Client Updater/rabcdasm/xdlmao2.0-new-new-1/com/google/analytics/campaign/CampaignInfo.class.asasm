@@ -1,0 +1,222 @@
+class
+ refid "com.google.analytics.campaign:CampaignInfo"
+ instance QName(PackageNamespace("com.google.analytics.campaign"), "CampaignInfo")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.campaign:CampaignInfo")
+  iinit
+   refid "com.google.analytics.campaign:CampaignInfo/iinit"
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   flag HAS_OPTIONAL
+   optional True()
+   optional False()
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignInfo"), "_empty")
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignInfo"), "_empty")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignInfo"), "_new")
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignInfo"), "_new")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignInfo"), "_new") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait method QName(PackageNamespace("", "#0"), "toURLString")
+   method
+    refid "com.google.analytics.campaign:CampaignInfo/toURLString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "toVariables")
+      callproperty        QName(PackageNamespace("", "#0"), "toVariables"), 0
+      coerce              QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+      setlocal1
+
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "toString"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "isNew")
+   method
+    refid "com.google.analytics.campaign:CampaignInfo/isNew"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignInfo"), "_new")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "utmcn")
+   method
+    refid "com.google.analytics.campaign:CampaignInfo/utmcn/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "1"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "isEmpty")
+   method
+    refid "com.google.analytics.campaign:CampaignInfo/isEmpty"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignInfo"), "_empty")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toVariables")
+   method
+    refid "com.google.analytics.campaign:CampaignInfo/toVariables"
+    returns QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+      constructprop       QName(PackageNamespace("com.google.analytics.utils"), "Variables"), 0
+      coerce              QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+      setlocal1
+
+      getlocal1
+      pushtrue
+      setproperty         QName(PackageNamespace("", "#0"), "URIencode")
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "isEmpty")
+      callproperty        QName(PackageNamespace("", "#0"), "isEmpty"), 0
+      not
+      dup
+      iffalse             L18
+
+      pop
+      findpropstrict      QName(PackageNamespace("", "#0"), "isNew")
+      callproperty        QName(PackageNamespace("", "#0"), "isNew"), 0
+      convert_b
+L18:
+      iffalse             L22
+
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "utmcn")
+      setproperty         Multiname("utmcn", [PrivateNamespace("*", "com.google.analytics.campaign:CampaignInfo"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignInfo/toVariables"), PackageNamespace("com.google.analytics.campaign"), PackageInternalNs("com.google.analytics.campaign"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.campaign:CampaignInfo"), StaticProtectedNs("com.google.analytics.campaign:CampaignInfo"), StaticProtectedNs("Object")])
+
+L22:
+      findpropstrict      QName(PackageNamespace("", "#0"), "isEmpty")
+      callproperty        QName(PackageNamespace("", "#0"), "isEmpty"), 0
+      not
+      dup
+      iffalse             L31
+
+      pop
+      findpropstrict      QName(PackageNamespace("", "#0"), "isNew")
+      callproperty        QName(PackageNamespace("", "#0"), "isNew"), 0
+      not
+L31:
+      iffalse             L35
+
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "utmcr")
+      setproperty         Multiname("utmcr", [PrivateNamespace("*", "com.google.analytics.campaign:CampaignInfo"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignInfo/toVariables"), PackageNamespace("com.google.analytics.campaign"), PackageInternalNs("com.google.analytics.campaign"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.campaign:CampaignInfo"), StaticProtectedNs("com.google.analytics.campaign:CampaignInfo"), StaticProtectedNs("Object")])
+
+L35:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "utmcr")
+   method
+    refid "com.google.analytics.campaign:CampaignInfo/utmcr/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "1"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignInfo"), "_empty") type QName(PackageNamespace("", "#0"), "Boolean") end
+ end ; instance
+ cinit
+  refid "com.google.analytics.campaign:CampaignInfo/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

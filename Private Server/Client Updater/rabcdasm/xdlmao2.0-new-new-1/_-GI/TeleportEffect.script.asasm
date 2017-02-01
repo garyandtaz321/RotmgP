@@ -1,0 +1,61 @@
+script ; 1722
+ sinit
+  refid "_-GI:TeleportEffect.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("TeleportEffect", [PackageNamespace("_-GI")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "_-1S9")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "_-1S9")
+    newclass            "_-GI:TeleportEffect"
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-GI"), "TeleportEffect")
+
+    findpropstrict      Multiname("TeleportParticle", [PrivateNamespace("*", "_-GI:TeleportEffect")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "Particle")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "Particle")
+    newclass            "_-GI:TeleportEffect/TeleportParticle"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-GI:TeleportEffect"), "TeleportParticle")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-GI"), "TeleportEffect")
+  #include "TeleportEffect.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-GI:TeleportEffect"), "TeleportParticle")
+  #include "TeleportEffect/TeleportParticle.class.asasm"
+ end ; trait
+end ; script

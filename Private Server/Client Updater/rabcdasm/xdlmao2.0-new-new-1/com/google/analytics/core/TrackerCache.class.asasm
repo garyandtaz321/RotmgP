@@ -1,0 +1,1472 @@
+class
+ refid "com.google.analytics.core:TrackerCache"
+ instance QName(PackageNamespace("com.google.analytics.core"), "TrackerCache")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("GoogleAnalyticsAPI", [PackageNamespace("com.google.analytics.v4")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.core:TrackerCache")
+  iinit
+   refid "com.google.analytics.core:TrackerCache/iinit"
+   param QName(PackageNamespace("com.google.analytics.v4"), "GoogleAnalyticsAPI")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "tracker")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:TrackerCache#0"), "_ar")
+     newarray            0
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:TrackerCache#0"), "_ar")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "size")
+   method
+    refid "com.google.analytics.core:TrackerCache/size"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:TrackerCache#0"), "_ar")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "flush")
+   method
+    refid "com.google.analytics.core:TrackerCache/flush"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("", "#0"), "Object")
+      setlocal1
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      pushbyte            0
+      setlocal            5
+
+      getlex              QName(PackageNamespace("", "#0"), "tracker")
+      pushnull
+      ifne                L19
+
+      returnvoid
+
+L19:
+      findpropstrict      QName(PackageNamespace("", "#0"), "size")
+      callproperty        QName(PackageNamespace("", "#0"), "size"), 0
+      pushbyte            0
+      ifngt               L68
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:TrackerCache#0"), "_ar")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      convert_i
+      setlocal            4
+
+      jump                L65
+
+L28:
+      label
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:TrackerCache#0"), "_ar")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "shift"), 0
+      coerce              QName(PackageNamespace("", "#0"), "Object")
+      setlocal1
+
+      getlocal1
+      getproperty         Multiname("name", [PrivateNamespace("*", "com.google.analytics.core:TrackerCache#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.core:TrackerCache#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:TrackerCache"), StaticProtectedNs("com.google.analytics.core:TrackerCache"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("", "#0"), "String")
+      astypelate
+      coerce_s
+      setlocal2
+
+      getlocal1
+      getproperty         Multiname("args", [PrivateNamespace("*", "com.google.analytics.core:TrackerCache#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.core:TrackerCache#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:TrackerCache"), StaticProtectedNs("com.google.analytics.core:TrackerCache"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("", "#0"), "Array")
+      astypelate
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal3
+
+      getlocal2
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L55
+
+      pop
+      getlocal2
+      getlex              QName(PackageNamespace("", "#0"), "tracker")
+      in
+L55:
+      iffalse             L64
+
+      getlex              QName(PackageNamespace("", "#0"), "tracker")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:TrackerCache#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.core:TrackerCache#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:TrackerCache"), StaticProtectedNs("com.google.analytics.core:TrackerCache"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("", "#0"), "Function")
+      astypelate
+      getlex              QName(PackageNamespace("", "#0"), "tracker")
+      getlocal3
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+
+L64:
+      inclocal_i          5
+L65:
+      getlocal            5
+      getlocal            4
+      iflt                L28
+
+L68:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "enqueue")
+   method
+    refid "com.google.analytics.core:TrackerCache/enqueue"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    flag NEED_REST
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushnull
+      ifne                L7
+
+      pushfalse
+      returnvalue
+
+L7:
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:TrackerCache#0"), "_ar")
+      pushstring          "name"
+      getlocal1
+      pushstring          "args"
+      getlocal2
+      newobject           2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "link")
+   method
+    refid "com.google.analytics.core:TrackerCache/link"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "link"
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addOrganic")
+   method
+    refid "com.google.analytics.core:TrackerCache/addOrganic"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "addOrganic"
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setAllowLinker")
+   method
+    refid "com.google.analytics.core:TrackerCache/setAllowLinker"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setAllowLinker"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "trackEvent")
+   method
+    refid "com.google.analytics.core:TrackerCache/trackEvent"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional Double(nan)
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "trackEvent"
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 5
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getLinkerUrl")
+   method
+    refid "com.google.analytics.core:TrackerCache/getLinkerUrl"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "String")
+    flag HAS_OPTIONAL
+    optional Utf8("")
+    optional False()
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "CACHE_THROW_ERROR")
+      iffalse             L8
+
+      findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
+      pushstring          "The tracker is not ready and you can use the 'getLinkerUrl' method for the moment."
+      constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
+      throw
+L8:
+      pushstring          ""
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getClientInfo")
+   method
+    refid "com.google.analytics.core:TrackerCache/getClientInfo"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "CACHE_THROW_ERROR")
+      iffalse             L8
+
+      findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
+      pushstring          "The tracker is not ready and you can use the 'getClientInfo' method for the moment."
+      constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
+      throw
+L8:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "trackTrans")
+   method
+    refid "com.google.analytics.core:TrackerCache/trackTrans"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "trackTrans"
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "trackPageview")
+   method
+    refid "com.google.analytics.core:TrackerCache/trackPageview"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Utf8("")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "trackPageview"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setClientInfo")
+   method
+    refid "com.google.analytics.core:TrackerCache/setClientInfo"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setClientInfo"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "linkByPost")
+   method
+    refid "com.google.analytics.core:TrackerCache/linkByPost"
+    param QName(PackageNamespace("", "#0"), "Object")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "linkByPost"
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "tracker") type QName(PackageNamespace("com.google.analytics.v4"), "GoogleAnalyticsAPI") end
+  trait method QName(PackageNamespace("", "#0"), "setCookieTimeout")
+   method
+    refid "com.google.analytics.core:TrackerCache/setCookieTimeout"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setCookieTimeout"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "isEmpty")
+   method
+    refid "com.google.analytics.core:TrackerCache/isEmpty"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:TrackerCache#0"), "_ar")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            0
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getDetectTitle")
+   method
+    refid "com.google.analytics.core:TrackerCache/getDetectTitle"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "CACHE_THROW_ERROR")
+      iffalse             L8
+
+      findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
+      pushstring          "The tracker is not ready and you can use the 'getDetectTitle' method for the moment."
+      constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
+      throw
+L8:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "resetSession")
+   method
+    refid "com.google.analytics.core:TrackerCache/resetSession"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "resetSession"
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setDetectFlash")
+   method
+    refid "com.google.analytics.core:TrackerCache/setDetectFlash"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setDetectFlash"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "clear")
+   method
+    refid "com.google.analytics.core:TrackerCache/clear"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:TrackerCache#0"), "_ar")
+      newarray            0
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:TrackerCache#0"), "_ar")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCampNameKey")
+   method
+    refid "com.google.analytics.core:TrackerCache/setCampNameKey"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setCampNameKey"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addItem")
+   method
+    refid "com.google.analytics.core:TrackerCache/addItem"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 8
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "addItem"
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      getlocal            5
+      getlocal            6
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 7
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "createEventTracker")
+   method
+    refid "com.google.analytics.core:TrackerCache/createEventTracker"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("com.google.analytics.core"), "EventTracker")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "CACHE_THROW_ERROR")
+      iffalse             L8
+
+      findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
+      pushstring          "The tracker is not ready and you can use the 'createEventTracker' method for the moment."
+      constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
+      throw
+L8:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "clearIgnoredOrganic")
+   method
+    refid "com.google.analytics.core:TrackerCache/clearIgnoredOrganic"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "clearIgnoredOrganic"
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setVar")
+   method
+    refid "com.google.analytics.core:TrackerCache/setVar"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setVar"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setDomainName")
+   method
+    refid "com.google.analytics.core:TrackerCache/setDomainName"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setDomainName"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCampSourceKey")
+   method
+    refid "com.google.analytics.core:TrackerCache/setCampSourceKey"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setCampSourceKey"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addTrans")
+   method
+    refid "com.google.analytics.core:TrackerCache/addTrans"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 9
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "CACHE_THROW_ERROR")
+      iffalse             L8
+
+      findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
+      pushstring          "The tracker is not ready and you can use the 'addTrans' method for the moment."
+      constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
+      throw
+L8:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCampContentKey")
+   method
+    refid "com.google.analytics.core:TrackerCache/setCampContentKey"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setCampContentKey"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setLocalServerMode")
+   method
+    refid "com.google.analytics.core:TrackerCache/setLocalServerMode"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setLocalServerMode"
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getLocalGifPath")
+   method
+    refid "com.google.analytics.core:TrackerCache/getLocalGifPath"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "CACHE_THROW_ERROR")
+      iffalse             L8
+
+      findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
+      pushstring          "The tracker is not ready and you can use the 'getLocalGifPath' method for the moment."
+      constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
+      throw
+L8:
+      pushstring          ""
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setAllowAnchor")
+   method
+    refid "com.google.analytics.core:TrackerCache/setAllowAnchor"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setAllowAnchor"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "clearIgnoredRef")
+   method
+    refid "com.google.analytics.core:TrackerCache/clearIgnoredRef"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "clearIgnoredRef"
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setLocalGifPath")
+   method
+    refid "com.google.analytics.core:TrackerCache/setLocalGifPath"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setLocalGifPath"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getVersion")
+   method
+    refid "com.google.analytics.core:TrackerCache/getVersion"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "CACHE_THROW_ERROR")
+      iffalse             L8
+
+      findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
+      pushstring          "The tracker is not ready and you can use the 'getVersion' method for the moment."
+      constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
+      throw
+L8:
+      pushstring          ""
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCookiePath")
+   method
+    refid "com.google.analytics.core:TrackerCache/setCookiePath"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setCookiePath"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setSampleRate")
+   method
+    refid "com.google.analytics.core:TrackerCache/setSampleRate"
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setSampleRate"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setDetectTitle")
+   method
+    refid "com.google.analytics.core:TrackerCache/setDetectTitle"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setDetectTitle"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setAllowHash")
+   method
+    refid "com.google.analytics.core:TrackerCache/setAllowHash"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setAllowHash"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addIgnoredOrganic")
+   method
+    refid "com.google.analytics.core:TrackerCache/addIgnoredOrganic"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "addIgnoredOrganic"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCampNOKey")
+   method
+    refid "com.google.analytics.core:TrackerCache/setCampNOKey"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setCampNOKey"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getServiceMode")
+   method
+    refid "com.google.analytics.core:TrackerCache/getServiceMode"
+    returns QName(PackageNamespace("com.google.analytics.core"), "ServerOperationMode")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "CACHE_THROW_ERROR")
+      iffalse             L8
+
+      findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
+      pushstring          "The tracker is not ready and you can use the 'getServiceMode' method for the moment."
+      constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
+      throw
+L8:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setLocalRemoteServerMode")
+   method
+    refid "com.google.analytics.core:TrackerCache/setLocalRemoteServerMode"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setLocalRemoteServerMode"
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "cookiePathCopy")
+   method
+    refid "com.google.analytics.core:TrackerCache/cookiePathCopy"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "cookiePathCopy"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:TrackerCache#0"), "_ar") type QName(PackageNamespace("", "#0"), "Array") end
+  trait method QName(PackageNamespace("", "#0"), "getDetectFlash")
+   method
+    refid "com.google.analytics.core:TrackerCache/getDetectFlash"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "CACHE_THROW_ERROR")
+      iffalse             L8
+
+      findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
+      pushstring          "The tracker is not ready and you can use the 'getDetectFlash' method for the moment."
+      constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
+      throw
+L8:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCampaignTrack")
+   method
+    refid "com.google.analytics.core:TrackerCache/setCampaignTrack"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setCampaignTrack"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "clearOrganic")
+   method
+    refid "com.google.analytics.core:TrackerCache/clearOrganic"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "clearOrganic"
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCampTermKey")
+   method
+    refid "com.google.analytics.core:TrackerCache/setCampTermKey"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setCampTermKey"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addIgnoredRef")
+   method
+    refid "com.google.analytics.core:TrackerCache/addIgnoredRef"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "addIgnoredRef"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCampMediumKey")
+   method
+    refid "com.google.analytics.core:TrackerCache/setCampMediumKey"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setCampMediumKey"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setSessionTimeout")
+   method
+    refid "com.google.analytics.core:TrackerCache/setSessionTimeout"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setSessionTimeout"
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setRemoteServerMode")
+   method
+    refid "com.google.analytics.core:TrackerCache/setRemoteServerMode"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "enqueue")
+      pushstring          "setRemoteServerMode"
+      callpropvoid        QName(PackageNamespace("", "#0"), "enqueue"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "element")
+   method
+    refid "com.google.analytics.core:TrackerCache/element"
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:TrackerCache#0"), "_ar")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:TrackerCache#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.core:TrackerCache#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:TrackerCache"), StaticProtectedNs("com.google.analytics.core:TrackerCache"), StaticProtectedNs("Object")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getAccount")
+   method
+    refid "com.google.analytics.core:TrackerCache/getAccount"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "CACHE_THROW_ERROR")
+      iffalse             L8
+
+      findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
+      pushstring          "The tracker is not ready and you can use the 'getAccount' method for the moment."
+      constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
+      throw
+L8:
+      pushstring          ""
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.core:TrackerCache/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace("", "#0"), "CACHE_THROW_ERROR") slotid 1 type QName(PackageNamespace("", "#0"), "Boolean") end
+end ; class

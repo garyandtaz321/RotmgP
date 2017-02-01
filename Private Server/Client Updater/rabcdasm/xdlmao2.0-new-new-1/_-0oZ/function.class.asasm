@@ -1,0 +1,125 @@
+class
+ refid "_-0oZ:function"
+ instance QName(PackageNamespace("_-0oZ"), "function")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-JH")
+  iinit
+   refid "_-0oZ:function/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   flag HAS_OPTIONAL
+   optional Utf8("")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal            2
+     instanceof
+     convert_u
+     declocal            3
+     not
+     kill                3
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     jump                L23
+
+     declocal_i          3
+     bitand
+     declocal            2
+     decrement_i
+     pushundefined
+     instanceof
+L23:
+     iffalse             L27
+
+     pop
+     getlocal0
+     convert_b
+L27:
+     iftrue              L45
+
+     getlocal0
+     constructsuper      0
+
+     getlocal3
+     dup
+     iffalse             L36
+
+     pop
+     getlocal0
+     convert_b
+L36:
+     iftrue              L45
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "name")
+
+     getlocal            4
+     iffalse             L45
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "data")
+
+L45:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "name") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "data") type QName(PackageNamespace("", "#0"), "String") end
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "_-0oZ:function/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "data")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0oZ:function/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

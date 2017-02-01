@@ -1,0 +1,205 @@
+class
+ refid "com.company.util:_-FF"
+ instance QName(PackageNamespace("com.company.util"), "_-FF")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1ue")
+  iinit
+   refid "com.company.util:_-FF/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     multiply
+     subtract
+     hasnext
+     dxnslate
+     urshift
+     bitnot
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iftrue              L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.util:_-FF/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace("", "#0"), "_-2-") flag FINAL dispid 3
+  method
+   refid "com.company.util:_-FF/_-2-"
+   returns QName(PackageNamespace("", "#0"), "String")
+   body
+    maxstack 5
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     setlocal            4
+
+     jump                L10
+
+     getglobalscope
+     coerce_s
+     setlocal            4
+
+     lshift
+     popscope
+     bitnot
+L10:
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "Date")
+     constructprop       QName(PackageNamespace("", "#0"), "Date"), 0
+     coerce              QName(PackageNamespace("", "#0"), "Date")
+     setlocal1
+
+     getlocal1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "getTime"), 0
+     convert_d
+     setlocal2
+
+     getlocal            5
+     iftrue              L74
+
+     getlocal2
+     getlocal            4
+     dup
+     iftrue              L30
+
+     pop
+     getlocal1
+     convert_b
+L30:
+     iffalse             L68
+
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "timezoneOffset")
+     pushshort           420
+     subtract
+     jump                L42
+
+     declocal_i          2
+     bitand
+     kill                2
+     modulo
+     getglobalscope
+     declocal            3
+L42:
+     getlocal            4
+     iffalse             L55
+
+     pushbyte            60
+     getlocal            5
+     dup
+     iffalse             L51
+
+     pop
+     getlocal1
+     convert_b
+L51:
+     iftrue              L56
+
+     multiply
+     getlocal            5
+     iftrue              L57
+
+L55:
+     pushshort           1000
+L56:
+     multiply
+L57:
+     add
+     getlocal            5
+     iftrue              L68
+
+     convert_d
+     jump                L68
+
+     getlocal1
+     coerce_a
+     setlocal3
+
+     decrement_i
+     inclocal_i          2
+     setlocal            4
+
+L68:
+     setlocal2
+
+     getlocal            5
+     iftrue              L74
+
+     getlocal1
+     getlocal2
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "setTime"), 1
+
+L74:
+     findpropstrict      QName(PackageNamespace("com.company.util"), "_-1sG")
+     constructprop       QName(PackageNamespace("com.company.util"), "_-1sG"), 0
+     coerce              QName(PackageNamespace("com.company.util"), "_-1sG")
+     setlocal3
+
+     getlocal            4
+     dup
+     iftrue              L84
+
+     pop
+     getlocal1
+     convert_b
+L84:
+     iffalse             L88
+
+     getlocal3
+     pushstring          "MMMM D, YYYY"
+     setproperty         QName(PackageNamespace("", "#0"), "_-o1")
+
+L88:
+     getlocal3
+     getlocal1
+     callproperty        QName(PackageNamespace("", "#0"), "_-1w"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

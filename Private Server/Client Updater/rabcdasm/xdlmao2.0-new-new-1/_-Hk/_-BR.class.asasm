@@ -1,0 +1,99 @@
+class
+ refid "_-Hk:_-BR"
+ instance QName(PackageNamespace("_-Hk"), "_-BR")
+  extends QName(PackageNamespace("_-Vb"), "_-Hx")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0R6")
+  iinit
+   refid "_-Hk:_-BR/iinit"
+   body
+    maxstack 6
+    localcount 3
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     decrement
+     convert_s
+     convert_u
+     pushwith
+     nextvalue
+     getlocal3
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     jump                L23
+
+     getlocal2
+     bitand
+     getlocal3
+     not
+     getglobalscope
+     decrement
+L23:
+     iffalse             L27
+
+     pop
+     getlocal0
+     convert_b
+L27:
+     iftrue              L38
+
+     getlocal0
+     pushstring          "Failed to retrieve valid Steam Credentials! Click to retry."
+     constructsuper      1
+
+     getlocal1
+     dup
+     iffalse             L37
+
+     pop
+     getlocal0
+     convert_b
+L37:
+     iftrue              L45
+
+L38:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-0Ql"), "_-0q-")
+     getlocal0
+     getlex              QName(PackageNamespace("_-Vb"), "Dialog")
+     getproperty         QName(PackageNamespace("", "#0"), "LEFT_BUTTON")
+     constructprop       QName(PackageNamespace("_-0Ql"), "_-0q-"), 2
+     initproperty        QName(PackageNamespace("", "#0"), "ok")
+
+L45:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "ok") type QName(PackageNamespace("_-1Sm"), "_-sy") end
+ end ; instance
+ cinit
+  refid "_-Hk:_-BR/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

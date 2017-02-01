@@ -1,0 +1,160 @@
+class
+ refid "avmplus:DescribeTypeJSON"
+ instance QName(PackageNamespace("avmplus"), "DescribeTypeJSON")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1v7")
+  iinit
+   refid "avmplus:DescribeTypeJSON/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "describeType")
+   method
+    refid "avmplus:DescribeTypeJSON/describeType"
+    param QName(PackageNamespace("", "#0"), "Object")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "Object")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageInternalNs("avmplus"), "describeTypeJSON")
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageInternalNs("avmplus"), "describeTypeJSON"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getInstanceDescription")
+   method
+    refid "avmplus:DescribeTypeJSON/getInstanceDescription"
+    param QName(PackageNamespace("", "#0"), "Class")
+    returns QName(PackageNamespace("", "#0"), "Object")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageInternalNs("avmplus"), "describeTypeJSON")
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "INSTANCE_FLAGS")
+      callproperty        QName(PackageInternalNs("avmplus"), "describeTypeJSON"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getClassDescription")
+   method
+    refid "avmplus:DescribeTypeJSON/getClassDescription"
+    param QName(PackageNamespace("", "#0"), "Class")
+    returns QName(PackageNamespace("", "#0"), "Object")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageInternalNs("avmplus"), "describeTypeJSON")
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "CLASS_FLAGS")
+      callproperty        QName(PackageInternalNs("avmplus"), "describeTypeJSON"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "avmplus:DescribeTypeJSON/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace("", "#0"), "available")
+    getlex              QName(PackageInternalNs("avmplus"), "describeTypeJSON")
+    pushnull
+    equals
+    not
+    setproperty         QName(PackageNamespace("", "#0"), "available")
+
+    findproperty        QName(PackageNamespace("", "#0"), "INSTANCE_FLAGS")
+    getlex              QName(PackageNamespace("avmplus"), "INCLUDE_BASES")
+    getlex              QName(PackageNamespace("avmplus"), "INCLUDE_INTERFACES")
+    bitor
+    getlex              QName(PackageNamespace("avmplus"), "INCLUDE_VARIABLES")
+    bitor
+    getlex              QName(PackageNamespace("avmplus"), "INCLUDE_ACCESSORS")
+    bitor
+    getlex              QName(PackageNamespace("avmplus"), "INCLUDE_METHODS")
+    bitor
+    getlex              QName(PackageNamespace("avmplus"), "INCLUDE_METADATA")
+    bitor
+    getlex              QName(PackageNamespace("avmplus"), "INCLUDE_CONSTRUCTOR")
+    bitor
+    getlex              QName(PackageNamespace("avmplus"), "INCLUDE_TRAITS")
+    bitor
+    getlex              QName(PackageNamespace("avmplus"), "USE_ITRAITS")
+    bitor
+    getlex              QName(PackageNamespace("avmplus"), "HIDE_OBJECT")
+    bitor
+    initproperty        QName(PackageNamespace("", "#0"), "INSTANCE_FLAGS")
+
+    findproperty        QName(PackageNamespace("", "#0"), "CLASS_FLAGS")
+    getlex              QName(PackageNamespace("avmplus"), "INCLUDE_INTERFACES")
+    getlex              QName(PackageNamespace("avmplus"), "INCLUDE_VARIABLES")
+    bitor
+    getlex              QName(PackageNamespace("avmplus"), "INCLUDE_ACCESSORS")
+    bitor
+    getlex              QName(PackageNamespace("avmplus"), "INCLUDE_METHODS")
+    bitor
+    getlex              QName(PackageNamespace("avmplus"), "INCLUDE_METADATA")
+    bitor
+    getlex              QName(PackageNamespace("avmplus"), "INCLUDE_TRAITS")
+    bitor
+    getlex              QName(PackageNamespace("avmplus"), "HIDE_OBJECT")
+    bitor
+    initproperty        QName(PackageNamespace("", "#0"), "CLASS_FLAGS")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace("", "#0"), "available") slotid 1 type QName(PackageNamespace("", "#0"), "Boolean") end
+ trait const QName(PackageNamespace("", "#0"), "INSTANCE_FLAGS") slotid 2 type QName(PackageNamespace("", "#0"), "uint") end
+ trait const QName(PackageNamespace("", "#0"), "CLASS_FLAGS") slotid 3 type QName(PackageNamespace("", "#0"), "uint") end
+end ; class

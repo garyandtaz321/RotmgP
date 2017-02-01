@@ -1,0 +1,144 @@
+class
+ refid "_-Nf:JSONParseError"
+ instance QName(PackageNamespace("_-Nf"), "JSONParseError")
+  extends QName(PackageNamespace("", "#0"), "Error")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0qY")
+  iinit
+   refid "_-Nf:JSONParseError/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "String")
+   flag HAS_OPTIONAL
+   optional Utf8("")
+   optional Integer(0)
+   optional Utf8("")
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     kill                4
+     convert_o
+     inclocal_i          3
+     inclocal            2
+     inclocal            2
+     kill                2
+L10:
+     setlocal            4
+
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     jump                L21
+
+     declocal_i          3
+     pushfalse
+     kill                4
+     getlocal3
+     pushfalse
+     inclocal_i          4
+L21:
+     getlocal            5
+     iffalse             L28
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal            5
+     iffalse             L38
+
+L28:
+     findproperty        QName(PackageNamespace("", "#0"), "name")
+     pushstring          "JSONParseError"
+     initproperty        QName(PackageNamespace("", "#0"), "name")
+
+     getlocal            5
+     iffalse             L41
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-Nf:JSONParseError"), "_location")
+
+     getlocal            4
+     iftrue              L41
+
+L38:
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace("*", "_-Nf:JSONParseError"), "_text")
+
+L41:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-Nf:JSONParseError"), "_location") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-Nf:JSONParseError"), "_text") type QName(PackageNamespace("", "#0"), "String") end
+  trait getter QName(PackageNamespace("", "#0"), "location")
+   method
+    refid "_-Nf:JSONParseError/location/getter"
+    returns QName(PackageNamespace("", "#0"), "int")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Nf:JSONParseError"), "_location")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "text")
+   method
+    refid "_-Nf:JSONParseError/text/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Nf:JSONParseError"), "_text")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Nf:JSONParseError/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

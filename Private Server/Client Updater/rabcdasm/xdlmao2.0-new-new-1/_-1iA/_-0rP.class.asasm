@@ -1,0 +1,536 @@
+class
+ refid "_-1iA:_-0rP"
+ instance QName(PackageNamespace("_-1iA"), "_-0rP")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Ys")
+  iinit
+   refid "_-1iA:_-0rP/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     add_i
+     nextname
+     pushfalse
+     getlocal3
+     newactivation
+     increment_i
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L20
+
+     pop
+     getlocal0
+     convert_b
+L20:
+     iftrue              L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-0ed") type QName(PackageNamespace("", "#0"), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("*", "_-1iA:_-0rP"), "seconds") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-1iA:_-0rP"), "minutes") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-0RD") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-1iA:_-0rP"), "days") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-0hA") type QName(PackageNamespace("", "#0"), "Array") end
+  trait method QName(PackageNamespace("", "#0"), "_-0Jt")
+   method
+    refid "_-1iA:_-0rP/_-0Jt"
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      setlocal2
+
+      typeof
+      setlocal2
+
+      decrement_i
+      convert_b
+      dup
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal1
+      pushshort           1000
+      divide
+      callproperty        QName(PackageNamespace("", "#0"), "floor"), 1
+      initproperty        QName(PrivateNamespace("*", "_-1iA:_-0rP"), "seconds")
+
+      getlocal3
+      iffalse             L101
+
+      getlocal0
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1iA:_-0rP"), "seconds")
+      pushbyte            60
+      divide
+      callproperty        QName(PackageNamespace("", "#0"), "floor"), 1
+      initproperty        QName(PrivateNamespace("*", "_-1iA:_-0rP"), "minutes")
+
+      getlocal3
+      dup
+      iftrue              L37
+
+      pop
+      getlocal0
+      convert_b
+L37:
+      iffalse             L126
+
+      getlocal0
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1iA:_-0rP"), "minutes")
+      pushbyte            60
+      divide
+      callproperty        QName(PackageNamespace("", "#0"), "floor"), 1
+      initproperty        QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-0RD")
+
+      getlocal0
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-0RD")
+      pushbyte            24
+      divide
+      callproperty        QName(PackageNamespace("", "#0"), "floor"), 1
+      initproperty        QName(PrivateNamespace("*", "_-1iA:_-0rP"), "days")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1iA:_-0rP"), "seconds")
+      pushbyte            60
+      modulo
+      jump                L66
+
+      declocal_i          2
+      pushtrue
+      getlocal1
+      inclocal            2
+      kill                2
+      convert_s
+L66:
+      initproperty        QName(PrivateNamespace("*", "_-1iA:_-0rP"), "seconds")
+
+      getlocal2
+      dup
+      iffalse             L73
+
+      pop
+      getlocal3
+      convert_b
+L73:
+      iftrue              L135
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1iA:_-0rP"), "minutes")
+      pushbyte            60
+      modulo
+      initproperty        QName(PrivateNamespace("*", "_-1iA:_-0rP"), "minutes")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-0RD")
+      pushbyte            24
+      modulo
+      initproperty        QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-0RD")
+
+      getlocal2
+      iftrue              L118
+
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-0ed")
+
+      getlocal0
+      newarray            0
+      initproperty        QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-0hA")
+
+      getlocal3
+      dup
+      iftrue              L100
+
+      pop
+      getlocal0
+      convert_b
+L100:
+      iffalse             L132
+
+L101:
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1iA:_-0rP"), "days")
+      pushstring          "d"
+      callpropvoid        QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-1Lh"), 2
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-0RD")
+      jump                L116
+
+      convert_d
+      kill                2
+      coerce_s
+      declocal            2
+      convert_d
+      inclocal            2
+L116:
+      pushstring          "h"
+      callpropvoid        QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-1Lh"), 2
+
+L118:
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1iA:_-0rP"), "minutes")
+      pushstring          "m"
+      pushbyte            2
+      callpropvoid        QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-1Lh"), 3
+
+      getlocal3
+      iffalse             L132
+
+L126:
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1iA:_-0rP"), "seconds")
+      pushstring          "s"
+      pushbyte            2
+      callpropvoid        QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-1Lh"), 3
+
+L132:
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-0ed")
+
+L135:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-0hA")
+      pushstring          " "
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-1Lh")
+   method
+    refid "_-1iA:_-0rP/_-1Lh"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Integer(-1)
+    body
+     maxstack 4
+     localcount 9
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal            4
+      inclocal_i          6
+      getlocal            6
+      inclocal            2
+      kill                2
+      getlocal2
+L10:
+      setlocal            7
+
+      setlocal            8
+
+      getlocal0
+      pushscope
+
+      getlocal            8
+      iffalse             L58
+
+      getlocal1
+      getlocal            8
+      dup
+      iftrue              L23
+
+      pop
+      getlocal0
+      convert_b
+L23:
+      iffalse             L65
+
+      pushbyte            0
+      equals
+      getlocal            8
+      dup
+      iftrue              L32
+
+      pop
+      getlocal0
+      convert_b
+L32:
+      iffalse             L54
+
+      dup
+      iffalse             L55
+
+      getlocal            8
+      dup
+      iftrue              L41
+
+      pop
+      getlocal2
+      convert_b
+L41:
+      iffalse             L54
+
+      pop
+      getlocal            8
+      dup
+      iftrue              L49
+
+      pop
+      getlocal1
+      convert_b
+L49:
+      iffalse             L58
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-0ed")
+      getlocal            8
+      iffalse             L55
+
+L54:
+      not
+L55:
+      iffalse             L61
+
+      getlocal            7
+      iftrue              L64
+
+L58:
+      returnvoid
+
+      getlocal            7
+      iftrue              L64
+
+L61:
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-0ed")
+
+L64:
+      getlocal1
+L65:
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      coerce_s
+      setlocal            4
+
+      getlocal            8
+      dup
+      iftrue              L81
+
+      pop
+      getlocal0
+      convert_b
+      jump                L81
+
+      negate_i
+      declocal_i          4
+      hasnext
+      declocal            7
+      declocal_i          3
+      coerce_s
+L81:
+      iffalse             L94
+
+      getlocal3
+      getlocal            7
+      iftrue              L97
+
+      pushbyte            255
+      ifne                L98
+
+      getlocal            8
+      dup
+      iftrue              L93
+
+      pop
+      getlocal1
+      convert_b
+L93:
+      iffalse             L98
+
+L94:
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      convert_i
+L97:
+      setlocal3
+
+L98:
+      pushstring          ""
+      setlocal            5
+
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      convert_i
+      setlocal            6
+
+      jump                L132
+
+L105:
+      label
+      getlocal            5
+      getlocal            7
+      dup
+      iffalse             L113
+
+      pop
+      getlocal1
+      convert_b
+L113:
+      iftrue              L157
+
+      pushstring          "0"
+      add
+      setlocal            5
+
+      getlocal            8
+      dup
+      iftrue              L123
+
+      pop
+      getlocal0
+      convert_b
+L123:
+      iffalse             L169
+
+      inclocal_i          6
+      getlocal            7
+      dup
+      iffalse             L131
+
+      pop
+      getlocal0
+      convert_b
+L131:
+      iftrue              L165
+
+L132:
+      getlocal            6
+      getlocal3
+      iflt                L105
+
+      getlocal            7
+      iftrue              L169
+
+      getlocal            5
+      getlocal            7
+      jump                L146
+
+      declocal            5
+      dup
+      dxnslate
+      declocal            5
+      increment_i
+      inclocal            5
+L146:
+      dup
+      iffalse             L151
+
+      pop
+      getlocal2
+      convert_b
+L151:
+      iftrue              L157
+
+      getlocal            4
+      add
+      getlocal2
+      add
+      coerce_s
+L157:
+      setlocal            4
+
+      getlocal            8
+      dup
+      iftrue              L164
+
+      pop
+      getlocal3
+      convert_b
+L164:
+      iffalse             L169
+
+L165:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1iA:_-0rP"), "_-0hA")
+      getlocal            4
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L169:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1iA:_-0rP/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,185 @@
+class
+ refid "_-1l6:AppEngineRequestStats"
+ instance QName(PackageNamespace("_-1l6"), "AppEngineRequestStats")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0K2")
+  iinit
+   refid "_-1l6:AppEngineRequestStats/iinit"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     convert_u
+     convert_s
+     bitor
+     hasnext
+     instanceof
+     bitxor
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L26
+
+     getlocal0
+     newobject           0
+     initproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats#1"), "_-0f7")
+
+     getlocal2
+     dup
+     iftrue              L25
+
+     pop
+     getlocal2
+     convert_b
+L25:
+     iffalse             L28
+
+L26:
+     getlocal0
+     constructsuper      0
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-1-f") flag METADATA type QName(PackageNamespace("_-1RN"), "_-lf")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait const QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats#1"), "_-0f7") type QName(PackageNamespace("", "#0"), "Object") end
+  trait method QName(PackageNamespace("", "#0"), "_-OQ")
+   method
+    refid "_-1l6:AppEngineRequestStats/_-OQ"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            6
+
+      jump                L10
+
+      inclocal            5
+      getlocal2
+      getlocal1
+      decrement_i
+      convert_u
+      kill                4
+L10:
+      setlocal            7
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats#1"), "_-0f7")
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats#1"), "_-0f7")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("*", "_-1l6:AppEngineRequestStats#1"), PrivateNamespace("*", "_-1l6:AppEngineRequestStats#0"), PackageNamespace("", "#0"), PackageNamespace("_-1l6"), PackageInternalNs("_-1l6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0K2"), StaticProtectedNs("_-0K2")])
+      coerce_a
+      dup
+      jump                L29
+
+      lessequals
+      equals
+      getlocal            5
+      checkfilter
+      typeof
+      declocal            5
+L29:
+      iftrue              L42
+
+      pop
+      findpropstrict      QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats#0"), "StatsWatch")
+      getlocal1
+      constructprop       QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats#0"), "StatsWatch"), 1
+      jump                L41
+
+      pushscope
+
+      pushnull
+      greaterequals
+      urshift
+      lessthan
+      decrement_i
+L41:
+      coerce_a
+L42:
+      dup
+      setlocal            5
+
+      setproperty         MultinameL([PrivateNamespace("*", "_-1l6:AppEngineRequestStats#1"), PrivateNamespace("*", "_-1l6:AppEngineRequestStats#0"), PackageNamespace("", "#0"), PackageNamespace("_-1l6"), PackageInternalNs("_-1l6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0K2"), StaticProtectedNs("_-0K2")])
+
+      getlocal            5
+      kill                5
+      coerce              QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats#0"), "StatsWatch")
+      dup
+      setlocal            4
+
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace("", "#0"), "addResponse"), 2
+
+      getlocal            7
+      dup
+      iffalse             L59
+
+      pop
+      getlocal3
+      convert_b
+L59:
+      iftrue              L64
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1-f")
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+L64:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1l6:AppEngineRequestStats/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

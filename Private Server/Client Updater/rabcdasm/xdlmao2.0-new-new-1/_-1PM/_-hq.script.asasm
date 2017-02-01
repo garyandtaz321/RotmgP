@@ -1,0 +1,33 @@
+script ; 2081
+ sinit
+  refid "_-1PM:_-hq.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-hq", [PackageNamespace("_-1PM")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Error")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Error")
+    newclass            "_-1PM:_-hq"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-1PM"), "_-hq")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-1PM"), "_-hq")
+  #include "_-hq.class.asasm"
+ end ; trait
+end ; script

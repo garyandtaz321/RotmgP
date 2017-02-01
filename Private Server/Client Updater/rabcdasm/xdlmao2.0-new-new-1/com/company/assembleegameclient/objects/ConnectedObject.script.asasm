@@ -1,0 +1,49 @@
+script ; 1299
+ sinit
+  refid "com.company.assembleegameclient.objects:ConnectedObject.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("ConnectedObject", [PackageNamespace("com.company.assembleegameclient.objects")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+    newclass            "com.company.assembleegameclient.objects:ConnectedObject"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.company.assembleegameclient.objects"), "ConnectedObject")
+
+    findpropstrict      Multiname("ConnectedResults", [PrivateNamespace("*", "com.company.assembleegameclient.objects:ConnectedObject#1")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.company.assembleegameclient.objects:ConnectedObject/ConnectedResults"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:ConnectedObject#1"), "ConnectedResults")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.company.assembleegameclient.objects"), "ConnectedObject")
+  #include "ConnectedObject.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:ConnectedObject#1"), "ConnectedResults")
+  #include "ConnectedObject/ConnectedResults.class.asasm"
+ end ; trait
+end ; script

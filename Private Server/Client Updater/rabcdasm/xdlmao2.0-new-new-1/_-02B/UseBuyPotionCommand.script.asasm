@@ -1,0 +1,29 @@
+script ; 461
+ sinit
+  refid "_-02B:UseBuyPotionCommand.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("UseBuyPotionCommand", [PackageNamespace("_-02B")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-02B:UseBuyPotionCommand"
+    popscope
+    initproperty        QName(PackageNamespace("_-02B"), "UseBuyPotionCommand")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-02B"), "UseBuyPotionCommand")
+  #include "UseBuyPotionCommand.class.asasm"
+ end ; trait
+end ; script

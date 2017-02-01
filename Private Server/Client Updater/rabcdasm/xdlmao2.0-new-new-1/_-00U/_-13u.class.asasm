@@ -1,0 +1,398 @@
+class
+ refid "_-00U:_-13u"
+ instance QName(PackageNamespace("_-00U"), "_-13u")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("_-06U", [PackageNamespace("_-00U")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0h5")
+  iinit
+   refid "_-00U:_-13u/iinit"
+   param QName(PackageNamespace("", "#0"), "Class")
+   param QName(PackageNamespace("_-0cA"), "_-0bz")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     decrement_i
+     inclocal_i          2
+     bitor
+     declocal            3
+     declocal            2
+     astypelate
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     jump                L20
+
+     inclocal_i          2
+     inclocal_i          3
+     istypelate
+     bitor
+     declocal            2
+     inclocal            2
+L20:
+     getlocal            4
+     dup
+     iffalse             L26
+
+     pop
+     getlocal1
+     convert_b
+L26:
+     iftrue              L36
+
+     getlocal0
+     constructsuper      0
+
+     getlocal3
+     iffalse             L36
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-00U:_-13u"), "_-WH")
+
+     getlocal            4
+     iftrue              L39
+
+L36:
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-00U:_-13u"), "_-Og")
+
+L39:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-00U:_-13u"), "_-WH") type QName(PackageNamespace("", "#0"), "Class") end
+  trait slot QName(PrivateNamespace("*", "_-00U:_-13u"), "_-Og") type QName(PackageNamespace("_-0cA"), "_-0bz") end
+  trait slot QName(PrivateNamespace("*", "_-00U:_-13u"), "_-1NB") type QName(PackageNamespace("", "#0"), "Object") end
+  trait slot QName(PrivateNamespace("*", "_-00U:_-13u"), "_-1fO") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait method QName(PackageNamespace("", "#0"), "apply")
+   method
+    refid "_-00U:_-13u/apply"
+    param QName(PackageNamespace("", "#0"), "Class")
+    param QName(PackageNamespace("_-0cA"), "_-0bz")
+    param QName(PackageNamespace("flash.utils"), "Dictionary")
+    returns QName(PackageNamespace("", "#0"), "Object")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            5
+
+      jump                L10
+
+      declocal_i          2
+      declocal_i          5
+      hasnext
+      declocal            3
+      pushnan
+      inclocal_i          4
+L10:
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      jump                L20
+
+      declocal_i          2
+      pushnull
+      getlocal3
+      setlocal            5
+
+      inclocal            2
+      modulo
+L20:
+      getlocal0
+      getlocal            5
+      iffalse             L29
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-00U:_-13u"), "_-1NB")
+      coerce              QName(PackageNamespace("", "#0"), "Object")
+      dup
+      iftrue              L34
+
+      pop
+L29:
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-00U:_-13u"), "_-Og")
+      callproperty        QName(PrivateNamespace("*", "_-00U:_-13u"), "_-1w8"), 1
+      coerce              QName(PackageNamespace("", "#0"), "Object")
+L34:
+      dup
+      setlocal            4
+
+      initproperty        QName(PrivateNamespace("*", "_-00U:_-13u"), "_-1NB")
+
+      getlocal            4
+      kill                4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-00U:_-13u"), "_-1w8")
+   method
+    refid "_-00U:_-13u/_-1w8"
+    param QName(PackageNamespace("_-0cA"), "_-0bz")
+    returns QName(PackageNamespace("", "#0"), "Object")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      convert_u
+      setlocal3
+
+      convert_s
+      inclocal_i          2
+      multiply_i
+      declocal            2
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      dup
+      iftrue              L20
+
+      pop
+      getlocal3
+      convert_b
+L20:
+      iffalse             L51
+
+      jump                L28
+
+      add
+      setlocal3
+
+      bitxor
+      inclocal_i          2
+      negate_i
+      getlocal0
+L28:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-00U:_-13u"), "_-1fO")
+      iffalse             L51
+
+      getlocal            4
+      jump                L39
+
+      coerce_s
+      setlocal2
+
+      declocal_i          3
+      lshift
+      inclocal_i          2
+      greaterthan
+L39:
+      iffalse             L51
+
+      findpropstrict      QName(PackageNamespace("_-0cA"), "_-0cp")
+      pushstring          "Forbidden usage of unmapped singleton provider for type "
+      getlocal3
+      iftrue              L49
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-00U:_-13u"), "_-WH")
+      callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
+      add
+L49:
+      constructprop       QName(PackageNamespace("_-0cA"), "_-0cp"), 1
+      throw
+L51:
+      getlocal1
+      dup
+      setlocal2
+
+      getlex              QName(PackageNamespace("_-0vT"), "SsInternal")
+      coerce              QName(PackageNamespace("", "#0"), "Namespace")
+      getproperty         RTQName("_-04d")
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-00U:_-13u"), "_-WH")
+      call                1
+      kill                2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "destroy")
+   method
+    refid "_-00U:_-13u/destroy"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      kill                3
+      declocal_i          3
+      convert_i
+      setlocal3
+
+      getlocal2
+      bitxor
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L20
+
+      pop
+      getlocal1
+      convert_b
+L20:
+      iftrue              L39
+
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("*", "_-00U:_-13u"), "_-1fO")
+
+      getlocal            4
+      iffalse             L39
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-00U:_-13u"), "_-1NB")
+      iftrue              L39
+
+      getlocal3
+      iftrue              L39
+
+      jump                L38
+
+      instanceof
+      lessequals
+      declocal            3
+      kill                2
+      coerce_s
+      declocal_i          2
+L38:
+      returnvoid
+
+L39:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-00U:_-13u"), "_-Og")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-00U:_-13u"), "_-WH")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1K2"), 1
+      coerce              QName(PackageNamespace("_-0uW"), "_-0gm")
+      setlocal1
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Y5")
+      coerce              QName(PackageNamespace("_-0uW"), "_-04V")
+      setlocal2
+
+      jump                L75
+
+L51:
+      label
+      jump                L59
+
+      inclocal            2
+      getlocal3
+      negate_i
+      inclocal_i          3
+      coerce_a
+      inclocal            2
+L59:
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-00U:_-13u"), "_-1NB")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-00U:_-13u"), "_-WH")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-00U:_-13u"), "_-Og")
+      callpropvoid        QName(PackageNamespace("", "#0"), "applyInjection"), 3
+
+      getlocal3
+      iftrue              L79
+
+      findpropstrict      QName(PackageNamespace("_-0uW"), "_-04V")
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "next")
+      callproperty        QName(PackageNamespace("_-0uW"), "_-04V"), 1
+      coerce              QName(PackageNamespace("_-0uW"), "_-04V")
+      setlocal2
+
+L75:
+      getlocal2
+      iftrue              L51
+
+      getlocal3
+      iftrue              L82
+
+L79:
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "_-00U:_-13u"), "_-1NB")
+
+L82:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-00U:_-13u/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,157 @@
+class
+ refid "_-1PM:_-1es"
+ instance QName(PackageNamespace("_-1PM"), "_-1es")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-IL")
+  iinit
+   refid "_-1PM:_-1es/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     getlocal1
+     bitor
+     not
+     coerce_a
+     greaterthan
+     lessthan
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iftrue              L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-1PM:_-1es/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    astypelate
+    pushscope
+
+    pushwith
+    equals
+    modulo
+    not
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-0b")
+    pushstring          "uninitialized"
+    initproperty        QName(PackageNamespace("", "#0"), "_-0b")
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-1Vi")
+    pushstring          "initializing"
+    initproperty        QName(PackageNamespace("", "#0"), "_-1Vi")
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-KP")
+    pushstring          "active"
+    initproperty        QName(PackageNamespace("", "#0"), "_-KP")
+
+    jump                L29
+
+    getlocal0
+    getglobalscope
+    multiply_i
+    equals
+    bitand
+    pushnan
+L29:
+    findproperty        QName(PackageNamespace("", "#0"), "_-170")
+    pushstring          "suspending"
+    initproperty        QName(PackageNamespace("", "#0"), "_-170")
+
+    getlocal1
+    iffalse             L56
+
+    jump                L41
+
+    dup
+    convert_u
+    negate_i
+    subtract
+    getglobalscope
+    lshift
+L41:
+    findproperty        QName(PackageNamespace("", "#0"), "_-07U")
+    pushstring          "suspended"
+    initproperty        QName(PackageNamespace("", "#0"), "_-07U")
+
+    getlocal1
+    iffalse             L64
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-5c")
+    pushstring          "resuming"
+    initproperty        QName(PackageNamespace("", "#0"), "_-5c")
+
+    getlocal2
+    dup
+    iffalse             L55
+
+    pop
+    getlocal2
+    convert_b
+L55:
+    iftrue              L64
+
+L56:
+    findproperty        QName(PackageNamespace("", "#0"), "_-1Fl")
+    pushstring          "destroying"
+    initproperty        QName(PackageNamespace("", "#0"), "_-1Fl")
+
+    getlocal2
+    iftrue              L64
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-0iO")
+    pushstring          "destroyed"
+    initproperty        QName(PackageNamespace("", "#0"), "_-0iO")
+
+L64:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-0b") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("uninitialized") end
+ trait const QName(PackageNamespace("", "#0"), "_-1Vi") slotid 2 type QName(PackageNamespace("", "#0"), "String") value Utf8("initializing") end
+ trait const QName(PackageNamespace("", "#0"), "_-KP") slotid 3 type QName(PackageNamespace("", "#0"), "String") value Utf8("active") end
+ trait const QName(PackageNamespace("", "#0"), "_-170") slotid 4 type QName(PackageNamespace("", "#0"), "String") value Utf8("suspending") end
+ trait const QName(PackageNamespace("", "#0"), "_-07U") slotid 5 type QName(PackageNamespace("", "#0"), "String") value Utf8("suspended") end
+ trait const QName(PackageNamespace("", "#0"), "_-5c") slotid 6 type QName(PackageNamespace("", "#0"), "String") value Utf8("resuming") end
+ trait const QName(PackageNamespace("", "#0"), "_-1Fl") slotid 7 type QName(PackageNamespace("", "#0"), "String") value Utf8("destroying") end
+ trait const QName(PackageNamespace("", "#0"), "_-0iO") slotid 8 type QName(PackageNamespace("", "#0"), "String") value Utf8("destroyed") end
+end ; class

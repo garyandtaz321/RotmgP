@@ -1,0 +1,45 @@
+script ; 2068
+ sinit
+  refid "_-bb:Executer.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Executer", [PackageNamespace("_-bb")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "_-bb:Executer"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-bb"), "Executer")
+
+    findpropstrict      Multiname("ExeValue", [PrivateNamespace("*", "_-bb:Executer#1")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-bb:Executer/ExeValue"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-bb:Executer#1"), "ExeValue")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-bb"), "Executer")
+  #include "Executer.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-bb:Executer#1"), "ExeValue")
+  #include "Executer/ExeValue.class.asasm"
+ end ; trait
+end ; script

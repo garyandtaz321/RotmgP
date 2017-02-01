@@ -1,0 +1,34 @@
+script ; 1445
+ sinit
+  refid "com.google.analytics:GATracker.sinit"
+  body
+   maxstack 2
+   localcount 2
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("GATracker", [PackageNamespace("com.google.analytics")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.google.analytics:GATracker"
+    popscope
+    initproperty        QName(PackageNamespace("com.google.analytics"), "GATracker")
+
+    getlex              QName(PackageNamespace("com.google.analytics.core"), "ServerOperationMode")
+    coerce_a
+    setlocal1
+
+    getlocal1
+    returnvalue
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.google.analytics"), "GATracker")
+  #include "GATracker.class.asasm"
+ end ; trait
+end ; script

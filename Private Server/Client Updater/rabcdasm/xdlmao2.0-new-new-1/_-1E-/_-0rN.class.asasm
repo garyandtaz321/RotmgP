@@ -1,0 +1,152 @@
+class
+ refid "_-1E-:_-0rN"
+ instance QName(PackageNamespace("_-1E-"), "_-0rN")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0rh")
+  iinit
+   refid "_-1E-:_-0rN/iinit"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "String")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     newactivation
+     getlocal2
+     declocal_i          2
+     subtract_i
+     bitxor
+     getglobalscope
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     jump                L20
+
+     decrement
+     getlocal2
+     kill                3
+     pushfalse
+     instanceof
+     instanceof
+L20:
+     getlocal            4
+     dup
+     iffalse             L26
+
+     pop
+     getlocal1
+     convert_b
+L26:
+     iftrue              L39
+
+     getlocal0
+     constructsuper      0
+
+     getlocal3
+     iffalse             L36
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "objectId")
+
+     getlocal3
+     iffalse             L39
+
+L36:
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "source")
+
+L39:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "objectId") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "source") type QName(PackageNamespace("", "#0"), "String") end
+ end ; instance
+ cinit
+  refid "_-1E-:_-0rN/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    convert_s
+    nextname
+    coerce_s
+    dup
+    convert_o
+    instanceof
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    jump                L20
+
+    coerce_s
+    add
+    pushnull
+    astypelate
+    nextvalue
+    lessthan
+L20:
+    getlocal1
+    dup
+    iftrue              L26
+
+    pop
+    getlocal1
+    convert_b
+L26:
+    iffalse             L37
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-0K6")
+    pushstring          "shift_click"
+    setproperty         QName(PackageNamespace("", "#0"), "_-0K6")
+
+    getlocal2
+    dup
+    iffalse             L36
+
+    pop
+    getlocal1
+    convert_b
+L36:
+    iftrue              L40
+
+L37:
+    findproperty        QName(PackageNamespace("", "#0"), "_-1vp")
+    pushstring          "context_buy"
+    setproperty         QName(PackageNamespace("", "#0"), "_-1vp")
+
+L40:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace("", "#0"), "_-0K6") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("shift_click") end
+ trait slot QName(PackageNamespace("", "#0"), "_-1vp") slotid 2 type QName(PackageNamespace("", "#0"), "String") value Utf8("context_buy") end
+end ; class

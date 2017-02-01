@@ -1,0 +1,145 @@
+class
+ refid "com.company.assembleegameclient.objects:YardUpgrader"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "YardUpgrader")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  implements Multiname("_-Rk", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1Bn")
+  iinit
+   refid "com.company.assembleegameclient.objects:YardUpgrader/iinit"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal            2
+     greaterequals
+     subtract_i
+     checkfilter
+     nextname
+     declocal            2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L21
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal3
+     iffalse             L24
+
+L21:
+     findproperty        QName(PackageNamespace("", "#0"), "_-11k")
+     pushtrue
+     initproperty        QName(PackageNamespace("", "#0"), "_-11k")
+
+L24:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "getTooltip")
+   method
+    refid "com.company.assembleegameclient.objects:YardUpgrader/getTooltip"
+    returns QName(PackageNamespace("_-Z0"), "_-0lC")
+    body
+     maxstack 8
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-Z0"), "_-0BS")
+      jump                L10
+
+      bitxor
+      pushfalse
+      pop
+      astypelate
+      nextname
+      getlocal1
+L10:
+      pushint             3552822
+      pushint             10197915
+      getlex              QName(PackageNamespace("_-6u"), "_-TG")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Yp")
+      getlex              QName(PackageNamespace("_-6u"), "_-TG")
+      getproperty         QName(PackageNamespace("", "#0"), "_-042")
+      pushshort           200
+      constructprop       QName(PackageNamespace("_-Z0"), "_-0BS"), 5
+      coerce              QName(PackageNamespace("_-Z0"), "_-0lC")
+      setlocal1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getPanel")
+   method
+    refid "com.company.assembleegameclient.objects:YardUpgrader/getPanel"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace("_-1f4"), "Panel")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-0Sj"), "_-0P")
+      jump                L10
+
+      instanceof
+      increment_i
+      nextname
+      increment
+      pushtrue
+      swap
+L10:
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "objectType_")
+      constructprop       QName(PackageNamespace("_-0Sj"), "_-0P"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:YardUpgrader/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

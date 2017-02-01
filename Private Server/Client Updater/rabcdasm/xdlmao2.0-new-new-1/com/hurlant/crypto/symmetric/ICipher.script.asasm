@@ -1,0 +1,25 @@
+script ; 1440
+ sinit
+  refid "com.hurlant.crypto.symmetric:ICipher.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("ICipher", [PackageNamespace("com.hurlant.crypto.symmetric")])
+    pushnull
+    newclass            "com.hurlant.crypto.symmetric:ICipher"
+    initproperty        QName(PackageNamespace("com.hurlant.crypto.symmetric"), "ICipher")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.hurlant.crypto.symmetric"), "ICipher")
+  #include "ICipher.class.asasm"
+ end ; trait
+end ; script

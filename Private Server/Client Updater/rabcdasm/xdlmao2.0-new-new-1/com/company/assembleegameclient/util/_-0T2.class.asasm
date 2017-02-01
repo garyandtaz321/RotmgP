@@ -1,0 +1,283 @@
+class
+ refid "com.company.assembleegameclient.util:_-0T2"
+ instance QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0T2")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1j7")
+  iinit
+   refid "com.company.assembleegameclient.util:_-0T2/iinit"
+   param QName(PackageNamespace("flash.display"), "BitmapData")
+   param QName(PackageNamespace("flash.display"), "BitmapData")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     setlocal2
+
+     inclocal            2
+     declocal            2
+     kill                2
+     increment_i
+     hasnext
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     iftrue              L41
+
+     jump                L22
+
+     multiply_i
+     inclocal_i          3
+     setlocal3
+
+     inclocal            2
+     getlocal1
+     pushundefined
+L22:
+     getlocal0
+     constructsuper      0
+
+     getlocal            4
+     dup
+     iffalse             L30
+
+     pop
+     getlocal3
+     convert_b
+L30:
+     iftrue              L44
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "image_")
+
+     getlocal3
+     dup
+     iftrue              L40
+
+     pop
+     getlocal2
+     convert_b
+L40:
+     iffalse             L44
+
+L41:
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "mask_")
+
+L44:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "image_") type QName(PackageNamespace("flash.display"), "BitmapData") end
+  trait slot QName(PackageNamespace("", "#0"), "mask_") type QName(PackageNamespace("flash.display"), "BitmapData") end
+  trait method QName(PackageNamespace("", "#0"), "width")
+   method
+    refid "com.company.assembleegameclient.util:_-0T2/width"
+    returns QName(PackageNamespace("", "#0"), "int")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      pushnull
+      setlocal3
+
+      getlocal1
+      nextname
+      setlocal3
+
+      divide
+L10:
+      getproperty         QName(PackageNamespace("", "#0"), "image_")
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "height")
+   method
+    refid "com.company.assembleegameclient.util:_-0T2/height"
+    returns QName(PackageNamespace("", "#0"), "int")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      pushtrue
+      nextname
+      subtract
+      multiply
+      nextvalue
+      bitor
+L10:
+      getproperty         QName(PackageNamespace("", "#0"), "image_")
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "mirror")
+   method
+    refid "com.company.assembleegameclient.util:_-0T2/mirror"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0T2")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      convert_s
+      urshift
+      inclocal_i          3
+      equals
+      getlocal2
+      setlocal2
+
+L10:
+      setlocal            4
+
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.util"), "BitmapUtil")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "image_")
+      getlocal1
+      jump                L25
+
+      inclocal            4
+      modulo
+      modulo
+      declocal_i          4
+      getlocal3
+      add_i
+L25:
+      callproperty        QName(PackageNamespace("", "#0"), "mirror"), 2
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal2
+
+      getlocal            5
+      iffalse             L35
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "mask_")
+      pushnull
+      equals
+      iffalse             L38
+
+L35:
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      jump                L44
+
+L38:
+      getlex              QName(PackageNamespace("com.company.util"), "BitmapUtil")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "mask_")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "mirror"), 2
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+L44:
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0T2")
+      getlocal2
+      getlocal3
+      constructprop       QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0T2"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-0Sa")
+   method
+    refid "com.company.assembleegameclient.util:_-0T2/_-0Sa"
+    returns QName(PackageNamespace("", "#0"), "Number")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.util"), "BitmapUtil")
+      jump                L10
+
+      subtract_i
+      setlocal3
+
+      increment_i
+      pushtrue
+      swap
+      multiply_i
+L10:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "image_")
+      callproperty        QName(PackageNamespace("", "#0"), "_-0Sa"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.util:_-0T2/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

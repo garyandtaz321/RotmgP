@@ -1,0 +1,266 @@
+class
+ refid "_-14-:Damage"
+ instance QName(PackageNamespace("_-14-"), "Damage")
+  extends QName(PackageNamespace("_-14-"), "_-eJ")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1W4")
+  iinit
+   refid "_-14-:Damage/iinit"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "Function")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     setlocal3
+
+     getlocal2
+     inclocal_i          2
+     setlocal3
+
+     add_i
+     setlocal2
+
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L24
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-14-:Damage/iinit#0"), PrivateNamespace("*", "_-14-:Damage/iinit#1"), PackageNamespace("", "#0"), PackageNamespace("_-14-"), PackageInternalNs("_-14-"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1W4"), StaticProtectedNs("_-1W4"), StaticProtectedNs("_-cO"), StaticProtectedNs("_-0rE"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("", "#0"), "uint")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace("", "#0"), "effects_")
+
+     getlocal3
+     iftrue              L28
+
+L24:
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "targetId_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "effects_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "uint")>) end
+  trait slot QName(PackageNamespace("", "#0"), "damageAmount_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "kill_") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "bulletId_") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PackageNamespace("", "#0"), "objectId_") type QName(PackageNamespace("", "#0"), "int") end
+  trait method QName(PackageNamespace("", "#0"), "parseFromInput") flag OVERRIDE
+   method
+    refid "_-14-:Damage/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      inclocal_i          4
+      negate_i
+      pushfalse
+      pushtrue
+      lessthan
+      instanceof
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      dup
+      iffalse             L19
+
+      pop
+      getlocal2
+      convert_b
+L19:
+      iftrue              L35
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "targetId_")
+
+      getlocal            5
+      dup
+      iffalse             L30
+
+      pop
+      getlocal2
+      convert_b
+L30:
+      iftrue              L35
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "effects_")
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+L35:
+      getlocal1
+      jump                L43
+
+      kill                2
+      declocal_i          3
+      convert_b
+      lshift
+      getlocal2
+      modulo
+L43:
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedByte"), 0
+      convert_i
+      setlocal2
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      jump                L71
+
+L50:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "effects_")
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedByte"), 0
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal3
+      getlocal            4
+      iffalse             L70
+
+      increment
+      convert_u
+      getlocal            5
+      jump                L69
+
+      convert_o
+      inclocal_i          4
+      declocal_i          3
+      kill                3
+      declocal            4
+      urshift
+L69:
+      iftrue              L72
+
+L70:
+      setlocal3
+
+L71:
+      getlocal3
+L72:
+      getlocal2
+      iflt                L50
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedShort"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "damageAmount_")
+
+      getlocal            4
+      iffalse             L84
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readBoolean"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "kill_")
+
+L84:
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedByte"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "bulletId_")
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "objectId_")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString") flag OVERRIDE
+   method
+    refid "_-14-:Damage/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 10
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-0rE"), "formatToString")
+      jump                L10
+
+      lessequals
+      convert_i
+      instanceof
+      istypelate
+      nextvalue
+      getlocal2
+L10:
+      pushstring          "DAMAGE"
+      pushstring          "targetId_"
+      pushstring          "effects_"
+      pushstring          "damageAmount_"
+      pushstring          "kill_"
+      pushstring          "bulletId_"
+      pushstring          "objectId_"
+      callproperty        QName(ProtectedNamespace("_-0rE"), "formatToString"), 7
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-14-:Damage/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

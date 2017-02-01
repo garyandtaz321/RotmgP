@@ -1,0 +1,678 @@
+class
+ refid "com.google.analytics.ecommerce:Transaction"
+ instance QName(PackageNamespace("com.google.analytics.ecommerce"), "Transaction")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.ecommerce:Transaction")
+  iinit
+   refid "com.google.analytics.ecommerce:Transaction/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   body
+    maxstack 2
+    localcount 9
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_id")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_affiliation")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_total")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_tax")
+
+     getlocal0
+     getlocal            5
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_shipping")
+
+     getlocal0
+     getlocal            6
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_city")
+
+     getlocal0
+     getlocal            7
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_state")
+
+     getlocal0
+     getlocal            8
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_country")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_items")
+     findpropstrict      QName(PackageNamespace("", "#0"), "Array")
+     constructprop       QName(PackageNamespace("", "#0"), "Array"), 0
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_items")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_items") type QName(PackageNamespace("", "#0"), "Array") end
+  trait getter QName(PackageNamespace("", "#0"), "total")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/total/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_total")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_total") type QName(PackageNamespace("", "#0"), "String") end
+  trait method QName(PackageNamespace("", "#0"), "getItemFromArray")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/getItemFromArray"
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("com.google.analytics.ecommerce"), "Item")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_items")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#1"), PackageNamespace("com.google.analytics.ecommerce"), PackageInternalNs("com.google.analytics.ecommerce"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("Object")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace("", "#0"), "total")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/total/setter"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_total")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_total")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getItem")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/getItem"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("com.google.analytics.ecommerce"), "Item")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal2
+
+      pushbyte            0
+      convert_d
+      setlocal2
+
+      jump                L23
+
+L8:
+      label
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_items")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#1"), PackageNamespace("com.google.analytics.ecommerce"), PackageInternalNs("com.google.analytics.ecommerce"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("Object")])
+      getproperty         Multiname("sku", [PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#1"), PackageNamespace("com.google.analytics.ecommerce"), PackageInternalNs("com.google.analytics.ecommerce"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("Object")])
+      getlocal1
+      ifne                L19
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_items")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#1"), PackageNamespace("com.google.analytics.ecommerce"), PackageInternalNs("com.google.analytics.ecommerce"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("Object")])
+      returnvalue
+
+L19:
+      getlocal2
+      increment
+      convert_d
+      setlocal2
+
+L23:
+      getlocal2
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_items")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L8
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_vars") type QName(PackageNamespace("com.google.analytics.utils"), "Variables") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_shipping") type QName(PackageNamespace("", "#0"), "String") end
+  trait method QName(PackageNamespace("", "#0"), "getItemsLength")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/getItemsLength"
+    returns QName(PackageNamespace("", "#0"), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_items")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_city") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_state") type QName(PackageNamespace("", "#0"), "String") end
+  trait method QName(PackageNamespace("", "#0"), "addItem")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/addItem"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.google.analytics.ecommerce"), "Item")
+      setlocal            6
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "getItem")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "getItem"), 1
+      coerce              QName(PackageNamespace("com.google.analytics.ecommerce"), "Item")
+      dup
+      setlocal            6
+
+      pushnull
+      ifne                L27
+
+      findpropstrict      QName(PackageNamespace("com.google.analytics.ecommerce"), "Item")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_id")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      getlocal            5
+      constructprop       QName(PackageNamespace("com.google.analytics.ecommerce"), "Item"), 6
+      coerce              QName(PackageNamespace("com.google.analytics.ecommerce"), "Item")
+      setlocal            6
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_items")
+      getlocal            6
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      jump                L39
+
+L27:
+      getlocal            6
+      getlocal2
+      setproperty         QName(PackageNamespace("", "#0"), "name")
+
+      getlocal            6
+      getlocal3
+      setproperty         QName(PackageNamespace("", "#0"), "category")
+
+      getlocal            6
+      getlocal            4
+      setproperty         QName(PackageNamespace("", "#0"), "price")
+
+      getlocal            6
+      getlocal            5
+      setproperty         QName(PackageNamespace("", "#0"), "quantity")
+
+L39:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_country") type QName(PackageNamespace("", "#0"), "String") end
+  trait setter QName(PackageNamespace("", "#0"), "shipping")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/shipping/setter"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_shipping")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_shipping")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "country")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/country/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_country")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "state")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/state/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_state")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace("", "#0"), "tax")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/tax/setter"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_tax")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_tax")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace("", "#0"), "affiliation")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/affiliation/setter"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_affiliation")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_affiliation")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace("", "#0"), "state")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/state/setter"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_state")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_state")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "id")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/id/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_id")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "tax")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/tax/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_tax")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_tax") type QName(PackageNamespace("", "#0"), "String") end
+  trait method QName(PackageNamespace("", "#0"), "toGifParams")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/toGifParams"
+    returns QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+    body
+     maxstack 9
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+      constructprop       QName(PackageNamespace("com.google.analytics.utils"), "Variables"), 0
+      coerce              QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+      setlocal1
+
+      getlocal1
+      pushtrue
+      setproperty         QName(PackageNamespace("", "#0"), "URIencode")
+
+      getlocal1
+      pushstring          "tran"
+      setproperty         Multiname("utmt", [PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#1"), PackageNamespace("com.google.analytics.ecommerce"), PackageInternalNs("com.google.analytics.ecommerce"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "id")
+      setproperty         Multiname("utmtid", [PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#1"), PackageNamespace("com.google.analytics.ecommerce"), PackageInternalNs("com.google.analytics.ecommerce"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "affiliation")
+      setproperty         Multiname("utmtst", [PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#1"), PackageNamespace("com.google.analytics.ecommerce"), PackageInternalNs("com.google.analytics.ecommerce"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "total")
+      setproperty         Multiname("utmtto", [PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#1"), PackageNamespace("com.google.analytics.ecommerce"), PackageInternalNs("com.google.analytics.ecommerce"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "tax")
+      setproperty         Multiname("utmttx", [PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#1"), PackageNamespace("com.google.analytics.ecommerce"), PackageInternalNs("com.google.analytics.ecommerce"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "shipping")
+      setproperty         Multiname("utmtsp", [PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#1"), PackageNamespace("com.google.analytics.ecommerce"), PackageInternalNs("com.google.analytics.ecommerce"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "city")
+      setproperty         Multiname("utmtci", [PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#1"), PackageNamespace("com.google.analytics.ecommerce"), PackageInternalNs("com.google.analytics.ecommerce"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "state")
+      setproperty         Multiname("utmtrg", [PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#1"), PackageNamespace("com.google.analytics.ecommerce"), PackageInternalNs("com.google.analytics.ecommerce"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "country")
+      setproperty         Multiname("utmtco", [PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#1"), PackageNamespace("com.google.analytics.ecommerce"), PackageInternalNs("com.google.analytics.ecommerce"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("com.google.analytics.ecommerce:Transaction"), StaticProtectedNs("Object")])
+
+      getlocal1
+      pushstring          "utmtid"
+      pushstring          "utmtst"
+      pushstring          "utmtto"
+      pushstring          "utmttx"
+      pushstring          "utmtsp"
+      pushstring          "utmtci"
+      pushstring          "utmtrg"
+      pushstring          "utmtco"
+      newarray            8
+      setproperty         QName(PackageNamespace("", "#0"), "post")
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "affiliation")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/affiliation/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_affiliation")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_affiliation") type QName(PackageNamespace("", "#0"), "String") end
+  trait getter QName(PackageNamespace("", "#0"), "city")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/city/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_city")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "shipping")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/shipping/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_shipping")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace("", "#0"), "id")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/id/setter"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_id")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_id")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace("", "#0"), "city")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/city/setter"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_city")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_city")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_id") type QName(PackageNamespace("", "#0"), "String") end
+  trait setter QName(PackageNamespace("", "#0"), "country")
+   method
+    refid "com.google.analytics.ecommerce:Transaction/country/setter"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_country")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.ecommerce:Transaction#0"), "_country")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.ecommerce:Transaction/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

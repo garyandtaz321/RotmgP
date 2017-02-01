@@ -1,0 +1,247 @@
+class
+ refid "com.hurlant.util.der:UTCTime"
+ instance QName(PackageNamespace("com.hurlant.util.der"), "UTCTime")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("IAsn1Type", [PackageNamespace("com.hurlant.util.der")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0fq")
+  iinit
+   refid "com.hurlant.util.der:UTCTime/iinit"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "uint")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(ProtectedNamespace("_-0fq"), "type")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(ProtectedNamespace("_-0fq"), "len")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("_-0fq"), "type") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(ProtectedNamespace("_-0fq"), "len") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PackageNamespace("", "#0"), "date") type QName(PackageNamespace("", "#0"), "Date") end
+  trait method QName(PackageNamespace("", "#0"), "getLength")
+   method
+    refid "com.hurlant.util.der:UTCTime/getLength"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0fq"), "len")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getType")
+   method
+    refid "com.hurlant.util.der:UTCTime/getType"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0fq"), "type")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setUTCTime")
+   method
+    refid "com.hurlant.util.der:UTCTime/setUTCTime"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+      getlocal1
+      pushbyte            0
+      pushbyte            2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 1
+      convert_u
+      setlocal2
+
+      getlocal2
+      pushbyte            50
+      ifnlt               L19
+
+      getlocal2
+      pushshort           2000
+      add
+      convert_u
+      setlocal2
+
+      jump                L24
+
+L19:
+      getlocal2
+      pushshort           1900
+      add
+      convert_u
+      setlocal2
+
+L24:
+      findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+      getlocal1
+      pushbyte            2
+      dup
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 1
+      convert_u
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+      getlocal1
+      pushbyte            4
+      pushbyte            2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 1
+      convert_u
+      setlocal            4
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+      getlocal1
+      pushbyte            6
+      pushbyte            2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 1
+      convert_u
+      setlocal            5
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+      getlocal1
+      pushbyte            8
+      pushbyte            2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 1
+      convert_u
+      setlocal            6
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("", "#0"), "Date")
+      getlocal2
+      getlocal3
+      decrement
+      getlocal            4
+      getlocal            5
+      getlocal            6
+      constructprop       QName(PackageNamespace("", "#0"), "Date"), 5
+      initproperty        QName(PackageNamespace("", "#0"), "date")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "com.hurlant.util.der:UTCTime/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+      getproperty         QName(PackageNamespace("", "#0"), "indent")
+      pushstring          "UTCTime["
+      add
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0fq"), "type")
+      add
+      pushstring          "]["
+      add
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0fq"), "len")
+      add
+      pushstring          "]["
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "date")
+      add
+      pushstring          "]"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toDER")
+   method
+    refid "com.hurlant.util.der:UTCTime/toDER"
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.util.der:UTCTime/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

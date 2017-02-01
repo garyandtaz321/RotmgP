@@ -1,0 +1,157 @@
+class
+ refid "com.hurlant.util.der:Integer"
+ instance QName(PackageNamespace("com.hurlant.util.der"), "Integer")
+  extends QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+  implements Multiname("IAsn1Type", [PackageNamespace("com.hurlant.util.der")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0wU")
+  iinit
+   refid "com.hurlant.util.der:Integer/iinit"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   body
+    maxstack 2
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:Integer"), "type")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:Integer"), "len")
+
+     getlocal0
+     getlocal3
+     constructsuper      1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.hurlant.util.der:Integer"), "type") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.util.der:Integer"), "len") type QName(PackageNamespace("", "#0"), "uint") end
+  trait method QName(PackageNamespace("", "#0"), "getLength")
+   method
+    refid "com.hurlant.util.der:Integer/getLength"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:Integer"), "len")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getType")
+   method
+    refid "com.hurlant.util.der:Integer/getType"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:Integer"), "type")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString") flag OVERRIDE
+   method
+    refid "com.hurlant.util.der:Integer/toString"
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "String")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+      getproperty         QName(PackageNamespace("", "#0"), "indent")
+      pushstring          "Integer["
+      add
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:Integer"), "type")
+      add
+      pushstring          "]["
+      add
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:Integer"), "len")
+      add
+      pushstring          "]["
+      add
+      getlocal0
+      pushbyte            16
+      callsuper           QName(PackageNamespace("", "#0"), "toString"), 1
+      add
+      pushstring          "]"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toDER")
+   method
+    refid "com.hurlant.util.der:Integer/toDER"
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.util.der:Integer/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

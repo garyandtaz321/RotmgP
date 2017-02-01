@@ -1,0 +1,591 @@
+class
+ refid "_-14-:Update"
+ instance QName(PackageNamespace("_-14-"), "Update")
+  extends QName(PackageNamespace("_-14-"), "_-eJ")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1Sr")
+  iinit
+   refid "_-14-:Update/iinit"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "Function")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal_i          2
+     inclocal            3
+     add
+     setlocal3
+
+     declocal            3
+     kill                2
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     dup
+     iftrue              L20
+
+     pop
+     getlocal2
+     convert_b
+L20:
+     iffalse             L69
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-14-:Update#0"), PrivateNamespace("*", "_-14-:Update#1"), PackageNamespace("", "#0"), PackageNamespace("_-14-"), PackageInternalNs("_-14-"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Sr"), StaticProtectedNs("_-1Sr"), StaticProtectedNs("_-cO"), StaticProtectedNs("_-0rE"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("_-11j"), "_-2-Z")
+     applytype           1
+     construct           0
+     jump                L33
+
+     inclocal            3
+     declocal            3
+     subtract_i
+     getlocal2
+     pushnull
+     setlocal3
+
+L33:
+     initproperty        QName(PackageNamespace("", "#0"), "tiles_")
+
+     getlocal            4
+     iffalse             L73
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-14-:Update#0"), PrivateNamespace("*", "_-14-:Update#1"), PackageNamespace("", "#0"), PackageNamespace("_-14-"), PackageInternalNs("_-14-"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Sr"), StaticProtectedNs("_-1Sr"), StaticProtectedNs("_-cO"), StaticProtectedNs("_-0rE"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("_-11j"), "_-CC")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace("", "#0"), "newObjs_")
+
+     getlocal            4
+     jump                L50
+
+     declocal            3
+     declocal            3
+     declocal_i          3
+     hasnext
+     declocal_i          3
+     pushfalse
+L50:
+     dup
+     iftrue              L55
+
+     pop
+     getlocal1
+     convert_b
+L55:
+     iffalse             L73
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-14-:Update#0"), PrivateNamespace("*", "_-14-:Update#1"), PackageNamespace("", "#0"), PackageNamespace("_-14-"), PackageInternalNs("_-14-"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Sr"), StaticProtectedNs("_-1Sr"), StaticProtectedNs("_-cO"), StaticProtectedNs("_-0rE"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("", "#0"), "int")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace("", "#0"), "drops_")
+
+     getlocal            4
+     dup
+     iftrue              L68
+
+     pop
+     getlocal1
+     convert_b
+L68:
+     iffalse             L73
+
+L69:
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+L73:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "tiles_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-11j"), "_-2-Z")>) end
+  trait slot QName(PackageNamespace("", "#0"), "newObjs_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-11j"), "_-CC")>) end
+  trait slot QName(PackageNamespace("", "#0"), "drops_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "int")>) end
+  trait method QName(PackageNamespace("", "#0"), "parseFromInput") flag OVERRIDE
+   method
+    refid "_-14-:Update/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 7
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal            5
+
+      jump                L10
+
+      popscope
+      getlocal1
+      inclocal            4
+      getlocal3
+      lshift
+      kill                5
+L10:
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readShort"), 0
+      convert_i
+      setlocal3
+
+      getlocal            5
+      dup
+      iftrue              L25
+
+      pop
+      getlocal3
+      convert_b
+L25:
+      iffalse             L36
+
+      getlocal3
+      getlocal            5
+      dup
+      iftrue              L33
+
+      pop
+      getlocal0
+      convert_b
+L33:
+      iffalse             L35
+
+      convert_i
+L35:
+      setlocal2
+
+L36:
+      jump                L52
+
+L37:
+      label
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0CH")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "tiles_")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "_-14-:Update#0"), PrivateNamespace("*", "_-14-:Update#1"), PackageNamespace("", "#0"), PackageNamespace("_-14-"), PackageInternalNs("_-14-"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Sr"), StaticProtectedNs("_-1Sr"), StaticProtectedNs("_-cO"), StaticProtectedNs("_-0rE")])
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-0Ez"), 1
+
+      inclocal_i          2
+      getlocal            6
+      dup
+      iffalse             L51
+
+      pop
+      getlocal2
+      convert_b
+L51:
+      iftrue              L200
+
+L52:
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "tiles_")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L37
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "tiles_")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "tiles_")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      callproperty        QName(PackageNamespace("", "#0"), "min"), 2
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      jump                L76
+
+L67:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "tiles_")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0CH")
+      getlex              QName(PackageNamespace("_-11j"), "_-2-Z")
+      callproperty        QName(PackageNamespace("", "#0"), "_-mN"), 1
+      getlex              QName(PackageNamespace("_-11j"), "_-2-Z")
+      astypelate
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L76:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "tiles_")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      getlocal3
+      iflt                L67
+
+      getlocal            5
+      iffalse             L142
+
+      pushbyte            0
+      getlocal            5
+      dup
+      iftrue              L90
+
+      pop
+      getlocal1
+      convert_b
+L90:
+      iffalse             L208
+
+      setlocal2
+
+      getlocal            5
+      dup
+      iftrue              L98
+
+      pop
+      getlocal3
+      convert_b
+L98:
+      iffalse             L150
+
+      jump                L117
+
+L100:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "tiles_")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "_-14-:Update#0"), PrivateNamespace("*", "_-14-:Update#1"), PackageNamespace("", "#0"), PackageNamespace("_-14-"), PackageInternalNs("_-14-"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Sr"), StaticProtectedNs("_-1Sr"), StaticProtectedNs("_-cO"), StaticProtectedNs("_-0rE")])
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "parseFromInput"), 1
+
+      getlocal            5
+      iffalse             L137
+
+      inclocal_i          2
+      getlocal            6
+      dup
+      iffalse             L116
+
+      pop
+      getlocal0
+      convert_b
+L116:
+      iftrue              L241
+
+L117:
+      getlocal2
+      getlocal3
+      getlocal            6
+      iftrue              L229
+
+      iflt                L100
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "newObjs_")
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readShort"), 0
+      convert_i
+      setlocal3
+
+      jump                L137
+
+      getlocal2
+      declocal_i          4
+      declocal_i          3
+      inclocal_i          2
+      convert_b
+      urshift
+L137:
+      getlocal3
+      convert_i
+      setlocal2
+
+      getlocal            5
+      iffalse             L170
+
+L142:
+      jump                L158
+
+L143:
+      label
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0CH")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "newObjs_")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "_-14-:Update#0"), PrivateNamespace("*", "_-14-:Update#1"), PackageNamespace("", "#0"), PackageNamespace("_-14-"), PackageInternalNs("_-14-"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Sr"), StaticProtectedNs("_-1Sr"), StaticProtectedNs("_-cO"), StaticProtectedNs("_-0rE")])
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-0Ez"), 1
+
+L150:
+      inclocal_i          2
+      getlocal            5
+      dup
+      iftrue              L157
+
+      pop
+      getlocal3
+      convert_b
+L157:
+      iffalse             L237
+
+L158:
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "newObjs_")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L143
+
+      getlocal            5
+      dup
+      iftrue              L169
+
+      pop
+      getlocal3
+      convert_b
+L169:
+      iffalse             L224
+
+L170:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "newObjs_")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "newObjs_")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      callproperty        QName(PackageNamespace("", "#0"), "min"), 2
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      getlocal            5
+      iffalse             L193
+
+      jump                L193
+
+L182:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "newObjs_")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0CH")
+      getlex              QName(PackageNamespace("_-11j"), "_-CC")
+      callproperty        QName(PackageNamespace("", "#0"), "_-mN"), 1
+      getlex              QName(PackageNamespace("_-11j"), "_-CC")
+      astypelate
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            6
+      iftrue              L241
+
+L193:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "newObjs_")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      getlocal3
+      iflt                L182
+
+      getlocal            6
+      iftrue              L224
+
+L200:
+      pushbyte            0
+      getlocal            5
+      dup
+      iftrue              L207
+
+      pop
+      getlocal1
+      convert_b
+L207:
+      iffalse             L228
+
+L208:
+      setlocal2
+
+      getlocal            6
+      dup
+      iffalse             L215
+
+      pop
+      getlocal3
+      convert_b
+L215:
+      iftrue              L237
+
+      jump                L227
+
+L217:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "newObjs_")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "_-14-:Update#0"), PrivateNamespace("*", "_-14-:Update#1"), PackageNamespace("", "#0"), PackageNamespace("_-14-"), PackageInternalNs("_-14-"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Sr"), StaticProtectedNs("_-1Sr"), StaticProtectedNs("_-cO"), StaticProtectedNs("_-0rE")])
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "parseFromInput"), 1
+
+L224:
+      inclocal_i          2
+      getlocal            5
+      iffalse             L237
+
+L227:
+      getlocal2
+L228:
+      getlocal3
+L229:
+      iflt                L217
+
+      getlocal            6
+      dup
+      iffalse             L236
+
+      pop
+      getlocal3
+      convert_b
+L236:
+      iftrue              L241
+
+L237:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "drops_")
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+L241:
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readShort"), 0
+      convert_i
+      setlocal            4
+
+      getlocal            6
+      iftrue              L277
+
+      pushbyte            0
+      getlocal            6
+      iftrue              L278
+
+      jump                L257
+
+      strictequals
+      kill                5
+      setlocal3
+
+      subtract_i
+      decrement_i
+      setlocal3
+
+L257:
+      setlocal2
+
+      getlocal            6
+      dup
+      iffalse             L264
+
+      pop
+      getlocal1
+      convert_b
+L264:
+      iftrue              L277
+
+      jump                L277
+
+L266:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "drops_")
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            6
+      iftrue              L280
+
+      inclocal_i          2
+      getlocal            5
+      iffalse             L280
+
+L277:
+      getlocal2
+L278:
+      getlocal            4
+      iflt                L266
+
+L280:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString") flag OVERRIDE
+   method
+    refid "_-14-:Update/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 7
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-0rE"), "formatToString")
+      jump                L10
+
+      astypelate
+      divide
+      getlocal3
+      add
+      convert_o
+      getglobalscope
+L10:
+      pushstring          "UPDATE"
+      pushstring          "tiles_"
+      pushstring          "newObjs_"
+      pushstring          "drops_"
+      callproperty        QName(ProtectedNamespace("_-0rE"), "formatToString"), 4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-14-:Update/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

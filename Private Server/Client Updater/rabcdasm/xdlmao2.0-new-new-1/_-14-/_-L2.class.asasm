@@ -1,0 +1,259 @@
+class
+ refid "_-14-:_-L2"
+ instance QName(PackageNamespace("_-14-"), "_-L2")
+  extends QName(PackageNamespace("_-14-"), "_-eJ")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Ph")
+  iinit
+   refid "_-14-:_-L2/iinit"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "Function")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     convert_d
+     inclocal            3
+     inclocal            2
+     popscope
+     getlocal2
+     setlocal3
+
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     iffalse             L28
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-14-:_-L2/iinit#0"), PrivateNamespace("*", "_-14-:_-L2/iinit#1"), PackageNamespace("", "#0"), PackageNamespace("_-14-"), PackageInternalNs("_-14-"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Ph"), StaticProtectedNs("_-Ph"), StaticProtectedNs("_-cO"), StaticProtectedNs("_-0rE"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("", "#0"), "String")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace("", "#0"), "accountIds_")
+
+     getlocal            4
+     iffalse             L28
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "accountListId_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "accountIds_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "String")>) end
+  trait slot QName(PackageNamespace("", "#0"), "lockAction_") type QName(PackageNamespace("", "#0"), "int") value Integer(-1) end
+  trait method QName(PackageNamespace("", "#0"), "parseFromInput") flag OVERRIDE
+   method
+    refid "_-14-:_-L2/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      dxnslate
+      getlocal0
+      inclocal_i          4
+      convert_o
+      getlocal0
+      kill                3
+L10:
+      setlocal            4
+
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      getlocal            4
+      dup
+      iffalse             L22
+
+      pop
+      getlocal3
+      convert_b
+L22:
+      iftrue              L34
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "accountListId_")
+
+      getlocal            5
+      dup
+      iftrue              L33
+
+      pop
+      getlocal1
+      convert_b
+L33:
+      iffalse             L45
+
+L34:
+      getlocal0
+      jump                L42
+
+      kill                4
+      kill                2
+      add
+      nextname
+      urshift
+      bitand
+L42:
+      getproperty         QName(PackageNamespace("", "#0"), "accountIds_")
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+L45:
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readShort"), 0
+      convert_i
+      setlocal3
+
+      getlocal            4
+      dup
+      iffalse             L55
+
+      pop
+      getlocal1
+      convert_b
+L55:
+      iftrue              L58
+
+      pushbyte            0
+      setlocal2
+
+L58:
+      jump                L77
+
+L59:
+      label
+      getlocal0
+      jump                L68
+
+      dxnslate
+      kill                4
+      declocal            2
+      strictequals
+      not
+      getlocal3
+L68:
+      getproperty         QName(PackageNamespace("", "#0"), "accountIds_")
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUTF"), 0
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            4
+      iftrue              L77
+
+      inclocal_i          2
+      getlocal            4
+      iftrue              L87
+
+L77:
+      getlocal2
+      getlocal3
+      iflt                L59
+
+      getlocal            4
+      dup
+      iffalse             L86
+
+      pop
+      getlocal3
+      convert_b
+L86:
+      iftrue              L91
+
+L87:
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "lockAction_")
+
+L91:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString") flag OVERRIDE
+   method
+    refid "_-14-:_-L2/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 7
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-0rE"), "formatToString")
+      jump                L10
+
+      increment_i
+      coerce_a
+      strictequals
+      subtract_i
+      istypelate
+      checkfilter
+L10:
+      pushstring          "ACCOUNTLIST"
+      pushstring          "accountListId_"
+      pushstring          "accountIds_"
+      pushstring          "lockAction_"
+      callproperty        QName(ProtectedNamespace("_-0rE"), "formatToString"), 4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-14-:_-L2/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

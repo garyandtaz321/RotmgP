@@ -1,0 +1,508 @@
+class
+ refid "com.hurlant.crypto.symmetric:XTeaKey"
+ instance QName(PackageNamespace("com.hurlant.crypto.symmetric"), "XTeaKey")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("ISymmetricKey", [PackageNamespace("com.hurlant.crypto.symmetric")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0uF")
+  iinit
+   refid "com.hurlant.crypto.symmetric:XTeaKey/iinit"
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   body
+    maxstack 5
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     pushbyte            0
+     setproperty         QName(PackageNamespace("", "#0"), "position")
+
+     getlocal0
+     getlocal1
+     callproperty        QName(PackageNamespace("", "#0"), "readUnsignedInt"), 0
+     getlocal1
+     callproperty        QName(PackageNamespace("", "#0"), "readUnsignedInt"), 0
+     getlocal1
+     callproperty        QName(PackageNamespace("", "#0"), "readUnsignedInt"), 0
+     getlocal1
+     callproperty        QName(PackageNamespace("", "#0"), "readUnsignedInt"), 0
+     newarray            4
+     initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#0"), "k")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PackageNamespace("", "#0"), "NUM_ROUNDS") type QName(PackageNamespace("", "#0"), "uint") value Integer(64) end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#0"), "k") type QName(PackageNamespace("", "#0"), "Array") end
+  trait method QName(PackageNamespace("", "#0"), "getBlockSize")
+   method
+    refid "com.hurlant.crypto.symmetric:XTeaKey/getBlockSize"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            8
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "encrypt")
+   method
+    refid "com.hurlant.crypto.symmetric:XTeaKey/encrypt"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 6
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      getlocal1
+      getlocal2
+      setproperty         QName(PackageNamespace("", "#0"), "position")
+
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "readUnsignedInt"), 0
+      convert_u
+      setlocal3
+
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "readUnsignedInt"), 0
+      convert_u
+      setlocal            4
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      pushdouble          2654435769
+      convert_u
+      setlocal            7
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      jump                L82
+
+L26:
+      label
+      getlocal3
+      getlocal            4
+      pushbyte            4
+      lshift
+      getlocal            4
+      pushbyte            5
+      rshift
+      bitxor
+      getlocal            4
+      add
+      getlocal            6
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#0"), "k")
+      getlocal            6
+      pushbyte            3
+      bitand
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.hurlant.crypto.symmetric"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), ProtectedNamespace("_-0uF"), StaticProtectedNs("_-0uF")])
+      add
+      bitxor
+      add
+      convert_u
+      setlocal3
+
+      getlocal            6
+      getlocal            7
+      add
+      convert_u
+      setlocal            6
+
+      getlocal            4
+      getlocal3
+      pushbyte            4
+      lshift
+      getlocal3
+      pushbyte            5
+      rshift
+      bitxor
+      getlocal3
+      add
+      getlocal            6
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#0"), "k")
+      getlocal            6
+      pushbyte            11
+      rshift
+      pushbyte            3
+      bitand
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.hurlant.crypto.symmetric"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), ProtectedNamespace("_-0uF"), StaticProtectedNs("_-0uF")])
+      add
+      bitxor
+      add
+      convert_u
+      setlocal            4
+
+      getlocal            5
+      increment
+      convert_u
+      setlocal            5
+
+L82:
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "NUM_ROUNDS")
+      iflt                L26
+
+      getlocal1
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "position")
+      pushbyte            8
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "position")
+
+      getlocal1
+      getlocal3
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeUnsignedInt"), 1
+
+      getlocal1
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeUnsignedInt"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "decrypt")
+   method
+    refid "com.hurlant.crypto.symmetric:XTeaKey/decrypt"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 6
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      getlocal1
+      getlocal2
+      setproperty         QName(PackageNamespace("", "#0"), "position")
+
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "readUnsignedInt"), 0
+      convert_u
+      setlocal3
+
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "readUnsignedInt"), 0
+      convert_u
+      setlocal            4
+
+      pushdouble          2654435769
+      convert_u
+      dup
+      setlocal            6
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "NUM_ROUNDS")
+      multiply
+      convert_u
+      setlocal            7
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      jump                L85
+
+L29:
+      label
+      getlocal            4
+      getlocal3
+      pushbyte            4
+      lshift
+      getlocal3
+      pushbyte            5
+      rshift
+      bitxor
+      getlocal3
+      add
+      getlocal            7
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#0"), "k")
+      getlocal            7
+      pushbyte            11
+      rshift
+      pushbyte            3
+      bitand
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.hurlant.crypto.symmetric"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), ProtectedNamespace("_-0uF"), StaticProtectedNs("_-0uF")])
+      add
+      bitxor
+      subtract
+      convert_u
+      setlocal            4
+
+      getlocal            7
+      getlocal            6
+      subtract
+      convert_u
+      setlocal            7
+
+      getlocal3
+      getlocal            4
+      pushbyte            4
+      lshift
+      getlocal            4
+      pushbyte            5
+      rshift
+      bitxor
+      getlocal            4
+      add
+      getlocal            7
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#0"), "k")
+      getlocal            7
+      pushbyte            3
+      bitand
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.hurlant.crypto.symmetric"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), ProtectedNamespace("_-0uF"), StaticProtectedNs("_-0uF")])
+      add
+      bitxor
+      subtract
+      convert_u
+      setlocal3
+
+      getlocal            5
+      increment
+      convert_u
+      setlocal            5
+
+L85:
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "NUM_ROUNDS")
+      iflt                L29
+
+      getlocal1
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "position")
+      pushbyte            8
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "position")
+
+      getlocal1
+      getlocal3
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeUnsignedInt"), 1
+
+      getlocal1
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeUnsignedInt"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "dispose")
+   method
+    refid "com.hurlant.crypto.symmetric:XTeaKey/dispose"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.hurlant.crypto.prng"), "Random")
+      constructprop       QName(PackageNamespace("com.hurlant.crypto.prng"), "Random"), 0
+      coerce              QName(PackageNamespace("com.hurlant.crypto.prng"), "Random")
+      setlocal1
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      jump                L26
+
+L10:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#0"), "k")
+      getlocal2
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "nextByte"), 0
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.hurlant.crypto.symmetric"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), ProtectedNamespace("_-0uF"), StaticProtectedNs("_-0uF")])
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#0"), "k")
+      getlocal2
+      deleteproperty      MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.hurlant.crypto.symmetric"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), ProtectedNamespace("_-0uF"), StaticProtectedNs("_-0uF")])
+      pop
+      getlocal2
+      increment
+      convert_u
+      setlocal2
+
+L26:
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#0"), "k")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L10
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:XTeaKey#0"), "k")
+
+      getlex              QName(PackageNamespace("com.hurlant.util"), "Memory")
+      callpropvoid        QName(PackageNamespace("", "#0"), "gc"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "com.hurlant.crypto.symmetric:XTeaKey/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "xtea"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.crypto.symmetric:XTeaKey/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace("", "#0"), "parseKey") flag FINAL dispid 3
+  method
+   refid "com.hurlant.crypto.symmetric:XTeaKey/parseKey"
+   param QName(PackageNamespace("", "#0"), "String")
+   returns QName(PackageNamespace("com.hurlant.crypto.symmetric"), "XTeaKey")
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+     constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+     coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+     setlocal2
+
+     getlocal2
+     findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+     getlocal1
+     pushbyte            0
+     pushbyte            8
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     pushbyte            16
+     callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 2
+     callpropvoid        QName(PackageNamespace("", "#0"), "writeUnsignedInt"), 1
+
+     getlocal2
+     findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+     getlocal1
+     pushbyte            8
+     dup
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     pushbyte            16
+     callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 2
+     callpropvoid        QName(PackageNamespace("", "#0"), "writeUnsignedInt"), 1
+
+     getlocal2
+     findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+     getlocal1
+     pushbyte            16
+     pushbyte            8
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     pushbyte            16
+     callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 2
+     callpropvoid        QName(PackageNamespace("", "#0"), "writeUnsignedInt"), 1
+
+     getlocal2
+     findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+     getlocal1
+     pushbyte            24
+     pushbyte            8
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     pushbyte            16
+     callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 2
+     callpropvoid        QName(PackageNamespace("", "#0"), "writeUnsignedInt"), 1
+
+     getlocal2
+     pushbyte            0
+     setproperty         QName(PackageNamespace("", "#0"), "position")
+
+     getlocal0
+     getlocal2
+     construct           1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

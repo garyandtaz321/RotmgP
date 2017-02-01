@@ -1,0 +1,141 @@
+class
+ refid "_-1E-:StatModel"
+ instance QName(PackageNamespace("_-1E-"), "StatModel")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0bB")
+  iinit
+   refid "_-1E-:StatModel/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     inclocal_i          2
+     getlocal3
+     pushwith
+     pushscope
+
+     pushnull
+     getlocal2
+L10:
+     setlocal            5
+
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     getlocal            6
+     dup
+     iftrue              L20
+
+     pop
+     getlocal2
+     convert_b
+L20:
+     iffalse             L67
+
+     getlocal0
+     constructsuper      0
+
+     jump                L30
+
+     modulo
+     newactivation
+     inclocal            5
+     setlocal            4
+
+     pushnull
+     pushnull
+L30:
+     getlocal            6
+     dup
+     iftrue              L36
+
+     pop
+     getlocal1
+     convert_b
+L36:
+     iffalse             L64
+
+     jump                L44
+
+     setlocal            4
+
+     inclocal_i          2
+     decrement_i
+     inclocal            2
+     declocal_i          3
+     lessequals
+L44:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "name")
+
+     getlocal            5
+     dup
+     iffalse             L53
+
+     pop
+     getlocal2
+     convert_b
+L53:
+     iftrue              L64
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "_-yt")
+
+     getlocal            5
+     iftrue              L67
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace("", "#0"), "description")
+
+     getlocal            6
+     iffalse             L67
+
+L64:
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace("", "#0"), "_-WQ")
+
+L67:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "name") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "_-yt") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "description") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "_-WQ") type QName(PackageNamespace("", "#0"), "Boolean") end
+ end ; instance
+ cinit
+  refid "_-1E-:StatModel/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

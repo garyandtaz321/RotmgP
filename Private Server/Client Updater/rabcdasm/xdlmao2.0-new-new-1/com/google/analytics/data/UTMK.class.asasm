@@ -1,0 +1,99 @@
+class
+ refid "com.google.analytics.data:UTMK"
+ instance QName(PackageNamespace("com.google.analytics.data"), "UTMK")
+  extends QName(PackageNamespace("com.google.analytics.data"), "UTMCookie")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.data:UTMK")
+  iinit
+   refid "com.google.analytics.data:UTMK/iinit"
+   param QName(PackageNamespace("", "#0"), "Number")
+   flag HAS_OPTIONAL
+   optional Double(nan)
+   body
+    maxstack 4
+    localcount 2
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     pushstring          "utmk"
+     pushstring          "__utmk"
+     pushstring          "hash"
+     newarray            1
+     constructsuper      3
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "hash")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait setter QName(PackageNamespace("", "#0"), "hash")
+   method
+    refid "com.google.analytics.data:UTMK/hash/setter"
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMK"), "_hash")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMK"), "_hash")
+
+      findpropstrict      QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "update")
+      callpropvoid        QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "update"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.data:UTMK"), "_hash") type QName(PackageNamespace("", "#0"), "Number") end
+  trait getter QName(PackageNamespace("", "#0"), "hash")
+   method
+    refid "com.google.analytics.data:UTMK/hash/getter"
+    returns QName(PackageNamespace("", "#0"), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMK"), "_hash")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.data:UTMK/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

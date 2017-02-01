@@ -1,0 +1,121 @@
+class
+ refid "_-0pG:_-1wd"
+ instance QName(PackageNamespace("_-0pG"), "_-1wd")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Nf")
+  iinit
+   refid "_-0pG:_-1wd/iinit"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     greaterequals
+     bitxor
+     declocal            2
+     dup
+     setlocal2
+
+     declocal_i          2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L56
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     dup
+     jump                L27
+
+     declocal_i          2
+     hasnext
+     nextname
+     popscope
+     pushundefined
+     multiply_i
+L27:
+     iffalse             L38
+
+     pop
+     getlocal3
+     convert_b
+     jump                L38
+
+     negate
+     coerce_a
+     declocal_i          2
+     getlocal2
+     nextvalue
+     inclocal_i          2
+L38:
+     iftrue              L56
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("", "#0"), "int")
+     findpropstrict      QName(PackageNamespace("", "#0"), "Number")
+     getlocal1
+     getproperty         MultinameA("time", [PrivateNamespace("*", "_-0pG:_-1wd/iinit#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-0pG:_-1wd/iinit#1"), PackageNamespace("_-0pG"), PackageInternalNs("_-0pG"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Nf"), StaticProtectedNs("_-0Nf")])
+     callproperty        QName(PackageNamespace("", "#0"), "Number"), 1
+     pushshort           1000
+     multiply
+     callproperty        QName(PackageNamespace("", "#0"), "int"), 1
+     initproperty        QName(PackageNamespace("", "#0"), "time_")
+
+     getlocal3
+     dup
+     iftrue              L55
+
+     pop
+     getlocal0
+     convert_b
+L55:
+     iffalse             L61
+
+L56:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-0sh")
+     getlocal1
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-0sh"), 1
+     initproperty        QName(PackageNamespace("", "#0"), "_-1Ip")
+
+L61:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "time_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-1Ip") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-1kQ") end
+ end ; instance
+ cinit
+  refid "_-0pG:_-1wd/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

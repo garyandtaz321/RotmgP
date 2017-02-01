@@ -1,0 +1,41 @@
+script ; 1289
+ sinit
+  refid "com.company.assembleegameclient.objects:ObjectProperties.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("ObjectProperties", [PackageNamespace("com.company.assembleegameclient.objects")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.company.assembleegameclient.objects:ObjectProperties"
+    popscope
+    initproperty        QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectProperties")
+
+    findpropstrict      Multiname("WhileMovingProperties", [PrivateNamespace("*", "com.company.assembleegameclient.objects:ObjectProperties")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.company.assembleegameclient.objects:ObjectProperties/WhileMovingProperties"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:ObjectProperties"), "WhileMovingProperties")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectProperties")
+  #include "ObjectProperties.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:ObjectProperties"), "WhileMovingProperties")
+  #include "ObjectProperties/WhileMovingProperties.class.asasm"
+ end ; trait
+end ; script

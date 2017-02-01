@@ -1,0 +1,787 @@
+class
+ refid "_-Z0:PlayerToolTip"
+ instance QName(PackageNamespace("_-Z0"), "PlayerToolTip")
+  extends QName(PackageNamespace("_-Z0"), "_-0lC")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1JT")
+  iinit
+   refid "_-Z0:PlayerToolTip/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+   body
+    maxstack 9
+    localcount 5
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     getlocal3
+     declocal            2
+     setlocal2
+
+     kill                2
+     strictequals
+     pop
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal2
+
+     getlocal3
+     iffalse             L271
+
+     getlocal0
+     pushint             3552822
+     pushdouble          0.5
+     pushint             16777215
+     pushbyte            1
+     constructsuper      4
+
+     getlocal3
+     iffalse             L164
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "player_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-wA")
+     pushint             11776947
+     pushtrue
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "player_")
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-wA"), 3
+     initproperty        QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-0J2")
+
+     getlocal            4
+     dup
+     iffalse             L42
+
+     pop
+     getlocal1
+     convert_b
+L42:
+     iftrue              L196
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-0J2")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     getlocal            4
+     iftrue              L126
+
+     pushbyte            34
+     setlocal2
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "RankText")
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "player_")
+     getproperty         QName(PackageNamespace("", "#0"), "numStars_")
+     pushfalse
+     pushtrue
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "RankText"), 3
+     initproperty        QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-1Qy")
+
+     getlocal3
+     dup
+     iftrue              L66
+
+     pop
+     getlocal3
+     convert_b
+L66:
+     iffalse             L75
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-1Qy")
+     getlocal            4
+     iftrue              L77
+
+     pushbyte            6
+     getlocal3
+     iffalse             L78
+
+     setproperty         QName(PackageNamespace("", "#0"), "x")
+
+L75:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-1Qy")
+L77:
+     getlocal2
+L78:
+     setproperty         QName(PackageNamespace("", "#0"), "y")
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-1Qy")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     getlocal            4
+     dup
+     iffalse             L89
+
+     pop
+     getlocal3
+     convert_b
+L89:
+     iftrue              L344
+
+     getlocal2
+     getlocal3
+     iffalse             L185
+
+     pushbyte            30
+     getlocal3
+     iffalse             L284
+
+     add
+     getlocal            4
+     iftrue              L287
+
+     convert_i
+     setlocal2
+
+     getlocal3
+     dup
+     iftrue              L107
+
+     pop
+     getlocal2
+     convert_b
+L107:
+     iffalse             L240
+
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "guildName_")
+     getlocal            4
+     iftrue              L128
+
+     pushnull
+     equals
+     getlocal            4
+     iftrue              L132
+
+     not
+     getlocal3
+     iffalse             L133
+
+     dup
+     iffalse             L133
+
+     getlocal3
+     iffalse             L132
+
+     pop
+     getlocal            4
+     iftrue              L434
+
+L126:
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "guildName_")
+L128:
+     pushstring          ""
+     equals
+     getlocal3
+     iffalse             L133
+
+L132:
+     not
+L133:
+     iffalse             L186
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-1g")
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "player_")
+     getproperty         QName(PackageNamespace("", "#0"), "guildName_")
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "player_")
+     getproperty         QName(PackageNamespace("", "#0"), "guildRank_")
+     pushshort           136
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-1g"), 3
+     initproperty        QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-0Qb")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-0Qb")
+     getlocal3
+     dup
+     iftrue              L153
+
+     pop
+     getlocal0
+     convert_b
+L153:
+     iffalse             L160
+
+     pushbyte            6
+     getlocal            4
+     iftrue              L161
+
+     setproperty         QName(PackageNamespace("", "#0"), "x")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-0Qb")
+L160:
+     getlocal2
+L161:
+     pushbyte            2
+     subtract
+     setproperty         QName(PackageNamespace("", "#0"), "y")
+
+L164:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-0Qb")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     getlocal            4
+     iftrue              L289
+
+     getlocal2
+     pushbyte            30
+     getlocal            4
+     iftrue              L284
+
+     add
+     getlocal            4
+     iftrue              L342
+
+     convert_i
+     getlocal            4
+     dup
+     iffalse             L184
+
+     pop
+     getlocal2
+     convert_b
+L184:
+     iftrue              L343
+
+L185:
+     setlocal2
+
+L186:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "StatusBar")
+     pushshort           176
+     pushbyte            16
+     pushint             14693428
+     pushint             5526612
+     getlex              QName(PackageNamespace("_-6u"), "_-TG")
+     getproperty         QName(PackageNamespace("", "#0"), "_-1iZ")
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "StatusBar"), 5
+     initproperty        QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-lz")
+
+L196:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-lz")
+     getlocal            4
+     dup
+     iffalse             L204
+
+     pop
+     getlocal3
+     convert_b
+L204:
+     iftrue              L218
+
+     pushbyte            6
+     getlocal3
+     iffalse             L219
+
+     setproperty         QName(PackageNamespace("", "#0"), "x")
+
+     jump                L216
+
+     inclocal_i          3
+     subtract
+     kill                2
+     bitxor
+     declocal_i          2
+     kill                2
+L216:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-lz")
+L218:
+     getlocal2
+L219:
+     setproperty         QName(PackageNamespace("", "#0"), "y")
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-lz")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     getlocal3
+     dup
+     iftrue              L230
+
+     pop
+     getlocal2
+     convert_b
+L230:
+     iffalse             L250
+
+     getlocal2
+     pushbyte            24
+     getlocal            4
+     iftrue              L341
+
+     add
+     getlocal            4
+     iftrue              L342
+
+     convert_i
+     setlocal2
+
+L240:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "StatusBar")
+     pushshort           176
+     pushbyte            16
+     pushint             6325472
+     pushint             5526612
+     getlex              QName(PackageNamespace("_-6u"), "_-TG")
+     getproperty         QName(PackageNamespace("", "#0"), "_-jS")
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "StatusBar"), 5
+     initproperty        QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-1lu")
+
+L250:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-1lu")
+     getlocal            4
+     iftrue              L262
+
+     pushbyte            6
+     getlocal            4
+     iftrue              L263
+
+     setproperty         QName(PackageNamespace("", "#0"), "x")
+
+     getlocal3
+     iffalse             L438
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-1lu")
+L262:
+     getlocal2
+L263:
+     setproperty         QName(PackageNamespace("", "#0"), "y")
+
+     getlocal3
+     dup
+     iftrue              L270
+
+     pop
+     getlocal0
+     convert_b
+L270:
+     iffalse             L352
+
+L271:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-1lu")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     getlocal2
+     pushbyte            24
+     getlocal            4
+     dup
+     iffalse             L283
+
+     pop
+     getlocal3
+     convert_b
+L283:
+     iftrue              L341
+
+L284:
+     add
+     getlocal            4
+     iftrue              L342
+
+L287:
+     convert_i
+     setlocal2
+
+L289:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-1qi"), "_-1cF")
+     pushnull
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "player_")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0ac")
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "player_")
+     constructprop       QName(PackageNamespace("_-1qi"), "_-1cF"), 3
+     initproperty        QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-06x")
+
+     getlocal            4
+     dup
+     iffalse             L305
+
+     pop
+     getlocal1
+     convert_b
+L305:
+     iftrue              L339
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-06x")
+     getlocal3
+     dup
+     iftrue              L314
+
+     pop
+     getlocal0
+     convert_b
+L314:
+     iffalse             L326
+
+     pushbyte            8
+     getlocal            4
+     dup
+     iffalse             L322
+
+     pop
+     getlocal2
+     convert_b
+L322:
+     iftrue              L327
+
+     setproperty         QName(PackageNamespace("", "#0"), "x")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-06x")
+L326:
+     getlocal2
+L327:
+     setproperty         QName(PackageNamespace("", "#0"), "y")
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-06x")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     getlocal3
+     dup
+     iftrue              L338
+
+     pop
+     getlocal0
+     convert_b
+L338:
+     iffalse             L344
+
+L339:
+     getlocal2
+     pushbyte            52
+L341:
+     add
+L342:
+     convert_i
+L343:
+     setlocal2
+
+L344:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-0y9"), "_-06T")
+     constructprop       QName(PackageNamespace("_-0y9"), "_-06T"), 0
+     pushbyte            12
+     callproperty        QName(PackageNamespace("", "#0"), "setSize"), 1
+     pushint             11776947
+     callproperty        QName(PackageNamespace("", "#0"), "setColor"), 1
+     initproperty        QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-ta")
+
+L352:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-ta")
+     getlocal            4
+     dup
+     iffalse             L360
+
+     pop
+     getlocal0
+     convert_b
+L360:
+     iftrue              L406
+
+     getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+     getproperty         QName(PackageNamespace("", "#0"), "CENTER")
+     callpropvoid        QName(PackageNamespace("", "#0"), "setAutoSize"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-ta")
+     getlocal3
+     iffalse             L398
+
+     findpropstrict      QName(PackageNamespace("_-0Mr"), "_-5R")
+     constructprop       QName(PackageNamespace("_-0Mr"), "_-5R"), 0
+     getlex              QName(PackageNamespace("_-6u"), "_-TG")
+     getproperty         QName(PackageNamespace("", "#0"), "_-1us")
+     callproperty        QName(PackageNamespace("", "#0"), "setParams"), 1
+     callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+     getlocal            4
+     iftrue              L394
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-ta")
+     getlocal3
+     iffalse             L398
+
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     dup
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+     newarray            1
+     setproperty         QName(PackageNamespace("", "#0"), "filters")
+
+     getlocal            4
+     dup
+     iffalse             L393
+
+     pop
+     getlocal0
+     convert_b
+L393:
+     iftrue              L438
+
+L394:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-ta")
+     getlocal3
+     iffalse             L406
+
+L398:
+     getlex              QName(PackageNamespace("", "#0"), "width")
+     pushbyte            2
+     divide
+     setproperty         QName(PackageNamespace("", "#0"), "x")
+
+     getlocal            4
+     iftrue              L422
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-ta")
+L406:
+     getlocal2
+     setproperty         QName(PackageNamespace("", "#0"), "y")
+
+     jump                L415
+
+     instanceof
+     declocal_i          3
+     convert_u
+     pushnull
+     greaterequals
+     setlocal3
+
+L415:
+     getlocal3
+     dup
+     iftrue              L421
+
+     pop
+     getlocal3
+     convert_b
+L421:
+     iffalse             L438
+
+L422:
+     getlex              QName(ProtectedNamespace("_-1mZ"), "_-qH")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-ta")
+     getproperty         QName(PackageNamespace("", "#0"), "textChanged")
+     callpropvoid        QName(PackageNamespace("", "#0"), "push"), 1
+
+     getlocal            4
+     dup
+     iffalse             L433
+
+     pop
+     getlocal2
+     convert_b
+L433:
+     iftrue              L438
+
+L434:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-ta")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L438:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "player_") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player") end
+  trait slot QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-0J2") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-wA") end
+  trait slot QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-1Qy") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "RankText") end
+  trait slot QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-0Qb") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-1g") end
+  trait slot QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-lz") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "StatusBar") end
+  trait slot QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-1lu") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "StatusBar") end
+  trait slot QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-ta") type QName(PackageNamespace("_-0y9"), "_-06T") end
+  trait slot QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-06x") type QName(PackageNamespace("_-1qi"), "_-1cF") end
+  trait method QName(PackageNamespace("", "#0"), "draw") flag OVERRIDE
+   method
+    refid "_-Z0:PlayerToolTip/draw"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      getlocal2
+      negate_i
+      convert_d
+      convert_o
+      greaterthan
+      setlocal2
+
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L19
+
+      pop
+      getlocal1
+      convert_b
+L19:
+      iftrue              L91
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-lz")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1wA")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      getproperty         QName(PackageNamespace("", "#0"), "_-022")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0fM")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Pv")
+      callpropvoid        QName(PackageNamespace("", "#0"), "draw"), 4
+
+      jump                L42
+
+      modulo
+      strictequals
+      convert_s
+      lessequals
+      nextvalue
+      setlocal3
+
+L42:
+      getlocal2
+      iftrue              L91
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-1lu")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0e")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0sE")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      getproperty         QName(PackageNamespace("", "#0"), "_-08J")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1hc")
+      callpropvoid        QName(PackageNamespace("", "#0"), "draw"), 4
+
+      getlocal1
+      iffalse             L91
+
+      jump                L68
+
+      getglobalscope
+      convert_o
+      pushundefined
+      convert_o
+      multiply_i
+      convert_b
+L68:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-06x")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Z-")
+      callpropvoid        QName(PackageNamespace("", "#0"), "setItems"), 1
+
+      getlocal1
+      iffalse             L91
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Z0:PlayerToolTip"), "_-1Qy")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      getproperty         QName(PackageNamespace("", "#0"), "numStars_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "draw"), 1
+
+      getlocal1
+      dup
+      iftrue              L88
+
+      pop
+      getlocal2
+      convert_b
+L88:
+      iffalse             L91
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace("", "#0"), "draw"), 0
+L91:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Z0:PlayerToolTip/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,41 @@
+script ; 2074
+ sinit
+  refid "com.company.assembleegameclient.engine3d:Order.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Order", [PackageNamespace("com.company.assembleegameclient.engine3d")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.company.assembleegameclient.engine3d:Order"
+    popscope
+    initproperty        QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "Order")
+
+    findpropstrict      Multiname("StaticEnforcer", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:Order")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.company.assembleegameclient.engine3d:Order/StaticEnforcer"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:Order"), "StaticEnforcer")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "Order")
+  #include "Order.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:Order"), "StaticEnforcer")
+  #include "Order/StaticEnforcer.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,81 @@
+script ; 1682
+ sinit
+  refid "_-GI:FlowEffect.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("FlowEffect", [PackageNamespace("_-GI")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "_-1S9")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "_-1S9")
+    newclass            "_-GI:FlowEffect"
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-GI"), "FlowEffect")
+
+    findpropstrict      Multiname("FlowParticle", [PrivateNamespace("*", "_-GI:FlowEffect")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "Particle")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "Particle")
+    newclass            "_-GI:FlowEffect/FlowParticle"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-GI:FlowEffect"), "FlowParticle")
+
+    findpropstrict      Multiname("FlowParticle2", [PrivateNamespace("*", "_-GI:FlowEffect")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "Particle")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "Particle")
+    newclass            "_-GI:FlowEffect/FlowParticle2"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-GI:FlowEffect"), "FlowParticle2")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-GI"), "FlowEffect")
+  #include "FlowEffect.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-GI:FlowEffect"), "FlowParticle")
+  #include "FlowEffect/FlowParticle.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-GI:FlowEffect"), "FlowParticle2")
+  #include "FlowEffect/FlowParticle2.class.asasm"
+ end ; trait
+end ; script

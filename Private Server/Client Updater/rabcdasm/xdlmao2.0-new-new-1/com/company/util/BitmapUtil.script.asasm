@@ -1,0 +1,41 @@
+script ; 803
+ sinit
+  refid "com.company.util:BitmapUtil.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("BitmapUtil", [PackageNamespace("com.company.util")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.company.util:BitmapUtil"
+    popscope
+    initproperty        QName(PackageNamespace("com.company.util"), "BitmapUtil")
+
+    findpropstrict      Multiname("StaticEnforcer", [PrivateNamespace("*", "com.company.util:BitmapUtil")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.company.util:BitmapUtil/StaticEnforcer"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "com.company.util:BitmapUtil"), "StaticEnforcer")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.company.util"), "BitmapUtil")
+  #include "BitmapUtil.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "com.company.util:BitmapUtil"), "StaticEnforcer")
+  #include "BitmapUtil/StaticEnforcer.class.asasm"
+ end ; trait
+end ; script

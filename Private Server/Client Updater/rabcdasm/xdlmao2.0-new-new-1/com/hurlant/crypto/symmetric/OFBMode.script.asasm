@@ -1,0 +1,33 @@
+script ; 1909
+ sinit
+  refid "com.hurlant.crypto.symmetric:OFBMode.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("OFBMode", [PackageNamespace("com.hurlant.crypto.symmetric")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IVMode")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IVMode")
+    newclass            "com.hurlant.crypto.symmetric:OFBMode"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.hurlant.crypto.symmetric"), "OFBMode")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.hurlant.crypto.symmetric"), "OFBMode")
+  #include "OFBMode.class.asasm"
+ end ; trait
+end ; script

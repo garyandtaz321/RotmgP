@@ -1,0 +1,383 @@
+class
+ refid "com.hurlant.crypto.symmetric:TripleDESKey"
+ instance QName(PackageNamespace("com.hurlant.crypto.symmetric"), "TripleDESKey")
+  extends QName(PackageNamespace("com.hurlant.crypto.symmetric"), "DESKey")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0nL")
+  iinit
+   refid "com.hurlant.crypto.symmetric:TripleDESKey/iinit"
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   body
+    maxstack 5
+    localcount 2
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal0
+     findpropstrict      QName(ProtectedNamespace("_-6n"), "generateWorkingKey")
+     pushfalse
+     getlocal1
+     pushbyte            8
+     callproperty        QName(ProtectedNamespace("_-6n"), "generateWorkingKey"), 3
+     initproperty        QName(ProtectedNamespace("_-0nL"), "encKey2")
+
+     getlocal0
+     findpropstrict      QName(ProtectedNamespace("_-6n"), "generateWorkingKey")
+     pushtrue
+     getlocal1
+     pushbyte            8
+     callproperty        QName(ProtectedNamespace("_-6n"), "generateWorkingKey"), 3
+     initproperty        QName(ProtectedNamespace("_-0nL"), "decKey2")
+
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "length")
+     pushbyte            16
+     ifngt               L38
+
+     getlocal0
+     findpropstrict      QName(ProtectedNamespace("_-6n"), "generateWorkingKey")
+     pushtrue
+     getlocal1
+     pushbyte            16
+     callproperty        QName(ProtectedNamespace("_-6n"), "generateWorkingKey"), 3
+     initproperty        QName(ProtectedNamespace("_-0nL"), "encKey3")
+
+     getlocal0
+     findpropstrict      QName(ProtectedNamespace("_-6n"), "generateWorkingKey")
+     pushfalse
+     getlocal1
+     pushbyte            16
+     callproperty        QName(ProtectedNamespace("_-6n"), "generateWorkingKey"), 3
+     initproperty        QName(ProtectedNamespace("_-0nL"), "decKey3")
+
+     jump                L44
+
+L38:
+     getlocal0
+     getlex              QName(ProtectedNamespace("_-6n"), "encKey")
+     initproperty        QName(ProtectedNamespace("_-0nL"), "encKey3")
+
+     getlocal0
+     getlex              QName(ProtectedNamespace("_-6n"), "decKey")
+     initproperty        QName(ProtectedNamespace("_-0nL"), "decKey3")
+
+L44:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("_-0nL"), "encKey2") type QName(PackageNamespace("", "#0"), "Array") end
+  trait slot QName(ProtectedNamespace("_-0nL"), "encKey3") type QName(PackageNamespace("", "#0"), "Array") end
+  trait slot QName(ProtectedNamespace("_-0nL"), "decKey2") type QName(PackageNamespace("", "#0"), "Array") end
+  trait slot QName(ProtectedNamespace("_-0nL"), "decKey3") type QName(PackageNamespace("", "#0"), "Array") end
+  trait method QName(PackageNamespace("", "#0"), "dispose") flag OVERRIDE
+   method
+    refid "com.hurlant.crypto.symmetric:TripleDESKey/dispose"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace("", "#0"), "dispose"), 0
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0nL"), "encKey2")
+      pushnull
+      ifeq                L33
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      jump                L25
+
+L15:
+      label
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0nL"), "encKey2")
+      getlocal1
+      pushbyte            0
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:TripleDESKey/dispose#0"), ProtectedNamespace("_-0nL"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:TripleDESKey/dispose#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-0nL"), StaticProtectedNs("_-6n")])
+
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+L25:
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0nL"), "encKey2")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L15
+
+      getlocal0
+      pushnull
+      initproperty        QName(ProtectedNamespace("_-0nL"), "encKey2")
+
+L33:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0nL"), "encKey3")
+      pushnull
+      ifeq                L59
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      jump                L51
+
+L41:
+      label
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0nL"), "encKey3")
+      getlocal1
+      pushbyte            0
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:TripleDESKey/dispose#0"), ProtectedNamespace("_-0nL"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:TripleDESKey/dispose#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-0nL"), StaticProtectedNs("_-6n")])
+
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+L51:
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0nL"), "encKey3")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L41
+
+      getlocal0
+      pushnull
+      initproperty        QName(ProtectedNamespace("_-0nL"), "encKey3")
+
+L59:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0nL"), "decKey2")
+      pushnull
+      ifeq                L85
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      jump                L77
+
+L67:
+      label
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0nL"), "decKey2")
+      getlocal1
+      pushbyte            0
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:TripleDESKey/dispose#0"), ProtectedNamespace("_-0nL"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:TripleDESKey/dispose#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-0nL"), StaticProtectedNs("_-6n")])
+
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+L77:
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0nL"), "decKey2")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L67
+
+      getlocal0
+      pushnull
+      initproperty        QName(ProtectedNamespace("_-0nL"), "decKey2")
+
+L85:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0nL"), "decKey3")
+      pushnull
+      ifeq                L111
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      jump                L103
+
+L93:
+      label
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0nL"), "decKey3")
+      getlocal1
+      pushbyte            0
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:TripleDESKey/dispose#0"), ProtectedNamespace("_-0nL"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:TripleDESKey/dispose#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-0nL"), StaticProtectedNs("_-6n")])
+
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+L103:
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0nL"), "decKey3")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L93
+
+      getlocal0
+      pushnull
+      initproperty        QName(ProtectedNamespace("_-0nL"), "decKey3")
+
+L111:
+      getlex              QName(PackageNamespace("com.hurlant.util"), "Memory")
+      callpropvoid        QName(PackageNamespace("", "#0"), "gc"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "encrypt") flag OVERRIDE
+   method
+    refid "com.hurlant.crypto.symmetric:TripleDESKey/encrypt"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-6n"), "desFunc")
+      getlex              QName(ProtectedNamespace("_-6n"), "encKey")
+      getlocal1
+      getlocal2
+      getlocal1
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("_-6n"), "desFunc"), 5
+
+      findpropstrict      QName(ProtectedNamespace("_-6n"), "desFunc")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0nL"), "encKey2")
+      getlocal1
+      getlocal2
+      getlocal1
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("_-6n"), "desFunc"), 5
+
+      findpropstrict      QName(ProtectedNamespace("_-6n"), "desFunc")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0nL"), "encKey3")
+      getlocal1
+      getlocal2
+      getlocal1
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("_-6n"), "desFunc"), 5
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "decrypt") flag OVERRIDE
+   method
+    refid "com.hurlant.crypto.symmetric:TripleDESKey/decrypt"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-6n"), "desFunc")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0nL"), "decKey3")
+      getlocal1
+      getlocal2
+      getlocal1
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("_-6n"), "desFunc"), 5
+
+      findpropstrict      QName(ProtectedNamespace("_-6n"), "desFunc")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0nL"), "decKey2")
+      getlocal1
+      getlocal2
+      getlocal1
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("_-6n"), "desFunc"), 5
+
+      findpropstrict      QName(ProtectedNamespace("_-6n"), "desFunc")
+      getlex              QName(ProtectedNamespace("_-6n"), "decKey")
+      getlocal1
+      getlocal2
+      getlocal1
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("_-6n"), "desFunc"), 5
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString") flag OVERRIDE
+   method
+    refid "com.hurlant.crypto.symmetric:TripleDESKey/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "3des"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.crypto.symmetric:TripleDESKey/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

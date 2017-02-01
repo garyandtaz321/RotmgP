@@ -1,0 +1,804 @@
+class
+ refid "_-u5:_-1kJ"
+ instance QName(PackageNamespace("_-u5"), "_-1kJ")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1db")
+  iinit
+   refid "_-u5:_-1kJ/iinit"
+   param QName(PackageNamespace("flash.display3D"), "Context3D")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     decrement_i
+     setlocal2
+
+     lessthan
+     declocal_i          2
+     setlocal2
+
+     declocal            2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iffalse             L25
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     dup
+     iffalse             L24
+
+     pop
+     getlocal3
+     convert_b
+L24:
+     iftrue              L28
+
+L25:
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D") type QName(PackageNamespace("flash.display3D"), "Context3D") end
+  trait method QName(PackageNamespace("", "#0"), "_-sU")
+   method
+    refid "_-u5:_-1kJ/_-sU"
+    returns QName(PackageNamespace("flash.display3D"), "Context3D")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "configureBackBuffer")
+   method
+    refid "_-u5:_-1kJ/configureBackBuffer"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional True()
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal_i          2
+      lessthan
+      pushnull
+      pushnan
+      getlocal            4
+      getlocal2
+L10:
+      setlocal            5
+
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      dup
+      iffalse             L20
+
+      pop
+      getlocal0
+      convert_b
+L20:
+      iftrue              L28
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "configureBackBuffer"), 4
+
+L28:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "createProgram")
+   method
+    refid "_-u5:_-1kJ/createProgram"
+    returns QName(PackageNamespace("_-u5"), "_-AK")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-u5"), "_-AK")
+      jump                L10
+
+      bitxor
+      rshift
+      modulo
+      lessequals
+      pop
+      convert_u
+L10:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+      callproperty        QName(PackageNamespace("", "#0"), "createProgram"), 0
+      constructprop       QName(PackageNamespace("_-u5"), "_-AK"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "clear")
+   method
+    refid "_-u5:_-1kJ/clear"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      greaterequals
+      nextvalue
+      decrement_i
+      rshift
+      popscope
+      add_i
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L19
+
+      pop
+      getlocal2
+      convert_b
+L19:
+      iftrue              L26
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+      pushdouble          0.05
+      pushdouble          0.05
+      pushdouble          0.05
+      callpropvoid        QName(PackageNamespace("", "#0"), "clear"), 3
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "present")
+   method
+    refid "_-u5:_-1kJ/present"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      getlocal3
+      negate
+      equals
+      swap
+      add
+      multiply
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      iftrue              L19
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+      callpropvoid        QName(PackageNamespace("", "#0"), "present"), 0
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "createIndexBuffer")
+   method
+    refid "_-u5:_-1kJ/createIndexBuffer"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("_-u5"), "default")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-u5"), "default")
+      jump                L10
+
+      bitxor
+      setlocal3
+
+      getlocal1
+      multiply_i
+      add
+      hasnext
+L10:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "createIndexBuffer"), 1
+      constructprop       QName(PackageNamespace("_-u5"), "default"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "createVertexBuffer")
+   method
+    refid "_-u5:_-1kJ/createVertexBuffer"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("_-u5"), "_-1a5")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-u5"), "_-1a5")
+      jump                L10
+
+      negate_i
+      divide
+      pushundefined
+      convert_s
+      popscope
+      pop
+L10:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace("", "#0"), "createVertexBuffer"), 2
+      constructprop       QName(PackageNamespace("_-u5"), "_-1a5"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setVertexBufferAt")
+   method
+    refid "_-u5:_-1kJ/setVertexBufferAt"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("_-u5"), "_-1a5")
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Utf8("float4")
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      getlocal            4
+      inclocal            3
+      getglobalscope
+      kill                4
+      getlocal1
+      declocal_i          2
+L10:
+      setlocal            5
+
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      getlocal            6
+      dup
+      iftrue              L20
+
+      pop
+      getlocal0
+      convert_b
+L20:
+      iffalse             L29
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace("", "#0"), "_-1v4"), 0
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "setVertexBufferAt"), 4
+
+L29:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setProgramConstantsFromMatrix")
+   method
+    refid "_-u5:_-1kJ/setProgramConstantsFromMatrix"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("flash.geom"), "Matrix3D")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal            3
+      kill                5
+      pushwith
+      setlocal2
+
+      getlocal2
+      increment_i
+L10:
+      setlocal            5
+
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      getlocal            6
+      iffalse             L23
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "setProgramConstantsFromMatrix"), 4
+
+L23:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setProgramConstantsFromVector")
+   method
+    refid "_-u5:_-1kJ/setProgramConstantsFromVector"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "int")
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "Number")>)
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Integer(-1)
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            5
+
+      jump                L10
+
+      inclocal            3
+      getlocal            4
+      declocal_i          5
+      getlocal1
+      getlocal0
+      instanceof
+L10:
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      getlocal            6
+      iftrue              L22
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "setProgramConstantsFromVector"), 4
+
+L22:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "createTexture")
+   method
+    refid "_-u5:_-1kJ/createTexture"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("_-u5"), "_-NH")
+    body
+     maxstack 8
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-u5"), "_-NH")
+      jump                L10
+
+      kill                3
+      declocal            3
+      inclocal            2
+      setlocal3
+
+      convert_i
+      multiply
+L10:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      callproperty        QName(PackageNamespace("", "#0"), "createTexture"), 4
+      constructprop       QName(PackageNamespace("_-u5"), "_-NH"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setTextureAt")
+   method
+    refid "_-u5:_-1kJ/setTextureAt"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("_-u5"), "_-NH")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      negate
+      astypelate
+      nextvalue
+      bitnot
+      declocal            2
+      kill                2
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      iftrue              L21
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace("", "#0"), "getTexture"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "setTextureAt"), 2
+
+L21:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setProgram")
+   method
+    refid "_-u5:_-1kJ/setProgram"
+    param QName(PackageNamespace("_-u5"), "_-AK")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      inclocal_i          2
+      inclocal            2
+      declocal_i          2
+      multiply_i
+      setlocal2
+
+      setlocal2
+
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iftrue              L19
+
+      pop
+      getlocal1
+      convert_b
+L19:
+      iffalse             L25
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-W0"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "setProgram"), 1
+
+L25:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "drawTriangles")
+   method
+    refid "_-u5:_-1kJ/drawTriangles"
+    param QName(PackageNamespace("_-u5"), "default")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      pushfalse
+      urshift
+      dup
+      getlocal2
+      inclocal_i          2
+      inclocal_i          2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L20
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-0LT"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "drawTriangles"), 1
+
+L20:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setBlendFactors")
+   method
+    refid "_-u5:_-1kJ/setBlendFactors"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      setlocal2
+
+      strictequals
+      pushundefined
+      rshift
+      not
+      setlocal3
+
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      dup
+      iffalse             L19
+
+      pop
+      getlocal3
+      convert_b
+L19:
+      iftrue              L25
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "setBlendFactors"), 2
+
+L25:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setDepthTest")
+   method
+    refid "_-u5:_-1kJ/setDepthTest"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      nextvalue
+      kill                3
+      pushwith
+      istypelate
+      inclocal            3
+      hasnext
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      iffalse             L21
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-u5:_-1kJ"), "context3D")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "setDepthTest"), 2
+
+L21:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-u5:_-1kJ/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

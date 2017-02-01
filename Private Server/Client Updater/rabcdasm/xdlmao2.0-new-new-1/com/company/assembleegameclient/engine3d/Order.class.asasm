@@ -1,0 +1,135 @@
+class
+ refid "com.company.assembleegameclient.engine3d:Order"
+ instance QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "Order")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-iV")
+  iinit
+   refid "com.company.assembleegameclient.engine3d:Order/iinit"
+   param QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:Order"), "StaticEnforcer")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     setlocal2
+
+     pop
+     kill                2
+     newactivation
+     declocal            2
+     pushnan
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L19
+
+     pop
+     getlocal1
+     convert_b
+L19:
+     iffalse             L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.engine3d:Order/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    subtract
+    bitnot
+    add_i
+    coerce_a
+    bitor
+    add
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    jump                L23
+
+    dxnslate
+    istypelate
+    negate_i
+    convert_i
+    multiply
+    swap
+L23:
+    iftrue              L27
+
+    pop
+    getlocal0
+    convert_b
+L27:
+    iffalse             L33
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-7B")
+    pushbyte            0
+    initproperty        QName(PackageNamespace("", "#0"), "_-7B")
+
+    getlocal2
+    iffalse             L46
+
+L33:
+    findproperty        QName(PackageNamespace("", "#0"), "_-Un")
+    pushbyte            1
+    initproperty        QName(PackageNamespace("", "#0"), "_-Un")
+
+    getlocal1
+    dup
+    iffalse             L42
+
+    pop
+    getlocal2
+    convert_b
+L42:
+    iftrue              L46
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-WA")
+    pushbyte            2
+    initproperty        QName(PackageNamespace("", "#0"), "_-WA")
+
+L46:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-7B") slotid 1 type QName(PackageNamespace("", "#0"), "int") value Integer(0) end
+ trait const QName(PackageNamespace("", "#0"), "_-Un") slotid 2 type QName(PackageNamespace("", "#0"), "int") value Integer(1) end
+ trait const QName(PackageNamespace("", "#0"), "_-WA") slotid 3 type QName(PackageNamespace("", "#0"), "int") value Integer(2) end
+end ; class

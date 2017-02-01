@@ -1,0 +1,210 @@
+class
+ refid "_-0hL:_-1As"
+ instance QName(PackageNamespace("_-0hL"), "_-1As")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1wx")
+  iinit
+   refid "_-0hL:_-1As/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     bitor
+     convert_u
+     bitxor
+     rshift
+     dxnslate
+     nextvalue
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-0hL:_-1As/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace("*", "_-0hL:_-1As"), "_-0HY") slotid 1 type QName(PackageNamespace("", "#0"), "uint") end
+ trait method QName(PackageNamespace("", "#0"), "create") flag FINAL dispid 3
+  method
+   refid "_-0hL:_-1As/create"
+   param null
+   returns QName(PackageNamespace("", "#0"), "String")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 6
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     divide
+     hasnext
+     subtract_i
+     pushwith
+     checkfilter
+     declocal            4
+L10:
+     setlocal            4
+
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     getlocal            5
+     iffalse             L27
+
+     getlocal1
+     getlex              QName(PackageNamespace("", "#0"), "Class")
+     istypelate
+     iffalse             L35
+
+     getlocal            4
+     dup
+     iffalse             L26
+
+     pop
+     getlocal1
+     convert_b
+L26:
+     iftrue              L44
+
+L27:
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+     getlocal1
+     callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
+     pushstring          "::"
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "pop"), 0
+     coerce_a
+     setlocal1
+
+L35:
+     getlocal1
+     iffalse             L51
+
+     jump                L44
+
+     setlocal3
+
+     kill                2
+     getlocal1
+     inclocal_i          3
+     strictequals
+     lessthan
+L44:
+     getlocal1
+     pushstring          "-"
+     add
+     getlocal            5
+     iffalse             L54
+
+     coerce_a
+     jump                L55
+
+L51:
+     pushstring          ""
+     getlocal            5
+     iffalse             L94
+
+L54:
+     coerce_a
+L55:
+     findpropstrict      QName(PrivateNamespace("*", "_-0hL:_-1As"), "_-0HY")
+     dup
+     setlocal2
+
+     getproperty         QName(PrivateNamespace("*", "_-0hL:_-1As"), "_-0HY")
+     convert_d
+     dup
+     increment
+     setlocal3
+
+     getlocal2
+     jump                L71
+
+     pushscope
+
+     inclocal_i          4
+     setlocal2
+
+     setlocal2
+
+     kill                3
+     inclocal            4
+L71:
+     getlocal3
+     setproperty         QName(PrivateNamespace("*", "_-0hL:_-1As"), "_-0HY")
+
+     kill                3
+     kill                2
+     pushbyte            16
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+     add
+     pushstring          "-"
+     add
+     getlocal            5
+     dup
+     iftrue              L86
+
+     pop
+     getlocal2
+     convert_b
+L86:
+     iffalse             L94
+
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+     pushshort           255
+     multiply
+     pushbyte            16
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+     add
+L94:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

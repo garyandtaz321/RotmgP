@@ -1,0 +1,619 @@
+class
+ refid "com.company.assembleegameclient.objects:Container"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "Container")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  implements Multiname("_-Rk", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0GC")
+  iinit
+   refid "com.company.assembleegameclient.objects:Container/iinit"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     getlocal2
+     bitand
+     pushscope
+
+     kill                2
+     getlocal2
+     declocal            2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iftrue              L50
+
+     getlocal0
+     jump                L29
+
+     nextname
+     lessequals
+     declocal_i          2
+     bitnot
+     setlocal2
+
+     inclocal            2
+L29:
+     getlocal1
+     constructsuper      1
+
+     getlocal2
+     iftrue              L62
+
+     findproperty        QName(PackageNamespace("", "#0"), "_-11k")
+     pushtrue
+     jump                L42
+
+     setlocal2
+
+     bitnot
+     getlocal2
+     kill                2
+     declocal_i          2
+     pop
+L42:
+     initproperty        QName(PackageNamespace("", "#0"), "_-11k")
+
+     getlocal3
+     dup
+     iftrue              L49
+
+     pop
+     getlocal2
+     convert_b
+L49:
+     iffalse             L62
+
+L50:
+     getlocal0
+     getlocal1
+     pushstring          "Loot"
+     callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Container/iinit#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Container/iinit#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0GC"), StaticProtectedNs("_-0GC"), StaticProtectedNs("_-0QL"), StaticProtectedNs("_-1mW")]), 1
+     initproperty        QName(PackageNamespace("", "#0"), "_-VC")
+
+     getlocal2
+     dup
+     iffalse             L61
+
+     pop
+     getlocal3
+     convert_b
+L61:
+     iftrue              L65
+
+L62:
+     getlocal0
+     pushstring          ""
+     initproperty        QName(PackageNamespace("", "#0"), "ownerId_")
+
+L65:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-VC") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "ownerId_") type QName(PackageNamespace("", "#0"), "String") end
+  trait method QName(PackageNamespace("", "#0"), "_-0r8")
+   method
+    refid "com.company.assembleegameclient.objects:Container/_-0r8"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      greaterthan
+      istypelate
+      setlocal2
+
+      getglobalscope
+      getglobalscope
+      declocal            2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L32
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace("", "#0"), "ownerId_")
+
+      getlocal3
+      dup
+      iffalse             L31
+
+      pop
+      getlocal0
+      convert_b
+      jump                L31
+
+      inclocal            2
+      getlocal1
+      rshift
+      coerce_a
+      greaterthan
+      greaterequals
+L31:
+      iftrue              L69
+
+L32:
+      findproperty        QName(PackageNamespace("", "#0"), "_-11k")
+      getlocal2
+      dup
+      iftrue              L46
+
+      pop
+      getlocal0
+      convert_b
+      jump                L46
+
+      instanceof
+      kill                2
+      pushnull
+      increment
+      getlocal1
+      coerce_s
+L46:
+      iffalse             L58
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "ownerId_")
+      pushstring          ""
+      equals
+      getlocal3
+      iftrue              L67
+
+      dup
+      iftrue              L68
+
+      getlocal3
+      iftrue              L67
+
+      pop
+L58:
+      getlocal0
+      callproperty        QName(PackageNamespace("", "#0"), "_-1w5"), 0
+      getlocal3
+      dup
+      iffalse             L66
+
+      pop
+      getlocal1
+      convert_b
+L66:
+      iftrue              L68
+
+L67:
+      convert_b
+L68:
+      initproperty        QName(PackageNamespace("", "#0"), "_-11k")
+
+L69:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-1w5")
+   method
+    refid "com.company.assembleegameclient.objects:Container/_-1w5"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      jump                L10
+
+      increment
+      divide
+      add
+      convert_i
+      subtract
+      greaterthan
+L10:
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      getproperty         QName(PackageNamespace("", "#0"), "accountId_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "ownerId_")
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addTo") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Container/addTo"
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "Map")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      setlocal3
+
+      convert_i
+      strictequals
+      setlocal3
+
+      greaterequals
+      setlocal3
+
+L10:
+      setlocal            5
+
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      iftrue              L31
+
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callsuper           QName(PackageNamespace("", "#0"), "addTo"), 3
+      getlocal            6
+      iffalse             L54
+
+      iftrue              L42
+
+      getlocal            6
+      dup
+      iftrue              L30
+
+      pop
+      getlocal3
+      convert_b
+L30:
+      iffalse             L42
+
+L31:
+      pushfalse
+      getlocal            6
+      iffalse             L54
+
+      returnvalue
+
+      getlocal            5
+      dup
+      iffalse             L41
+
+      pop
+      getlocal3
+      convert_b
+L41:
+      iftrue              L53
+
+L42:
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      pushnull
+      ifne                L55
+
+      getlocal            5
+      dup
+      iffalse             L52
+
+      pop
+      getlocal2
+      convert_b
+L52:
+      iftrue              L55
+
+L53:
+      pushtrue
+L54:
+      returnvalue
+
+L55:
+      getlex              QName(PackageNamespace("com.company.util"), "PointUtil")
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      getlocal2
+      jump                L70
+
+      convert_d
+      getglobalscope
+      pop
+      declocal_i          4
+      setlocal            5
+
+      getlocal3
+L70:
+      getlocal3
+      callproperty        QName(PackageNamespace("", "#0"), "_-1Ar"), 4
+      getlocal            6
+      dup
+      iftrue              L78
+
+      pop
+      getlocal1
+      convert_b
+L78:
+      iffalse             L80
+
+      convert_d
+L80:
+      setlocal            4
+
+      getlocal            6
+      dup
+      iftrue              L87
+
+      pop
+      getlocal3
+      convert_b
+L87:
+      iffalse             L142
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-VC")
+      getlocal            5
+      dup
+      iffalse             L96
+
+      pop
+      getlocal0
+      convert_b
+L96:
+      iftrue              L134
+
+      convert_b
+      getlocal            6
+      dup
+      iftrue              L104
+
+      pop
+      getlocal0
+      convert_b
+L104:
+      iffalse             L114
+
+      dup
+      iffalse             L134
+
+      getlocal            5
+      dup
+      iffalse             L113
+
+      pop
+      getlocal3
+      convert_b
+L113:
+      iftrue              L146
+
+L114:
+      pop
+      getlocal            6
+      jump                L123
+
+      setlocal3
+
+      getlocal3
+      bitxor
+      declocal            3
+      declocal_i          5
+      declocal_i          3
+L123:
+      dup
+      iftrue              L128
+
+      pop
+      getlocal1
+      convert_b
+L128:
+      iffalse             L142
+
+      getlocal            4
+      pushbyte            10
+      lessthan
+      getlocal            6
+      iffalse             L146
+
+L134:
+      iffalse             L145
+
+      getlocal            6
+      dup
+      iftrue              L141
+
+      pop
+      getlocal2
+      convert_b
+L141:
+      iffalse             L145
+
+L142:
+      getlex              QName(PackageNamespace("_-1TG"), "_-0Yn")
+      pushstring          "loot_appears"
+      callpropvoid        QName(PackageNamespace("", "#0"), "play"), 1
+
+L145:
+      pushtrue
+L146:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getPanel")
+   method
+    refid "com.company.assembleegameclient.objects:Container/getPanel"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace("_-1f4"), "Panel")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      getlocal            4
+      setlocal2
+
+      declocal            2
+      istypelate
+      lessequals
+      popscope
+L10:
+      setlocal            4
+
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      dup
+      iftrue              L20
+
+      pop
+      getlocal1
+      convert_b
+L20:
+      iffalse             L46
+
+      getlocal1
+      convert_b
+      jump                L30
+
+      getlocal3
+      getglobalscope
+      subtract_i
+      declocal_i          2
+      convert_d
+      newactivation
+L30:
+      getlocal            5
+      iffalse             L49
+
+      dup
+      iffalse             L49
+
+      getlocal            4
+      iftrue              L49
+
+      jump                L43
+
+      pushwith
+      declocal_i          2
+      inclocal            2
+      inclocal_i          2
+      nextvalue
+      nextname
+L43:
+      pop
+      getlocal            5
+      iffalse             L50
+
+L46:
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "map")
+      convert_b
+L49:
+      iffalse             L55
+
+L50:
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "map")
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+      jump                L57
+
+L55:
+      pushnull
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+L57:
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("_-1qi"), "_-1p4")
+      getlocal0
+      getlocal2
+      constructprop       QName(PackageNamespace("_-1qi"), "_-1p4"), 2
+      coerce              QName(PackageNamespace("_-1qi"), "_-1p4")
+      setlocal3
+
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:Container/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

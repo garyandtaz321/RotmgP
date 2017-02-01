@@ -1,0 +1,159 @@
+class
+ refid "com.hurlant.util.der:ByteString"
+ instance QName(PackageNamespace("com.hurlant.util.der"), "ByteString")
+  extends QName(PackageNamespace("flash.utils"), "ByteArray")
+  implements Multiname("IAsn1Type", [PackageNamespace("com.hurlant.util.der")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1md")
+  iinit
+   refid "com.hurlant.util.der:ByteString/iinit"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "uint")
+   flag HAS_OPTIONAL
+   optional Integer(4)
+   optional Integer(0)
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:ByteString"), "type")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:ByteString"), "len")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.hurlant.util.der:ByteString"), "type") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.util.der:ByteString"), "len") type QName(PackageNamespace("", "#0"), "uint") end
+  trait method QName(PackageNamespace("", "#0"), "getLength")
+   method
+    refid "com.hurlant.util.der:ByteString/getLength"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ByteString"), "len")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getType")
+   method
+    refid "com.hurlant.util.der:ByteString/getType"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ByteString"), "type")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toDER")
+   method
+    refid "com.hurlant.util.der:ByteString/toDER"
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ByteString"), "type")
+      getlocal0
+      callproperty        QName(PackageNamespace("", "#0"), "wrapDER"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString") flag OVERRIDE
+   method
+    refid "com.hurlant.util.der:ByteString/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+      getproperty         QName(PackageNamespace("", "#0"), "indent")
+      pushstring          "ByteString["
+      add
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ByteString"), "type")
+      add
+      pushstring          "]["
+      add
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.util.der:ByteString"), "len")
+      add
+      pushstring          "]["
+      add
+      getlex              QName(PackageNamespace("com.hurlant.util"), "Hex")
+      getlocal0
+      callproperty        QName(PackageNamespace("", "#0"), "fromArray"), 1
+      add
+      pushstring          "]"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.util.der:ByteString/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

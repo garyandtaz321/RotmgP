@@ -1,0 +1,133 @@
+class
+ refid "_-jX:_-Av"
+ instance QName(PackageNamespace("_-jX"), "_-Av")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-13Q")
+  iinit
+   refid "_-jX:_-Av/iinit"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   body
+    maxstack 7
+    localcount 7
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     setlocal            5
+
+     jump                L10
+
+     kill                5
+     declocal            3
+     declocal            3
+     pushtrue
+     declocal_i          5
+     setlocal2
+
+L10:
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlex              QName(PackageNamespace("", "#0"), "graphics")
+     pushbyte            0
+     dup
+     callpropvoid        QName(PackageNamespace("", "#0"), "beginFill"), 2
+
+     getlocal            5
+     dup
+     iftrue              L32
+
+     pop
+     jump                L30
+
+     coerce_s
+     istypelate
+     pushnan
+     pop
+     astypelate
+     not
+L30:
+     getlocal1
+     convert_b
+L32:
+     iffalse             L50
+
+     getlex              QName(PackageNamespace("", "#0"), "graphics")
+     pushbyte            0
+     dup
+     jump                L43
+
+     checkfilter
+     inclocal            2
+     hasnext
+     convert_o
+     kill                5
+     urshift
+L43:
+     getlocal3
+     getlocal            4
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRect"), 4
+
+     getlocal            6
+     iftrue              L66
+
+     getlex              QName(PackageNamespace("", "#0"), "graphics")
+     callpropvoid        QName(PackageNamespace("", "#0"), "endFill"), 0
+
+L50:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "x")
+
+     getlocal            5
+     dup
+     iftrue              L59
+
+     pop
+     getlocal1
+     convert_b
+L59:
+     iffalse             L63
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "y")
+
+L63:
+     findproperty        QName(PackageNamespace("", "#0"), "buttonMode")
+     pushtrue
+     initproperty        QName(PackageNamespace("", "#0"), "buttonMode")
+
+L66:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-jX:_-Av/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

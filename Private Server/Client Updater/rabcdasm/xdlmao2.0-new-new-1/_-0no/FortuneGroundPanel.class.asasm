@@ -1,0 +1,1762 @@
+class
+ refid "_-0no:FortuneGroundPanel"
+ instance QName(PackageNamespace("_-0no"), "FortuneGroundPanel")
+  extends QName(PackageNamespace("_-1f4"), "Panel")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0f")
+  iinit
+   refid "_-0no:FortuneGroundPanel/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+   param QName(PackageNamespace("", "#0"), "uint")
+   body
+    maxstack 7
+    localcount 12
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     setlocal            10
+
+     jump                L10
+
+     inclocal            2
+     declocal_i          2
+     inclocal            6
+     pop
+     getlocal            6
+     kill                3
+L10:
+     setlocal            11
+
+     getlocal0
+     pushscope
+
+     getlocal            10
+     iffalse             L20
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-1Sm"), "_-sy")
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "SellableObject")
+     constructprop       QName(PackageNamespace("_-1Sm"), "_-sy"), 1
+     initproperty        QName(PackageNamespace("", "#0"), "_-0SS")
+
+L20:
+     getlex              QName(PackageNamespace("_-0CT"), "_-8w")
+     callproperty        QName(PackageNamespace("", "#0"), "_-1Sz"), 0
+     coerce              QName(PackageNamespace("_-0cA"), "_-0bz")
+     setlocal3
+
+     getlocal3
+     getlex              QName(PackageNamespace("_-OP"), "_-PV")
+     callproperty        QName(PackageNamespace("", "#0"), "getInstance"), 1
+     coerce              QName(PackageNamespace("_-OP"), "_-PV")
+     dup
+     setlocal            4
+
+     callpropvoid        QName(PackageNamespace("", "#0"), "start"), 0
+
+     getlocal            11
+     iftrue              L38
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal            10
+     iffalse             L141
+
+L38:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-0y9"), "_-06T")
+     constructprop       QName(PackageNamespace("_-0y9"), "_-06T"), 0
+     pushbyte            16
+     callproperty        QName(PackageNamespace("", "#0"), "setSize"), 1
+     pushint             16777215
+     callproperty        QName(PackageNamespace("", "#0"), "setColor"), 1
+     getlex              QName(PackageNamespace("", "#0"), "WIDTH")
+     pushbyte            44
+     subtract
+     callproperty        QName(PackageNamespace("", "#0"), "setTextWidth"), 1
+     initproperty        QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "nameText_")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "nameText_")
+     getlocal            10
+     dup
+     iftrue              L58
+
+     pop
+     getlocal2
+     convert_b
+L58:
+     iffalse             L118
+
+     pushtrue
+     getlocal            11
+     dup
+     iffalse             L66
+
+     pop
+     getlocal2
+     convert_b
+L66:
+     iftrue              L95
+
+     callpropvoid        QName(PackageNamespace("", "#0"), "setBold"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "nameText_")
+     getlocal            10
+     dup
+     iftrue              L76
+
+     pop
+     getlocal3
+     convert_b
+L76:
+     iffalse             L107
+
+     findpropstrict      QName(PackageNamespace("_-0Mr"), "_-5R")
+     constructprop       QName(PackageNamespace("_-0Mr"), "_-5R"), 0
+     getlex              QName(PackageNamespace("_-6u"), "_-TG")
+     getproperty         QName(PackageNamespace("", "#0"), "_-p9")
+     callproperty        QName(PackageNamespace("", "#0"), "setParams"), 1
+     callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "nameText_")
+     getlocal            11
+     dup
+     iffalse             L91
+
+     pop
+     getlocal0
+     convert_b
+L91:
+     iftrue              L118
+
+     pushtrue
+     getlocal            10
+     iffalse             L108
+
+L95:
+     callpropvoid        QName(PackageNamespace("", "#0"), "setWordWrap"), 1
+
+     getlocal            10
+     iffalse             L128
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "nameText_")
+     getlocal            10
+     dup
+     iftrue              L106
+
+     pop
+     getlocal1
+     convert_b
+L106:
+     iffalse             L130
+
+L107:
+     pushtrue
+L108:
+     callpropvoid        QName(PackageNamespace("", "#0"), "setMultiLine"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "nameText_")
+     getlocal            11
+     dup
+     iffalse             L117
+
+     pop
+     getlocal2
+     convert_b
+L117:
+     iftrue              L130
+
+L118:
+     getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+     getproperty         QName(PackageNamespace("", "#0"), "CENTER")
+     callpropvoid        QName(PackageNamespace("", "#0"), "setAutoSize"), 1
+
+     getlocal            11
+     dup
+     iffalse             L127
+
+     pop
+     getlocal2
+     convert_b
+L127:
+     iftrue              L156
+
+L128:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "nameText_")
+L130:
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     dup
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+     newarray            1
+     setproperty         QName(PackageNamespace("", "#0"), "filters")
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "nameText_")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L141:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+     constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+     initproperty        QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0nd")
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0nd")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     getlocal            11
+     dup
+     iffalse             L155
+
+     pop
+     getlocal0
+     convert_b
+L155:
+     iftrue              L175
+
+L156:
+     getlocal0
+     jump                L164
+
+     inclocal_i          10
+     inclocal_i          6
+     kill                9
+     declocal            6
+     inclocal            3
+     convert_s
+L164:
+     findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+     pushnull
+     constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 1
+     initproperty        QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "bitmap_")
+
+     getlocal            11
+     dup
+     iffalse             L174
+
+     pop
+     getlocal1
+     convert_b
+L174:
+     iftrue              L180
+
+L175:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0nd")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "bitmap_")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L180:
+     pushstring          "FortuneGroundPanel.play"
+     setlocal            5
+
+     pushstring          "MysteryBoxPanel.checkBackLater"
+     setlocal            6
+
+     pushstring          "FortuneGroundPanel.alchemist"
+     setlocal            7
+
+     getlocal3
+     getlex              QName(PackageNamespace("_-QC"), "_-0Ew")
+     callproperty        QName(PackageNamespace("", "#0"), "getInstance"), 1
+     coerce              QName(PackageNamespace("_-QC"), "_-0Ew")
+     setlocal            8
+
+     getlocal3
+     getlex              QName(PackageNamespace("_-1PE"), "Account")
+     callproperty        QName(PackageNamespace("", "#0"), "getInstance"), 1
+     coerce              QName(PackageNamespace("_-1PE"), "Account")
+     setlocal            9
+
+     getlex              QName(PackageNamespace("_-QC"), "_-0Ew")
+     getproperty         QName(PackageNamespace("", "#0"), "_-05m")
+     getlocal            10
+     iffalse             L227
+
+     convert_b
+     getlocal            10
+     dup
+     iftrue              L207
+
+     pop
+     getlocal1
+     convert_b
+L207:
+     iffalse             L227
+
+     dup
+     iffalse             L227
+
+     getlocal            11
+     iftrue              L292
+
+     pop
+     getlocal            11
+     iftrue              L253
+
+     getlocal            9
+     callproperty        QName(Namespace("_-1lo"), "_-vD"), 0
+     getlocal            10
+     dup
+     iftrue              L223
+
+     pop
+     getlocal2
+     convert_b
+L223:
+     iffalse             L227
+
+     convert_b
+     getlocal            11
+     iftrue              L292
+
+L227:
+     iffalse             L241
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-1jP")
+     pushbyte            16
+     getlocal            5
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-1jP"), 2
+     initproperty        QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1xv")
+
+     getlocal            10
+     iffalse             L249
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1xv")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+     jump                L253
+
+L241:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-1jP")
+     pushbyte            16
+     getlocal            6
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-1jP"), 2
+     initproperty        QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1xv")
+
+     getlocal            11
+     iftrue              L269
+
+L249:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1xv")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L253:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "nameText_")
+     findpropstrict      QName(PackageNamespace("_-0Mr"), "_-5R")
+     constructprop       QName(PackageNamespace("_-0Mr"), "_-5R"), 0
+     getlocal            7
+     callproperty        QName(PackageNamespace("", "#0"), "setParams"), 1
+     callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+     getlocal            10
+     iffalse             L290
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "bitmap_")
+     getlex              QName(PackageNamespace("_-E4"), "_-AQ")
+     getlocal2
+     callproperty        QName(PackageNamespace("", "#0"), "_-1W8"), 1
+     getproperty         QName(PackageNamespace("", "#0"), "bitmapData")
+     setproperty         QName(PackageNamespace("", "#0"), "bitmapData")
+
+L269:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace("", "#0"), "ADDED_TO_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "onAddedToStage")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     getlocal            11
+     dup
+     iffalse             L281
+
+     pop
+     getlocal3
+     convert_b
+L281:
+     iftrue              L334
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace("", "#0"), "REMOVED_FROM_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "onRemovedFromStage")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     getlocal            11
+     iftrue              L293
+
+L290:
+     getlex              QName(PackageNamespace("_-04j"), "_-1Wz")
+     getproperty         QName(PackageNamespace("", "#0"), "_-so")
+L292:
+     iftrue              L329
+
+L293:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1xv")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace("", "#0"), "CLICK")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-8G")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     getlocal            11
+     dup
+     iffalse             L313
+
+     pop
+     jump                L311
+
+     getlocal            6
+     declocal_i          10
+     getlocal            5
+     lessthan
+     inclocal            10
+     increment_i
+L311:
+     getlocal1
+     convert_b
+L313:
+     iftrue              L328
+
+     getlex              QName(PackageNamespace("", "#0"), "WebMain")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0b2")
+     getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+     getproperty         QName(PackageNamespace("", "#0"), "KEY_DOWN")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-13y")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     getlocal            10
+     dup
+     iftrue              L327
+
+     pop
+     getlocal2
+     convert_b
+L327:
+     iffalse             L334
+
+L328:
+     jump                L334
+
+L329:
+     getlex              QName(PackageNamespace("_-04j"), "_-1Wz")
+     getproperty         QName(PackageNamespace("", "#0"), "closed")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1eV")
+     callpropvoid        QName(PackageNamespace("", "#0"), "add"), 1
+
+L334:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-0SS") type QName(PackageNamespace("_-1Sm"), "_-sy") end
+  trait slot QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-9g") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "SellableObject") end
+  trait slot QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "nameText_") type QName(PackageNamespace("_-0y9"), "_-06T") end
+  trait slot QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-my") type QName(PackageNamespace("_-n-"), "_-19y") end
+  trait slot QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1xv") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-1jP") end
+  trait slot QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0nd") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "bitmap_") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait slot QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0MS") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait method QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1eV")
+   method
+    refid "_-0no:FortuneGroundPanel/_-1eV"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      negate_i
+      subtract
+      not
+      swap
+      getlocal3
+      pushnull
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iftrue              L20
+
+      pop
+      getlocal1
+      convert_b
+L20:
+      iffalse             L63
+
+      jump                L28
+
+      coerce_s
+      add
+      setlocal3
+
+      convert_s
+      swap
+      checkfilter
+L28:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1xv")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace("", "#0"), "CLICK")
+      getlocal0
+      jump                L40
+
+      nextname
+      newactivation
+      instanceof
+      pushnull
+      not
+      dxnslate
+L40:
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-8G")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+      getlocal2
+      iffalse             L63
+
+      getlex              QName(PackageNamespace("", "#0"), "WebMain")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0b2")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace("", "#0"), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-13y")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+      getlocal1
+      dup
+      iffalse             L57
+
+      pop
+      getlocal1
+      convert_b
+L57:
+      iftrue              L63
+
+      getlex              QName(PackageNamespace("_-04j"), "_-1Wz")
+      getproperty         QName(PackageNamespace("", "#0"), "closed")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1eV")
+      callpropvoid        QName(PackageNamespace("", "#0"), "remove"), 1
+
+L63:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0kA")
+   method
+    refid "_-0no:FortuneGroundPanel/_-0kA"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      add
+      popscope
+      nextvalue
+      strictequals
+      kill                3
+      setlocal2
+
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_-0EN"), "_-0u4")
+      setlocal2
+
+      getlocal3
+      dup
+      iftrue              L22
+
+      pop
+      getlocal0
+      convert_b
+L22:
+      iffalse             L27
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0MS")
+      pushnull
+      ifne                L107
+
+L27:
+      getlex              QName(PackageNamespace("_-0CT"), "_-8w")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1Sz"), 0
+      getlex              QName(PackageNamespace("_-QC"), "_-0Ew")
+      callproperty        QName(PackageNamespace("", "#0"), "getInstance"), 1
+      callproperty        Multiname("getFortune", [PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-0no:FortuneGroundPanel#1"), PackageNamespace("_-0no"), PackageInternalNs("_-0no"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("_-1f4"), ProtectedNamespace("_-0f"), StaticProtectedNs("_-0f"), StaticProtectedNs("_-0CS"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      coerce              QName(PackageNamespace("_-0EN"), "_-0u4")
+      setlocal2
+
+      getlocal3
+      dup
+      iftrue              L40
+
+      pop
+      getlocal2
+      convert_b
+L40:
+      iffalse             L97
+
+      getlocal0
+      getlex              QName(PackageNamespace("_-n-"), "_-0m8")
+      jump                L50
+
+      getlocal2
+      multiply
+      declocal            2
+      declocal_i          2
+      inclocal_i          2
+      getglobalscope
+L50:
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "_-71")
+      callproperty        QName(PackageNamespace("", "#0"), "make"), 1
+      initproperty        QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0MS")
+
+      getlocal            4
+      iftrue              L107
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0MS")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0MS")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0MS")
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      pushbyte            10
+      add
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal            4
+      dup
+      iffalse             L74
+
+      pop
+      getlocal0
+      convert_b
+L74:
+      iftrue              L103
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0MS")
+      jump                L84
+
+      inclocal_i          3
+      dup
+      subtract
+      decrement_i
+      getlocal3
+      negate_i
+L84:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0MS")
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0MS")
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      subtract
+      subtract
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal            4
+      iftrue              L107
+
+L97:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0MS")
+      pushnull
+      ifeq                L107
+
+      getlocal            4
+      iftrue              L107
+
+L103:
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0MS")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L107:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1XV")
+   method
+    refid "_-0no:FortuneGroundPanel/_-1XV"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal_i          2
+      inclocal_i          2
+      divide
+      inclocal_i          2
+      declocal            2
+      declocal_i          2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L20
+
+      pop
+      getlocal0
+      convert_b
+L20:
+      iftrue              L84
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0MS")
+      pushnull
+      equals
+      getlocal2
+      dup
+      iffalse             L31
+
+      pop
+      getlocal2
+      convert_b
+L31:
+      iftrue              L47
+
+      not
+      jump                L40
+
+      getlocal2
+      convert_s
+      inclocal            2
+      convert_o
+      setlocal2
+
+      setlocal2
+
+L40:
+      getlocal3
+      dup
+      iftrue              L46
+
+      pop
+      getlocal1
+      convert_b
+L46:
+      iffalse             L51
+
+L47:
+      dup
+      iffalse             L70
+
+      getlocal3
+      iffalse             L70
+
+L51:
+      pop
+      getlocal3
+      dup
+      iftrue              L65
+
+      pop
+      getlocal1
+      jump                L64
+
+      pushnan
+      decrement
+      getlocal2
+      pushfalse
+      setlocal2
+
+      pop
+L64:
+      convert_b
+L65:
+      iffalse             L87
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0MS")
+      getproperty         QName(PackageNamespace("", "#0"), "parent")
+      convert_b
+L70:
+      iffalse             L87
+
+      getlocal2
+      dup
+      iffalse             L77
+
+      pop
+      getlocal2
+      convert_b
+L77:
+      iftrue              L84
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "removeChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0MS")
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeChild"), 1
+
+      getlocal2
+      iftrue              L87
+
+L84:
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0MS")
+
+L87:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-ot")
+   method
+    refid "_-0no:FortuneGroundPanel/_-ot"
+    param QName(PackageNamespace("com.company.assembleegameclient.objects"), "SellableObject")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      convert_o
+      getlocal2
+      urshift
+      greaterthan
+      inclocal            2
+      increment
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      dup
+      iftrue              L20
+
+      pop
+      getlocal3
+      convert_b
+L20:
+      iffalse             L47
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-9g")
+      ifne                L47
+
+      getlocal            4
+      dup
+      iftrue              L31
+
+      pop
+      getlocal1
+      convert_b
+L31:
+      iffalse             L52
+
+      returnvoid
+
+      getlocal            4
+      dup
+      iftrue              L46
+
+      jump                L43
+
+      declocal            3
+      typeof
+      getlocal2
+      inclocal            2
+      declocal            3
+      greaterequals
+L43:
+      pop
+      getlocal3
+      convert_b
+L46:
+      iffalse             L52
+
+L47:
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-9g")
+
+      getlocal3
+      iftrue              L61
+
+L52:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-my")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-9g")
+      getproperty         QName(PackageNamespace("", "#0"), "price_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-9g")
+      getproperty         QName(PackageNamespace("", "#0"), "currency_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "setPrice"), 2
+
+L61:
+      getlocal0
+      jump                L69
+
+      getglobalscope
+      istypelate
+      subtract
+      istypelate
+      getlocal2
+      inclocal            3
+L69:
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-9g")
+      callproperty        QName(PackageNamespace("", "#0"), "soldObjectName"), 0
+      getlocal            4
+      iffalse             L74
+
+      coerce_s
+L74:
+      setlocal2
+
+      getlocal            4
+      iffalse             L92
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "nameText_")
+      findpropstrict      QName(PackageNamespace("_-0Mr"), "_-5R")
+      constructprop       QName(PackageNamespace("_-0Mr"), "_-5R"), 0
+      getlocal2
+      callproperty        QName(PackageNamespace("", "#0"), "setParams"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+      getlocal            4
+      iffalse             L92
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "bitmap_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-9g")
+      callproperty        QName(PackageNamespace("", "#0"), "getIcon"), 0
+      setproperty         QName(PackageNamespace("", "#0"), "bitmapData")
+
+L92:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "onAddedToStage")
+   method
+    refid "_-0no:FortuneGroundPanel/onAddedToStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      kill                2
+      inclocal            2
+      dxnslate
+      declocal            2
+      dup
+      astypelate
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L27
+
+      pop
+      jump                L25
+
+      kill                2
+      newactivation
+      istypelate
+      convert_d
+      declocal_i          2
+      typeof
+L25:
+      getlocal3
+      convert_b
+L27:
+      iftrue              L45
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0nd")
+      pushbyte            252
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal2
+      iftrue              L45
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0nd")
+      pushbyte            248
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal3
+      dup
+      iftrue              L44
+
+      pop
+      getlocal3
+      convert_b
+L44:
+      iffalse             L49
+
+L45:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "nameText_")
+      pushbyte            44
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+L49:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "onRemovedFromStage")
+   method
+    refid "_-0no:FortuneGroundPanel/onRemovedFromStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      inclocal_i          2
+      setlocal2
+
+      inclocal_i          2
+      setlocal2
+
+      newactivation
+      setlocal2
+
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L39
+
+      jump                L22
+
+      getlocal1
+      bitor
+      setlocal3
+
+      kill                2
+      getlocal2
+      inclocal_i          2
+L22:
+      getlex              QName(PackageNamespace("", "#0"), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace("", "#0"), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-13y")
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeEventListener"), 2
+
+      getlocal3
+      iftrue              L44
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1xv")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace("", "#0"), "CLICK")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-8G")
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeEventListener"), 2
+
+      getlocal3
+      iftrue              L44
+
+L39:
+      getlex              QName(PackageNamespace("_-04j"), "_-1Wz")
+      getproperty         QName(PackageNamespace("", "#0"), "closed")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1eV")
+      callpropvoid        QName(PackageNamespace("", "#0"), "remove"), 1
+
+L44:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-8G")
+   method
+    refid "_-0no:FortuneGroundPanel/_-8G"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      getlocal0
+      kill                2
+      lessthan
+      declocal_i          2
+      equals
+      setlocal2
+
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L17
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1ZE"), 0
+
+L17:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1ZE")
+   method
+    refid "_-0no:FortuneGroundPanel/_-1ZE"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 8
+     localcount 7
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      getlocal2
+      declocal            2
+      pushscope
+
+      not
+      not
+      divide
+L10:
+      setlocal            5
+
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      iftrue              L22
+
+      getlex              QName(PackageNamespace("_-04j"), "_-1Wz")
+      getproperty         QName(PackageNamespace("", "#0"), "_-so")
+      iffalse             L22
+
+      getlocal            6
+      iffalse             L22
+
+      returnvoid
+
+L22:
+      getlex              QName(PackageNamespace("_-0CT"), "_-8w")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1Sz"), 0
+      coerce              QName(PackageNamespace("_-0cA"), "_-0bz")
+      setlocal1
+
+      getlocal1
+      getlex              QName(PackageNamespace("_-QC"), "_-0Ew")
+      callproperty        QName(PackageNamespace("", "#0"), "getInstance"), 1
+      coerce              QName(PackageNamespace("_-QC"), "_-0Ew")
+      setlocal2
+
+      getlocal1
+      getlex              QName(PackageNamespace("_-1PE"), "Account")
+      callproperty        QName(PackageNamespace("", "#0"), "getInstance"), 1
+      coerce              QName(PackageNamespace("_-1PE"), "Account")
+      setlocal3
+
+      getlocal1
+      getlex              QName(PackageNamespace("_-Nj"), "_-M4")
+      callproperty        QName(PackageNamespace("", "#0"), "getInstance"), 1
+      coerce              QName(PackageNamespace("_-Nj"), "_-M4")
+      setlocal            4
+
+      getlocal            5
+      dup
+      iffalse             L47
+
+      pop
+      getlocal1
+      convert_b
+L47:
+      iftrue              L92
+
+      getlocal2
+      callproperty        QName(PackageNamespace("", "#0"), "_-0C"), 0
+      getlocal            5
+      iftrue              L64
+
+      convert_b
+      getlocal            6
+      dup
+      iftrue              L59
+
+      pop
+      getlocal1
+      convert_b
+L59:
+      iffalse             L91
+
+      dup
+      iffalse             L91
+
+      getlocal            5
+      iftrue              L91
+
+L64:
+      pop
+      jump                L72
+
+      declocal_i          4
+      kill                4
+      kill                4
+      decrement
+      getlocal3
+      setlocal            5
+
+L72:
+      getlocal            6
+      dup
+      iftrue              L78
+
+      pop
+      getlocal1
+      convert_b
+L78:
+      iffalse             L150
+
+      getlocal3
+      callproperty        QName(Namespace("_-1lo"), "_-vD"), 0
+      getlocal            5
+      dup
+      iffalse             L87
+
+      pop
+      getlocal0
+      convert_b
+L87:
+      iftrue              L131
+
+      convert_b
+      getlocal            5
+      iftrue              L131
+
+L91:
+      iffalse             L129
+
+L92:
+      getlocal            4
+      findpropstrict      QName(PackageNamespace("_-04j"), "_-1Wz")
+      constructprop       QName(PackageNamespace("_-04j"), "_-1Wz"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+      getlex              QName(PackageNamespace("", "#0"), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace("", "#0"), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-13y")
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeEventListener"), 2
+
+      getlocal            5
+      dup
+      iffalse             L108
+
+      pop
+      getlocal2
+      convert_b
+L108:
+      iftrue              L139
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1xv")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace("", "#0"), "CLICK")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-8G")
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeEventListener"), 2
+
+      getlex              QName(PackageNamespace("_-04j"), "_-1Wz")
+      getproperty         QName(PackageNamespace("", "#0"), "closed")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1eV")
+      jump                L127
+
+      istypelate
+      inclocal            3
+      declocal            2
+      greaterequals
+      kill                2
+      equals
+L127:
+      callpropvoid        QName(PackageNamespace("", "#0"), "add"), 1
+
+      jump                L150
+
+L129:
+      getlocal3
+      callproperty        QName(Namespace("_-1lo"), "_-vD"), 0
+L131:
+      iftrue              L150
+
+      getlocal            6
+      dup
+      iftrue              L138
+
+      pop
+      getlocal0
+      convert_b
+L138:
+      iffalse             L150
+
+L139:
+      getlocal            4
+      findpropstrict      QName(PackageNamespace("_-04g"), "_-GE")
+      pushstring          "SellableObjectPanelMediator.text"
+      pushstring          "type"
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1mE")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1sg"), 1
+      newobject           1
+      constructprop       QName(PackageNamespace("_-04g"), "_-GE"), 2
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+L150:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-13y")
+   method
+    refid "_-0no:FortuneGroundPanel/_-13y"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      kill                2
+      newactivation
+      convert_u
+      inclocal_i          2
+      convert_b
+      urshift
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iffalse             L64
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "keyCode")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace("", "#0"), "data_")
+      getproperty         Multiname("interact", [PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-0no:FortuneGroundPanel#1"), PackageNamespace("_-0no"), PackageInternalNs("_-0no"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("_-1f4"), ProtectedNamespace("_-0f"), StaticProtectedNs("_-0f"), StaticProtectedNs("_-0CS"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      equals
+      jump                L29
+
+      getlocal2
+      hasnext
+      istypelate
+      dxnslate
+      getlocal2
+      hasnext
+L29:
+      getlocal2
+      iftrue              L54
+
+      dup
+      iffalse             L54
+
+      getlocal2
+      jump                L41
+
+      lessequals
+      declocal_i          2
+      pushscope
+
+      astypelate
+      multiply
+      getlocal2
+L41:
+      dup
+      iffalse             L46
+
+      pop
+      getlocal3
+      convert_b
+L46:
+      iftrue              L54
+
+      pop
+      getlocal2
+      iftrue              L64
+
+      getlex              QName(PackageNamespace("", "#0"), "stage")
+      getproperty         QName(PackageNamespace("", "#0"), "focus")
+      pushnull
+      equals
+L54:
+      iffalse             L64
+
+      getlocal3
+      dup
+      iftrue              L61
+
+      pop
+      getlocal2
+      convert_b
+L61:
+      iffalse             L64
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1ZE"), 0
+
+L64:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait const QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0Xe") type QName(PackageNamespace("", "#0"), "int") value Integer(17) end
+  trait method QName(PackageNamespace("", "#0"), "draw") flag OVERRIDE
+   method
+    refid "_-0no:FortuneGroundPanel/draw"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      convert_b
+      pushtrue
+      convert_i
+      urshift
+      urshift
+      decrement
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L119
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "nameText_")
+      getlocal2
+      dup
+      iffalse             L23
+
+      pop
+      getlocal2
+      convert_b
+L23:
+      iftrue              L29
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "nameText_")
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      pushbyte            30
+      ifngt               L46
+
+L29:
+      pushbyte            0
+      getlocal1
+      dup
+      iftrue              L36
+
+      pop
+      getlocal1
+      convert_b
+L36:
+      iffalse             L47
+
+      convert_d
+      getlocal1
+      dup
+      iftrue              L44
+
+      pop
+      getlocal0
+      convert_b
+L44:
+      iffalse             L48
+
+      jump                L48
+
+L46:
+      pushbyte            12
+L47:
+      convert_d
+L48:
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal2
+      iftrue              L119
+
+      jump                L58
+
+      strictequals
+      instanceof
+      instanceof
+      pushtrue
+      getlocal1
+      popscope
+L58:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1xv")
+      getlocal1
+      iffalse             L90
+
+      getlex              QName(PackageNamespace("", "#0"), "WIDTH")
+      pushbyte            2
+      divide
+      getlocal1
+      dup
+      iftrue              L71
+
+      pop
+      getlocal0
+      convert_b
+L71:
+      iffalse             L85
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1xv")
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      pushbyte            2
+      divide
+      subtract
+      getlocal2
+      dup
+      iffalse             L84
+
+      pop
+      getlocal0
+      convert_b
+L84:
+      iftrue              L109
+
+L85:
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal2
+      iftrue              L119
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1xv")
+L90:
+      getlex              QName(PackageNamespace("", "#0"), "HEIGHT")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1xv")
+      jump                L100
+
+      coerce_a
+      popscope
+      pushwith
+      pushwith
+      coerce_s
+      convert_b
+L100:
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      pushbyte            2
+      divide
+      subtract
+      getlocal2
+      iftrue              L109
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-0Xe")
+      subtract
+L109:
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal1
+      iffalse             L123
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "contains")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1xv")
+      callproperty        QName(PackageNamespace("", "#0"), "contains"), 1
+      iftrue              L123
+
+      getlocal1
+      iffalse             L123
+
+L119:
+      findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-1xv")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L123:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0no:FortuneGroundPanel/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace("*", "_-0no:FortuneGroundPanel#0"), "_-3V") slotid 1 type QName(PackageNamespace("", "#0"), "Boolean") end
+end ; class

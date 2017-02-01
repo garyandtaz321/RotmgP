@@ -1,0 +1,433 @@
+class
+ refid "com.company.assembleegameclient.objects:Stalagmite"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "Stalagmite")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-HK")
+  iinit
+   refid "com.company.assembleegameclient.objects:Stalagmite/iinit"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 17
+    localcount 7
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal            5
+
+     jump                L10
+
+     declocal            5
+     convert_s
+     declocal            3
+     inclocal_i          2
+     declocal_i          5
+     inclocal            4
+L10:
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     getlocal            5
+     dup
+     iftrue              L19
+
+     pop
+     getlocal3
+     convert_b
+L19:
+     iffalse             L23
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L23:
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), "bs")
+     getlocal            5
+     iffalse             L45
+
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), "cs")
+     getlocal            5
+     dup
+     iftrue              L33
+
+     pop
+     getlocal2
+     convert_b
+L33:
+     iffalse             L37
+
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+     multiply
+L37:
+     add
+     getlocal            6
+     dup
+     iffalse             L44
+
+     pop
+     getlocal3
+     convert_b
+L44:
+     iftrue              L46
+
+L45:
+     convert_d
+L46:
+     setlocal2
+
+     pushbyte            2
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), "cs")
+     multiply
+     getlocal            5
+     iffalse             L82
+
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), "bs")
+     getlocal            6
+     dup
+     iffalse             L59
+
+     pop
+     getlocal1
+     convert_b
+L59:
+     iftrue              L79
+
+     add
+     getlocal            5
+     dup
+     iftrue              L67
+
+     pop
+     getlocal3
+     convert_b
+L67:
+     iffalse             L82
+
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), "cs")
+     getlocal            6
+     dup
+     iffalse             L75
+
+     pop
+     getlocal2
+     convert_b
+L75:
+     iftrue              L79
+
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+     multiply
+L79:
+     add
+     getlocal            6
+     iftrue              L83
+
+L82:
+     convert_d
+L83:
+     setlocal3
+
+     pushbyte            4
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), "cs")
+     multiply
+     getlocal            5
+     iffalse             L109
+
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), "bs")
+     getlocal            5
+     iffalse             L103
+
+     add
+     getlocal            5
+     iffalse             L109
+
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), "cs")
+     getlocal            6
+     dup
+     iffalse             L102
+
+     pop
+     getlocal1
+     convert_b
+L102:
+     iftrue              L106
+
+L103:
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+     multiply
+L106:
+     add
+     getlocal            5
+     iffalse             L110
+
+L109:
+     convert_d
+L110:
+     setlocal            4
+
+     getlocal            6
+     iftrue              L252
+
+     findproperty        QName(PackageNamespace("", "#0"), "_-1bD")
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-1KR")
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-1KR"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "_-1bD")
+
+     getlocal            5
+     iffalse             L267
+
+     getlex              QName(PackageNamespace("", "#0"), "_-1bD")
+     getproperty         QName(PackageNamespace("", "#0"), "vL_")
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     getlocal2
+     jump                L130
+
+     kill                3
+     getlocal3
+     increment
+     equals
+     negate
+     getlocal2
+L130:
+     callproperty        QName(PackageNamespace("", "#0"), "cos"), 1
+     pushdouble          0.3
+     multiply
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     getlocal2
+     callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+     pushdouble          0.3
+     multiply
+     pushdouble          0
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     getlocal3
+     callproperty        QName(PackageNamespace("", "#0"), "cos"), 1
+     pushdouble          0.3
+     multiply
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     getlocal3
+     callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+     pushdouble          0.3
+     multiply
+     pushdouble          0
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     getlocal            4
+     callproperty        QName(PackageNamespace("", "#0"), "cos"), 1
+     pushdouble          0.3
+     multiply
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     getlocal            4
+     callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+     pushdouble          0.3
+     multiply
+     pushdouble          0
+     pushdouble          0
+     pushdouble          0
+     pushdouble          0.6
+     pushdouble          0.6
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+     multiply
+     add
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 12
+
+     getlocal            6
+     iftrue              L267
+
+     getlex              QName(PackageNamespace("", "#0"), "_-1bD")
+     getproperty         QName(PackageNamespace("", "#0"), "faces_")
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "ObjectFace3D")
+     getlex              QName(PackageNamespace("", "#0"), "_-1bD")
+     findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+     getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite/iinit"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), ProtectedNamespace("_-HK"), StaticProtectedNs("_-HK"), StaticProtectedNs("_-0QL"), StaticProtectedNs("_-1mW")])
+     getlex              QName(PackageNamespace("", "#0"), "int")
+     applytype           1
+     pushbyte            3
+     construct           1
+     dup
+     pushbyte            0
+     dup
+     setproperty         MultinameL([PackageNamespace("", "#0")])
+
+     dup
+     pushbyte            1
+     dup
+     setproperty         MultinameL([PackageNamespace("", "#0")])
+
+     dup
+     pushbyte            2
+     pushbyte            3
+     setproperty         MultinameL([PackageNamespace("", "#0")])
+
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "ObjectFace3D"), 2
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "ObjectFace3D")
+     getlex              QName(PackageNamespace("", "#0"), "_-1bD")
+     findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+     getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite/iinit"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), ProtectedNamespace("_-HK"), StaticProtectedNs("_-HK"), StaticProtectedNs("_-0QL"), StaticProtectedNs("_-1mW")])
+     getlex              QName(PackageNamespace("", "#0"), "int")
+     applytype           1
+     pushbyte            3
+     construct           1
+     dup
+     pushbyte            0
+     pushbyte            1
+     setproperty         MultinameL([PackageNamespace("", "#0")])
+
+     dup
+     pushbyte            1
+     pushbyte            2
+     setproperty         MultinameL([PackageNamespace("", "#0")])
+
+     dup
+     pushbyte            2
+     pushbyte            3
+     setproperty         MultinameL([PackageNamespace("", "#0")])
+
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "ObjectFace3D"), 2
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "ObjectFace3D")
+     getlex              QName(PackageNamespace("", "#0"), "_-1bD")
+     findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+     getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite/iinit"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), ProtectedNamespace("_-HK"), StaticProtectedNs("_-HK"), StaticProtectedNs("_-0QL"), StaticProtectedNs("_-1mW")])
+     getlex              QName(PackageNamespace("", "#0"), "int")
+     applytype           1
+     pushbyte            3
+     construct           1
+     dup
+     pushbyte            0
+     pushbyte            2
+     setproperty         MultinameL([PackageNamespace("", "#0")])
+
+     dup
+     pushbyte            1
+     pushbyte            0
+     setproperty         MultinameL([PackageNamespace("", "#0")])
+
+     dup
+     pushbyte            2
+     pushbyte            3
+     setproperty         MultinameL([PackageNamespace("", "#0")])
+
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "ObjectFace3D"), 2
+     jump                L244
+
+     lessequals
+     bitor
+     pop
+     inclocal            3
+     add_i
+     declocal_i          5
+L244:
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 3
+
+     getlocal            6
+     dup
+     iffalse             L251
+
+     pop
+     getlocal2
+     convert_b
+L251:
+     iftrue              L267
+
+L252:
+     getlex              QName(PackageNamespace("", "#0"), "_-1bD")
+     getproperty         QName(PackageNamespace("", "#0"), "uvts_")
+     pushbyte            0
+     pushbyte            1
+     pushbyte            0
+     pushdouble          0.5
+     pushbyte            1
+     pushbyte            0
+     pushbyte            1
+     dup
+     pushbyte            0
+     pushdouble          0.5
+     pushbyte            0
+     dup
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 12
+
+L267:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:Stalagmite/cinit"
+  body
+   maxstack 5
+   localcount 3
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    decrement_i
+    multiply_i
+    bitor
+    convert_s
+    astypelate
+    hasnext
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    jump                L21
+
+    convert_b
+    bitxor
+    setlocal2
+
+    getlocal2
+    checkfilter
+    coerce_s
+L21:
+    getlocal2
+    dup
+    iftrue              L27
+
+    pop
+    getlocal0
+    convert_b
+L27:
+    iffalse             L42
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), "bs")
+    getlex              QName(PackageNamespace("", "#0"), "Math")
+    getproperty         QName(PackageNamespace("", "#0"), "PI")
+    pushbyte            6
+    divide
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), "bs")
+
+    getlocal2
+    iffalse             L42
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), "cs")
+    getlex              QName(PackageNamespace("", "#0"), "Math")
+    getproperty         QName(PackageNamespace("", "#0"), "PI")
+    pushbyte            3
+    divide
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), "cs")
+
+L42:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), "bs") slotid 1 type QName(PackageNamespace("", "#0"), "Number") value Double(0.5235987755982988) end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Stalagmite"), "cs") slotid 2 type QName(PackageNamespace("", "#0"), "Number") value Double(1.0471975511965977) end
+end ; class

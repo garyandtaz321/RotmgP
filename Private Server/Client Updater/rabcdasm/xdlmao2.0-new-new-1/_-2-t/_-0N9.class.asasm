@@ -1,0 +1,137 @@
+class
+ refid "_-2-t:_-0N9"
+ instance QName(PackageNamespace("_-2-t"), "_-0N9")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1kr")
+  iinit
+   refid "_-2-t:_-0N9/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "int")
+   flag HAS_OPTIONAL
+   optional Integer(-1)
+   body
+    maxstack 5
+    localcount 6
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal            4
+
+     jump                L10
+
+     declocal_i          3
+     not
+     convert_d
+     declocal_i          4
+     increment
+     setlocal2
+
+L10:
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     jump                L21
+
+     dxnslate
+     setlocal3
+
+     getlocal3
+     bitand
+     convert_u
+     checkfilter
+L21:
+     iffalse             L33
+
+     getlocal0
+     getlocal1
+     pushtrue
+     constructsuper      2
+
+     getlocal            5
+     dup
+     iffalse             L32
+
+     pop
+     getlocal1
+     convert_b
+L32:
+     iftrue              L38
+
+L33:
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "name_")
+
+     getlocal            5
+     iftrue              L41
+
+L38:
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace("", "#0"), "_-02V")
+
+L41:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "name_") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "_-02V") type QName(PackageNamespace("", "#0"), "int") end
+ end ; instance
+ cinit
+  refid "_-2-t:_-0N9/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    hasnext
+    getlocal1
+    add_i
+    bitor
+    divide
+    increment
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    iffalse             L24
+
+    findproperty        QName(PackageNamespace("", "#0"), "SET_RANK")
+    pushstring          "SET_RANK"
+    initproperty        QName(PackageNamespace("", "#0"), "SET_RANK")
+
+    getlocal1
+    iftrue              L24
+
+    findproperty        QName(PackageNamespace("", "#0"), "REMOVE_MEMBER")
+    pushstring          "REMOVE_MEMBER"
+    initproperty        QName(PackageNamespace("", "#0"), "REMOVE_MEMBER")
+
+L24:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "SET_RANK") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("SET_RANK") end
+ trait const QName(PackageNamespace("", "#0"), "REMOVE_MEMBER") slotid 2 type QName(PackageNamespace("", "#0"), "String") value Utf8("REMOVE_MEMBER") end
+end ; class

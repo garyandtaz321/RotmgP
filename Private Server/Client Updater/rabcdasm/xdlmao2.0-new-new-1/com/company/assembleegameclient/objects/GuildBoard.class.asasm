@@ -1,0 +1,109 @@
+class
+ refid "com.company.assembleegameclient.objects:GuildBoard"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "GuildBoard")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  implements Multiname("_-Rk", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0mB")
+  iinit
+   refid "com.company.assembleegameclient.objects:GuildBoard/iinit"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     kill                2
+     inclocal_i          2
+     declocal_i          2
+     kill                2
+     pushfalse
+     getlocal2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iffalse             L28
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal3
+     iftrue              L28
+
+     findproperty        QName(PackageNamespace("", "#0"), "_-11k")
+     pushtrue
+     initproperty        QName(PackageNamespace("", "#0"), "_-11k")
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "getPanel")
+   method
+    refid "com.company.assembleegameclient.objects:GuildBoard/getPanel"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace("_-1f4"), "Panel")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-1f4"), "GuildBoardPanel")
+      jump                L10
+
+      greaterequals
+      nextname
+      bitor
+      multiply
+      negate
+      nextname
+L10:
+      getlocal1
+      constructprop       QName(PackageNamespace("_-1f4"), "GuildBoardPanel"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:GuildBoard/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

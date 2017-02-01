@@ -1,0 +1,110 @@
+class
+ refid "_-1Kr:_-0Mx"
+ instance QName(PackageNamespace("_-1Kr"), "_-0Mx")
+  extends QName(PackageNamespace("flash.display"), "Shape")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-9f")
+  iinit
+   refid "_-1Kr:_-0Mx/iinit"
+   body
+    maxstack 7
+    localcount 3
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     checkfilter
+     increment
+     getlocal3
+     convert_i
+     equals
+     bitand
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iffalse             L31
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     dup
+     jump                L26
+
+     divide
+     greaterthan
+     lessthan
+     increment
+     greaterequals
+     negate_i
+L26:
+     iftrue              L30
+
+     pop
+     getlocal0
+     convert_b
+L30:
+     iffalse             L50
+
+L31:
+     getlex              QName(PackageNamespace("", "#0"), "graphics")
+     pushint             2829099
+     pushdouble          0.8
+     callpropvoid        QName(PackageNamespace("", "#0"), "beginFill"), 2
+
+     getlocal1
+     dup
+     iftrue              L41
+
+     pop
+     getlocal1
+     convert_b
+L41:
+     iffalse             L52
+
+     getlex              QName(PackageNamespace("", "#0"), "graphics")
+     pushbyte            0
+     dup
+     pushshort           800
+     pushshort           600
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRect"), 4
+
+     getlocal2
+     iftrue              L52
+
+L50:
+     getlex              QName(PackageNamespace("", "#0"), "graphics")
+     callpropvoid        QName(PackageNamespace("", "#0"), "endFill"), 0
+
+L52:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-1Kr:_-0Mx/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

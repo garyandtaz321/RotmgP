@@ -1,0 +1,29 @@
+script ; 9
+ sinit
+  refid "_-Yc:_-NT.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-NT", [PackageNamespace("_-Yc")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-Yc:_-NT"
+    popscope
+    initproperty        QName(PackageNamespace("_-Yc"), "_-NT")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-Yc"), "_-NT")
+  #include "_-NT.class.asasm"
+ end ; trait
+end ; script

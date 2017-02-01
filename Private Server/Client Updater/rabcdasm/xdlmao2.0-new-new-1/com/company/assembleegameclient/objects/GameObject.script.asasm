@@ -1,0 +1,33 @@
+script ; 981
+ sinit
+  refid "com.company.assembleegameclient.objects:GameObject.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("GameObject", [PackageNamespace("com.company.assembleegameclient.objects")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    newclass            "com.company.assembleegameclient.objects:GameObject"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  #include "GameObject.class.asasm"
+ end ; trait
+end ; script

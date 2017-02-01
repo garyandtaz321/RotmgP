@@ -1,0 +1,33 @@
+script ; 1912
+ sinit
+  refid "com.hurlant.crypto.symmetric:CTRMode.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("CTRMode", [PackageNamespace("com.hurlant.crypto.symmetric")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IVMode")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IVMode")
+    newclass            "com.hurlant.crypto.symmetric:CTRMode"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.hurlant.crypto.symmetric"), "CTRMode")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.hurlant.crypto.symmetric"), "CTRMode")
+  #include "CTRMode.class.asasm"
+ end ; trait
+end ; script

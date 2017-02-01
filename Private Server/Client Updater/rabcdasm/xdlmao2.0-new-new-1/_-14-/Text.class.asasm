@@ -1,0 +1,224 @@
+class
+ refid "_-14-:Text"
+ instance QName(PackageNamespace("_-14-"), "Text")
+  extends QName(PackageNamespace("_-14-"), "_-eJ")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-11z")
+  iinit
+   refid "_-14-:Text/iinit"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "Function")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     getlocal3
+     coerce_s
+     urshift
+     declocal            2
+     kill                2
+     istypelate
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     iffalse             L45
+
+     jump                L23
+
+     declocal_i          2
+     inclocal            3
+     getlocal2
+     declocal            3
+     getlocal3
+     getlocal3
+L23:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("", "#0"), "String")
+     constructprop       QName(PackageNamespace("", "#0"), "String"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "name_")
+
+     getlocal            4
+     iffalse             L45
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("", "#0"), "String")
+     constructprop       QName(PackageNamespace("", "#0"), "String"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "text_")
+
+     getlocal            4
+     iffalse             L45
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("", "#0"), "String")
+     constructprop       QName(PackageNamespace("", "#0"), "String"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "cleanText_")
+
+     getlocal            4
+     iffalse             L45
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+L45:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "name_") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "objectId_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "numStars_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "bubbleTime_") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PackageNamespace("", "#0"), "recipient_") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "text_") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "cleanText_") type QName(PackageNamespace("", "#0"), "String") end
+  trait method QName(PackageNamespace("", "#0"), "parseFromInput") flag OVERRIDE
+   method
+    refid "_-14-:Text/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal            2
+      declocal            2
+      kill                2
+      setlocal2
+
+      inclocal_i          2
+      pushtrue
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUTF"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "name_")
+
+      jump                L25
+
+      bitxor
+      convert_i
+      getlocal1
+      pushscope
+
+      inclocal            2
+      rshift
+L25:
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "objectId_")
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "numStars_")
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedByte"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "bubbleTime_")
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUTF"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "recipient_")
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUTF"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "text_")
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUTF"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "cleanText_")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString") flag OVERRIDE
+   method
+    refid "_-14-:Text/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 11
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-0rE"), "formatToString")
+      jump                L10
+
+      pushtrue
+      bitand
+      negate_i
+      subtract_i
+      pop
+      pushwith
+L10:
+      pushstring          "TEXT"
+      pushstring          "name_"
+      pushstring          "objectId_"
+      pushstring          "numStars_"
+      pushstring          "bubbleTime_"
+      pushstring          "recipient_"
+      pushstring          "text_"
+      pushstring          "cleanText_"
+      callproperty        QName(ProtectedNamespace("_-0rE"), "formatToString"), 8
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-14-:Text/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

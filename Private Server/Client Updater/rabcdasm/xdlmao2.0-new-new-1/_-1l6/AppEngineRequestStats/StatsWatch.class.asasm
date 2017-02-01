@@ -1,0 +1,197 @@
+class
+ refid "_-1l6:AppEngineRequestStats/StatsWatch"
+ instance QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats#0"), "StatsWatch")
+  extends QName(PackageNamespace("_-0oZ"), "function")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("AppEngineRequestStats.as$1076:StatsWatch")
+  iinit
+   refid "_-1l6:AppEngineRequestStats/StatsWatch/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     pushstring          ""
+     constructsuper      2
+
+     getlocal0
+     pushbyte            0
+     initproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "count")
+
+     getlocal0
+     pushbyte            0
+     initproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "ok")
+
+     getlocal0
+     pushbyte            0
+     initproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "time")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "count") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "time") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "mean") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "ok") type QName(PackageNamespace("", "#0"), "int") end
+  trait method QName(PackageNamespace("", "#0"), "addResponse")
+   method
+    refid "_-1l6:AppEngineRequestStats/StatsWatch/addResponse"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      coerce_a
+      dup
+      iffalse             L20
+
+      pop
+      getlocal0
+      dup
+      setlocal3
+
+      getproperty         QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "ok")
+      increment_i
+      dup
+      setlocal            4
+
+      getlocal3
+      getlocal            4
+      setproperty         QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "ok")
+
+      kill                4
+      kill                3
+      coerce_a
+L20:
+      pop
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "time")
+      getlocal2
+      add
+      initproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "time")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "time")
+      getlocal0
+      dup
+      setlocal3
+
+      getproperty         QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "count")
+      increment_i
+      dup
+      setlocal            4
+
+      getlocal3
+      getlocal            4
+      setproperty         QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "count")
+
+      kill                4
+      kill                3
+      divide
+      initproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "mean")
+
+      findproperty        QName(PackageNamespace("", "#0"), "data")
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "report"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "data")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "report")
+   method
+    refid "_-1l6:AppEngineRequestStats/StatsWatch/_-1l6:AppEngineRequestStats/StatsWatch/report"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "STATS_PATTERN")
+      getlex              QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "MEAN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "mean")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      getlex              QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "COUNT")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "count")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      getlex              QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "OK")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "ok")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      getlex              QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "NAME")
+      getlex              QName(PackageNamespace("", "#0"), "name")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1l6:AppEngineRequestStats/StatsWatch/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "STATS_PATTERN")
+    pushstring          "[APPENGINE STATS] [0xFFEE00:{/x={MEAN}ms, ok={OK}/{COUNT}} {NAME}]"
+    initproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "STATS_PATTERN")
+
+    findproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "MEAN")
+    pushstring          "{MEAN}"
+    initproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "MEAN")
+
+    findproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "COUNT")
+    pushstring          "{COUNT}"
+    initproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "COUNT")
+
+    findproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "OK")
+    pushstring          "{OK}"
+    initproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "OK")
+
+    findproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "NAME")
+    pushstring          "{NAME}"
+    initproperty        QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "NAME")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "STATS_PATTERN") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("[APPENGINE STATS] [0xFFEE00:{/x={MEAN}ms, ok={OK}/{COUNT}} {NAME}]") end
+ trait const QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "MEAN") slotid 2 type QName(PackageNamespace("", "#0"), "String") value Utf8("{MEAN}") end
+ trait const QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "COUNT") slotid 3 type QName(PackageNamespace("", "#0"), "String") value Utf8("{COUNT}") end
+ trait const QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "OK") slotid 4 type QName(PackageNamespace("", "#0"), "String") value Utf8("{OK}") end
+ trait const QName(PrivateNamespace("*", "_-1l6:AppEngineRequestStats/StatsWatch"), "NAME") slotid 5 type QName(PackageNamespace("", "#0"), "String") value Utf8("{NAME}") end
+end ; class

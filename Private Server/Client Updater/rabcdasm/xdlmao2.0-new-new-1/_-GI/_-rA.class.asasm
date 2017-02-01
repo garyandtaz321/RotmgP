@@ -1,0 +1,195 @@
+class
+ refid "_-GI:_-rA"
+ instance QName(PackageNamespace("_-GI"), "_-rA")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Eo")
+  iinit
+   refid "_-GI:_-rA/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     multiply
+     increment_i
+     nextname
+     instanceof
+     convert_s
+     getlocal2
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-GI:_-rA/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    convert_d
+    popscope
+    subtract
+    decrement_i
+    getglobalscope
+    pushscope
+
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L19
+
+    pop
+    getlocal0
+    convert_b
+L19:
+    iftrue              L23
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-x9")
+    newobject           0
+    initproperty        QName(PackageNamespace("", "#0"), "_-x9")
+
+L23:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-x9") slotid 1 type QName(PackageNamespace("", "#0"), "Object") end
+ trait method QName(PackageNamespace("", "#0"), "_-0vQ") flag FINAL dispid 3
+  method
+   refid "_-GI:_-rA/_-0vQ"
+   param QName(PackageNamespace("", "#0"), "XML")
+   returns QName(PackageNamespace("", "#0"), "void")
+   body
+    maxstack 6
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     setlocal            5
+
+     jump                L10
+
+     astypelate
+     setlocal2
+
+     kill                5
+     istypelate
+     kill                4
+     setlocal            4
+
+L10:
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("", "#0"), "XML")
+     setlocal2
+
+     pushbyte            0
+     setlocal3
+
+     getlocal1
+     getproperty         Multiname("Particle", [PrivateNamespace("*", "_-GI:_-rA/_-0vQ#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-GI:_-rA/_-0vQ#1"), PackageNamespace("_-GI"), PackageInternalNs("_-GI"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Eo"), StaticProtectedNs("_-0Eo")])
+     jump                L27
+
+     setlocal            5
+
+     increment_i
+     subtract_i
+     lessthan
+     kill                3
+     getlocal2
+L27:
+     coerce_a
+     setlocal            4
+
+     jump                L57
+
+L30:
+     label
+     jump                L38
+
+     inclocal            5
+     getlocal2
+     declocal            3
+     urshift
+     declocal_i          4
+     lshift
+L38:
+     getlocal            4
+     getlocal3
+     nextvalue
+     coerce              QName(PackageNamespace("", "#0"), "XML")
+     setlocal2
+
+     getlocal            5
+     dup
+     iftrue              L49
+
+     pop
+     getlocal3
+     convert_b
+L49:
+     iffalse             L57
+
+     getlex              QName(PackageNamespace("", "#0"), "_-x9")
+     getlocal2
+     getproperty         MultinameA("id", [PrivateNamespace("*", "_-GI:_-rA/_-0vQ#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-GI:_-rA/_-0vQ#1"), PackageNamespace("_-GI"), PackageInternalNs("_-GI"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Eo"), StaticProtectedNs("_-0Eo")])
+     findpropstrict      QName(PackageNamespace("_-GI"), "_-0ZY")
+     getlocal2
+     constructprop       QName(PackageNamespace("_-GI"), "_-0ZY"), 1
+     setproperty         MultinameL([PrivateNamespace("*", "_-GI:_-rA/_-0vQ#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-GI:_-rA/_-0vQ#1"), PackageNamespace("_-GI"), PackageInternalNs("_-GI"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Eo"), StaticProtectedNs("_-0Eo")])
+
+L57:
+     hasnext2            4, 3
+     iftrue              L30
+
+     kill                4
+     kill                3
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,244 @@
+class
+ refid "_-1pV:Timespan"
+ instance QName(PackageNamespace("_-1pV"), "Timespan")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1Rv")
+  iinit
+   refid "_-1pV:Timespan/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     astypelate
+     declocal            3
+     declocal_i          2
+     urshift
+     inclocal_i          3
+     getglobalscope
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     jump                L22
+
+     decrement
+     declocal_i          2
+     coerce_s
+     declocal_i          2
+     coerce_s
+     pushundefined
+L22:
+     iftrue              L26
+
+     pop
+     getlocal1
+     convert_b
+L26:
+     iffalse             L44
+
+     getlocal0
+     constructsuper      0
+
+     getlocal            4
+     dup
+     iffalse             L35
+
+     pop
+     getlocal0
+     convert_b
+L35:
+     iftrue              L41
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-1pV:Timespan"), "name")
+
+     getlocal            4
+     iftrue              L44
+
+L41:
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-1pV:Timespan"), "id")
+
+L44:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-1pV:Timespan"), "name") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PrivateNamespace("*", "_-1pV:Timespan"), "id") type QName(PackageNamespace("", "#0"), "String") end
+  trait method QName(PackageNamespace("", "#0"), "getName")
+   method
+    refid "_-1pV:Timespan/getName"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1pV:Timespan"), "name")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-yr")
+   method
+    refid "_-1pV:Timespan/_-yr"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1pV:Timespan"), "id")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1pV:Timespan/cinit"
+  body
+   maxstack 7
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    negate
+    subtract
+    greaterequals
+    convert_s
+    convert_i
+    pushwith
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    iftrue              L25
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-xG")
+    getlocal0
+    getlex              QName(PackageNamespace("_-6u"), "_-TG")
+    getproperty         QName(PackageNamespace("", "#0"), "_-0Zs")
+    pushstring          "week"
+    construct           2
+    initproperty        QName(PackageNamespace("", "#0"), "_-xG")
+
+    getlocal2
+    iffalse             L41
+
+L25:
+    findproperty        QName(PackageNamespace("", "#0"), "_-NU")
+    getlocal0
+    getlex              QName(PackageNamespace("_-6u"), "_-TG")
+    jump                L35
+
+    multiply_i
+    increment
+    checkfilter
+    lessequals
+    modulo
+    pushnull
+L35:
+    getproperty         QName(PackageNamespace("", "#0"), "_-0t7")
+    pushstring          "month"
+    construct           2
+    initproperty        QName(PackageNamespace("", "#0"), "_-NU")
+
+    getlocal1
+    iftrue              L77
+
+L41:
+    findproperty        QName(PackageNamespace("", "#0"), "_-lP")
+    getlocal0
+    getlex              QName(PackageNamespace("_-6u"), "_-TG")
+    getproperty         QName(PackageNamespace("", "#0"), "_-ID")
+    pushstring          "all"
+    construct           2
+    jump                L54
+
+    getlocal0
+    lessequals
+    pop
+    pushfalse
+    equals
+    popscope
+L54:
+    initproperty        QName(PackageNamespace("", "#0"), "_-lP")
+
+    getlocal2
+    iffalse             L77
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-QL")
+    findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+    getproperty         Multiname("Vector", [PrivateNamespace("*", "_-1pV:Timespan"), PackageNamespace("", "#0"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_-1pV:Timespan/cinit"), PackageNamespace("_-1pV"), PackageInternalNs("_-1pV"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1Rv"), StaticProtectedNs("_-1Rv")])
+    getlocal0
+    applytype           1
+    pushbyte            3
+    construct           1
+    dup
+    pushbyte            0
+    getlex              QName(PackageNamespace("", "#0"), "_-xG")
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            1
+    getlex              QName(PackageNamespace("", "#0"), "_-NU")
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            2
+    getlex              QName(PackageNamespace("", "#0"), "_-lP")
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    initproperty        QName(PackageNamespace("", "#0"), "_-QL")
+
+L77:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-xG") slotid 1 type QName(PackageNamespace("_-1pV"), "Timespan") end
+ trait const QName(PackageNamespace("", "#0"), "_-NU") slotid 2 type QName(PackageNamespace("_-1pV"), "Timespan") end
+ trait const QName(PackageNamespace("", "#0"), "_-lP") slotid 3 type QName(PackageNamespace("_-1pV"), "Timespan") end
+ trait const QName(PackageNamespace("", "#0"), "_-QL") slotid 4 type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-1pV"), "Timespan")>) end
+end ; class

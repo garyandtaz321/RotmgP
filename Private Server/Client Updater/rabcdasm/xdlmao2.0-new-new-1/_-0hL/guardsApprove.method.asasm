@@ -1,0 +1,102 @@
+method
+ refid "_-0hL:guardsApprove"
+ param QName(PackageNamespace("", "#0"), "Array")
+ param QName(PackageNamespace("_-0cA"), "_-0bz")
+ returns QName(PackageNamespace("", "#0"), "Boolean")
+ flag HAS_OPTIONAL
+ optional Null()
+ body
+  maxstack 3
+  localcount 6
+  initscopedepth 1
+  maxscopedepth 2
+  code
+   getlocal0
+   pushscope
+
+   pushnull
+   coerce              QName(PackageNamespace("", "#0"), "Object")
+   setlocal3
+
+   pushbyte            0
+   setlocal            4
+
+   getlocal1
+   coerce_a
+   setlocal            5
+
+   jump                L56
+
+L11:
+   label
+   getlocal            5
+   getlocal            4
+   nextvalue
+   coerce              QName(PackageNamespace("", "#0"), "Object")
+   setlocal3
+
+   getlocal3
+   getlex              QName(PackageNamespace("", "#0"), "Function")
+   istypelate
+   iffalse             L30
+
+   getlocal3
+   getlex              QName(PackageNamespace("", "#0"), "Function")
+   astypelate
+   getglobalscope
+   call                0
+   iffalse             L28
+
+   jump                L56
+
+L28:
+   pushfalse
+   returnvalue
+
+L30:
+   getlocal3
+   getlex              QName(PackageNamespace("", "#0"), "Class")
+   istypelate
+   iffalse             L50
+
+   getlocal2
+   iffalse             L43
+
+   getlocal2
+   getlocal3
+   getlex              QName(PackageNamespace("", "#0"), "Class")
+   astypelate
+   callproperty        QName(PackageNamespace("", "#0"), "getInstance"), 1
+   coerce              QName(PackageNamespace("", "#0"), "Object")
+   jump                L48
+
+L43:
+   getlocal3
+   getlex              QName(PackageNamespace("", "#0"), "Class")
+   astypelate
+   construct           0
+   coerce              QName(PackageNamespace("", "#0"), "Object")
+L48:
+   coerce              QName(PackageNamespace("", "#0"), "Object")
+   setlocal3
+
+L50:
+   getlocal3
+   callproperty        Multiname("approve", [PackageNamespace("", "#0"), PrivateNamespace("*", "_-0hL:guardsApprove"), PackageNamespace("_-0hL"), PackageInternalNs("_-0hL"), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+   pushfalse
+   ifne                L56
+
+   pushfalse
+   returnvalue
+
+L56:
+   hasnext2            5, 4
+   iftrue              L11
+
+   kill                5
+   kill                4
+   pushtrue
+   returnvalue
+  end ; code
+ end ; body
+end ; method

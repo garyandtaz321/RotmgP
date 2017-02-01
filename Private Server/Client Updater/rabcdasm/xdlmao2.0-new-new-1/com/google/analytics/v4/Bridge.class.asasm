@@ -1,0 +1,2094 @@
+class
+ refid "com.google.analytics.v4:Bridge"
+ instance QName(PackageNamespace("com.google.analytics.v4"), "Bridge")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("GoogleAnalyticsAPI", [PackageNamespace("com.google.analytics.v4")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.v4:Bridge")
+  iinit
+   refid "com.google.analytics.v4:Bridge/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration")
+   param QName(PackageNamespace("com.google.analytics.external"), "JavascriptProxy")
+   body
+    maxstack 3
+    localcount 7
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce_s
+     setlocal            4
+
+     pushnull
+     coerce_s
+     setlocal            5
+
+     pushnull
+     coerce_s
+     setlocal            6
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_account")
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_account")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_proxy")
+     getlocal3
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_proxy")
+
+     findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkGAJS")
+     callproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkGAJS"), 0
+     iftrue              L46
+
+     pushstring          ""
+     dup
+     setlocal            4
+
+     pushstring          "ga.js not found, be sure to check if\n"
+     add
+     dup
+     setlocal            4
+
+     pushstring          "<script src=\"http://www.google-analytics.com/ga.js\"></script>\n"
+     add
+     dup
+     setlocal            4
+
+     pushstring          "is included in the HTML."
+     add
+     setlocal            4
+
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+     getlocal            4
+     callpropvoid        QName(PackageNamespace("", "#0"), "warning"), 1
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "Error")
+     getlocal            4
+     constructprop       QName(PackageNamespace("", "#0"), "Error"), 1
+     throw
+L46:
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_hasGATracker")
+     iftrue              L75
+
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+     getproperty         QName(PackageNamespace("", "#0"), "javascript")
+     convert_b
+     dup
+     iffalse             L57
+
+     pop
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+     getproperty         QName(PackageNamespace("", "#0"), "verbose")
+     convert_b
+L57:
+     iffalse             L73
+
+     pushstring          ""
+     dup
+     setlocal            5
+
+     pushstring          "The Google Analytics tracking code was not found on the container page\n"
+     add
+     dup
+     setlocal            5
+
+     pushstring          "we create it"
+     add
+     setlocal            5
+
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+     getlocal            5
+     getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
+     getproperty         QName(PackageNamespace("", "#0"), "advanced")
+     callpropvoid        QName(PackageNamespace("", "#0"), "info"), 2
+
+L73:
+     findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_injectTrackingObject")
+     callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_injectTrackingObject"), 0
+
+L75:
+     getlex              QName(PackageNamespace("com.google.analytics.core"), "Utils")
+     getlocal1
+     callproperty        QName(PackageNamespace("", "#0"), "validateAccount"), 1
+     iffalse             L83
+
+     findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_createTrackingObject")
+     getlocal1
+     callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_createTrackingObject"), 1
+
+     jump                L113
+
+L83:
+     findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkTrackingObject")
+     getlocal1
+     callproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkTrackingObject"), 1
+     iffalse             L91
+
+     findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_linkTrackingObject")
+     getlocal1
+     callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_linkTrackingObject"), 1
+
+     jump                L113
+
+L91:
+     pushstring          ""
+     dup
+     setlocal            6
+
+     pushstring          "JS Object \""
+     getlocal1
+     add
+     pushstring          "\" doesn't exist in DOM\n"
+     add
+     add
+     coerce_s
+     dup
+     setlocal            6
+
+     pushstring          "Bridge object not created."
+     add
+     setlocal            6
+
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+     getlocal            6
+     callpropvoid        QName(PackageNamespace("", "#0"), "warning"), 1
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "Error")
+     getlocal            6
+     constructprop       QName(PackageNamespace("", "#0"), "Error"), 1
+     throw
+L113:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "link")
+   method
+    refid "com.google.analytics.v4:Bridge/link"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "link( "
+      getlocal1
+      add
+      pushstring          ", "
+      add
+      getlocal2
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_link"
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addOrganic")
+   method
+    refid "com.google.analytics.v4:Bridge/addOrganic"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "addOrganic( "
+      getlocal1
+      getlocal2
+      newarray            2
+      pushstring          ", "
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_addOrganic"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setAllowLinker")
+   method
+    refid "com.google.analytics.v4:Bridge/setAllowLinker"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setAllowLinker( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setAllowLinker"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getLinkerUrl")
+   method
+    refid "com.google.analytics.v4:Bridge/getLinkerUrl"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "String")
+    flag HAS_OPTIONAL
+    optional Utf8("")
+    optional False()
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "getLinkerUrl("
+      getlocal1
+      add
+      pushstring          ", "
+      add
+      getlocal2
+      add
+      pushstring          ")"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_getLinkerUrl"
+      getlocal1
+      getlocal2
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_linkTrackingObject")
+   method
+    refid "com.google.analytics.v4:Bridge/_linkTrackingObject"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_proxy")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_linkTrackingObject_js")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_jsContainer")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "call"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setClientInfo")
+   method
+    refid "com.google.analytics.v4:Bridge/setClientInfo"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setClientInfo( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setClientInfo"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "trackTrans")
+   method
+    refid "com.google.analytics.v4:Bridge/trackTrans"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "trackTrans()"
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_trackTrans"
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "trackEvent")
+   method
+    refid "com.google.analytics.v4:Bridge/trackEvent"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional Double(nan)
+    body
+     maxstack 6
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            2
+      setlocal            5
+
+      getlocal3
+      convert_b
+      dup
+      iffalse             L13
+
+      pop
+      getlocal3
+      pushstring          ""
+      equals
+      not
+L13:
+      iffalse             L16
+
+      pushbyte            3
+      setlocal            5
+
+L16:
+      getlocal            5
+      pushbyte            3
+      equals
+      dup
+      iffalse             L26
+
+      pop
+      findpropstrict      QName(PackageNamespace("", "#0"), "isNaN")
+      getlocal            4
+      callproperty        QName(PackageNamespace("", "#0"), "isNaN"), 1
+      not
+L26:
+      iffalse             L29
+
+      pushbyte            4
+      setlocal            5
+
+L29:
+      jump                L91
+
+L30:
+      label
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "trackEvent( "
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      newarray            4
+      pushstring          ", "
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_trackEvent"
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 5
+      returnvalue
+
+L52:
+      label
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "trackEvent( "
+      getlocal1
+      getlocal2
+      getlocal3
+      newarray            3
+      pushstring          ", "
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_trackEvent"
+      getlocal1
+      getlocal2
+      getlocal3
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 4
+      returnvalue
+
+L72:
+      label
+L73:
+      label
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "trackEvent( "
+      getlocal1
+      getlocal2
+      newarray            2
+      pushstring          ", "
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_trackEvent"
+      getlocal1
+      getlocal2
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 3
+      returnvalue
+
+L91:
+      getlocal            5
+      setlocal            6
+
+      pushbyte            4
+      getlocal            6
+      ifstrictne          L98
+
+      pushbyte            0
+      jump                L112
+
+L98:
+      pushbyte            3
+      getlocal            6
+      ifstrictne          L103
+
+      pushbyte            1
+      jump                L112
+
+L103:
+      pushbyte            2
+      getlocal            6
+      ifstrictne          L108
+
+      pushbyte            2
+      jump                L112
+
+L108:
+      jump                L111
+
+      pushbyte            3
+      jump                L112
+
+L111:
+      pushbyte            3
+L112:
+      kill                6
+      lookupswitch        L73, [L30, L52, L72, L73]
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCookieTimeout")
+   method
+    refid "com.google.analytics.v4:Bridge/setCookieTimeout"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setCookieTimeout( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setCookieTimeout"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "trackPageview")
+   method
+    refid "com.google.analytics.v4:Bridge/trackPageview"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Utf8("")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "trackPageview( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_trackPageview"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkValidTrackingObject")
+   method
+    refid "com.google.analytics.v4:Bridge/_checkValidTrackingObject"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_proxy")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkValidTrackingObject_js")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "call"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkGAJS")
+   method
+    refid "com.google.analytics.v4:Bridge/_checkGAJS"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_proxy")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkGAJS_js")
+      callproperty        QName(PackageNamespace("", "#0"), "call"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "linkByPost")
+   method
+    refid "com.google.analytics.v4:Bridge/linkByPost"
+    param QName(PackageNamespace("", "#0"), "Object")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "linkByPost( "
+      getlocal1
+      add
+      pushstring          ", "
+      add
+      getlocal2
+      add
+      pushstring          " ) not implemented"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "warning"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getClientInfo")
+   method
+    refid "com.google.analytics.v4:Bridge/getClientInfo"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "getClientInfo()"
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_getClientInfo"
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+   method
+    refid "com.google.analytics.v4:Bridge/_call"
+    param QName(PackageNamespace("", "#0"), "String")
+    flag NEED_REST
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushstring          "window."
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_jsContainer")
+      add
+      pushstring          "[\""
+      add
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_account")
+      add
+      pushstring          "\"]."
+      add
+      getlocal1
+      add
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "unshift"), 1
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_proxy")
+      getproperty         QName(PackageNamespace("", "#0"), "call")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_proxy")
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "hasGAJS")
+   method
+    refid "com.google.analytics.v4:Bridge/hasGAJS"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkGAJS")
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkGAJS"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkTrackingObject")
+   method
+    refid "com.google.analytics.v4:Bridge/_checkTrackingObject"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_proxy")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "hasProperty"), 1
+      convert_b
+      setlocal2
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_proxy")
+      getlocal1
+      pushstring          "._getAccount"
+      add
+      callproperty        QName(PackageNamespace("", "#0"), "hasProperty"), 1
+      convert_b
+      setlocal3
+
+      getlocal2
+      convert_b
+      dup
+      iffalse             L21
+
+      pop
+      getlocal3
+      convert_b
+L21:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "resetSession")
+   method
+    refid "com.google.analytics.v4:Bridge/resetSession"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "resetSession() not implemented"
+      callpropvoid        QName(PackageNamespace("", "#0"), "warning"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getDetectTitle")
+   method
+    refid "com.google.analytics.v4:Bridge/getDetectTitle"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "getDetectTitle()"
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_getDetectTitle"
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCampNameKey")
+   method
+    refid "com.google.analytics.v4:Bridge/setCampNameKey"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setCampNameKey( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setCampNameKey"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setDetectFlash")
+   method
+    refid "com.google.analytics.v4:Bridge/setDetectFlash"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setDetectFlash( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setDetectFlash"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
+  trait method QName(PackageNamespace("", "#0"), "createEventTracker")
+   method
+    refid "com.google.analytics.v4:Bridge/createEventTracker"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("com.google.analytics.core"), "EventTracker")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "createEventTracker( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PackageNamespace("com.google.analytics.core"), "EventTracker")
+      getlocal1
+      getlocal0
+      constructprop       QName(PackageNamespace("com.google.analytics.core"), "EventTracker"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addItem")
+   method
+    refid "com.google.analytics.v4:Bridge/addItem"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 8
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "addItem( "
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      getlocal            5
+      getlocal            6
+      newarray            6
+      pushstring          ", "
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_addItem"
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      getlocal            5
+      getlocal            6
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 7
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "clearIgnoredOrganic")
+   method
+    refid "com.google.analytics.v4:Bridge/clearIgnoredOrganic"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "clearIgnoredOrganic()"
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_clearIgnoreOrganic"
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setVar")
+   method
+    refid "com.google.analytics.v4:Bridge/setVar"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setVar( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setVar"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_proxy") type QName(PackageNamespace("com.google.analytics.external"), "JavascriptProxy") end
+  trait method QName(PackageNamespace("", "#0"), "setDomainName")
+   method
+    refid "com.google.analytics.v4:Bridge/setDomainName"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setDomainName( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setDomainName"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_jsContainer") type QName(PackageNamespace("", "#0"), "String") value Utf8("_GATracker") end
+  trait method QName(PackageNamespace("", "#0"), "hasTrackingAccount")
+   method
+    refid "com.google.analytics.v4:Bridge/hasTrackingAccount"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.google.analytics.core"), "Utils")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "validateAccount"), 1
+      iffalse             L10
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkValidTrackingObject")
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkValidTrackingObject"), 1
+      returnvalue
+
+L10:
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkTrackingObject")
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkTrackingObject"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCampSourceKey")
+   method
+    refid "com.google.analytics.v4:Bridge/setCampSourceKey"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setCampSourceKey( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setCampSourceKey"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_hasGATracker") type QName(PackageNamespace("", "#0"), "Boolean") value False() end
+  trait method QName(PackageNamespace("", "#0"), "addTrans")
+   method
+    refid "com.google.analytics.v4:Bridge/addTrans"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 10
+     localcount 9
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "addTrans( "
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      getlocal            5
+      getlocal            6
+      getlocal            7
+      getlocal            8
+      newarray            8
+      pushstring          ", "
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_addTrans"
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      getlocal            5
+      getlocal            6
+      getlocal            7
+      getlocal            8
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 9
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCampContentKey")
+   method
+    refid "com.google.analytics.v4:Bridge/setCampContentKey"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setCampContentKey( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setCampContentKey"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setLocalServerMode")
+   method
+    refid "com.google.analytics.v4:Bridge/setLocalServerMode"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setLocalServerMode()"
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setLocalServerMode"
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getLocalGifPath")
+   method
+    refid "com.google.analytics.v4:Bridge/getLocalGifPath"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "getLocalGifPath()"
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_getLocalGifPath"
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "clearIgnoredRef")
+   method
+    refid "com.google.analytics.v4:Bridge/clearIgnoredRef"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "clearIgnoredRef()"
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_clearIgnoreRef"
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setAllowAnchor")
+   method
+    refid "com.google.analytics.v4:Bridge/setAllowAnchor"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setAllowAnchor( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setAllowAnchor"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setLocalGifPath")
+   method
+    refid "com.google.analytics.v4:Bridge/setLocalGifPath"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setLocalGifPath( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setLocalGifPath"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getVersion")
+   method
+    refid "com.google.analytics.v4:Bridge/getVersion"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "getVersion()"
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_getVersion"
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_injectTrackingObject")
+   method
+    refid "com.google.analytics.v4:Bridge/_injectTrackingObject"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_proxy")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_injectTrackingObject_js")
+      callpropvoid        QName(PackageNamespace("", "#0"), "executeBlock"), 1
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_hasGATracker")
+      pushtrue
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_hasGATracker")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCookiePath")
+   method
+    refid "com.google.analytics.v4:Bridge/setCookiePath"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setCookiePath( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setCookiePath"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setSampleRate")
+   method
+    refid "com.google.analytics.v4:Bridge/setSampleRate"
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setSampleRate( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setSampleRate"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setAllowHash")
+   method
+    refid "com.google.analytics.v4:Bridge/setAllowHash"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setAllowHash( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setAllowHash"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addIgnoredOrganic")
+   method
+    refid "com.google.analytics.v4:Bridge/addIgnoredOrganic"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "addIgnoredOrganic( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_addIgnoredOrganic"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCampNOKey")
+   method
+    refid "com.google.analytics.v4:Bridge/setCampNOKey"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setCampNOKey( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setCampNOKey"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "cookiePathCopy")
+   method
+    refid "com.google.analytics.v4:Bridge/cookiePathCopy"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "cookiePathCopy( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_cookiePathCopy"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setLocalRemoteServerMode")
+   method
+    refid "com.google.analytics.v4:Bridge/setLocalRemoteServerMode"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setLocalRemoteServerMode()"
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setLocalRemoteServerMode"
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getServiceMode")
+   method
+    refid "com.google.analytics.v4:Bridge/getServiceMode"
+    returns QName(PackageNamespace("com.google.analytics.core"), "ServerOperationMode")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "getServiceMode()"
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_getServiceMode"
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setDetectTitle")
+   method
+    refid "com.google.analytics.v4:Bridge/setDetectTitle"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setDetectTitle( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setDetectTitle"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_createTrackingObject")
+   method
+    refid "com.google.analytics.v4:Bridge/_createTrackingObject"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_proxy")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_createTrackingObject_js")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCampaignTrack")
+   method
+    refid "com.google.analytics.v4:Bridge/setCampaignTrack"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setCampaignTrack( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setCampaignTrack"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "clearOrganic")
+   method
+    refid "com.google.analytics.v4:Bridge/clearOrganic"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "clearOrganic()"
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_clearOrganic"
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCampTermKey")
+   method
+    refid "com.google.analytics.v4:Bridge/setCampTermKey"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setCampTermKey( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setCampTermKey"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getDetectFlash")
+   method
+    refid "com.google.analytics.v4:Bridge/getDetectFlash"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "getDetectFlash()"
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_getDetectFlash"
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setCampMediumKey")
+   method
+    refid "com.google.analytics.v4:Bridge/setCampMediumKey"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setCampMediumKey( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setCampMediumKey"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addIgnoredRef")
+   method
+    refid "com.google.analytics.v4:Bridge/addIgnoredRef"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "addIgnoredRef( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_addIgnoredRef"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_account") type QName(PackageNamespace("", "#0"), "String") end
+  trait method QName(PackageNamespace("", "#0"), "setSessionTimeout")
+   method
+    refid "com.google.analytics.v4:Bridge/setSessionTimeout"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setSessionTimeout( "
+      getlocal1
+      add
+      pushstring          " )"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setSessionTimeout"
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setRemoteServerMode")
+   method
+    refid "com.google.analytics.v4:Bridge/setRemoteServerMode"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "setRemoteServerMode()"
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_setRemoteServerMode"
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getAccount")
+   method
+    refid "com.google.analytics.v4:Bridge/getAccount"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug")
+      pushstring          "getAccount()"
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
+      pushstring          "_getAccount"
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.v4:Bridge/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkGAJS_js")
+    getlex              QName(PackageNamespace("", "#0"), "XML")
+    pushstring          "<script>\r\n            <![CDATA[\r\n                function()\r\n                {\r\n                    if( _gat && _gat._getTracker )\r\n                    {\r\n                        return true;\r\n                    }\r\n                    return false;\r\n                }\r\n            ]]>\r\n        </script>"
+    construct           1
+    setproperty         QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkGAJS_js")
+
+    findproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkValidTrackingObject_js")
+    getlex              QName(PackageNamespace("", "#0"), "XML")
+    pushstring          "<script>\r\n            <![CDATA[\r\n                function(acct)\r\n                {\r\n                    if( _GATracker[acct] && (_GATracker[acct]._getAccount) )\r\n                    {\r\n                        return true ;\r\n                    }\r\n                    else\r\n                    {\r\n                        return false;\r\n                    }\r\n                }\r\n            ]]>\r\n        </script>"
+    construct           1
+    setproperty         QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkValidTrackingObject_js")
+
+    findproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_createTrackingObject_js")
+    getlex              QName(PackageNamespace("", "#0"), "XML")
+    pushstring          "<script>\r\n            <![CDATA[\r\n                function( acct )\r\n                {\r\n                    _GATracker[acct] = _gat._getTracker(acct);\r\n                }\r\n            ]]>\r\n        </script>"
+    construct           1
+    setproperty         QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_createTrackingObject_js")
+
+    findproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_injectTrackingObject_js")
+    getlex              QName(PackageNamespace("", "#0"), "XML")
+    pushstring          "<script>\r\n            <![CDATA[\r\n                function()\r\n                {\r\n                    try \r\n                    {\r\n                        _GATracker\r\n                    }\r\n                    catch(e) \r\n                    {\r\n                        _GATracker = {};\r\n                    }\r\n                }\r\n            ]]>\r\n        </script>"
+    construct           1
+    setproperty         QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_injectTrackingObject_js")
+
+    findproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_linkTrackingObject_js")
+    getlex              QName(PackageNamespace("", "#0"), "XML")
+    pushstring          "<script>\r\n            <![CDATA[\r\n                function( container , target )\r\n                {\r\n                    var targets ;\r\n                    var name ;\r\n                    if( target.indexOf(\".\") > 0 )\r\n                    {\r\n                        targets = target.split(\".\");\r\n                        name    = targets.pop();\r\n                    }\r\n                    else\r\n                    {\r\n                        targets = [];\r\n                        name    = target;\r\n                    }\r\n                    var ref   = window;\r\n                    var depth = targets.length;\r\n                    for( var j = 0 ; j < depth ; j++ )\r\n                    {\r\n                        ref = ref[ targets[j] ] ;\r\n                    }\r\n                    window[container][target] = ref[name] ;\r\n                }\r\n            ]]>\r\n        </script>"
+    construct           1
+    setproperty         QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_linkTrackingObject_js")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_linkTrackingObject_js") slotid 5 type QName(PackageNamespace("", "#0"), "XML") end
+ trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_createTrackingObject_js") slotid 3 type QName(PackageNamespace("", "#0"), "XML") end
+ trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_injectTrackingObject_js") slotid 4 type QName(PackageNamespace("", "#0"), "XML") end
+ trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkGAJS_js") slotid 1 type QName(PackageNamespace("", "#0"), "XML") end
+ trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkValidTrackingObject_js") slotid 2 type QName(PackageNamespace("", "#0"), "XML") end
+end ; class

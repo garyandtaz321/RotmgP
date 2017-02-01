@@ -1,0 +1,536 @@
+class
+ refid "com.hurlant.crypto.hash:SHA1"
+ instance QName(PackageNamespace("com.hurlant.crypto.hash"), "SHA1")
+  extends QName(PackageNamespace("com.hurlant.crypto.hash"), "SHABase")
+  implements Multiname("IHash", [PackageNamespace("com.hurlant.crypto.hash")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0BA")
+  iinit
+   refid "com.hurlant.crypto.hash:SHA1/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "getHashSize") flag OVERRIDE
+   method
+    refid "com.hurlant.crypto.hash:SHA1/getHashSize"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "HASH_SIZE")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-0BA"), "core") flag OVERRIDE
+   method
+    refid "com.hurlant.crypto.hash:SHA1/_-0BA:core"
+    param QName(PackageNamespace("", "#0"), "Array")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "Array")
+    body
+     maxstack 7
+     localcount 17
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            10
+
+      pushbyte            0
+      convert_u
+      setlocal            11
+
+      pushbyte            0
+      convert_u
+      setlocal            12
+
+      pushbyte            0
+      convert_u
+      setlocal            13
+
+      pushbyte            0
+      convert_u
+      setlocal            14
+
+      pushbyte            0
+      convert_u
+      setlocal            15
+
+      pushbyte            0
+      convert_u
+      setlocal            16
+
+      getlocal1
+      getlocal2
+      pushbyte            5
+      rshift
+      getlocal1
+      getlocal2
+      pushbyte            5
+      rshift
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1/_-0BA:core"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0BA"), StaticProtectedNs("_-0BA"), StaticProtectedNs("_-1Xn")])
+      pushshort           128
+      pushbyte            24
+      getlocal2
+      pushbyte            32
+      modulo
+      subtract
+      lshift
+      bitor
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1/_-0BA:core"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0BA"), StaticProtectedNs("_-0BA"), StaticProtectedNs("_-1Xn")])
+
+      getlocal1
+      getlocal2
+      pushbyte            64
+      add
+      pushbyte            9
+      rshift
+      pushbyte            4
+      lshift
+      pushbyte            15
+      add
+      getlocal2
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1/_-0BA:core"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0BA"), StaticProtectedNs("_-0BA"), StaticProtectedNs("_-1Xn")])
+
+      newarray            0
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal3
+
+      pushint             1732584193
+      convert_u
+      setlocal            4
+
+      pushdouble          4023233417
+      convert_u
+      setlocal            5
+
+      pushdouble          2562383102
+      convert_u
+      setlocal            6
+
+      pushint             271733878
+      convert_u
+      setlocal            7
+
+      pushdouble          3285377520
+      convert_u
+      setlocal            8
+
+      pushbyte            0
+      convert_u
+      setlocal            9
+
+      jump                L221
+
+L75:
+      label
+      getlocal            4
+      convert_u
+      setlocal            10
+
+      getlocal            5
+      convert_u
+      setlocal            11
+
+      getlocal            6
+      convert_u
+      setlocal            12
+
+      getlocal            7
+      convert_u
+      setlocal            13
+
+      getlocal            8
+      convert_u
+      setlocal            14
+
+      pushbyte            0
+      convert_u
+      setlocal            15
+
+      jump                L188
+
+L95:
+      label
+      getlocal            15
+      pushbyte            16
+      ifnlt               L114
+
+      getlocal3
+      getlocal            15
+      getlocal1
+      getlocal            9
+      getlocal            15
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1/_-0BA:core"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0BA"), StaticProtectedNs("_-0BA"), StaticProtectedNs("_-1Xn")])
+      coerce_a
+      dup
+      iftrue              L112
+
+      pop
+      pushbyte            0
+      coerce_a
+L112:
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1/_-0BA:core"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0BA"), StaticProtectedNs("_-0BA"), StaticProtectedNs("_-1Xn")])
+
+      jump                L143
+
+L114:
+      getlocal3
+      getlocal            15
+      getlocal0
+      getlocal3
+      getlocal            15
+      pushbyte            3
+      subtract
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1/_-0BA:core"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0BA"), StaticProtectedNs("_-0BA"), StaticProtectedNs("_-1Xn")])
+      getlocal3
+      getlocal            15
+      pushbyte            8
+      subtract
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1/_-0BA:core"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0BA"), StaticProtectedNs("_-0BA"), StaticProtectedNs("_-1Xn")])
+      bitxor
+      getlocal3
+      getlocal            15
+      pushbyte            14
+      subtract
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1/_-0BA:core"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0BA"), StaticProtectedNs("_-0BA"), StaticProtectedNs("_-1Xn")])
+      bitxor
+      getlocal3
+      getlocal            15
+      pushbyte            16
+      subtract
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1/_-0BA:core"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0BA"), StaticProtectedNs("_-0BA"), StaticProtectedNs("_-1Xn")])
+      bitxor
+      pushbyte            1
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), "rol"), 2
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1/_-0BA:core"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0BA"), StaticProtectedNs("_-0BA"), StaticProtectedNs("_-1Xn")])
+
+L143:
+      getlocal0
+      getlocal            4
+      pushbyte            5
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), "rol"), 2
+      getlocal0
+      getlocal            15
+      getlocal            5
+      getlocal            6
+      getlocal            7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), "ft"), 4
+      add
+      getlocal            8
+      add
+      getlocal3
+      getlocal            15
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1/_-0BA:core"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0BA"), StaticProtectedNs("_-0BA"), StaticProtectedNs("_-1Xn")])
+      add
+      getlocal0
+      getlocal            15
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), "kt"), 1
+      add
+      convert_u
+      setlocal            16
+
+      getlocal            7
+      convert_u
+      setlocal            8
+
+      getlocal            6
+      convert_u
+      setlocal            7
+
+      getlocal0
+      getlocal            5
+      pushbyte            30
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), "rol"), 2
+      convert_u
+      setlocal            6
+
+      getlocal            4
+      convert_u
+      setlocal            5
+
+      getlocal            16
+      convert_u
+      setlocal            4
+
+      getlocal            15
+      increment
+      convert_u
+      setlocal            15
+
+L188:
+      getlocal            15
+      pushbyte            80
+      iflt                L95
+
+      getlocal            4
+      getlocal            10
+      add
+      convert_u
+      setlocal            4
+
+      getlocal            5
+      getlocal            11
+      add
+      convert_u
+      setlocal            5
+
+      getlocal            6
+      getlocal            12
+      add
+      convert_u
+      setlocal            6
+
+      getlocal            7
+      getlocal            13
+      add
+      convert_u
+      setlocal            7
+
+      getlocal            8
+      getlocal            14
+      add
+      convert_u
+      setlocal            8
+
+      getlocal            9
+      pushbyte            16
+      add
+      convert_u
+      setlocal            9
+
+L221:
+      getlocal            9
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L75
+
+      getlocal            4
+      getlocal            5
+      getlocal            6
+      getlocal            7
+      getlocal            8
+      newarray            5
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), "rol")
+   method
+    refid "com.hurlant.crypto.hash:SHA1/rol"
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal2
+      lshift
+      getlocal1
+      pushbyte            32
+      getlocal2
+      subtract
+      urshift
+      bitor
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), "ft")
+   method
+    refid "com.hurlant.crypto.hash:SHA1/ft"
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            20
+      ifnlt               L14
+
+      getlocal2
+      getlocal3
+      bitand
+      getlocal2
+      bitnot
+      getlocal            4
+      bitand
+      bitor
+      returnvalue
+
+L14:
+      getlocal1
+      pushbyte            40
+      ifnlt               L23
+
+      getlocal2
+      getlocal3
+      bitxor
+      getlocal            4
+      bitxor
+      returnvalue
+
+L23:
+      getlocal1
+      pushbyte            60
+      ifnlt               L38
+
+      getlocal2
+      getlocal3
+      bitand
+      getlocal2
+      getlocal            4
+      bitand
+      bitor
+      getlocal3
+      getlocal            4
+      bitand
+      bitor
+      returnvalue
+
+L38:
+      getlocal2
+      getlocal3
+      bitxor
+      getlocal            4
+      bitxor
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:SHA1"), "kt")
+   method
+    refid "com.hurlant.crypto.hash:SHA1/kt"
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            20
+      ifnlt               L8
+
+      pushint             1518500249
+      convert_u
+      jump                L22
+
+L8:
+      getlocal1
+      pushbyte            40
+      ifnlt               L14
+
+      pushint             1859775393
+      convert_u
+      jump                L22
+
+L14:
+      getlocal1
+      pushbyte            60
+      ifnlt               L20
+
+      pushdouble          2400959708
+      convert_u
+      jump                L22
+
+L20:
+      pushdouble          3395469782
+      convert_u
+L22:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString") flag OVERRIDE
+   method
+    refid "com.hurlant.crypto.hash:SHA1/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "sha1"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.crypto.hash:SHA1/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace("", "#0"), "HASH_SIZE")
+    pushbyte            20
+    initproperty        QName(PackageNamespace("", "#0"), "HASH_SIZE")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "HASH_SIZE") slotid 1 type QName(PackageNamespace("", "#0"), "int") value Integer(20) end
+end ; class

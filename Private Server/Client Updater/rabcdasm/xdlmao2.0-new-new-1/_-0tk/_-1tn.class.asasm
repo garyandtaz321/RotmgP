@@ -1,0 +1,332 @@
+class
+ refid "_-0tk:_-1tn"
+ instance QName(PackageNamespace("_-0tk"), "_-1tn")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-hf")
+  iinit
+   refid "_-0tk:_-1tn/iinit"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     modulo
+     getlocal0
+     urshift
+     pushfalse
+     strictequals
+     greaterequals
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     jump                L21
+
+     pushwith
+     convert_s
+     divide
+     strictequals
+     istypelate
+     divide
+L21:
+     dup
+     iffalse             L26
+
+     pop
+     getlocal0
+     convert_b
+L26:
+     iftrue              L42
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-0tk:_-1tn"), PrivateNamespace("*", "_-0tk:_-1tn/iinit"), PackageNamespace("", "#0"), PackageNamespace("_-0tk"), PackageInternalNs("_-0tk"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hf"), StaticProtectedNs("_-hf"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("_-0tk"), "Command")
+     applytype           1
+     construct           0
+     initproperty        QName(PrivateNamespace("*", "_-0tk:_-1tn"), "_-1iW")
+
+     getlocal2
+     dup
+     iffalse             L39
+
+     pop
+     getlocal1
+     convert_b
+L39:
+     iftrue              L42
+
+     getlocal0
+     constructsuper      0
+
+L42:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-0tk:_-1tn"), "_-1iW") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-0tk"), "Command")>) end
+  trait method QName(PackageNamespace("", "#0"), "_-02M")
+   method
+    refid "_-0tk:_-1tn/_-02M"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      lshift
+      subtract_i
+      greaterequals
+      popscope
+      subtract_i
+      multiply
+L10:
+      getproperty         QName(PrivateNamespace("*", "_-0tk:_-1tn"), "_-1iW")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            0
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-33")
+   method
+    refid "_-0tk:_-1tn/_-33"
+    param QName(PackageNamespace("_-0tk"), "Command")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      declocal            2
+      declocal            2
+      getlocal1
+      astypelate
+      declocal_i          2
+      setlocal2
+
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L19
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0tk:_-1tn"), "_-1iW")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "execute")
+   method
+    refid "_-0tk:_-1tn/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      inclocal            2
+      declocal_i          4
+      pushscope
+
+      inclocal            3
+      strictequals
+      inclocal            4
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_-0tk"), "Command")
+      jump                L22
+
+      getlocal2
+      not
+      greaterthan
+      getlocal            4
+      bitnot
+      kill                2
+L22:
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0tk:_-1tn"), "_-1iW")
+      coerce_a
+      setlocal3
+
+      jump                L40
+
+L30:
+      label
+      getlocal3
+      getlocal2
+      nextvalue
+      coerce              QName(PackageNamespace("_-0tk"), "Command")
+      setlocal1
+
+      getlocal            4
+      iffalse             L40
+
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "execute"), 0
+
+L40:
+      hasnext2            3, 2
+      iftrue              L30
+
+      kill                3
+      kill                2
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "unexecute")
+   method
+    refid "_-0tk:_-1tn/unexecute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal            2
+      declocal            2
+      declocal_i          3
+      declocal_i          3
+      rshift
+      inclocal            3
+L10:
+      setlocal            4
+
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_-0tk"), "Command")
+      setlocal1
+
+      pushbyte            0
+      jump                L25
+
+      inclocal            2
+      getlocal2
+      convert_u
+      strictequals
+      convert_s
+      add
+L25:
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0tk:_-1tn"), "_-1iW")
+      coerce_a
+      setlocal3
+
+      jump                L46
+
+L31:
+      label
+      getlocal3
+      getlocal2
+      nextvalue
+      coerce              QName(PackageNamespace("_-0tk"), "Command")
+      setlocal1
+
+      getlocal            5
+      dup
+      iftrue              L43
+
+      pop
+      getlocal3
+      convert_b
+L43:
+      iffalse             L46
+
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "unexecute"), 0
+
+L46:
+      hasnext2            3, 2
+      iftrue              L31
+
+      kill                3
+      kill                2
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0tk:_-1tn/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

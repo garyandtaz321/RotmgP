@@ -1,0 +1,248 @@
+class
+ refid "_-08f:_-0Rt"
+ instance QName(PackageNamespace("_-08f"), "_-0Rt")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0ZH")
+  iinit
+   refid "_-08f:_-0Rt/iinit"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     modulo
+     hasnext
+     pushscope
+
+     subtract_i
+     decrement
+     getlocal2
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L20
+
+     pop
+     getlocal0
+     convert_b
+L20:
+     iffalse             L56
+
+     getlocal0
+     jump                L29
+
+     lessequals
+     add
+     equals
+     divide
+     istypelate
+     getlocal2
+L29:
+     getlex              QName(PackageNamespace("_-08f"), "Console")
+     getproperty         QName(PackageNamespace("", "#0"), "FATAL")
+     initproperty        QName(PackageNamespace("", "#0"), "_-cY")
+
+     getlocal2
+     iffalse             L64
+
+     jump                L41
+
+     subtract_i
+     typeof
+     increment_i
+     coerce_a
+     checkfilter
+     negate_i
+L41:
+     getlocal0
+     newfunction         "_-08f:_-0Rt/iinit/inline_method#1"
+     initproperty        QName(PackageNamespace("", "#0"), "traceCall")
+
+     getlocal1
+     iftrue              L64
+
+     getlocal0
+     newfunction         "_-08f:_-0Rt/iinit/inline_method#0"
+     initproperty        QName(PackageNamespace("", "#0"), "timeStampFormatter")
+
+     getlocal2
+     dup
+     iftrue              L55
+
+     pop
+     getlocal0
+     convert_b
+L55:
+     iffalse             L64
+
+L56:
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     iftrue              L64
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-08f"), "_-0eS")
+     constructprop       QName(PackageNamespace("_-08f"), "_-0eS"), 0
+     initproperty        QName(PrivateNamespace("*", "_-08f:_-0Rt"), "_-1Zh")
+
+L64:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "keystrokePassword") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "remotingPassword") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "maxLines") type QName(PackageNamespace("", "#0"), "uint") value Integer(1000) end
+  trait slot QName(PackageNamespace("", "#0"), "maxRepeats") type QName(PackageNamespace("", "#0"), "int") value Integer(75) end
+  trait slot QName(PackageNamespace("", "#0"), "_-cY") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-0Z5") type QName(PackageNamespace("", "#0"), "int") value Integer(2) end
+  trait slot QName(PackageNamespace("", "#0"), "useObjectLinking") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "objectHardReferenceTimer") type QName(PackageNamespace("", "#0"), "uint") value Integer(0) end
+  trait slot QName(PackageNamespace("", "#0"), "tracing") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "traceCall") type QName(PackageNamespace("", "#0"), "Function") end
+  trait slot QName(PackageNamespace("", "#0"), "showTimestamp") type QName(PackageNamespace("", "#0"), "Boolean") value False() end
+  trait slot QName(PackageNamespace("", "#0"), "timeStampFormatter") type QName(PackageNamespace("", "#0"), "Function") end
+  trait method QName(PrivateNamespace("*", "_-08f:_-0Rt"), "_-1sP")
+   method
+    refid "_-08f:_-0Rt/_-1sP"
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      pushnull
+      getlocal2
+      add_i
+      inclocal_i          2
+      pushnull
+      getlocal3
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      jump                L21
+
+      greaterthan
+      getlocal2
+      inclocal_i          2
+      setlocal3
+
+      kill                2
+      newactivation
+L21:
+      iftrue              L38
+
+      getlocal1
+      pushbyte            10
+      ifnlt               L38
+
+      getlocal3
+      dup
+      iffalse             L31
+
+      pop
+      getlocal3
+      convert_b
+L31:
+      iftrue              L38
+
+      pushstring          "0"
+      getlocal3
+      iftrue              L37
+
+      getlocal1
+      add
+L37:
+      returnvalue
+
+L38:
+      findpropstrict      QName(PackageNamespace("", "#0"), "String")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "String"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "showLineNumber") type QName(PackageNamespace("", "#0"), "Boolean") value False() end
+  trait slot QName(PackageNamespace("", "#0"), "remotingConnectionName") type QName(PackageNamespace("", "#0"), "String") value Utf8("_Console") end
+  trait slot QName(PackageNamespace("", "#0"), "allowedRemoteDomain") type QName(PackageNamespace("", "#0"), "String") value Utf8("*") end
+  trait slot QName(PackageNamespace("", "#0"), "commandLineAllowed") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "commandLineAutoScope") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "commandLineInputPassThrough") type QName(PackageNamespace("", "#0"), "Function") end
+  trait slot QName(PackageNamespace("", "#0"), "commandLineAutoCompleteEnabled") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "keyBindsEnabled") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "displayRollerEnabled") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "rulerToolEnabled") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "_-1y2") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "_-nZ") type QName(PackageNamespace("", "#0"), "String") value Utf8("com.junkbyte/Console/UserData") end
+  trait slot QName(PackageNamespace("", "#0"), "_-0j5") type QName(PackageNamespace("", "#0"), "String") value Utf8("/") end
+  trait slot QName(PackageNamespace("", "#0"), "rememberFilterSettings") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PackageNamespace("", "#0"), "_-MH") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait getter QName(PackageNamespace("", "#0"), "style")
+   method
+    refid "_-08f:_-0Rt/style/getter"
+    returns QName(PackageNamespace("_-08f"), "_-0eS")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-08f:_-0Rt"), "_-1Zh")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "_-08f:_-0Rt"), "_-1Zh") type QName(PackageNamespace("_-08f"), "_-0eS") end
+ end ; instance
+ cinit
+  refid "_-08f:_-0Rt/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

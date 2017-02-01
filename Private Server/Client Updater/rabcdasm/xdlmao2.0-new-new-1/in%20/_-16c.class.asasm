@@ -1,0 +1,208 @@
+class
+ refid "in :_-16c"
+ instance QName(PackageNamespace("in "), "_-16c")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("_-06U", [PackageNamespace("_-00U")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-18g")
+  iinit
+   refid "in :_-16c/iinit"
+   param QName(PackageNamespace("_-u5"), "_-1kJ")
+   returns QName(PackageNamespace("", "#0"), "void")
+   body
+    maxstack 10
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     declocal_i          3
+     setlocal3
+
+     pushundefined
+     inclocal            2
+     subtract_i
+     greaterequals
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iffalse             L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     getlex              Multiname("Vector", [PrivateNamespace("*", "in :_-16c"), PrivateNamespace("*", "in :_-16c/iinit"), PackageNamespace("", "#0"), PackageNamespace("in "), PackageInternalNs("in "), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-18g"), StaticProtectedNs("_-18g"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("", "#0"), "uint")
+     applytype           1
+     getglobalscope
+     pushbyte            0
+     pushbyte            1
+     pushbyte            2
+     dup
+     pushbyte            1
+     pushbyte            3
+     jump                L34
+
+     pushnan
+     declocal            3
+     setlocal2
+
+     getlocal1
+     modulo
+     getlocal2
+L34:
+     newarray            6
+     call                1
+     coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "uint")>)
+     setlocal2
+
+     getlocal3
+     iffalse             L69
+
+     getlocal1
+     pushnull
+     ifeq                L75
+
+     getlocal            4
+     dup
+     jump                L52
+
+     getlocal2
+     inclocal            2
+     getlocal3
+     getglobalscope
+     negate
+     nextvalue
+L52:
+     iffalse             L56
+
+     pop
+     getlocal2
+     convert_b
+L56:
+     iftrue              L69
+
+     getlocal0
+     getlocal1
+     getlex              QName(PrivateNamespace("*", "in :_-16c"), "_-1Y8")
+     callproperty        QName(PackageNamespace("", "#0"), "createIndexBuffer"), 1
+     initproperty        QName(PrivateNamespace("*", "in :_-16c"), "_-1jc")
+
+     getlocal3
+     dup
+     iftrue              L68
+
+     pop
+     getlocal1
+     convert_b
+L68:
+     iffalse             L75
+
+L69:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "in :_-16c"), "_-1jc")
+     getlocal2
+     pushbyte            0
+     getlex              QName(PrivateNamespace("*", "in :_-16c"), "_-1Y8")
+     callpropvoid        QName(PackageNamespace("", "#0"), "uploadFromVector"), 3
+
+L75:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "in :_-16c"), "_-1jc") type QName(PackageNamespace("_-u5"), "default") end
+  trait method QName(PackageNamespace("", "#0"), "apply")
+   method
+    refid "in :_-16c/apply"
+    param QName(PackageNamespace("", "#0"), "Class")
+    param QName(PackageNamespace("_-0cA"), "_-0bz")
+    param QName(PackageNamespace("flash.utils"), "Dictionary")
+    returns QName(PackageNamespace("", "#0"), "Object")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "in :_-16c"), "_-1jc")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "destroy")
+   method
+    refid "in :_-16c/destroy"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "in :_-16c/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    modulo
+    rshift
+    dup
+    pushnan
+    increment_i
+    multiply_i
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    iftrue              L19
+
+    findproperty        QName(PrivateNamespace("*", "in :_-16c"), "_-1Y8")
+    pushbyte            6
+    initproperty        QName(PrivateNamespace("*", "in :_-16c"), "_-1Y8")
+
+L19:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "in :_-16c"), "_-1Y8") slotid 1 type QName(PackageNamespace("", "#0"), "int") value Integer(6) end
+end ; class

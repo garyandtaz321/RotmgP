@@ -1,0 +1,273 @@
+class
+ refid "_-GI:TeleportEffect"
+ instance QName(PackageNamespace("_-GI"), "TeleportEffect")
+  extends QName(PackageNamespace("_-GI"), "_-1S9")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-W")
+  iinit
+   refid "_-GI:TeleportEffect/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     coerce_s
+     convert_s
+     nextname
+     equals
+     dup
+     add_i
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iffalse             L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "_-GI:TeleportEffect/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 9
+     localcount 11
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal_i          3
+      setlocal            6
+
+      declocal_i          9
+      kill                2
+      getlocal            7
+      declocal_i          3
+L10:
+      setlocal            9
+
+      setlocal            10
+
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      pushbyte            0
+      setlocal            7
+
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_-GI:TeleportEffect"), "TeleportParticle")
+      setlocal            8
+
+      pushbyte            20
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      jump                L132
+
+L28:
+      label
+      pushbyte            2
+      getlocal            10
+      iffalse             L92
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      multiply
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      multiply
+      convert_d
+      setlocal            5
+
+      getlocal            10
+      dup
+      iftrue              L46
+
+      pop
+      getlocal1
+      convert_b
+L46:
+      iffalse             L57
+
+      pushdouble          0.7
+      getlocal            10
+      iffalse             L53
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      multiply
+L53:
+      convert_d
+      setlocal            6
+
+      getlocal            9
+      iftrue              L95
+
+L57:
+      pushshort           500
+      jump                L65
+
+      bitnot
+      popscope
+      inclocal_i          9
+      negate_i
+      getlocal3
+      declocal_i          7
+L65:
+      getlocal            10
+      dup
+      iftrue              L71
+
+      pop
+      getlocal2
+      convert_b
+L71:
+      iffalse             L133
+
+      pushshort           1000
+      getlocal            10
+      dup
+      iftrue              L79
+
+      pop
+      getlocal1
+      convert_b
+L79:
+      iffalse             L134
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      multiply
+      add
+      convert_i
+      getlocal            9
+      dup
+      iffalse             L91
+
+      pop
+      getlocal0
+      convert_b
+L91:
+      iftrue              L133
+
+L92:
+      setlocal            7
+
+      getlocal            10
+      iffalse             L135
+
+L95:
+      findpropstrict      QName(PrivateNamespace("*", "_-GI:TeleportEffect"), "TeleportParticle")
+      pushshort           255
+      pushbyte            50
+      pushdouble          0.1
+      getlocal            7
+      constructprop       QName(PrivateNamespace("*", "_-GI:TeleportEffect"), "TeleportParticle"), 4
+      coerce              QName(PrivateNamespace("*", "_-GI:TeleportEffect"), "TeleportParticle")
+      setlocal            8
+
+      getlocal            9
+      iftrue              L131
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      jump                L113
+
+      bitor
+      typeof
+      getlocal3
+      inclocal            3
+      declocal_i          3
+      dup
+L113:
+      getlocal            8
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlocal            6
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal            5
+      callproperty        QName(PackageNamespace("", "#0"), "cos"), 1
+      multiply
+      add
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      getlocal            6
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal            5
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      multiply
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "addObj"), 3
+
+      getlocal            10
+      iffalse             L132
+
+L131:
+      inclocal_i          4
+L132:
+      getlocal            4
+L133:
+      getlocal3
+L134:
+      iflt                L28
+
+L135:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-GI:TeleportEffect/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

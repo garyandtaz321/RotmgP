@@ -1,0 +1,49 @@
+script ; 904
+ sinit
+  refid "_-DO:GTween.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("GTween", [PackageNamespace("_-DO")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "_-DO:GTween"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-DO"), "GTween")
+
+    findpropstrict      Multiname("TargetProxy", [PrivateNamespace("*", "_-DO:GTween#0")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.utils"), "Proxy")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.utils"), "Proxy")
+    newclass            "_-DO:GTween/TargetProxy"
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-DO:GTween#0"), "TargetProxy")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-DO"), "GTween")
+  #include "GTween.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-DO:GTween#0"), "TargetProxy")
+  #include "GTween/TargetProxy.class.asasm"
+ end ; trait
+end ; script

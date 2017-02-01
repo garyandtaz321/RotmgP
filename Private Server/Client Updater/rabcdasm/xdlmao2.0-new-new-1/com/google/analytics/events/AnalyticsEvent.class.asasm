@@ -1,0 +1,86 @@
+class
+ refid "com.google.analytics.events:AnalyticsEvent"
+ instance QName(PackageNamespace("com.google.analytics.events"), "AnalyticsEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.events:AnalyticsEvent")
+  iinit
+   refid "com.google.analytics.events:AnalyticsEvent/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("com.google.analytics"), "AnalyticsTracker")
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   flag HAS_OPTIONAL
+   optional False()
+   optional False()
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal3
+     getlocal            4
+     constructsuper      3
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "tracker")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "tracker") type QName(PackageNamespace("com.google.analytics"), "AnalyticsTracker") end
+  trait method QName(PackageNamespace("", "#0"), "clone") flag OVERRIDE
+   method
+    refid "com.google.analytics.events:AnalyticsEvent/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.google.analytics.events"), "AnalyticsEvent")
+      getlex              QName(PackageNamespace("", "#0"), "type")
+      getlex              QName(PackageNamespace("", "#0"), "tracker")
+      getlex              QName(PackageNamespace("", "#0"), "bubbles")
+      getlex              QName(PackageNamespace("", "#0"), "cancelable")
+      constructprop       QName(PackageNamespace("com.google.analytics.events"), "AnalyticsEvent"), 4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.events:AnalyticsEvent/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace("", "#0"), "READY")
+    pushstring          "ready"
+    initproperty        QName(PackageNamespace("", "#0"), "READY")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "READY") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("ready") end
+end ; class

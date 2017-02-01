@@ -1,0 +1,289 @@
+class
+ refid "_-20I:_-0Hi"
+ instance QName(PackageNamespace("_-20I"), "_-0Hi")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-oH")
+  iinit
+   refid "_-20I:_-0Hi/iinit"
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal            4
+
+     jump                L10
+
+     nextvalue
+     greaterequals
+     inclocal_i          4
+     getlocal0
+     declocal_i          3
+     inclocal            4
+L10:
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     getlocal            5
+     dup
+     iffalse             L26
+
+     pop
+     getlocal1
+     jump                L25
+
+     popscope
+     declocal            3
+     setlocal2
+
+     getlocal            4
+     lessthan
+     declocal            4
+L25:
+     convert_b
+L26:
+     iftrue              L46
+
+     getlocal0
+     constructsuper      0
+
+     getlocal            5
+     iftrue              L46
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-20I:_-0Hi"), "_-15x")
+
+     getlocal            4
+     dup
+     iftrue              L40
+
+     pop
+     getlocal3
+     convert_b
+L40:
+     iffalse             L49
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace("*", "_-20I:_-0Hi"), "_-0em")
+
+     getlocal            4
+     iffalse             L49
+
+L46:
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-20I:_-0Hi"), "name")
+
+L49:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-20I:_-0Hi"), "_-15x") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_-20I:_-0Hi"), "_-0em") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_-20I:_-0Hi"), "name") type QName(PackageNamespace("", "#0"), "String") end
+  trait method QName(PackageNamespace("", "#0"), "_-0XI")
+   method
+    refid "_-20I:_-0Hi/_-0XI"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-20I:_-0Hi"), "_-15x")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-KQ")
+   method
+    refid "_-20I:_-0Hi/_-KQ"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-20I:_-0Hi"), "_-0em")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "_-20I:_-0Hi/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "[CharacterSkinState {NAME}]"
+      jump                L10
+
+      bitor
+      modulo
+      getlocal3
+      dup
+      pushnan
+      bitor
+L10:
+      pushstring          "{NAME}"
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-20I:_-0Hi"), "name")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-20I:_-0Hi/cinit"
+  body
+   maxstack 7
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    rshift
+    pushnan
+    bitor
+    convert_u
+    urshift
+    bitnot
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace("", "#0"), "OWNED")
+    getlocal0
+    pushfalse
+    pushstring          "OWNED"
+    pushfalse
+    construct           3
+    initproperty        QName(PackageNamespace("", "#0"), "OWNED")
+
+    getlocal2
+    iftrue              L80
+
+    findproperty        QName(PackageNamespace("", "#0"), "UNLISTED")
+    getlocal0
+    pushtrue
+    pushstring          "UNLISTED"
+    pushfalse
+    construct           3
+    initproperty        QName(PackageNamespace("", "#0"), "UNLISTED")
+
+    findproperty        QName(PackageNamespace("", "#0"), "PURCHASABLE")
+    jump                L37
+
+    lessthan
+    convert_o
+    convert_s
+    not
+    subtract
+    divide
+L37:
+    getlocal0
+    pushfalse
+    pushstring          "PURCHASABLE"
+    pushtrue
+    construct           3
+    initproperty        QName(PackageNamespace("", "#0"), "PURCHASABLE")
+
+    getlocal1
+    dup
+    iftrue              L49
+
+    pop
+    getlocal0
+    convert_b
+L49:
+    iffalse             L80
+
+    jump                L57
+
+    pushtrue
+    convert_d
+    getlocal3
+    instanceof
+    decrement_i
+    add_i
+L57:
+    findproperty        QName(PackageNamespace("", "#0"), "PURCHASING")
+    getlocal0
+    pushtrue
+    pushstring          "PURCHASING"
+    pushtrue
+    construct           3
+    initproperty        QName(PackageNamespace("", "#0"), "PURCHASING")
+
+    getlocal2
+    iftrue              L80
+
+    findproperty        QName(PackageNamespace("", "#0"), "LOCKED")
+    getlocal0
+    pushtrue
+    pushstring          "LOCKED"
+    pushtrue
+    construct           3
+    initproperty        QName(PackageNamespace("", "#0"), "LOCKED")
+
+    findproperty        QName(PackageNamespace("", "#0"), "NULL")
+    getlocal0
+    pushtrue
+    pushstring          "NULL"
+    pushtrue
+    construct           3
+    initproperty        QName(PackageNamespace("", "#0"), "NULL")
+
+L80:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "OWNED") slotid 1 type QName(PackageNamespace("_-20I"), "_-0Hi") end
+ trait const QName(PackageNamespace("", "#0"), "UNLISTED") slotid 2 type QName(PackageNamespace("_-20I"), "_-0Hi") end
+ trait const QName(PackageNamespace("", "#0"), "PURCHASABLE") slotid 3 type QName(PackageNamespace("_-20I"), "_-0Hi") end
+ trait const QName(PackageNamespace("", "#0"), "PURCHASING") slotid 4 type QName(PackageNamespace("_-20I"), "_-0Hi") end
+ trait const QName(PackageNamespace("", "#0"), "LOCKED") slotid 5 type QName(PackageNamespace("_-20I"), "_-0Hi") end
+ trait const QName(PackageNamespace("", "#0"), "NULL") slotid 6 type QName(PackageNamespace("_-20I"), "_-0Hi") end
+end ; class

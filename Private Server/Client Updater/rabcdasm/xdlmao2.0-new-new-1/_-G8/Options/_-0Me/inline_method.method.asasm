@@ -1,0 +1,45 @@
+method
+ refid "_-G8:Options/_-0Me/inline_method"
+ returns QName(PackageNamespace("", "#0"), "void")
+ body
+  maxstack 4
+  localcount 1
+  initscopedepth 10
+  maxscopedepth 10
+  code
+   getlex              QName(PackageInternalNs("_-G8"), "option")
+   getlex              QName(PrivateNamespace("*", "_-G8:Options#0"), "_-oo")
+   getproperty         QName(PackageNamespace("", "#0"), "length")
+   pushbyte            2
+   modulo
+   pushbyte            0
+   equals
+   iffalse             L11
+
+   pushbyte            20
+   convert_d
+   jump                L13
+
+L11:
+   pushshort           415
+   convert_d
+L13:
+   setproperty         QName(PackageNamespace("", "#0"), "x")
+
+   getlex              QName(PackageInternalNs("_-G8"), "option")
+   findpropstrict      QName(PackageNamespace("", "#0"), "int")
+   getlex              QName(PrivateNamespace("*", "_-G8:Options#0"), "_-oo")
+   getproperty         QName(PackageNamespace("", "#0"), "length")
+   pushbyte            2
+   divide
+   callproperty        QName(PackageNamespace("", "#0"), "int"), 1
+   pushbyte            44
+   multiply
+   pushbyte            122
+   add
+   setproperty         QName(PackageNamespace("", "#0"), "y")
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

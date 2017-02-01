@@ -1,0 +1,197 @@
+class
+ refid "com.company.assembleegameclient.ui:_-Tl"
+ instance QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-Tl")
+  extends QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-mH")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-pj")
+  iinit
+   refid "com.company.assembleegameclient.ui:_-Tl/iinit"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "int")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   body
+    maxstack 5
+    localcount 6
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     bitor
+     kill                2
+     declocal            4
+     convert_b
+     getlocal3
+     newactivation
+L10:
+     setlocal            4
+
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     getlocal            5
+     dup
+     iftrue              L20
+
+     pop
+     getlocal0
+     convert_b
+L20:
+     iffalse             L34
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-1Sm"), "_-sy")
+     constructprop       QName(PackageNamespace("_-1Sm"), "_-sy"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "textChanged")
+
+     getlocal            5
+     jump                L33
+
+     rshift
+     popscope
+     dxnslate
+     inclocal_i          2
+     inclocal            2
+     kill                2
+L33:
+     iffalse             L61
+
+L34:
+     getlocal0
+     getlocal3
+     constructsuper      1
+
+     getlocal            4
+     dup
+     iffalse             L50
+
+     pop
+     getlocal2
+     convert_b
+     jump                L50
+
+     inclocal            2
+     declocal            2
+     inclocal            4
+     add
+     typeof
+     kill                3
+L50:
+     iftrue              L73
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "_-1pL")
+     getlocal1
+     callpropvoid        QName(PackageNamespace("", "#0"), "_-1pL"), 1
+
+     getlocal            4
+     dup
+     iffalse             L60
+
+     pop
+     getlocal1
+     convert_b
+L60:
+     iftrue              L73
+
+L61:
+     getlex              QName(ProtectedNamespace("_-Ft"), "text_")
+     findpropstrict      QName(PackageNamespace("_-0Mr"), "_-1M")
+     getlocal2
+     constructprop       QName(PackageNamespace("_-0Mr"), "_-1M"), 1
+     callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+     getlocal            4
+     iftrue              L73
+
+     getlex              QName(ProtectedNamespace("_-Ft"), "text_")
+     getproperty         QName(PackageNamespace("", "#0"), "textChanged")
+     getlocal0
+     getproperty         QName(ProtectedNamespace("_-pj"), "onTextChanged")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addOnce"), 1
+
+L73:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PackageNamespace("", "#0"), "textChanged") type QName(PackageNamespace("_-1Sm"), "_-sy") end
+  trait method QName(ProtectedNamespace("_-pj"), "onTextChanged")
+   method
+    refid "com.company.assembleegameclient.ui:_-Tl/_-pj:onTextChanged"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      decrement
+      decrement_i
+      negate_i
+      convert_u
+      divide
+      pushnan
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iffalse             L20
+
+      pop
+      getlocal1
+      convert_b
+L20:
+      iftrue              L28
+
+      findpropstrict      QName(ProtectedNamespace("_-1sZ"), "initText")
+      callpropvoid        QName(ProtectedNamespace("_-1sZ"), "initText"), 0
+
+      getlocal2
+      iffalse             L28
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "textChanged")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 0
+
+L28:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.ui:_-Tl/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

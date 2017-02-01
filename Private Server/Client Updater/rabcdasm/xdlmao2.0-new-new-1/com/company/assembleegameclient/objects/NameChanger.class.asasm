@@ -1,0 +1,155 @@
+class
+ refid "com.company.assembleegameclient.objects:NameChanger"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "NameChanger")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  implements Multiname("_-Rk", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-05Y")
+  iinit
+   refid "com.company.assembleegameclient.objects:NameChanger/iinit"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     declocal            2
+     pushnan
+     inclocal            2
+     popscope
+     pushtrue
+     kill                2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L19
+
+     pop
+     getlocal3
+     convert_b
+L19:
+     iffalse             L25
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal3
+     iftrue              L28
+
+L25:
+     findproperty        QName(PackageNamespace("", "#0"), "_-11k")
+     pushtrue
+     initproperty        QName(PackageNamespace("", "#0"), "_-11k")
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-1uD") type QName(PackageNamespace("", "#0"), "int") value Integer(0) end
+  trait method QName(PackageNamespace("", "#0"), "_-1eL")
+   method
+    refid "com.company.assembleegameclient.objects:NameChanger/_-1eL"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      coerce_s
+      declocal            2
+      add_i
+      dxnslate
+      inclocal_i          2
+      coerce_a
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L18
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace("", "#0"), "_-1uD")
+
+L18:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getPanel")
+   method
+    refid "com.company.assembleegameclient.objects:NameChanger/getPanel"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace("_-1f4"), "Panel")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-0no"), "NameChangerPanel")
+      jump                L10
+
+      increment
+      subtract_i
+      swap
+      rshift
+      getlocal1
+      getglobalscope
+L10:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1uD")
+      constructprop       QName(PackageNamespace("_-0no"), "NameChangerPanel"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:NameChanger/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

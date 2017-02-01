@@ -1,0 +1,422 @@
+class
+ refid "_-1kt:EvolveDialog"
+ instance QName(PackageNamespace("_-1kt"), "EvolveDialog")
+  extends QName(PackageNamespace("_-0ld"), "_-0p1")
+  implements Multiname("_-1gk", [PackageNamespace("_-Vb")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-12N")
+  iinit
+   refid "_-1kt:EvolveDialog/iinit"
+   param QName(PackageNamespace("_-1kt"), "_-e4")
+   body
+    maxstack 8
+    localcount 4
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal_i          2
+     inclocal_i          2
+     pushnan
+     equals
+     convert_o
+     bitnot
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L20
+
+     pop
+     getlocal3
+     convert_b
+L20:
+     iftrue              L51
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-Vb"), "_-qK")
+     constructprop       QName(PackageNamespace("_-Vb"), "_-qK"), 0
+     initproperty        QName(PrivateNamespace("*", "_-1kt:EvolveDialog"), "_-ay")
+
+     getlocal2
+     dup
+     jump                L34
+
+     inclocal_i          2
+     getlocal3
+     getlocal2
+     declocal_i          2
+     bitor
+     inclocal            2
+L34:
+     iffalse             L38
+
+     pop
+     getlocal1
+     convert_b
+L38:
+     iftrue              L60
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "_-1SM")
+
+     getlocal2
+     iftrue              L60
+
+     jump                L51
+
+     declocal_i          2
+     declocal            2
+     setlocal2
+
+     inclocal            2
+     multiply
+     kill                2
+L51:
+     getlocal0
+     pushstring          "EvolveDialog.title"
+     pushstring          ""
+     pushstring          "ErrorDialog.ok"
+     pushnull
+     pushnull
+     constructsuper      5
+
+     getlocal2
+     iftrue              L68
+
+L60:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1kt:EvolveDialog"), "_-ay")
+     getlocal0
+     getlex              QName(PackageNamespace("_-Vb"), "Dialog")
+     getproperty         QName(PackageNamespace("", "#0"), "LEFT_BUTTON")
+     callpropvoid        QName(PackageNamespace("", "#0"), "add"), 2
+
+     getlocal3
+     iffalse             L74
+
+L68:
+     findproperty        QName(PackageNamespace("", "#0"), "_-0j4")
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "width")
+     pushbyte            1
+     add
+     initproperty        QName(PackageNamespace("", "#0"), "_-0j4")
+
+L74:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-1SM") type QName(PackageNamespace("_-1kt"), "_-e4") end
+  trait const QName(PrivateNamespace("*", "_-1kt:EvolveDialog"), "_-ay") type QName(PackageNamespace("_-Vb"), "_-qK") end
+  trait method QName(ProtectedNamespace("_-12N"), "makeUIAndAdd") flag OVERRIDE
+   method
+    refid "_-1kt:EvolveDialog/_-12N:makeUIAndAdd"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      bitor
+      dxnslate
+      multiply
+      getlocal3
+      negate_i
+      astypelate
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L19
+
+      getlex              QName(PackageNamespace("", "#0"), "box_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1SM")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-12N"), "drawAdditionalUI") flag OVERRIDE
+   method
+    refid "_-1kt:EvolveDialog/_-12N:drawAdditionalUI"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      not
+      rshift
+      convert_o
+      astypelate
+      pushwith
+      strictequals
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iffalse             L20
+
+      pop
+      getlocal0
+      convert_b
+L20:
+      iftrue              L65
+
+      getlocal0
+      jump                L29
+
+      convert_b
+      negate
+      getlocal1
+      setlocal3
+
+      nextname
+      increment
+L29:
+      getproperty         QName(PackageNamespace("", "#0"), "_-1SM")
+      getlocal2
+      iffalse             L58
+
+      getlex              QName(PackageNamespace("", "#0"), "_-0j4")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1SM")
+      jump                L42
+
+      pushundefined
+      increment
+      lessequals
+      subtract
+      nextname
+      setlocal2
+
+L42:
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      subtract
+      getlocal2
+      dup
+      iftrue              L50
+
+      pop
+      getlocal0
+      convert_b
+L50:
+      iffalse             L53
+
+      pushbyte            2
+      divide
+L53:
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal2
+      iffalse             L65
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1SM")
+L58:
+      getlex              QName(PackageNamespace("", "#0"), "_-zj")
+      getlex              QName(PackageNamespace("", "#0"), "box_")
+      callproperty        QName(PackageNamespace("", "#0"), "getBounds"), 1
+      getproperty         QName(PackageNamespace("", "#0"), "bottom")
+      getlex              QName(PrivateNamespace("*", "_-1kt:EvolveDialog"), "_-EL")
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+L65:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-12N"), "drawGraphicsTemplate") flag OVERRIDE
+   method
+    refid "_-1kt:EvolveDialog/_-12N:drawGraphicsTemplate"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal            2
+      inclocal_i          2
+      setlocal2
+
+      lessequals
+      getlocal2
+      declocal_i          2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      jump                L21
+
+      inclocal            2
+      pushfalse
+      getlocal2
+      subtract
+      inclocal            2
+      negate
+L21:
+      getlocal2
+      dup
+      iffalse             L27
+
+      pop
+      getlocal0
+      convert_b
+L27:
+      iftrue              L30
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("_-nu"), "drawGraphicsTemplate"), 0
+L30:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1SM")
+      getlex              QName(PackageNamespace("", "#0"), "rect_")
+      callproperty        QName(PackageNamespace("", "#0"), "getBounds"), 1
+      getproperty         QName(PackageNamespace("", "#0"), "bottom")
+      convert_d
+      setlocal1
+
+      getlocal3
+      iffalse             L42
+
+      getlex              QName(ProtectedNamespace("_-nu"), "_-0ty")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "drawLine"), 1
+
+L42:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-zK")
+   method
+    refid "_-1kt:EvolveDialog/_-zK"
+    returns QName(PackageNamespace("_-1Sm"), "_-sy")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      bitor
+      popscope
+      astypelate
+      convert_b
+      hasnext
+      lessequals
+L10:
+      getproperty         QName(PrivateNamespace("*", "_-1kt:EvolveDialog"), "_-ay")
+      callproperty        QName(PackageNamespace("", "#0"), "_-zK"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1kt:EvolveDialog/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    convert_o
+    decrement_i
+    pop
+    divide
+    subtract_i
+    swap
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iftrue              L20
+
+    pop
+    getlocal1
+    convert_b
+L20:
+    iffalse             L24
+
+    findproperty        QName(PrivateNamespace("*", "_-1kt:EvolveDialog"), "_-EL")
+    pushbyte            6
+    initproperty        QName(PrivateNamespace("*", "_-1kt:EvolveDialog"), "_-EL")
+
+L24:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_-1kt:EvolveDialog"), "_-EL") slotid 1 type QName(PackageNamespace("", "#0"), "int") value Integer(6) end
+end ; class

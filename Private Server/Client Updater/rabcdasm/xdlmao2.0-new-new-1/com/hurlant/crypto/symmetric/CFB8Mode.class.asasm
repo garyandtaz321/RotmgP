@@ -1,0 +1,301 @@
+class
+ refid "com.hurlant.crypto.symmetric:CFB8Mode"
+ instance QName(PackageNamespace("com.hurlant.crypto.symmetric"), "CFB8Mode")
+  extends QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IVMode")
+  implements Multiname("IMode", [PackageNamespace("com.hurlant.crypto.symmetric")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0vL")
+  iinit
+   refid "com.hurlant.crypto.symmetric:CFB8Mode/iinit"
+   param QName(PackageNamespace("com.hurlant.crypto.symmetric"), "ISymmetricKey")
+   param QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IPad")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     pushnull
+     constructsuper      2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "encrypt")
+   method
+    refid "com.hurlant.crypto.symmetric:CFB8Mode/encrypt"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      findpropstrict      QName(ProtectedNamespace("_-bN"), "getIV4e")
+      callproperty        QName(ProtectedNamespace("_-bN"), "getIV4e"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L69
+
+L17:
+      label
+      getlocal3
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "position")
+
+      getlocal3
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBytes"), 1
+
+      getlex              QName(ProtectedNamespace("_-bN"), "key")
+      getlocal2
+      callpropvoid        QName(Namespace("_-10u"), "encrypt"), 1
+
+      getlocal1
+      getlocal            4
+      getlocal1
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#0"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0vL"), StaticProtectedNs("_-0vL"), StaticProtectedNs("_-bN")])
+      getlocal2
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#0"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0vL"), StaticProtectedNs("_-0vL"), StaticProtectedNs("_-bN")])
+      bitxor
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#0"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0vL"), StaticProtectedNs("_-0vL"), StaticProtectedNs("_-bN")])
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      jump                L54
+
+L41:
+      label
+      getlocal2
+      getlocal            5
+      getlocal3
+      getlocal            5
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#0"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0vL"), StaticProtectedNs("_-0vL"), StaticProtectedNs("_-bN")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#0"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0vL"), StaticProtectedNs("_-0vL"), StaticProtectedNs("_-bN")])
+
+      getlocal            5
+      increment
+      convert_u
+      setlocal            5
+
+L54:
+      getlocal            5
+      getlex              QName(ProtectedNamespace("_-bN"), "blockSize")
+      decrement
+      iflt                L41
+
+      getlocal2
+      getlex              QName(ProtectedNamespace("_-bN"), "blockSize")
+      decrement
+      getlocal1
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#0"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0vL"), StaticProtectedNs("_-0vL"), StaticProtectedNs("_-bN")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#0"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0vL"), StaticProtectedNs("_-0vL"), StaticProtectedNs("_-bN")])
+
+      getlocal            4
+      increment
+      convert_u
+      setlocal            4
+
+L69:
+      getlocal            4
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L17
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "decrypt")
+   method
+    refid "com.hurlant.crypto.symmetric:CFB8Mode/decrypt"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      findpropstrict      QName(ProtectedNamespace("_-bN"), "getIV4d")
+      callproperty        QName(ProtectedNamespace("_-bN"), "getIV4d"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L75
+
+L20:
+      label
+      getlocal1
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#0"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0vL"), StaticProtectedNs("_-0vL"), StaticProtectedNs("_-bN")])
+      convert_u
+      setlocal            5
+
+      getlocal3
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "position")
+
+      getlocal3
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBytes"), 1
+
+      getlex              QName(ProtectedNamespace("_-bN"), "key")
+      getlocal2
+      callpropvoid        QName(Namespace("_-10u"), "encrypt"), 1
+
+      getlocal1
+      getlocal            4
+      getlocal1
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#0"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0vL"), StaticProtectedNs("_-0vL"), StaticProtectedNs("_-bN")])
+      getlocal2
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#0"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0vL"), StaticProtectedNs("_-0vL"), StaticProtectedNs("_-bN")])
+      bitxor
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#0"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0vL"), StaticProtectedNs("_-0vL"), StaticProtectedNs("_-bN")])
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      jump                L62
+
+L49:
+      label
+      getlocal2
+      getlocal            6
+      getlocal3
+      getlocal            6
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#0"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0vL"), StaticProtectedNs("_-0vL"), StaticProtectedNs("_-bN")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#0"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0vL"), StaticProtectedNs("_-0vL"), StaticProtectedNs("_-bN")])
+
+      getlocal            6
+      increment
+      convert_u
+      setlocal            6
+
+L62:
+      getlocal            6
+      getlex              QName(ProtectedNamespace("_-bN"), "blockSize")
+      decrement
+      iflt                L49
+
+      getlocal2
+      getlex              QName(ProtectedNamespace("_-bN"), "blockSize")
+      decrement
+      getlocal            5
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#0"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:CFB8Mode#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0vL"), StaticProtectedNs("_-0vL"), StaticProtectedNs("_-bN")])
+
+      getlocal            4
+      increment
+      convert_u
+      setlocal            4
+
+L75:
+      getlocal            4
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L20
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "com.hurlant.crypto.symmetric:CFB8Mode/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("_-bN"), "key")
+      callproperty        QName(Namespace("_-10u"), "toString"), 0
+      pushstring          "-cfb8"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.crypto.symmetric:CFB8Mode/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,41 @@
+script ; 1438
+ sinit
+  refid "_-Qu:MessageCenterMapping.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("MessageCenterMapping", [PackageNamespace("_-Qu")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-Qu:MessageCenterMapping"
+    popscope
+    initproperty        QName(PackageNamespace("_-Qu"), "MessageCenterMapping")
+
+    findpropstrict      Multiname("NullHandlerProxy", [PrivateNamespace("*", "_-Qu:MessageCenterMapping#1")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-Qu:MessageCenterMapping/NullHandlerProxy"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-Qu:MessageCenterMapping#1"), "NullHandlerProxy")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-Qu"), "MessageCenterMapping")
+  #include "MessageCenterMapping.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-Qu:MessageCenterMapping#1"), "NullHandlerProxy")
+  #include "MessageCenterMapping/NullHandlerProxy.class.asasm"
+ end ; trait
+end ; script

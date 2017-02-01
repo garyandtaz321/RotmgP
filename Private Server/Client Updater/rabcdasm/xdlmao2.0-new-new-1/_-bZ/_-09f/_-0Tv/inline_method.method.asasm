@@ -1,0 +1,34 @@
+method
+ refid "_-bZ:_-09f/_-0Tv/inline_method"
+ param QName(PackageNamespace("flash.events"), "Event")
+ returns QName(PackageNamespace("", "#0"), "void")
+ flag NEED_ARGUMENTS
+ body
+  maxstack 3
+  localcount 3
+  initscopedepth 5
+  maxscopedepth 5
+  code
+   getlex              QName(PackageInternalNs("_-bZ"), "displayObject")
+   pushstring          "creationComplete"
+   getlocal2
+   getproperty         Multiname("callee", [PrivateNamespace("*", "_-bZ:_-09f#0"), PackageNamespace("", "#0"), PackageInternalNs("_-bZ"), PrivateNamespace("*", "_-bZ:_-09f#1"), PackageNamespace("_-bZ"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Df"), StaticProtectedNs("_-Df")])
+   callpropvoid        QName(PackageNamespace("", "#0"), "removeEventListener"), 2
+
+   getlex              QName(PrivateNamespace("*", "_-bZ:_-09f#0"), "_factory")
+   getlex              QName(PackageInternalNs("_-bZ"), "displayObject")
+   getlex              QName(PackageInternalNs("_-bZ"), "event")
+   getproperty         QName(PackageNamespace("", "#0"), "mapping")
+   callproperty        QName(Namespace("_-1Wv"), "_-1Pb"), 2
+   iffalse             L15
+
+   findpropstrict      QName(PrivateNamespace("*", "_-bZ:_-09f#0"), "_-1zj")
+   getlex              QName(PackageInternalNs("_-bZ"), "displayObject")
+   getlex              QName(PackageInternalNs("_-bZ"), "mediator")
+   callpropvoid        QName(PrivateNamespace("*", "_-bZ:_-09f#0"), "_-1zj"), 2
+
+L15:
+   returnvoid
+  end ; code
+ end ; body
+end ; method

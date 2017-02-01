@@ -1,0 +1,440 @@
+class
+ refid "com.hurlant.util.der:Sequence"
+ instance QName(PackageNamespace("com.hurlant.util.der"), "Sequence")
+  extends QName(PackageNamespace("", "#0"), "Array")
+  implements Multiname("IAsn1Type", [PackageNamespace("com.hurlant.util.der")])
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Pt")
+  iinit
+   refid "com.hurlant.util.der:Sequence/iinit"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "uint")
+   flag HAS_OPTIONAL
+   optional Integer(48)
+   optional Integer(0)
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(ProtectedNamespace("_-0Pt"), "type")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(ProtectedNamespace("_-0Pt"), "len")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("_-0Pt"), "type") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(ProtectedNamespace("_-0Pt"), "len") type QName(PackageNamespace("", "#0"), "uint") end
+  trait method QName(PackageNamespace("", "#0"), "getLength")
+   method
+    refid "com.hurlant.util.der:Sequence/getLength"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0Pt"), "len")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getType")
+   method
+    refid "com.hurlant.util.der:Sequence/getType"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0Pt"), "type")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toDER")
+   method
+    refid "com.hurlant.util.der:Sequence/toDER"
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.hurlant.util.der"), "IAsn1Type")
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      jump                L33
+
+L12:
+      label
+      getlocal0
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-0Pt"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-0Pt")])
+      coerce              QName(PackageNamespace("com.hurlant.util.der"), "IAsn1Type")
+      setlocal3
+
+      getlocal3
+      pushnull
+      ifne                L28
+
+      getlocal1
+      pushbyte            5
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeByte"), 1
+
+      getlocal1
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeByte"), 1
+
+      jump                L32
+
+L28:
+      getlocal1
+      getlocal3
+      callproperty        QName(Namespace("_-0lu"), "toDER"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBytes"), 1
+
+L32:
+      inclocal_i          2
+L33:
+      getlocal2
+      getlex              QName(PackageNamespace("", "#0"), "length")
+      iflt                L12
+
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0Pt"), "type")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "wrapDER"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "com.hurlant.util.der:Sequence/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 4
+     localcount 8
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      setlocal            4
+
+      pushnull
+      coerce_s
+      setlocal            5
+
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+      getproperty         QName(PackageNamespace("", "#0"), "indent")
+      coerce_s
+      setlocal1
+
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+      getproperty         QName(PackageNamespace("", "#0"), "indent")
+      pushstring          "    "
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "indent")
+
+      pushstring          ""
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      jump                L91
+
+L22:
+      label
+      getlocal0
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-0Pt"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-0Pt")])
+      pushnull
+      ifne                L29
+
+      jump                L90
+
+L29:
+      pushfalse
+      setlocal            4
+
+      pushbyte            0
+      setlocal            6
+
+      getlocal0
+      coerce_a
+      setlocal            7
+
+      jump                L75
+
+L37:
+      label
+      getlocal            7
+      getlocal            6
+      nextname
+      coerce_s
+      setlocal            5
+
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      getlocal            5
+      equals
+      not
+      dup
+      iffalse             L58
+
+      pop
+      getlocal0
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-0Pt"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-0Pt")])
+      getlocal0
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-0Pt"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-0Pt")])
+      equals
+L58:
+      iffalse             L75
+
+      getlocal2
+      getlocal            5
+      pushstring          ": "
+      add
+      getlocal0
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-0Pt"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-0Pt")])
+      add
+      pushstring          "\n"
+      add
+      add
+      coerce_s
+      setlocal2
+
+      pushtrue
+      setlocal            4
+
+      jump                L77
+
+L75:
+      hasnext2            7, 6
+      iftrue              L37
+
+L77:
+      kill                7
+      kill                6
+      getlocal            4
+      iftrue              L90
+
+      getlocal2
+      getlocal0
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-0Pt"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-0Pt")])
+      pushstring          "\n"
+      add
+      add
+      coerce_s
+      setlocal2
+
+L90:
+      inclocal_i          3
+L91:
+      getlocal3
+      getlex              QName(PackageNamespace("", "#0"), "length")
+      iflt                L22
+
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+      getlocal1
+      setproperty         QName(PackageNamespace("", "#0"), "indent")
+
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+      getproperty         QName(PackageNamespace("", "#0"), "indent")
+      pushstring          "Sequence["
+      add
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0Pt"), "type")
+      add
+      pushstring          "]["
+      add
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-0Pt"), "len")
+      add
+      pushstring          "][\n"
+      add
+      getlocal2
+      add
+      pushstring          "\n"
+      add
+      getlocal1
+      add
+      pushstring          "]"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "findAttributeValue")
+   method
+    refid "com.hurlant.util.der:Sequence/findAttributeValue"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("com.hurlant.util.der"), "IAsn1Type")
+    body
+     maxstack 2
+     localcount 8
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal2
+
+      pushundefined
+      coerce_a
+      setlocal3
+
+      pushundefined
+      coerce_a
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("com.hurlant.util.der"), "ObjectIdentifier")
+      setlocal            5
+
+      pushbyte            0
+      setlocal            6
+
+      getlocal0
+      coerce_a
+      setlocal            7
+
+      jump                L63
+
+L20:
+      label
+      getlocal            7
+      getlocal            6
+      nextvalue
+      coerce_a
+      setlocal2
+
+      getlocal2
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "Set")
+      istypelate
+      iffalse             L63
+
+      getlocal2
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-0Pt"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-0Pt")])
+      coerce_a
+      setlocal3
+
+      getlocal3
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "Sequence")
+      istypelate
+      iffalse             L63
+
+      getlocal3
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-0Pt"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-0Pt")])
+      coerce_a
+      dup
+      setlocal            4
+
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "ObjectIdentifier")
+      istypelate
+      iffalse             L63
+
+      getlocal            4
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "ObjectIdentifier")
+      astypelate
+      coerce              QName(PackageNamespace("com.hurlant.util.der"), "ObjectIdentifier")
+      dup
+      setlocal            5
+
+      callproperty        QName(PackageNamespace("", "#0"), "toString"), 0
+      getlocal1
+      ifne                L63
+
+      getlocal3
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-0Pt"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-0Pt")])
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "IAsn1Type")
+      astypelate
+      returnvalue
+
+L63:
+      hasnext2            7, 6
+      iftrue              L20
+
+      kill                7
+      kill                6
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.util.der:Sequence/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

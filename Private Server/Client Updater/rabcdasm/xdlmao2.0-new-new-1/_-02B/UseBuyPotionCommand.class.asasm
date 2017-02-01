@@ -1,0 +1,787 @@
+class
+ refid "_-02B:UseBuyPotionCommand"
+ instance QName(PackageNamespace("_-02B"), "UseBuyPotionCommand")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1PR")
+  iinit
+   refid "_-02B:UseBuyPotionCommand/iinit"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     istypelate
+     bitxor
+     newactivation
+     getlocal1
+     bitnot
+     not
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L20
+
+     pop
+     getlocal0
+     convert_b
+L20:
+     iftrue              L27
+
+     getlocal0
+     getlex              QName(PackageNamespace("_-1TC"), "_-08E")
+     getproperty         QName(PackageNamespace("", "#0"), "_-a9")
+     initproperty        QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-NW")
+
+     getlocal2
+     iffalse             L29
+
+L27:
+     getlocal0
+     constructsuper      0
+
+L29:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-1HM") flag METADATA type QName(PackageNamespace("_-1E-"), "_-0rN")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-1-F") flag METADATA type QName(PackageNamespace("_-1E-"), "_-1ne")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-1b") flag METADATA type QName(PackageNamespace("_-1Fr"), "_-qf")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-1TT") flag METADATA type QName(PackageNamespace("_-1PM"), "_-1YQ")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-NW") type QName(PackageNamespace("_-1TC"), "_-08E") end
+  trait slot QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "player") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player") end
+  trait slot QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-11i") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "count") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-0Lp") type QName(PackageNamespace("_-1Fr"), "_-1vE") end
+  trait method QName(PackageNamespace("", "#0"), "execute")
+   method
+    refid "_-02B:UseBuyPotionCommand/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      convert_d
+      astypelate
+      getlocal2
+      urshift
+      urshift
+      lessthan
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1b")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1-P")
+      getproperty         QName(PackageNamespace("", "#0"), "map")
+      getproperty         QName(PackageNamespace("", "#0"), "player_")
+      initproperty        QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "player")
+
+      getlocal1
+      iffalse             L33
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "player")
+      pushnull
+      ifne                L36
+
+      getlocal2
+      dup
+      iffalse             L32
+
+      pop
+      getlocal1
+      convert_b
+L32:
+      iftrue              L101
+
+L33:
+      returnvoid
+
+      getlocal1
+      iffalse             L43
+
+L36:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1HM")
+      getproperty         QName(PackageNamespace("", "#0"), "objectId")
+      initproperty        QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-11i")
+
+      getlocal1
+      iffalse             L57
+
+L43:
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "player")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-11i")
+      jump                L55
+
+      equals
+      coerce_s
+      subtract_i
+      divide
+      typeof
+      coerce_s
+L55:
+      callproperty        QName(PackageNamespace("", "#0"), "getPotionCount"), 1
+      initproperty        QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "count")
+
+L57:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1-F")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-11i")
+      callproperty        QName(PackageNamespace("", "#0"), "_-9s"), 1
+      initproperty        QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-0Lp")
+
+      getlocal1
+      dup
+      iftrue              L70
+
+      pop
+      getlocal1
+      convert_b
+L70:
+      iffalse             L111
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "count")
+      pushbyte            0
+      greaterthan
+      getlocal1
+      dup
+      iftrue              L81
+
+      pop
+      getlocal2
+      convert_b
+L81:
+      iffalse             L105
+
+      dup
+      iftrue              L106
+
+      getlocal1
+      dup
+      jump                L93
+
+      lessequals
+      dxnslate
+      strictequals
+      greaterequals
+      convert_d
+      bitor
+L93:
+      iftrue              L97
+
+      pop
+      getlocal1
+      convert_b
+L97:
+      iffalse             L106
+
+      pop
+      getlocal1
+      iffalse             L116
+
+L101:
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-1Tt"), 0
+      getlocal2
+      iftrue              L106
+
+L105:
+      convert_b
+L106:
+      iffalse             L112
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-1so"), 0
+
+      getlocal2
+      iftrue              L116
+
+L111:
+      jump                L116
+
+L112:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1TT")
+      pushstring          "Not safe to purchase potion"
+      callpropvoid        QName(Namespace("_-g2"), "info"), 1
+
+L116:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-1Tt")
+   method
+    refid "_-02B:UseBuyPotionCommand/_-1Tt"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      newactivation
+      newactivation
+      inclocal_i          2
+      dup
+      kill                3
+      getlocal3
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "player")
+      getproperty         QName(PackageNamespace("", "#0"), "credits_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-0Lp")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "player")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-11i")
+      callproperty        QName(PackageNamespace("", "#0"), "getPotionCount"), 1
+      callproperty        QName(PackageNamespace("", "#0"), "_-1nt"), 1
+      greaterequals
+      setlocal1
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace("", "#0"), "data_")
+      jump                L35
+
+      kill                2
+      declocal_i          3
+      setlocal2
+
+      astypelate
+      pushnan
+      getlocal1
+L35:
+      getproperty         Multiname("contextualPotionBuy", [PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-02B:UseBuyPotionCommand#1"), PackageNamespace("_-02B"), PackageInternalNs("_-02B"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1PR"), StaticProtectedNs("_-1PR")])
+      convert_b
+      setlocal2
+
+      getlocal            4
+      dup
+      iffalse             L44
+
+      pop
+      getlocal3
+      convert_b
+L44:
+      iftrue              L68
+
+      getlocal1
+      getlocal            4
+      jump                L54
+
+      inclocal            3
+      dup
+      negate
+      declocal_i          3
+      getlocal3
+      inclocal_i          2
+L54:
+      iftrue              L77
+
+      convert_b
+      getlocal            4
+      iftrue              L67
+
+      dup
+      iffalse             L77
+
+      getlocal3
+      dup
+      iftrue              L66
+
+      pop
+      getlocal0
+      convert_b
+L66:
+      iffalse             L76
+
+L67:
+      pop
+L68:
+      getlocal2
+      getlocal            4
+      dup
+      iffalse             L75
+
+      pop
+      getlocal0
+      convert_b
+L75:
+      iftrue              L77
+
+L76:
+      convert_b
+L77:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-1so")
+   method
+    refid "_-02B:UseBuyPotionCommand/_-1so"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      hasnext
+      dup
+      negate_i
+      subtract
+      greaterequals
+      pop
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L39
+
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-1Pi"), 0
+      iffalse             L40
+
+      jump                L26
+
+      greaterthan
+      add_i
+      multiply
+      instanceof
+      dxnslate
+      decrement
+L26:
+      getlocal1
+      dup
+      iffalse             L32
+
+      pop
+      getlocal0
+      convert_b
+L32:
+      iftrue              L52
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1TT")
+      pushstring          "UseBuyPotionCommand.execute: User has MAX of that attribute, not requesting a use/buy from server."
+      callpropvoid        QName(Namespace("_-g2"), "info"), 1
+
+      getlocal2
+      iffalse             L49
+
+L39:
+      jump                L52
+
+L40:
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-1IH"), 0
+
+      getlocal1
+      dup
+      iffalse             L48
+
+      pop
+      getlocal2
+      convert_b
+L48:
+      iftrue              L52
+
+L49:
+      getlex              QName(PackageNamespace("_-1TG"), "_-0Yn")
+      pushstring          "use_potion"
+      callpropvoid        QName(PackageNamespace("", "#0"), "play"), 1
+
+L52:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-1Pi")
+   method
+    refid "_-02B:UseBuyPotionCommand/_-1Pi"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      decrement_i
+      coerce_a
+      swap
+      add_i
+      convert_s
+      checkfilter
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iffalse             L20
+
+      pop
+      getlocal0
+      convert_b
+L20:
+      iftrue              L54
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-11i")
+      getlocal1
+      dup
+      iffalse             L29
+
+      pop
+      getlocal2
+      convert_b
+L29:
+      iftrue              L87
+
+      getlex              QName(PackageNamespace("_-1E-"), "_-1ne")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0ip")
+      getlocal1
+      dup
+      iffalse             L38
+
+      pop
+      getlocal2
+      convert_b
+L38:
+      iftrue              L89
+
+      ifne                L85
+
+      getlocal1
+      jump                L48
+
+      pushscope
+
+      pushnull
+      newactivation
+      nextname
+      greaterthan
+      subtract_i
+L48:
+      dup
+      iffalse             L53
+
+      pop
+      getlocal0
+      convert_b
+L53:
+      iftrue              L92
+
+L54:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "player")
+      getlocal1
+      dup
+      iffalse             L62
+
+      pop
+      getlocal0
+      convert_b
+L62:
+      iftrue              L94
+
+      getproperty         QName(PackageNamespace("", "#0"), "_-1wA")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "player")
+      getproperty         QName(PackageNamespace("", "#0"), "_-022")
+      greaterequals
+      getlocal1
+      iftrue              L101
+
+      returnvalue
+
+      getlocal1
+      dup
+      jump                L80
+
+      rshift
+      convert_i
+      setlocal2
+
+      istypelate
+      equals
+      greaterthan
+L80:
+      iffalse             L84
+
+      pop
+      getlocal1
+      convert_b
+L84:
+      iftrue              L92
+
+L85:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-11i")
+L87:
+      getlex              QName(PackageNamespace("_-1E-"), "_-1ne")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Kh")
+L89:
+      ifne                L102
+
+      getlocal1
+      iftrue              L102
+
+L92:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "player")
+L94:
+      getproperty         QName(PackageNamespace("", "#0"), "_-0e")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "player")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0sE")
+      greaterequals
+      getlocal1
+      iftrue              L103
+
+L101:
+      returnvalue
+
+L102:
+      pushfalse
+L103:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-1IH")
+   method
+    refid "_-02B:UseBuyPotionCommand/_-1IH"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 10
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      bitand
+      setlocal3
+
+      inclocal_i          3
+      lessequals
+      bitnot
+      inclocal_i          3
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("_-1E-"), "_-1ne")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1HM")
+      getproperty         QName(PackageNamespace("", "#0"), "objectId")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1Kn"), 1
+      getlocal            4
+      iftrue              L21
+
+      convert_i
+L21:
+      setlocal1
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace("", "#0"), "data_")
+      getproperty         Multiname("contextualPotionBuy", [PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-02B:UseBuyPotionCommand#1"), PackageNamespace("_-02B"), PackageInternalNs("_-02B"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1PR"), StaticProtectedNs("_-1PR")])
+      convert_i
+      setlocal2
+
+      getlocal3
+      dup
+      iftrue              L33
+
+      pop
+      getlocal1
+      convert_b
+L33:
+      iffalse             L83
+
+      getlocal0
+      jump                L42
+
+      inclocal            2
+      convert_u
+      setlocal3
+
+      declocal            3
+      greaterthan
+      declocal_i          3
+L42:
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-NW")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "player")
+      getproperty         QName(PackageNamespace("", "#0"), "objectId_")
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "_-11i")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "player")
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "player")
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "useItem"), 7
+
+      getlocal3
+      jump                L67
+
+      equals
+      setlocal2
+
+      setlocal2
+
+      urshift
+      declocal_i          3
+      setlocal3
+
+L67:
+      dup
+      iftrue              L72
+
+      pop
+      getlocal2
+      convert_b
+L72:
+      iffalse             L90
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-02B:UseBuyPotionCommand#0"), "player")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1HM")
+      getproperty         QName(PackageNamespace("", "#0"), "objectId")
+      callproperty        QName(PackageNamespace("", "#0"), "getPotionCount"), 1
+      pushbyte            0
+      ifne                L90
+
+      getlocal            4
+      iftrue              L90
+
+L83:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1-F")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1HM")
+      getproperty         QName(PackageNamespace("", "#0"), "objectId")
+      callproperty        QName(PackageNamespace("", "#0"), "_-9s"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-7F"), 0
+
+L90:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-02B:UseBuyPotionCommand/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,33 @@
+method
+ refid "_-08f:Console/iinit/inline_method"
+ param QName(PackageNamespace("", "#0"), "String")
+ returns QName(PackageNamespace("", "#0"), "void")
+ flag HAS_OPTIONAL
+ optional Utf8("")
+ body
+  maxstack 4
+  localcount 3
+  initscopedepth 10
+  maxscopedepth 10
+  code
+   getlocal1
+   getlex              QName(PackageNamespace("", "#0"), "RegExp")
+   pushstring          "\\s+|\\:"
+   construct           1
+   callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+   coerce              QName(PackageNamespace("", "#0"), "Array")
+   setlocal2
+
+   findpropstrict      QName(PackageNamespace("", "#0"), "remotingSocket")
+   getlocal2
+   pushbyte            0
+   getproperty         MultinameL([PrivateNamespace("*", "_-08f:Console#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-08f:Console#1"), PackageNamespace("_-08f"), PackageInternalNs("_-08f"), ProtectedNamespace("_-0OP"), StaticProtectedNs("_-0OP"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getlocal2
+   pushbyte            1
+   getproperty         MultinameL([PrivateNamespace("*", "_-08f:Console#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-08f:Console#1"), PackageNamespace("_-08f"), PackageInternalNs("_-08f"), ProtectedNamespace("_-0OP"), StaticProtectedNs("_-0OP"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   callpropvoid        QName(PackageNamespace("", "#0"), "remotingSocket"), 2
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

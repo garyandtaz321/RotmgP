@@ -1,0 +1,289 @@
+class
+ refid "_-GI:_-0rj"
+ instance QName(PackageNamespace("_-GI"), "_-0rj")
+  extends QName(PackageNamespace("_-GI"), "Particle")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1FP")
+  iinit
+   refid "_-GI:_-0rj/iinit"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   body
+    maxstack 6
+    localcount 10
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     increment
+     inclocal_i          4
+     inclocal            3
+     add
+     popscope
+     setlocal            4
+
+L10:
+     setlocal            8
+
+     setlocal            9
+
+     getlocal0
+     pushscope
+
+     getlocal            9
+     dup
+     iftrue              L20
+
+     pop
+     getlocal2
+     convert_b
+L20:
+     iffalse             L63
+
+     getlocal0
+     getlocal2
+     getlocal            4
+     getlocal1
+     jump                L32
+
+     pushscope
+
+     multiply_i
+     hasnext
+     declocal_i          2
+     declocal_i          3
+     subtract
+L32:
+     constructsuper      3
+
+     getlocal            8
+     iftrue              L40
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "initialSize_")
+
+     getlocal            9
+     iffalse             L68
+
+L40:
+     getlocal0
+     jump                L48
+
+     getlocal3
+     declocal            2
+     add
+     lessthan
+     inclocal_i          7
+     greaterthan
+L48:
+     getlocal0
+     getlocal3
+     dup
+     setlocal            7
+
+     initproperty        QName(PackageNamespace("", "#0"), "timeLeft_")
+
+     getlocal            7
+     kill                7
+     initproperty        QName(PackageNamespace("", "#0"), "lifetime_")
+
+     getlocal            9
+     dup
+     iftrue              L62
+
+     pop
+     getlocal3
+     convert_b
+L62:
+     iffalse             L71
+
+L63:
+     getlocal0
+     getlocal            5
+     initproperty        QName(PackageNamespace("", "#0"), "dx_")
+
+     getlocal            9
+     iffalse             L71
+
+L68:
+     getlocal0
+     getlocal            6
+     initproperty        QName(PackageNamespace("", "#0"), "dy_")
+
+L71:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "lifetime_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "timeLeft_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "initialSize_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "dx_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "dy_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "_-GI:_-0rj/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      getlocal3
+      setlocal2
+
+      kill                3
+      inclocal_i          2
+      getlocal2
+      declocal_i          3
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L54
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "timeLeft_")
+      getlocal2
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "timeLeft_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "timeLeft_")
+      pushbyte            0
+      ifnle               L44
+
+      pushfalse
+      getlocal            4
+      iffalse             L91
+
+      returnvalue
+
+      getlocal            4
+      dup
+      iftrue              L43
+
+      pop
+      getlocal1
+      jump                L42
+
+      getlocal2
+      declocal            2
+      declocal            3
+      declocal            2
+      rshift
+      kill                2
+L42:
+      convert_b
+L43:
+      iffalse             L90
+
+L44:
+      findproperty        QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "dx_")
+      getlocal2
+      multiply
+      pushshort           1000
+      divide
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "x_")
+
+L54:
+      findproperty        QName(PackageNamespace("", "#0"), "y_")
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "dy_")
+      getlocal2
+      multiply
+      pushshort           1000
+      jump                L68
+
+      getlocal2
+      setlocal2
+
+      getlocal2
+      declocal_i          2
+      pushscope
+
+      declocal            2
+L68:
+      divide
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "y_")
+
+      getlocal            4
+      iffalse             L90
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "setSize")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "timeLeft_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "lifetime_")
+      divide
+      getlocal3
+      dup
+      iffalse             L85
+
+      pop
+      getlocal2
+      convert_b
+L85:
+      iftrue              L89
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "initialSize_")
+      multiply
+L89:
+      callpropvoid        QName(PackageNamespace("", "#0"), "setSize"), 1
+
+L90:
+      pushtrue
+L91:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-GI:_-0rj/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

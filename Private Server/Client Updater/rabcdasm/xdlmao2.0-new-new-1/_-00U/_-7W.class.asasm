@@ -1,0 +1,160 @@
+class
+ refid "_-00U:_-7W"
+ instance QName(PackageNamespace("_-00U"), "_-7W")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("_-06U", [PackageNamespace("_-00U")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0co")
+  iinit
+   refid "_-00U:_-7W/iinit"
+   param QName(PackageNamespace("_-00U"), "_-06U")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal            2
+     declocal_i          2
+     declocal_i          2
+     rshift
+     dxnslate
+     lessthan
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iffalse             L25
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     dup
+     iffalse             L24
+
+     pop
+     getlocal0
+     convert_b
+L24:
+     iftrue              L28
+
+L25:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "provider")
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "provider") type QName(PackageNamespace("_-00U"), "_-06U") end
+  trait method QName(PackageNamespace("", "#0"), "apply")
+   method
+    refid "_-00U:_-7W/apply"
+    param QName(PackageNamespace("", "#0"), "Class")
+    param QName(PackageNamespace("_-0cA"), "_-0bz")
+    param QName(PackageNamespace("flash.utils"), "Dictionary")
+    returns QName(PackageNamespace("", "#0"), "Object")
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      kill                2
+      declocal_i          2
+      setlocal3
+
+      getlocal2
+      declocal            2
+      kill                2
+L10:
+      getproperty         QName(PackageNamespace("", "#0"), "provider")
+      getlocal1
+      getlocal2
+      getlocal3
+      callproperty        QName(Namespace("_-1mw"), "apply"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "destroy")
+   method
+    refid "_-00U:_-7W/destroy"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      negate_i
+      pushnan
+      pushscope
+
+      pushscope
+
+      convert_b
+      urshift
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L18
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "provider")
+      callpropvoid        QName(Namespace("_-1mw"), "destroy"), 0
+
+L18:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-00U:_-7W/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

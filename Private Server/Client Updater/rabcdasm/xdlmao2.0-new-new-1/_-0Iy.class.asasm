@@ -1,0 +1,101 @@
+class
+ refid "_-0Iy"
+ instance QName(PackageNamespace("", "#0"), "_-0Iy")
+  extends QName(PackageNamespace("flash.display"), "BitmapData")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Iy")
+  iinit
+   refid "_-0Iy/iinit"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   param QName(PackageNamespace("", "#0"), "uint")
+   flag HAS_OPTIONAL
+   optional True()
+   optional Integer(0)
+   body
+    maxstack 7
+    localcount 7
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal            5
+
+     jump                L10
+
+     multiply_i
+     nextvalue
+     setlocal2
+
+     convert_u
+     declocal            4
+     setlocal            4
+
+L10:
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     getlocal            5
+     dup
+     iftrue              L19
+
+     pop
+     getlocal2
+     convert_b
+L19:
+     iffalse             L26
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     constructsuper      4
+
+L26:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "clone") flag OVERRIDE
+   method
+    refid "_-0Iy/clone"
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsuper           QName(PackageNamespace("", "#0"), "clone"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0Iy/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

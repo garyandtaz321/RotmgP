@@ -1,0 +1,239 @@
+class
+ refid "_-005:_-08z"
+ instance QName(PackageNamespace("_-005"), "_-08z")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0le")
+  iinit
+   refid "_-005:_-08z/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     rshift
+     equals
+     newactivation
+     getglobalscope
+     pushnull
+     divide
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal1
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), " else")
+   method
+    refid "_-005:_-08z/ else"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Array")
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            5
+
+      jump                L10
+
+      inclocal            3
+      multiply_i
+      getlocal1
+      getlocal            4
+      declocal_i          5
+      urshift
+L10:
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal            6
+      iftrue              L35
+
+      getlocal2
+      getlocal            5
+      dup
+      iftrue              L26
+
+      pop
+      getlocal1
+      convert_b
+L26:
+      iffalse             L36
+
+      iffalse             L105
+
+      getlocal            5
+      dup
+      iftrue              L34
+
+      pop
+      getlocal3
+      convert_b
+L34:
+      iffalse             L55
+
+L35:
+      getlocal2
+L36:
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      convert_i
+      getlocal            6
+      dup
+      iffalse             L51
+
+      pop
+      getlocal0
+      jump                L50
+
+      convert_o
+      convert_d
+      multiply_i
+      hasnext
+      coerce_a
+      inclocal_i          2
+L50:
+      convert_b
+L51:
+      iftrue              L56
+
+      setlocal3
+
+      getlocal            5
+      iffalse             L57
+
+L55:
+      pushbyte            0
+L56:
+      setlocal            4
+
+L57:
+      jump                L102
+
+L58:
+      label
+      getlocal1
+      getlocal            5
+      dup
+      iftrue              L66
+
+      pop
+      getlocal0
+      convert_b
+L66:
+      iffalse             L91
+
+      pushstring          "{"
+      getlocal            6
+      iftrue              L83
+
+      getlocal            4
+      add
+      getlocal            5
+      iffalse             L83
+
+      pushstring          "}"
+      add
+      jump                L83
+
+      declocal            4
+      inclocal            2
+      getlocal2
+      convert_s
+      declocal_i          5
+      inclocal            2
+L83:
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      getlocal2
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "_-005:_-08z/ else#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-005:_-08z/ else#1"), PackageNamespace("_-005"), PackageInternalNs("_-005"), ProtectedNamespace("_-0le"), StaticProtectedNs("_-0le")])
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      coerce_s
+      getlocal            6
+      iftrue              L106
+
+L91:
+      setlocal1
+
+      getlocal            5
+      iffalse             L105
+
+      inclocal_i          4
+      getlocal            5
+      dup
+      iftrue              L101
+
+      pop
+      getlocal2
+      convert_b
+L101:
+      iffalse             L105
+
+L102:
+      getlocal            4
+      getlocal3
+      iflt                L58
+
+L105:
+      getlocal1
+L106:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-005:_-08z/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

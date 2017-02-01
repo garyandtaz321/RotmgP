@@ -1,0 +1,101 @@
+class
+ refid "_-0Vn:_-0Nd"
+ instance QName(PackageNamespace("_-0Vn"), "_-0Nd")
+  extends QName(PackageNamespace("_-Vb"), "_-Hx")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1Ob")
+  iinit
+   refid "_-0Vn:_-0Nd/iinit"
+   body
+    maxstack 6
+    localcount 3
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     lessthan
+     urshift
+     convert_b
+     dup
+     pushscope
+
+     getlocal2
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iftrue              L21
+
+     getlocal0
+     getlex              QName(PrivateNamespace("*", "_-0Vn:_-0Nd"), "MESSAGE")
+     constructsuper      1
+
+     getlocal1
+     iftrue              L27
+
+L21:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-0Ql"), "_-0q-")
+     getlocal0
+     getlex              QName(PackageNamespace("", "#0"), "LEFT_BUTTON")
+     constructprop       QName(PackageNamespace("_-0Ql"), "_-0q-"), 2
+     initproperty        QName(PackageNamespace("", "#0"), "close")
+
+L27:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "close") type QName(PackageNamespace("_-1Sm"), "_-sy") end
+ end ; instance
+ cinit
+  refid "_-0Vn:_-0Nd/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    getlocal2
+    greaterthan
+    pushtrue
+    pushwith
+    greaterequals
+    astypelate
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    iftrue              L19
+
+    findproperty        QName(PrivateNamespace("*", "_-0Vn:_-0Nd"), "MESSAGE")
+    pushstring          "Failed to retrieve valid Kabam request! Click to reload."
+    initproperty        QName(PrivateNamespace("*", "_-0Vn:_-0Nd"), "MESSAGE")
+
+L19:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_-0Vn:_-0Nd"), "MESSAGE") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("Failed to retrieve valid Kabam request! Click to reload.") end
+end ; class

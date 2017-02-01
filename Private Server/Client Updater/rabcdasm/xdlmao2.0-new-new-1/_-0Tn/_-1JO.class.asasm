@@ -1,0 +1,403 @@
+class
+ refid "_-0Tn:_-1JO"
+ instance QName(PackageNamespace("_-0Tn"), "_-1JO")
+  extends QName(PackageNamespace("_-1Sm"), "_-sy")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0GZ")
+  iinit
+   refid "_-0Tn:_-1JO/iinit"
+   flag NEED_REST
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     pushwith
+     convert_o
+     dxnslate
+     inclocal_i          2
+     declocal            2
+     decrement
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal0
+     newarray            0
+     initproperty        QName(PrivateNamespace("*", "_-0Tn:_-1JO"), "data")
+
+     getlocal2
+     dup
+     iffalse             L23
+
+     pop
+     getlocal3
+     convert_b
+L23:
+     iftrue              L27
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L27:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-0Tn:_-1JO"), "data") type QName(PackageNamespace("", "#0"), "Array") end
+  trait slot QName(PrivateNamespace("*", "_-0Tn:_-1JO"), "log") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait method QName(PackageNamespace("", "#0"), "dispatch") flag OVERRIDE
+   method
+    refid "_-0Tn:_-1JO/dispatch"
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag NEED_REST
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      bitxor
+      convert_u
+      checkfilter
+      rshift
+      convert_u
+      rshift
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iftrue              L27
+
+      jump                L24
+
+      convert_d
+      urshift
+      pushfalse
+      declocal            2
+      dup
+      inclocal            2
+L24:
+      pop
+      getlocal0
+      convert_b
+L27:
+      iffalse             L31
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Tn:_-1JO"), "log")
+      iffalse             L42
+
+L31:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Tn:_-1JO"), "data")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal2
+      dup
+      iffalse             L41
+
+      pop
+      getlocal1
+      convert_b
+L41:
+      iftrue              L47
+
+L42:
+      getlocal0
+      getsuper            QName(PackageNamespace("", "#0"), "dispatch")
+      getlocal0
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+
+L47:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "add") flag OVERRIDE
+   method
+    refid "_-0Tn:_-1JO/add"
+    param QName(PackageNamespace("", "#0"), "Function")
+    returns QName(PackageNamespace("_-1Sm"), "_-1xK")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      getlocal2
+      setlocal3
+
+      convert_u
+      typeof
+      inclocal            2
+      setlocal2
+
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsuper           QName(PackageNamespace("", "#0"), "add"), 1
+      coerce              QName(PackageNamespace("_-1Sm"), "_-1xK")
+      setlocal2
+
+      jump                L26
+
+      astypelate
+      bitnot
+      swap
+      declocal_i          3
+      kill                2
+      kill                2
+L26:
+      jump                L41
+
+L27:
+      label
+      getlocal1
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Tn:_-1JO"), "data")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "shift"), 0
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+
+      getlocal3
+      dup
+      iffalse             L40
+
+      pop
+      getlocal1
+      convert_b
+L40:
+      iftrue              L51
+
+L41:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Tn:_-1JO"), "data")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            0
+      ifgt                L27
+
+      getlocal3
+      iftrue              L51
+
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "_-0Tn:_-1JO"), "log")
+
+L51:
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addOnce") flag OVERRIDE
+   method
+    refid "_-0Tn:_-1JO/addOnce"
+    param QName(PackageNamespace("", "#0"), "Function")
+    returns QName(PackageNamespace("_-1Sm"), "_-1xK")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      getlocal3
+      inclocal            3
+      inclocal_i          3
+      inclocal            3
+      swap
+      strictequals
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_-1Sm"), "_-1xK")
+      setlocal2
+
+      getlocal3
+      iftrue              L44
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Tn:_-1JO"), "data")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            0
+      ifngt               L45
+
+      getlocal            4
+      dup
+      iftrue              L37
+
+      pop
+      jump                L35
+
+      istypelate
+      inclocal_i          2
+      inclocal            3
+      nextvalue
+      greaterequals
+      bitand
+L35:
+      getlocal3
+      convert_b
+L37:
+      iffalse             L44
+
+      getlocal1
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Tn:_-1JO"), "data")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "shift"), 0
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+
+L44:
+      jump                L62
+
+L45:
+      getlocal0
+      getlocal1
+      jump                L54
+
+      getlocal2
+      declocal            3
+      pushfalse
+      declocal_i          3
+      urshift
+      inclocal_i          3
+L54:
+      callsuper           QName(PackageNamespace("", "#0"), "addOnce"), 1
+      coerce              QName(PackageNamespace("_-1Sm"), "_-1xK")
+      setlocal2
+
+      getlocal            4
+      iffalse             L62
+
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "_-0Tn:_-1JO"), "log")
+
+L62:
+      jump                L71
+
+L63:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Tn:_-1JO"), "data")
+      getlocal            4
+      iffalse             L73
+
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "shift"), 0
+
+      getlocal3
+      iftrue              L76
+
+L71:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Tn:_-1JO"), "data")
+L73:
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            0
+      ifgt                L63
+
+L76:
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-1wQ")
+   method
+    refid "_-0Tn:_-1JO/_-1wQ"
+    returns QName(PackageNamespace("", "#0"), "int")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      subtract
+      checkfilter
+      urshift
+      greaterthan
+      pushwith
+      urshift
+L10:
+      getproperty         QName(PrivateNamespace("*", "_-0Tn:_-1JO"), "data")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0Tn:_-1JO/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

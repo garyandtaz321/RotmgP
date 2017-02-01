@@ -1,0 +1,33 @@
+script ; 1906
+ sinit
+  refid "com.hurlant.crypto.hash:SHA1.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("SHA1", [PackageNamespace("com.hurlant.crypto.hash")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.hurlant.crypto.hash"), "SHABase")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.hurlant.crypto.hash"), "SHABase")
+    newclass            "com.hurlant.crypto.hash:SHA1"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.hurlant.crypto.hash"), "SHA1")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.hurlant.crypto.hash"), "SHA1")
+  #include "SHA1.class.asasm"
+ end ; trait
+end ; script

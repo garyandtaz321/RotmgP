@@ -1,0 +1,158 @@
+class
+ refid "_-1CB:_-mz"
+ instance QName(PackageNamespace("_-1CB"), "_-mz")
+  extends QName(PackageNamespace("_-1Em"), "_-i9")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-lM")
+  iinit
+   refid "_-1CB:_-mz/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+   param QName(PackageNamespace("_-0Mr"), "_-1vN")
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   body
+    maxstack 7
+    localcount 8
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     setlocal            6
+
+     jump                L10
+
+     inclocal_i          6
+     typeof
+     declocal            3
+     istypelate
+     setlocal2
+
+     astypelate
+L10:
+     setlocal            7
+
+     getlocal0
+     pushscope
+
+     getlocal            6
+     dup
+     jump                L22
+
+     setlocal2
+
+     setlocal            4
+
+     getlocal            6
+     urshift
+     inclocal            5
+     pushfalse
+L22:
+     iftrue              L26
+
+     pop
+     getlocal0
+     convert_b
+L26:
+     iffalse             L40
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "_-cE")
+
+     getlocal            7
+     iftrue              L43
+
+     getlocal0
+     getlocal1
+     getlocal3
+     getlocal            4
+     getlocal            5
+     constructsuper      4
+
+     getlocal            7
+     iftrue              L43
+
+L40:
+     findpropstrict      QName(PackageNamespace("", "#0"), "setStringBuilder")
+     getlocal2
+     callpropvoid        QName(PackageNamespace("", "#0"), "setStringBuilder"), 1
+
+L43:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "list") type QName(PackageNamespace("_-1CB"), "_-1il") end
+  trait slot QName(PackageNamespace("", "#0"), "next") type QName(PackageNamespace("_-1CB"), "_-mz") end
+  trait slot QName(PackageNamespace("", "#0"), "_-cE") type QName(PackageNamespace("_-0Mr"), "_-1vN") end
+  trait method QName(PackageNamespace("", "#0"), "dispose") flag OVERRIDE
+   method
+    refid "_-1CB:_-mz/dispose"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      divide
+      decrement
+      setlocal3
+
+      lessthan
+      coerce_a
+      getlocal3
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L19
+
+      pop
+      getlocal2
+      convert_b
+L19:
+      iftrue              L23
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "list")
+      callpropvoid        QName(PackageNamespace("", "#0"), "shift"), 0
+
+L23:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1CB:_-mz/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

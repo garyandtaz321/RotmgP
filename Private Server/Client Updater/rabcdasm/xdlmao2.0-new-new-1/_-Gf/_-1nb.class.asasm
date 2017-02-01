@@ -1,0 +1,175 @@
+class
+ refid "_-Gf:_-1nb"
+ instance QName(PackageNamespace("_-Gf"), "_-1nb")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-XM")
+  iinit
+   refid "_-Gf:_-1nb/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     lessthan
+     setlocal3
+
+     pushtrue
+     negate_i
+     negate
+     pushscope
+
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "register") flag METADATA type QName(PackageNamespace("_-1RN"), "_-BC")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "setFocus") flag METADATA type QName(PackageNamespace("_-Gf"), "_-GC")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "execute")
+   method
+    refid "_-Gf:_-1nb/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      checkfilter
+      increment_i
+      declocal            2
+      kill                2
+      coerce_s
+      kill                2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_-pz"), "_-1Oo")
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace("_-pz"), "_-1Oo")
+      constructprop       QName(PackageNamespace("_-pz"), "_-1Oo"), 0
+      coerce              QName(PackageNamespace("_-pz"), "_-1Oo")
+      setlocal1
+
+      jump                L28
+
+      inclocal            2
+      kill                2
+      pushscope
+
+      negate_i
+      modulo
+      declocal_i          2
+L28:
+      getlocal3
+      iffalse             L57
+
+      getlocal1
+      pushstring          "follow"
+      setproperty         QName(PackageNamespace("", "#0"), "name")
+
+      jump                L40
+
+      kill                2
+      declocal            2
+      getlocal2
+      inclocal_i          2
+      declocal_i          2
+      setlocal3
+
+L40:
+      getlocal2
+      dup
+      iffalse             L46
+
+      pop
+      getlocal0
+      convert_b
+L46:
+      iftrue              L63
+
+      getlocal1
+      pushstring          "follow a game object (by name)"
+      setproperty         QName(PackageNamespace("", "#0"), "description")
+
+      getlocal2
+      dup
+      iffalse             L56
+
+      pop
+      getlocal3
+      convert_b
+L56:
+      iftrue              L63
+
+L57:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "register")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "setFocus")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 2
+
+L63:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Gf:_-1nb/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

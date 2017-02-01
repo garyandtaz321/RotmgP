@@ -1,0 +1,203 @@
+class
+ refid "_-GI:ExplosionEffect/ExplosionParticle"
+ instance QName(PrivateNamespace("*", "_-GI:ExplosionEffect"), "ExplosionParticle")
+  extends QName(PackageNamespace("_-GI"), "Particle")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("ExplosionEffect.as$1188:ExplosionParticle")
+  iinit
+   refid "_-GI:ExplosionEffect/ExplosionParticle/iinit"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   body
+    maxstack 4
+    localcount 10
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+     constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 0
+     initproperty        QName(ProtectedNamespace("ExplosionEffect.as$1188:ExplosionParticle"), "moveVec_")
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     getlocal0
+     getlocal0
+     getlocal            4
+     dup
+     setlocal            8
+
+     initproperty        QName(PackageNamespace("", "#0"), "lifetime_")
+
+     getlocal            8
+     kill                8
+     initproperty        QName(PackageNamespace("", "#0"), "timeLeft_")
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("ExplosionEffect.as$1188:ExplosionParticle"), "moveVec_")
+     getlocal            5
+     setproperty         QName(PackageNamespace("", "#0"), "x")
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("ExplosionEffect.as$1188:ExplosionParticle"), "moveVec_")
+     getlocal            6
+     setproperty         QName(PackageNamespace("", "#0"), "y")
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("ExplosionEffect.as$1188:ExplosionParticle"), "moveVec_")
+     getlocal            7
+     setproperty         QName(PackageNamespace("", "#0"), "z")
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "total_")
+     dup
+     setlocal            8
+
+     getproperty         QName(PackageNamespace("", "#0"), "total_")
+     increment_i
+     setlocal            9
+
+     getlocal            8
+     getlocal            9
+     setproperty         QName(PackageNamespace("", "#0"), "total_")
+
+     kill                9
+     kill                8
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "lifetime_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "timeLeft_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(ProtectedNamespace("ExplosionEffect.as$1188:ExplosionParticle"), "moveVec_") type QName(PackageNamespace("flash.geom"), "Vector3D") end
+  trait slot QName(PrivateNamespace("*", "_-GI:ExplosionEffect/ExplosionParticle"), "deleted") type QName(PackageNamespace("", "#0"), "Boolean") value False() end
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "_-GI:ExplosionEffect/ExplosionParticle/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "timeLeft_")
+      getlocal2
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "timeLeft_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "timeLeft_")
+      pushbyte            0
+      ifnle               L31
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-GI:ExplosionEffect/ExplosionParticle"), "deleted")
+      iftrue              L29
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "total_")
+      dup
+      setlocal3
+
+      getproperty         QName(PackageNamespace("", "#0"), "total_")
+      decrement_i
+      setlocal            4
+
+      getlocal3
+      getlocal            4
+      setproperty         QName(PackageNamespace("", "#0"), "total_")
+
+      kill                4
+      kill                3
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("*", "_-GI:ExplosionEffect/ExplosionParticle"), "deleted")
+
+L29:
+      pushfalse
+      returnvalue
+
+L31:
+      findproperty        QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("ExplosionEffect.as$1188:ExplosionParticle"), "moveVec_")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal2
+      multiply
+      pushdouble          0.008
+      multiply
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "x_")
+
+      findproperty        QName(PackageNamespace("", "#0"), "y_")
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("ExplosionEffect.as$1188:ExplosionParticle"), "moveVec_")
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      getlocal2
+      multiply
+      pushdouble          0.008
+      multiply
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "y_")
+
+      findproperty        QName(PackageNamespace("", "#0"), "z_")
+      getlex              QName(PackageNamespace("", "#0"), "z_")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("ExplosionEffect.as$1188:ExplosionParticle"), "moveVec_")
+      getproperty         QName(PackageNamespace("", "#0"), "z")
+      getlocal2
+      multiply
+      pushdouble          0.008
+      multiply
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "z_")
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-GI:ExplosionEffect/ExplosionParticle/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace("", "#0"), "total_")
+    pushbyte            0
+    setproperty         QName(PackageNamespace("", "#0"), "total_")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace("", "#0"), "total_") slotid 1 type QName(PackageNamespace("", "#0"), "int") value Integer(0) end
+end ; class

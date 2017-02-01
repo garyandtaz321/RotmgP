@@ -1,0 +1,369 @@
+class
+ refid "_-GI:_-0n3"
+ instance QName(PackageNamespace("_-GI"), "_-0n3")
+  extends QName(PackageNamespace("_-GI"), "_-1S9")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1BK")
+  iinit
+   refid "_-GI:_-0n3/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+   param QName(PackageNamespace("_-11j"), "_-1ST")
+   param QName(PackageNamespace("_-11j"), "_-1ST")
+   param QName(PackageNamespace("", "#0"), "int")
+   body
+    maxstack 6
+    localcount 7
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal            3
+     convert_s
+     setlocal            4
+
+     declocal_i          2
+     astypelate
+     declocal            2
+L10:
+     setlocal            5
+
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     getlocal            6
+     dup
+     iftrue              L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iffalse             L32
+
+     getlocal0
+     constructsuper      0
+
+     jump                L30
+
+     multiply
+     greaterequals
+     instanceof
+     declocal            4
+     declocal            4
+     kill                3
+L30:
+     getlocal            6
+     iffalse             L54
+
+L32:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "x_")
+     getlocal2
+     jump                L44
+
+     inclocal_i          2
+     convert_b
+     declocal            3
+     getlocal3
+     setlocal2
+
+     inclocal_i          2
+L44:
+     getproperty         QName(PackageNamespace("", "#0"), "y_")
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     initproperty        QName(PackageNamespace("", "#0"), "center_")
+
+     getlocal            5
+     dup
+     iffalse             L53
+
+     pop
+     getlocal2
+     convert_b
+L53:
+     iftrue              L67
+
+L54:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal3
+     getproperty         QName(PackageNamespace("", "#0"), "x_")
+     getlocal3
+     getproperty         QName(PackageNamespace("", "#0"), "y_")
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     initproperty        QName(PackageNamespace("", "#0"), "_-0v2")
+
+     getlocal            5
+     iftrue              L67
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace("", "#0"), "color_")
+
+L67:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "center_") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace("", "#0"), "_-0v2") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace("", "#0"), "color_") type QName(PackageNamespace("", "#0"), "int") end
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "_-GI:_-0n3/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 8
+     localcount 13
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      setlocal            11
+
+      jump                L10
+
+      declocal            10
+      inclocal            11
+      pushundefined
+      kill                11
+      inclocal_i          9
+      getglobalscope
+L10:
+      setlocal            12
+
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            8
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            9
+
+      pushnull
+      coerce              QName(PackageNamespace("_-GI"), "Particle")
+      setlocal            10
+
+      getlocal            12
+      dup
+      iffalse             L27
+
+      pop
+      getlocal1
+      convert_b
+L27:
+      iftrue              L45
+
+      findproperty        QName(PackageNamespace("", "#0"), "x_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "center_")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      initproperty        QName(PackageNamespace("", "#0"), "x_")
+
+      getlocal            12
+      dup
+      iffalse             L39
+
+      pop
+      getlocal2
+      convert_b
+L39:
+      iftrue              L45
+
+      findproperty        QName(PackageNamespace("", "#0"), "y_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "center_")
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      initproperty        QName(PackageNamespace("", "#0"), "y_")
+
+L45:
+      getlex              QName(PackageNamespace("flash.geom"), "Point")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "center_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0v2")
+      callproperty        QName(PackageNamespace("", "#0"), "distance"), 2
+      convert_d
+      setlocal3
+
+      pushshort           300
+      setlocal            4
+
+      pushshort           200
+      setlocal            5
+
+      pushbyte            24
+      setlocal            6
+
+      pushbyte            0
+      setlocal            7
+
+      jump                L157
+
+L62:
+      label
+      getlocal            7
+      getlocal            12
+      dup
+      iffalse             L77
+
+      pop
+      getlocal1
+      convert_b
+      jump                L77
+
+      setlocal2
+
+      lessthan
+      inclocal_i          9
+      instanceof
+      kill                8
+      setlocal3
+
+L77:
+      iftrue              L158
+
+      pushbyte            2
+      getlocal            12
+      iftrue              L159
+
+      multiply
+      getlocal            12
+      iftrue              L89
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      multiply
+      getlocal            12
+      iftrue              L93
+
+L89:
+      getlocal            6
+      divide
+      getlocal            11
+      iffalse             L94
+
+L93:
+      convert_d
+L94:
+      setlocal            8
+
+      getlocal            12
+      dup
+      iffalse             L101
+
+      pop
+      getlocal3
+      convert_b
+L101:
+      iftrue              L160
+
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "center_")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal3
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal            8
+      callproperty        QName(PackageNamespace("", "#0"), "cos"), 1
+      multiply
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "center_")
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      getlocal3
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal            8
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      multiply
+      add
+      constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            9
+
+      findpropstrict      QName(PackageNamespace("_-GI"), "_-06W")
+      getlocal            4
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "color_")
+      getlocal            5
+      getlocal            9
+      getlocal0
+      jump                L138
+
+      bitand
+      getlocal            5
+      inclocal_i          10
+      astypelate
+      dxnslate
+      inclocal            6
+L138:
+      getproperty         QName(PackageNamespace("", "#0"), "center_")
+      constructprop       QName(PackageNamespace("_-GI"), "_-06W"), 5
+      coerce              QName(PackageNamespace("_-GI"), "Particle")
+      setlocal            10
+
+      getlocal            12
+      dup
+      iffalse             L148
+
+      pop
+      getlocal2
+      convert_b
+L148:
+      iftrue              L157
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getlocal            10
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addObj"), 3
+
+      getlocal            11
+      iffalse             L157
+
+      inclocal_i          7
+L157:
+      getlocal            7
+L158:
+      getlocal            6
+L159:
+      iflt                L62
+
+L160:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-GI:_-0n3/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

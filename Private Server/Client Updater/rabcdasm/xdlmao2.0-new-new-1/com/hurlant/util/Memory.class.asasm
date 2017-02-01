@@ -1,0 +1,112 @@
+class
+ refid "com.hurlant.util:Memory"
+ instance QName(PackageNamespace("com.hurlant.util"), "Memory")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-D9")
+  iinit
+   refid "com.hurlant.util:Memory/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.hurlant.util:Memory/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace("", "#0"), "gc") flag FINAL dispid 3
+  method
+   refid "com.hurlant.util:Memory/gc"
+   returns QName(PackageNamespace("", "#0"), "void")
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+L2:
+     findpropstrict      QName(PackageNamespace("flash.net"), "LocalConnection")
+     constructprop       QName(PackageNamespace("flash.net"), "LocalConnection"), 0
+     pushstring          "foo"
+     callpropvoid        QName(PackageNamespace("", "#0"), "connect"), 1
+
+     findpropstrict      QName(PackageNamespace("flash.net"), "LocalConnection")
+     constructprop       QName(PackageNamespace("flash.net"), "LocalConnection"), 0
+     pushstring          "foo"
+     callpropvoid        QName(PackageNamespace("", "#0"), "connect"), 1
+
+L10:
+     jump                L22
+
+L11:
+     getlocal0
+     pushscope
+
+     newcatch            0
+     dup
+     setlocal1
+
+     dup
+     pushscope
+
+     swap
+     setslot             1
+
+     popscope
+     kill                1
+L22:
+     returnvoid
+    end ; code
+    try from L2 to L10 target L11 type null name QName(PackageNamespace("", "#0"), "e") end
+   end ; body
+  end ; method
+ end ; trait
+ trait getter QName(PackageNamespace("", "#0"), "used") flag FINAL dispid 4
+  method
+   refid "com.hurlant.util:Memory/used/getter"
+   returns QName(PackageNamespace("", "#0"), "uint")
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("flash.system"), "System")
+     getproperty         QName(PackageNamespace("", "#0"), "totalMemory")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

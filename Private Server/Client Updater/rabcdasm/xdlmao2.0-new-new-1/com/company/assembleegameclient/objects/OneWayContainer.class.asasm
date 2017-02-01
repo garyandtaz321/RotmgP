@@ -1,0 +1,64 @@
+class
+ refid "com.company.assembleegameclient.objects:OneWayContainer"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "OneWayContainer")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "Container")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0rF")
+  iinit
+   refid "com.company.assembleegameclient.objects:OneWayContainer/iinit"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     setlocal2
+
+     getlocal2
+     negate
+     declocal            2
+     inclocal_i          2
+     greaterequals
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L18
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:OneWayContainer/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

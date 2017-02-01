@@ -1,0 +1,704 @@
+class
+ refid "com.google.analytics.core:Organic"
+ instance QName(PackageNamespace("com.google.analytics.core"), "Organic")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.core:Organic")
+  iinit
+   refid "com.google.analytics.core:Organic/iinit"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sources")
+     newarray            0
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sources")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesCache")
+     newarray            0
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesCache")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesEngine")
+     newarray            0
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesEngine")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferrals")
+     newarray            0
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferrals")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferralsCache")
+     newobject           0
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferralsCache")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywords")
+     newarray            0
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywords")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywordsCache")
+     newobject           0
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywordsCache")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "isIgnoredKeyword")
+   method
+    refid "com.google.analytics.core:Organic/isIgnoredKeyword"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywordsCache")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L8
+
+      pushtrue
+      returnvalue
+
+L8:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getKeywordValue")
+   method
+    refid "com.google.analytics.core:Organic/getKeywordValue"
+    param QName(PackageNamespace("com.google.analytics.core"), "OrganicReferrer")
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "keyword")
+      coerce_s
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "getKeywordValueFromPath")
+      getlocal3
+      getlocal2
+      callproperty        QName(PackageNamespace("", "#0"), "getKeywordValueFromPath"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesCache") type QName(PackageNamespace("", "#0"), "Array") end
+  trait method QName(PackageNamespace("", "#0"), "isIgnoredReferral")
+   method
+    refid "com.google.analytics.core:Organic/isIgnoredReferral"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferralsCache")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L8
+
+      pushtrue
+      returnvalue
+
+L8:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "clear")
+   method
+    refid "com.google.analytics.core:Organic/clear"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "clearEngines")
+      callpropvoid        QName(PackageNamespace("", "#0"), "clearEngines"), 0
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "clearIgnoredReferrals")
+      callpropvoid        QName(PackageNamespace("", "#0"), "clearIgnoredReferrals"), 0
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "clearIgnoredKeywords")
+      callpropvoid        QName(PackageNamespace("", "#0"), "clearIgnoredKeywords"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "count")
+   method
+    refid "com.google.analytics.core:Organic/count/getter"
+    returns QName(PackageNamespace("", "#0"), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sources")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "ignoredKeywordsCount")
+   method
+    refid "com.google.analytics.core:Organic/ignoredKeywordsCount/getter"
+    returns QName(PackageNamespace("", "#0"), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywords")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "match")
+   method
+    refid "com.google.analytics.core:Organic/match"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushstring          ""
+      ifne                L7
+
+      pushfalse
+      returnvalue
+
+L7:
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      coerce_s
+      setlocal1
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesEngine")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Organic#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Organic#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Organic"), StaticProtectedNs("com.google.analytics.core:Organic"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("", "#0"), "undefined")
+      ifeq                L18
+
+      pushtrue
+      returnvalue
+
+L18:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "clearIgnoredKeywords")
+   method
+    refid "com.google.analytics.core:Organic/clearIgnoredKeywords"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywords")
+      newarray            0
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywords")
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywordsCache")
+      newobject           0
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywordsCache")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesEngine") type QName(PackageNamespace("", "#0"), "Array") end
+  trait method QName(PackageNamespace("", "#0"), "addSource")
+   method
+    refid "com.google.analytics.core:Organic/addSource"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.google.analytics.core"), "OrganicReferrer")
+      getlocal1
+      getlocal2
+      constructprop       QName(PackageNamespace("com.google.analytics.core"), "OrganicReferrer"), 2
+      coerce              QName(PackageNamespace("com.google.analytics.core"), "OrganicReferrer")
+      setlocal3
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesCache")
+      getlocal3
+      callproperty        QName(PackageNamespace("", "#0"), "toString"), 0
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Organic#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Organic#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Organic"), StaticProtectedNs("com.google.analytics.core:Organic"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("", "#0"), "undefined")
+      ifne                L48
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sources")
+      getlocal3
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesCache")
+      getlocal3
+      callproperty        QName(PackageNamespace("", "#0"), "toString"), 0
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sources")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      decrement
+      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Organic#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Organic#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Organic"), StaticProtectedNs("com.google.analytics.core:Organic"), StaticProtectedNs("Object")])
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesEngine")
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "engine")
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Organic#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Organic#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Organic"), StaticProtectedNs("com.google.analytics.core:Organic"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("", "#0"), "undefined")
+      ifne                L39
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesEngine")
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "engine")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sources")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      decrement
+      newarray            1
+      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Organic#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Organic#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Organic"), StaticProtectedNs("com.google.analytics.core:Organic"), StaticProtectedNs("Object")])
+
+      jump                L47
+
+L39:
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesEngine")
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "engine")
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Organic#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Organic#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Organic"), StaticProtectedNs("com.google.analytics.core:Organic"), StaticProtectedNs("Object")])
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sources")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      decrement
+      callpropvoid        Multiname("push", [PrivateNamespace("*", "com.google.analytics.core:Organic#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Organic#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Organic"), StaticProtectedNs("com.google.analytics.core:Organic"), StaticProtectedNs("Object")]), 1
+
+L47:
+      jump                L57
+
+L48:
+      getlex              QName(PackageNamespace("", "#0"), "throwErrors")
+      iffalse             L57
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "Error")
+      getlocal3
+      callproperty        QName(PackageNamespace("", "#0"), "toString"), 0
+      pushstring          " already exists, we don't add it."
+      add
+      constructprop       QName(PackageNamespace("", "#0"), "Error"), 1
+      throw
+L57:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywords") type QName(PackageNamespace("", "#0"), "Array") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferralsCache") type QName(PackageNamespace("", "#0"), "Object") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferrals") type QName(PackageNamespace("", "#0"), "Array") end
+  trait method QName(PackageNamespace("", "#0"), "clearEngines")
+   method
+    refid "com.google.analytics.core:Organic/clearEngines"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sources")
+      newarray            0
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sources")
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesCache")
+      newarray            0
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesCache")
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesEngine")
+      newarray            0
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesEngine")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywordsCache") type QName(PackageNamespace("", "#0"), "Object") end
+  trait getter QName(PackageNamespace("", "#0"), "ignoredReferralsCount")
+   method
+    refid "com.google.analytics.core:Organic/ignoredReferralsCount/getter"
+    returns QName(PackageNamespace("", "#0"), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferrals")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addIgnoredReferral")
+   method
+    refid "com.google.analytics.core:Organic/addIgnoredReferral"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferralsCache")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Organic#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Organic#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Organic"), StaticProtectedNs("com.google.analytics.core:Organic"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("", "#0"), "undefined")
+      ifne                L17
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferrals")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferralsCache")
+      getlocal1
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferrals")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      decrement
+      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Organic#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Organic#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Organic"), StaticProtectedNs("com.google.analytics.core:Organic"), StaticProtectedNs("Object")])
+
+      jump                L27
+
+L17:
+      getlex              QName(PackageNamespace("", "#0"), "throwErrors")
+      iffalse             L27
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "Error")
+      pushstring          "\""
+      getlocal1
+      add
+      pushstring          "\" already exists, we don't add it."
+      add
+      constructprop       QName(PackageNamespace("", "#0"), "Error"), 1
+      throw
+L27:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "clearIgnoredReferrals")
+   method
+    refid "com.google.analytics.core:Organic/clearIgnoredReferrals"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferrals")
+      newarray            0
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferrals")
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferralsCache")
+      newobject           0
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferralsCache")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getReferrerByName")
+   method
+    refid "com.google.analytics.core:Organic/getReferrerByName"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("com.google.analytics.core"), "OrganicReferrer")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "match")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "match"), 1
+      iffalse             L19
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesEngine")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Organic#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Organic#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Organic"), StaticProtectedNs("com.google.analytics.core:Organic"), StaticProtectedNs("Object")])
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Organic#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Organic#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Organic"), StaticProtectedNs("com.google.analytics.core:Organic"), StaticProtectedNs("Object")])
+      convert_i
+      setlocal2
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sources")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Organic#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Organic#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Organic"), StaticProtectedNs("com.google.analytics.core:Organic"), StaticProtectedNs("Object")])
+      returnvalue
+
+L19:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "addIgnoredKeyword")
+   method
+    refid "com.google.analytics.core:Organic/addIgnoredKeyword"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywordsCache")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Organic#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Organic#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Organic"), StaticProtectedNs("com.google.analytics.core:Organic"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("", "#0"), "undefined")
+      ifne                L17
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywords")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywordsCache")
+      getlocal1
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywords")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      decrement
+      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Organic#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Organic#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Organic"), StaticProtectedNs("com.google.analytics.core:Organic"), StaticProtectedNs("Object")])
+
+      jump                L27
+
+L17:
+      getlex              QName(PackageNamespace("", "#0"), "throwErrors")
+      iffalse             L27
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "Error")
+      pushstring          "\""
+      getlocal1
+      add
+      pushstring          "\" already exists, we don't add it."
+      add
+      constructprop       QName(PackageNamespace("", "#0"), "Error"), 1
+      throw
+L27:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sources") type QName(PackageNamespace("", "#0"), "Array") end
+  trait getter QName(PackageNamespace("", "#0"), "sources")
+   method
+    refid "com.google.analytics.core:Organic/sources/getter"
+    returns QName(PackageNamespace("", "#0"), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sources")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.core:Organic/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace("", "#0"), "throwErrors")
+    pushfalse
+    setproperty         QName(PackageNamespace("", "#0"), "throwErrors")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace("", "#0"), "throwErrors") slotid 1 type QName(PackageNamespace("", "#0"), "Boolean") value False() end
+ trait method QName(PackageNamespace("", "#0"), "getKeywordValueFromPath") flag FINAL dispid 3
+  method
+   refid "com.google.analytics.core:Organic/getKeywordValueFromPath"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   returns QName(PackageNamespace("", "#0"), "String")
+   body
+    maxstack 3
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce_s
+     setlocal3
+
+     pushnull
+     coerce              QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+     setlocal            4
+
+     getlocal2
+     getlocal1
+     pushstring          "="
+     add
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     pushbyte            255
+     ifngt               L42
+
+     getlocal2
+     pushbyte            0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     pushstring          "?"
+     ifne                L25
+
+     getlocal2
+     pushbyte            1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+     coerce_s
+     setlocal2
+
+L25:
+     getlocal2
+     pushstring          "+"
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     pushstring          "%20"
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+     coerce_s
+     setlocal2
+
+     findpropstrict      QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+     getlocal2
+     constructprop       QName(PackageNamespace("com.google.analytics.utils"), "Variables"), 1
+     coerce              QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+     dup
+     setlocal            4
+
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Organic#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Organic#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Organic"), StaticProtectedNs("com.google.analytics.core:Organic"), StaticProtectedNs("Object")])
+     coerce_s
+     setlocal3
+
+L42:
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

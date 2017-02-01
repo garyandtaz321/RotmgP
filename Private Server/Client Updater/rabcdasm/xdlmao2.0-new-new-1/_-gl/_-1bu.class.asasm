@@ -1,0 +1,127 @@
+class
+ refid "_-gl:_-1bu"
+ instance QName(PackageNamespace("_-gl"), "_-1bu")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1cg")
+  iinit
+   refid "_-gl:_-1bu/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     bitand
+     add
+     modulo
+     coerce_s
+     swap
+     multiply_i
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L20
+
+     pop
+     getlocal2
+     convert_b
+L20:
+     iftrue              L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-gl:_-1bu/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    getlocal0
+    convert_s
+    lessthan
+    convert_o
+    pushscope
+
+    add_i
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    jump                L20
+
+    convert_b
+    pushwith
+    divide
+    lessthan
+    popscope
+    not
+L20:
+    getlocal2
+    iftrue              L37
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-l9")
+    pushbyte            1
+    initproperty        QName(PackageNamespace("", "#0"), "_-l9")
+
+    getlocal1
+    dup
+    iftrue              L31
+
+    pop
+    getlocal1
+    convert_b
+L31:
+    iffalse             L40
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-0RT")
+    pushbyte            4
+    initproperty        QName(PackageNamespace("", "#0"), "_-0RT")
+
+    getlocal2
+    iftrue              L40
+
+L37:
+    findproperty        QName(PackageNamespace("", "#0"), "_-0KV")
+    pushbyte            8
+    initproperty        QName(PackageNamespace("", "#0"), "_-0KV")
+
+L40:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-l9") slotid 1 type QName(PackageNamespace("", "#0"), "int") value Integer(1) end
+ trait const QName(PackageNamespace("", "#0"), "_-0RT") slotid 2 type QName(PackageNamespace("", "#0"), "int") value Integer(4) end
+ trait const QName(PackageNamespace("", "#0"), "_-0KV") slotid 3 type QName(PackageNamespace("", "#0"), "int") value Integer(8) end
+end ; class

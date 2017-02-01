@@ -1,0 +1,111 @@
+class
+ refid "_-07g:_-0Uj"
+ instance QName(PackageNamespace("_-07g"), "_-0Uj")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1p")
+  iinit
+   refid "_-07g:_-0Uj/iinit"
+   body
+    maxstack 7
+    localcount 4
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     convert_s
+     inclocal_i          2
+     inclocal_i          2
+     inclocal_i          2
+     kill                2
+     divide
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+     constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+     coerce              QName(PackageNamespace("flash.display"), "Sprite")
+     jump                L27
+
+     convert_o
+     declocal_i          2
+     declocal_i          2
+     setlocal2
+
+     negate_i
+     getglobalscope
+L27:
+     setlocal1
+
+     getlocal2
+     dup
+     iftrue              L34
+
+     pop
+     getlocal1
+     convert_b
+L34:
+     iffalse             L50
+
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "graphics")
+     pushint             3552822
+     callpropvoid        QName(PackageNamespace("", "#0"), "beginFill"), 1
+
+     getlocal3
+     iftrue              L50
+
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "graphics")
+     pushbyte            0
+     dup
+     pushshort           200
+     pushshort           600
+     callpropvoid        QName(PackageNamespace("", "#0"), "drawRect"), 4
+
+     getlocal3
+     iftrue              L53
+
+L50:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addChild")
+     getlocal1
+     callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L53:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-07g:_-0Uj/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

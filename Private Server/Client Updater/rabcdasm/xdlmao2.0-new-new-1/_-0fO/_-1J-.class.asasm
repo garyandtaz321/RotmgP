@@ -1,0 +1,263 @@
+class
+ refid "_-0fO:_-1J-"
+ instance QName(PackageNamespace("_-0fO"), "_-1J-")
+  extends QName(PackageNamespace("_-r7"), "_-17v")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-13c")
+  iinit
+   refid "_-0fO:_-1J-/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     bitxor
+     setlocal3
+
+     decrement
+     strictequals
+     convert_s
+     subtract_i
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iftrue              L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "view") flag METADATA type QName(PackageNamespace("_-0fO"), "_-oh")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "resize") flag METADATA type QName(PackageNamespace("_-pm"), "_-vP")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "initialize") flag OVERRIDE
+   method
+    refid "_-0fO:_-1J-/initialize"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      divide
+      setlocal2
+
+      dxnslate
+      swap
+      increment
+      getlocal2
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "view")
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      getproperty         QName(PackageNamespace("", "#0"), "stage")
+      coerce              QName(PackageNamespace("flash.display"), "Stage")
+      setlocal1
+
+      jump                L28
+
+      convert_s
+      newactivation
+      setlocal2
+
+      add
+      not
+      bitxor
+L28:
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Rectangle")
+      pushbyte            0
+      dup
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "stageWidth")
+      jump                L40
+
+      not
+      declocal            3
+      convert_u
+      lessthan
+      declocal            3
+      greaterequals
+L40:
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "stageHeight")
+      constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
+      coerce              QName(PackageNamespace("flash.geom"), "Rectangle")
+      setlocal2
+
+      getlocal3
+      iftrue              L63
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "resize")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0fO:_-1J-"), "onResize")
+      callpropvoid        QName(PackageNamespace("", "#0"), "add"), 1
+
+      getlocal3
+      dup
+      iffalse             L58
+
+      pop
+      getlocal1
+      convert_b
+L58:
+      iftrue              L63
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "view")
+      getlocal2
+      callpropvoid        QName(Namespace("_-iK"), "resize"), 1
+
+L63:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "destroy") flag OVERRIDE
+   method
+    refid "_-0fO:_-1J-/destroy"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      convert_b
+      bitnot
+      equals
+      add_i
+      convert_o
+      dxnslate
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iffalse             L20
+
+      pop
+      getlocal1
+      convert_b
+L20:
+      iftrue              L26
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "resize")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0fO:_-1J-"), "onResize")
+      callpropvoid        QName(PackageNamespace("", "#0"), "remove"), 1
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0fO:_-1J-"), "onResize")
+   method
+    refid "_-0fO:_-1J-/onResize"
+    param QName(PackageNamespace("flash.geom"), "Rectangle")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      inclocal            2
+      inclocal            2
+      nextvalue
+      convert_i
+      inclocal_i          2
+      kill                2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L19
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "view")
+      getlocal1
+      callpropvoid        QName(Namespace("_-iK"), "resize"), 1
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0fO:_-1J-/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

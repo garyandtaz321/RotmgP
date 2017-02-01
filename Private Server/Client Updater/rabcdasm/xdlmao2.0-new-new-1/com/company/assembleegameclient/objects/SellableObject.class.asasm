@@ -1,0 +1,336 @@
+class
+ refid "com.company.assembleegameclient.objects:SellableObject"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "SellableObject")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  implements Multiname("_-Rk", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Rj")
+  iinit
+   refid "com.company.assembleegameclient.objects:SellableObject/iinit"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     bitnot
+     popscope
+     bitxor
+     convert_i
+     checkfilter
+     instanceof
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iftrue              L20
+
+     pop
+     getlocal0
+     convert_b
+L20:
+     iffalse             L26
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal3
+     iffalse             L29
+
+L26:
+     findproperty        QName(PackageNamespace("", "#0"), "_-11k")
+     pushtrue
+     initproperty        QName(PackageNamespace("", "#0"), "_-11k")
+
+L29:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "price_") type QName(PackageNamespace("", "#0"), "int") value Integer(0) end
+  trait slot QName(PackageNamespace("", "#0"), "currency_") type QName(PackageNamespace("", "#0"), "int") value Integer(-1) end
+  trait slot QName(PackageNamespace("", "#0"), "_-1DL") type QName(PackageNamespace("", "#0"), "int") value Integer(0) end
+  trait slot QName(PackageNamespace("", "#0"), "_-16t") type QName(PackageNamespace("", "#0"), "int") value Integer(-1) end
+  trait method QName(PackageNamespace("", "#0"), "setPrice")
+   method
+    refid "com.company.assembleegameclient.objects:SellableObject/setPrice"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      declocal            2
+      inclocal            2
+      setlocal2
+
+      getglobalscope
+      convert_b
+      kill                2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L19
+
+      pop
+      getlocal2
+      convert_b
+L19:
+      iftrue              L23
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace("", "#0"), "price_")
+
+L23:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-qz")
+   method
+    refid "com.company.assembleegameclient.objects:SellableObject/_-qz"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal            2
+      getlocal2
+      coerce_a
+      bitand
+      divide
+      subtract_i
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iffalse             L19
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace("", "#0"), "currency_")
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setRankReq")
+   method
+    refid "com.company.assembleegameclient.objects:SellableObject/setRankReq"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      getlocal2
+      inclocal            2
+      getlocal3
+      inclocal            2
+      getlocal2
+      coerce_s
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L20
+
+      pop
+      getlocal3
+      convert_b
+L20:
+      iftrue              L24
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace("", "#0"), "_-1DL")
+
+L24:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "soldObjectName")
+   method
+    refid "com.company.assembleegameclient.objects:SellableObject/soldObjectName"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "soldObjectInternalName")
+   method
+    refid "com.company.assembleegameclient.objects:SellableObject/soldObjectInternalName"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getTooltip")
+   method
+    refid "com.company.assembleegameclient.objects:SellableObject/getTooltip"
+    returns QName(PackageNamespace("_-Z0"), "_-0lC")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getIcon")
+   method
+    refid "com.company.assembleegameclient.objects:SellableObject/getIcon"
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getPanel")
+   method
+    refid "com.company.assembleegameclient.objects:SellableObject/getPanel"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace("_-1f4"), "Panel")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-0no"), "SellableObjectPanel")
+      jump                L10
+
+      convert_b
+      coerce_a
+      setlocal3
+
+      lessequals
+      pop
+      rshift
+L10:
+      getlocal1
+      getlocal0
+      constructprop       QName(PackageNamespace("_-0no"), "SellableObjectPanel"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:SellableObject/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

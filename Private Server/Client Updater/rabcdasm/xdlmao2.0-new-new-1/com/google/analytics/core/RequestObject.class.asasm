@@ -1,0 +1,172 @@
+class
+ refid "com.google.analytics.core:RequestObject"
+ instance QName(PackageNamespace("com.google.analytics.core"), "RequestObject")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.core:RequestObject")
+  iinit
+   refid "com.google.analytics.core:RequestObject/iinit"
+   param QName(PackageNamespace("flash.net"), "URLRequest")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace("", "#0"), "start")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+     callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "start")
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "request")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "hasCompleted")
+   method
+    refid "com.google.analytics.core:RequestObject/hasCompleted"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "end")
+      pushbyte            0
+      greaterthan
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "start") type QName(PackageNamespace("", "#0"), "int") end
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "com.google.analytics.core:RequestObject/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      newarray            0
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal1
+
+      getlocal1
+      pushstring          "duration: "
+      getlex              QName(PackageNamespace("", "#0"), "duration")
+      add
+      pushstring          "ms"
+      add
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      pushstring          "url: "
+      getlex              QName(PackageNamespace("", "#0"), "request")
+      getproperty         QName(PackageNamespace("", "#0"), "url")
+      add
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      pushstring          "{ "
+      getlocal1
+      pushstring          ", "
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      add
+      pushstring          " }"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "complete")
+   method
+    refid "com.google.analytics.core:RequestObject/complete"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace("", "#0"), "end")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "end")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "end") type QName(PackageNamespace("", "#0"), "int") end
+  trait getter QName(PackageNamespace("", "#0"), "duration")
+   method
+    refid "com.google.analytics.core:RequestObject/duration/getter"
+    returns QName(PackageNamespace("", "#0"), "int")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "hasCompleted")
+      callproperty        QName(PackageNamespace("", "#0"), "hasCompleted"), 0
+      iftrue              L7
+
+      pushbyte            0
+      returnvalue
+
+L7:
+      getlex              QName(PackageNamespace("", "#0"), "end")
+      getlex              QName(PackageNamespace("", "#0"), "start")
+      subtract
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "request") type QName(PackageNamespace("flash.net"), "URLRequest") end
+ end ; instance
+ cinit
+  refid "com.google.analytics.core:RequestObject/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

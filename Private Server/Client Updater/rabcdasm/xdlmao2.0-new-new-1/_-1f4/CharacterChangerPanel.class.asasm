@@ -1,0 +1,336 @@
+class
+ refid "_-1f4:CharacterChangerPanel"
+ instance QName(PackageNamespace("_-1f4"), "CharacterChangerPanel")
+  extends QName(PackageNamespace("_-1f4"), "_-0l2")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Dx")
+  iinit
+   refid "_-1f4:CharacterChangerPanel/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     kill                2
+     inclocal_i          2
+     setlocal2
+
+     convert_b
+     inclocal            2
+     pushnull
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L31
+
+     getlocal0
+     jump                L23
+
+     inclocal            2
+     declocal_i          2
+     declocal            2
+     bitand
+     bitnot
+     popscope
+L23:
+     getlocal1
+     getlex              QName(PackageNamespace("_-6u"), "_-TG")
+     getproperty         QName(PackageNamespace("", "#0"), "_-nL")
+     getlex              QName(PackageNamespace("_-6u"), "_-TG")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0vO")
+     constructsuper      3
+
+     getlocal2
+     iffalse             L39
+
+L31:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace("", "#0"), "ADDED_TO_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:CharacterChangerPanel"), "onAddedToStage")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+     getlocal3
+     iftrue              L45
+
+L39:
+     findpropstrict      QName(PackageNamespace("", "#0"), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace("", "#0"), "REMOVED_FROM_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-1f4:CharacterChangerPanel"), "onRemovedFromStage")
+     callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+L45:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(ProtectedNamespace("_-0Dx"), "onButtonClick") flag OVERRIDE
+   method
+    refid "_-1f4:CharacterChangerPanel/_-0Dx:onButtonClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      getlocal2
+      pop
+      checkfilter
+      pushnan
+      lessthan
+      greaterthan
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L18
+
+      getlex              QName(PackageNamespace("", "#0"), "gs_")
+      getproperty         QName(PackageNamespace("", "#0"), "closed")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 0
+
+L18:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-1f4:CharacterChangerPanel"), "onAddedToStage")
+   method
+    refid "_-1f4:CharacterChangerPanel/onAddedToStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      setlocal2
+
+      istypelate
+      declocal_i          2
+      getlocal2
+      declocal            2
+      pop
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L21
+
+      getlex              QName(PackageNamespace("", "#0"), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace("", "#0"), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1f4:CharacterChangerPanel"), "_-13y")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addEventListener"), 2
+
+L21:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-1f4:CharacterChangerPanel"), "onRemovedFromStage")
+   method
+    refid "_-1f4:CharacterChangerPanel/onRemovedFromStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      inclocal_i          2
+      getlocal2
+      bitnot
+      inclocal_i          2
+      nextvalue
+      dxnslate
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L21
+
+      getlex              QName(PackageNamespace("", "#0"), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace("", "#0"), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1f4:CharacterChangerPanel"), "_-13y")
+      callpropvoid        QName(PackageNamespace("", "#0"), "removeEventListener"), 2
+
+L21:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-1f4:CharacterChangerPanel"), "_-13y")
+   method
+    refid "_-1f4:CharacterChangerPanel/_-13y"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      decrement_i
+      kill                2
+      dup
+      typeof
+      convert_b
+      inclocal            2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L62
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "keyCode")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace("", "#0"), "data_")
+      getproperty         Multiname("interact", [PrivateNamespace("*", "_-1f4:CharacterChangerPanel"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-1f4:CharacterChangerPanel/_-13y"), PackageNamespace("_-1f4"), PackageInternalNs("_-1f4"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Dx"), StaticProtectedNs("_-0Dx"), StaticProtectedNs("_-1Zv"), StaticProtectedNs("_-0CS"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      equals
+      jump                L29
+
+      declocal            2
+      declocal            2
+      multiply
+      inclocal_i          2
+      declocal_i          2
+      inclocal_i          2
+L29:
+      getlocal3
+      dup
+      iftrue              L42
+
+      pop
+      getlocal0
+      convert_b
+      jump                L42
+
+      kill                2
+      increment_i
+      inclocal            2
+      inclocal_i          2
+      declocal            2
+      decrement
+L42:
+      iffalse             L54
+
+      dup
+      iffalse             L54
+
+      getlocal3
+      iffalse             L54
+
+      pop
+      getlocal3
+      iffalse             L62
+
+      getlex              QName(PackageNamespace("", "#0"), "stage")
+      getproperty         QName(PackageNamespace("", "#0"), "focus")
+      pushnull
+      equals
+L54:
+      iffalse             L65
+
+      getlocal3
+      dup
+      iftrue              L61
+
+      pop
+      getlocal0
+      convert_b
+L61:
+      iffalse             L65
+
+L62:
+      getlex              QName(PackageNamespace("", "#0"), "gs_")
+      getproperty         QName(PackageNamespace("", "#0"), "closed")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 0
+
+L65:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1f4:CharacterChangerPanel/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

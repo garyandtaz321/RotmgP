@@ -1,0 +1,563 @@
+class
+ refid "com.google.analytics.external:JavascriptProxy"
+ instance QName(PackageNamespace("com.google.analytics.external"), "JavascriptProxy")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.external:JavascriptProxy")
+  iinit
+   refid "com.google.analytics.external:JavascriptProxy/iinit"
+   param QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_debug")
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_debug")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_notAvailableWarning") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait method QName(PackageNamespace("", "#0"), "getProperty")
+   method
+    refid "com.google.analytics.external:JavascriptProxy/getProperty"
+    param QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "call")
+      getlocal1
+      pushstring          ".valueOf"
+      add
+      callproperty        QName(PackageNamespace("", "#0"), "call"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "hasProperty")
+   method
+    refid "com.google.analytics.external:JavascriptProxy/hasProperty"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "call")
+      getlex              QName(PackageNamespace("", "#0"), "hasProperty_js")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "call"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
+  trait method QName(PackageNamespace("", "#0"), "setProperty")
+   method
+    refid "com.google.analytics.external:JavascriptProxy/setProperty"
+    param QName(PackageNamespace("", "#0"), "String")
+    param null
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "call")
+      getlex              QName(PackageNamespace("", "#0"), "setProperty_js")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "call"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "executeBlock")
+   method
+    refid "com.google.analytics.external:JavascriptProxy/executeBlock"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal2
+
+      pushscope
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "isAvailable")
+      callproperty        QName(PackageNamespace("", "#0"), "isAvailable"), 0
+      iffalse             L60
+
+L12:
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      getscopeobject      1
+      getslot             1
+      callpropvoid        QName(PackageNamespace("", "#0"), "call"), 1
+
+L16:
+      jump                L60
+
+L17:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "javascript")
+      iffalse             L34
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_debug")
+      pushstring          "ExternalInterface is not allowed.\nEnsure that allowScriptAccess is set to \"always\" in the Flash embed HTML."
+      callpropvoid        QName(PackageNamespace("", "#0"), "warning"), 1
+
+L34:
+      popscope
+      kill                3
+      jump                L60
+
+L37:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "javascript")
+      iffalse             L58
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_debug")
+      pushstring          "ExternalInterface failed to make the call\nreason: "
+      getscopeobject      2
+      getslot             1
+      getproperty         QName(PackageNamespace("", "#0"), "message")
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "warning"), 1
+
+L58:
+      popscope
+      kill                3
+L60:
+      returnvoid
+     end ; code
+     try from L12 to L16 target L17 type QName(PackageNamespace("", "#0"), "SecurityError") name QName(PackageNamespace("", "#0"), "e") end
+     try from L12 to L16 target L37 type QName(PackageNamespace("", "#0"), "Error") name QName(PackageNamespace("", "#0"), "e") end
+     trait slot QName(PackageInternalNs("com.google.analytics.external"), "data") slotid 1 type QName(PackageNamespace("", "#0"), "String") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getPropertyString")
+   method
+    refid "com.google.analytics.external:JavascriptProxy/getPropertyString"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "call")
+      getlocal1
+      pushstring          ".toString"
+      add
+      callproperty        QName(PackageNamespace("", "#0"), "call"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setPropertyByReference")
+   method
+    refid "com.google.analytics.external:JavascriptProxy/setPropertyByReference"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "call")
+      getlex              QName(PackageNamespace("", "#0"), "setPropertyRef_js")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "call"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "call")
+   method
+    refid "com.google.analytics.external:JavascriptProxy/call"
+    param QName(PackageNamespace("", "#0"), "String")
+    flag NEED_ACTIVATION
+    flag NEED_REST
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal3
+
+      pushscope
+
+      getscopeobject      1
+      pushnull
+      coerce_s
+      setslot             3
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getscopeobject      1
+      getlocal2
+      setslot             2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "isAvailable")
+      callproperty        QName(PackageNamespace("", "#0"), "isAvailable"), 0
+      iffalse             L126
+
+L19:
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "javascript")
+      convert_b
+      dup
+      iffalse             L28
+
+      pop
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "verbose")
+      convert_b
+L28:
+      iffalse             L70
+
+      getscopeobject      1
+      pushstring          ""
+      setslot             3
+
+      getscopeobject      1
+      pushstring          "Flash->JS: "
+      getscopeobject      1
+      getslot             1
+      add
+      coerce_s
+      setslot             3
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             3
+      pushstring          "( "
+      add
+      setslot             3
+
+      getscopeobject      1
+      getslot             2
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            0
+      ifngt               L60
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             3
+      getscopeobject      1
+      getslot             2
+      pushstring          ","
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      add
+      coerce_s
+      setslot             3
+
+L60:
+      getscopeobject      1
+      getscopeobject      1
+      getslot             3
+      pushstring          " )"
+      add
+      setslot             3
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_debug")
+      getscopeobject      1
+      getslot             3
+      callpropvoid        QName(PackageNamespace("", "#0"), "info"), 1
+
+L70:
+      getscopeobject      1
+      getslot             2
+      getscopeobject      1
+      getslot             1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "unshift"), 1
+
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      getproperty         QName(PackageNamespace("", "#0"), "call")
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      getscopeobject      1
+      getslot             2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+      returnvalue
+
+L82:
+      jump                L126
+
+L83:
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "javascript")
+      iffalse             L100
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_debug")
+      pushstring          "ExternalInterface is not allowed.\nEnsure that allowScriptAccess is set to \"always\" in the Flash embed HTML."
+      callpropvoid        QName(PackageNamespace("", "#0"), "warning"), 1
+
+L100:
+      popscope
+      kill                4
+      jump                L126
+
+L103:
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "javascript")
+      iffalse             L124
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_debug")
+      pushstring          "ExternalInterface failed to make the call\nreason: "
+      getscopeobject      2
+      getslot             1
+      getproperty         QName(PackageNamespace("", "#0"), "message")
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "warning"), 1
+
+L124:
+      popscope
+      kill                4
+L126:
+      pushnull
+      returnvalue
+     end ; code
+     try from L19 to L82 target L83 type QName(PackageNamespace("", "#0"), "SecurityError") name QName(PackageNamespace("", "#0"), "e") end
+     try from L19 to L82 target L103 type QName(PackageNamespace("", "#0"), "Error") name QName(PackageNamespace("", "#0"), "e") end
+     trait slot QName(PackageInternalNs("com.google.analytics.external"), "output") slotid 3 type QName(PackageNamespace("", "#0"), "String") end
+     trait slot QName(PackageInternalNs("com.google.analytics.external"), "functionName") slotid 1 type QName(PackageNamespace("", "#0"), "String") end
+     trait slot QName(PackageNamespace("", "#0"), "args") slotid 2 type QName(PackageNamespace("", "#0"), "Array") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "isAvailable")
+   method
+    refid "com.google.analytics.external:JavascriptProxy/isAvailable"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      getproperty         QName(PackageNamespace("", "#0"), "available")
+      convert_b
+      setlocal1
+
+      getlocal1
+      convert_b
+      dup
+      iffalse             L15
+
+      pop
+      getlex              QName(PackageNamespace("flash.system"), "Capabilities")
+      getproperty         QName(PackageNamespace("", "#0"), "playerType")
+      pushstring          "External"
+      equals
+L15:
+      iffalse             L18
+
+      pushfalse
+      setlocal1
+
+L18:
+      getlocal1
+      not
+      dup
+      iffalse             L26
+
+      pop
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "javascript")
+      convert_b
+L26:
+      dup
+      iffalse             L31
+
+      pop
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_notAvailableWarning")
+      convert_b
+L31:
+      iffalse             L38
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_debug")
+      pushstring          "ExternalInterface is not available."
+      callpropvoid        QName(PackageNamespace("", "#0"), "warning"), 1
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_notAvailableWarning")
+      pushfalse
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:JavascriptProxy"), "_notAvailableWarning")
+
+L38:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.external:JavascriptProxy/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace("", "#0"), "hasProperty_js")
+    getlex              QName(PackageNamespace("", "#0"), "XML")
+    pushstring          "<script>\r\n                <![CDATA[\r\n                    function( path )\r\n                    {\r\n                        var paths;\r\n                        if( path.indexOf(\".\") > 0 )\r\n                        {\r\n                            paths = path.split(\".\");\r\n                        }\r\n                        else\r\n                        {\r\n                            paths = [path];\r\n                        }\r\n                        var target = window ;\r\n                        var len    = paths.length ;\r\n                        for( var i = 0 ; i < len ; i++ )\r\n                        {\r\n                            target = target[ paths[i] ] ;\r\n                        }\r\n                        if( target )\r\n                        {\r\n                            return true;\r\n                        }\r\n                        else\r\n                        {\r\n                            return false;\r\n                        }\r\n                    }\r\n                ]]>\r\n            </script>"
+    construct           1
+    setproperty         QName(PackageNamespace("", "#0"), "hasProperty_js")
+
+    findproperty        QName(PackageNamespace("", "#0"), "setProperty_js")
+    getlex              QName(PackageNamespace("", "#0"), "XML")
+    pushstring          "<script>\r\n                <![CDATA[\r\n                    function( path , value )\r\n                    {\r\n                        var paths;\r\n                        var prop;\r\n                        if( path.indexOf(\".\") > 0 )\r\n                        {\r\n                            paths = path.split(\".\");\r\n                            prop  = paths.pop() ;\r\n                        }\r\n                        else\r\n                        {\r\n                            paths = [];\r\n                            prop  = path;\r\n                        }\r\n                        var target = window ;\r\n                        var len    = paths.length ;\r\n                        for( var i = 0 ; i < len ; i++ )\r\n                        {\r\n                            target = target[ paths[i] ] ;\r\n                        }\r\n                        \r\n                        target[ prop ] = value ;\r\n                    }\r\n                ]]>\r\n            </script>"
+    construct           1
+    setproperty         QName(PackageNamespace("", "#0"), "setProperty_js")
+
+    findproperty        QName(PackageNamespace("", "#0"), "setPropertyRef_js")
+    getlex              QName(PackageNamespace("", "#0"), "XML")
+    pushstring          "<script>\r\n                <![CDATA[\r\n                    function( path , target )\r\n                    {\r\n                        var paths;\r\n                        var prop;\r\n                        if( path.indexOf(\".\") > 0 )\r\n                        {\r\n                            paths = path.split(\".\");\r\n                            prop  = paths.pop() ;\r\n                        }\r\n                        else\r\n                        {\r\n                            paths = [];\r\n                            prop  = path;\r\n                        }\r\n                        alert( \"paths:\"+paths.length+\", prop:\"+prop );\r\n                        var targets;\r\n                        var name;\r\n                        if( target.indexOf(\".\") > 0 )\r\n                        {\r\n                            targets = target.split(\".\");\r\n                            name    = targets.pop();\r\n                        }\r\n                        else\r\n                        {\r\n                            targets = [];\r\n                            name    = target;\r\n                        }\r\n                        alert( \"targets:\"+targets.length+\", name:\"+name );\r\n                        var root = window;\r\n                        var len  = paths.length;\r\n                        for( var i = 0 ; i < len ; i++ )\r\n                        {\r\n                            root = root[ paths[i] ] ;\r\n                        }\r\n                        var ref   = window;\r\n                        var depth = targets.length;\r\n                        for( var j = 0 ; j < depth ; j++ )\r\n                        {\r\n                            ref = ref[ targets[j] ] ;\r\n                        }\r\n                        root[ prop ] = ref[name] ;\r\n                    }\r\n                ]]>\r\n            </script>"
+    construct           1
+    setproperty         QName(PackageNamespace("", "#0"), "setPropertyRef_js")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace("", "#0"), "setProperty_js") slotid 2 type QName(PackageNamespace("", "#0"), "XML") end
+ trait slot QName(PackageNamespace("", "#0"), "hasProperty_js") slotid 1 type QName(PackageNamespace("", "#0"), "XML") end
+ trait slot QName(PackageNamespace("", "#0"), "setPropertyRef_js") slotid 3 type QName(PackageNamespace("", "#0"), "XML") end
+end ; class

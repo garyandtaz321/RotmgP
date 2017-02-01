@@ -1,0 +1,29 @@
+script ; 1914
+ sinit
+  refid "com.hurlant.crypto.symmetric:BlowFishKey.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("BlowFishKey", [PackageNamespace("com.hurlant.crypto.symmetric")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.hurlant.crypto.symmetric:BlowFishKey"
+    popscope
+    initproperty        QName(PackageNamespace("com.hurlant.crypto.symmetric"), "BlowFishKey")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.hurlant.crypto.symmetric"), "BlowFishKey")
+  #include "BlowFishKey.class.asasm"
+ end ; trait
+end ; script

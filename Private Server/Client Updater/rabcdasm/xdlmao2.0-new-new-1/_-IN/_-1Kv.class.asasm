@@ -1,0 +1,188 @@
+class
+ refid "_-IN:_-1Kv"
+ instance QName(PackageNamespace("_-IN"), "_-1Kv")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0KF")
+  iinit
+   refid "_-IN:_-1Kv/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     pushwith
+     equals
+     greaterthan
+     add_i
+     instanceof
+     getglobalscope
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iftrue              L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-1Dx") flag METADATA type QName(PackageNamespace("_-1i0"), "_-cz")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-p2") flag METADATA type QName(PackageNamespace("_-1i0"), "_-nB")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "closeDialogs") flag METADATA type QName(PackageNamespace("_-Nj"), "_-0ay")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-Tu") flag METADATA type QName(PackageNamespace("_-10a"), "_-1bT")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "execute")
+   method
+    refid "_-IN:_-1Kv/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      getlocal2
+      divide
+      increment
+      nextname
+      declocal_i          2
+      inclocal            2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L29
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-Tu")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1Qb"), 0
+      coerce              QName(PackageNamespace("", "#0"), "Class")
+      dup
+      iftrue              L31
+
+      jump                L28
+
+      add_i
+      kill                2
+      getlocal2
+      setlocal2
+
+      pushnull
+      getglobalscope
+L28:
+      pop
+L29:
+      getlex              QName(PackageNamespace("_-07g"), "TitleView")
+      coerce              QName(PackageNamespace("", "#0"), "Class")
+L31:
+      coerce              QName(PackageNamespace("", "#0"), "Class")
+      jump                L39
+
+      declocal            2
+      decrement_i
+      inclocal_i          2
+      setlocal2
+
+      hasnext
+      kill                2
+L39:
+      setlocal1
+
+      getlocal3
+      dup
+      iffalse             L46
+
+      pop
+      getlocal0
+      convert_b
+L46:
+      iftrue              L57
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1Dx")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 0
+
+      getlocal3
+      iftrue              L62
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "closeDialogs")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 0
+
+      getlocal2
+      iffalse             L62
+
+L57:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-p2")
+      getlocal1
+      construct           0
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+L62:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-IN:_-1Kv/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

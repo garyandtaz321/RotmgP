@@ -1,0 +1,37 @@
+script ; 1859
+ sinit
+  refid "_-GI:_-MX.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-MX", [PackageNamespace("_-GI")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "Particle")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "Particle")
+    newclass            "_-GI:_-MX"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-GI"), "_-MX")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-GI"), "_-MX")
+  #include "_-MX.class.asasm"
+ end ; trait
+end ; script

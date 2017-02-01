@@ -1,0 +1,396 @@
+class
+ refid "com.hurlant.util.der:PEM"
+ instance QName(PackageNamespace("com.hurlant.util.der"), "PEM")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Sw")
+  iinit
+   refid "com.hurlant.util.der:PEM/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.hurlant.util.der:PEM/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PRIVATE_KEY_HEADER")
+    pushstring          "-----BEGIN RSA PRIVATE KEY-----"
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PRIVATE_KEY_HEADER")
+
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PRIVATE_KEY_FOOTER")
+    pushstring          "-----END RSA PRIVATE KEY-----"
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PRIVATE_KEY_FOOTER")
+
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PUBLIC_KEY_HEADER")
+    pushstring          "-----BEGIN PUBLIC KEY-----"
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PUBLIC_KEY_HEADER")
+
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PUBLIC_KEY_FOOTER")
+    pushstring          "-----END PUBLIC KEY-----"
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PUBLIC_KEY_FOOTER")
+
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "CERTIFICATE_HEADER")
+    pushstring          "-----BEGIN CERTIFICATE-----"
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "CERTIFICATE_HEADER")
+
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "CERTIFICATE_FOOTER")
+    pushstring          "-----END CERTIFICATE-----"
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "CERTIFICATE_FOOTER")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PRIVATE_KEY_HEADER") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("-----BEGIN RSA PRIVATE KEY-----") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PRIVATE_KEY_FOOTER") slotid 2 type QName(PackageNamespace("", "#0"), "String") value Utf8("-----END RSA PRIVATE KEY-----") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PUBLIC_KEY_HEADER") slotid 3 type QName(PackageNamespace("", "#0"), "String") value Utf8("-----BEGIN PUBLIC KEY-----") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PUBLIC_KEY_FOOTER") slotid 4 type QName(PackageNamespace("", "#0"), "String") value Utf8("-----END PUBLIC KEY-----") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "CERTIFICATE_HEADER") slotid 5 type QName(PackageNamespace("", "#0"), "String") value Utf8("-----BEGIN CERTIFICATE-----") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "CERTIFICATE_FOOTER") slotid 6 type QName(PackageNamespace("", "#0"), "String") value Utf8("-----END CERTIFICATE-----") end
+ trait method QName(PackageNamespace("", "#0"), "readRSAPrivateKey") flag FINAL dispid 3
+  method
+   refid "com.hurlant.util.der:PEM/readRSAPrivateKey"
+   param QName(PackageNamespace("", "#0"), "String")
+   returns QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey")
+   body
+    maxstack 10
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+     setlocal            4
+
+     findpropstrict      QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "extractBinary")
+     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PRIVATE_KEY_HEADER")
+     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PRIVATE_KEY_FOOTER")
+     getlocal1
+     callproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "extractBinary"), 3
+     coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+     setlocal2
+
+     getlocal2
+     pushnull
+     ifne                L17
+
+     pushnull
+     returnvalue
+
+L17:
+     getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+     getlocal2
+     callproperty        QName(PackageNamespace("", "#0"), "parse"), 1
+     coerce_a
+     setlocal3
+
+     getlocal3
+     getlex              QName(PackageNamespace("", "#0"), "Array")
+     istypelate
+     iffalse             L59
+
+     getlocal3
+     getlex              QName(PackageNamespace("", "#0"), "Array")
+     astypelate
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+     setlocal            4
+
+     findpropstrict      QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey")
+     getlocal            4
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     getlocal            4
+     pushbyte            2
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     callproperty        Multiname("valueOf", [PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")]), 0
+     getlocal            4
+     pushbyte            3
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     getlocal            4
+     pushbyte            4
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     getlocal            4
+     pushbyte            5
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     getlocal            4
+     pushbyte            6
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     getlocal            4
+     pushbyte            7
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     getlocal            4
+     pushbyte            8
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     constructprop       QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey"), 8
+     returnvalue
+
+L59:
+     pushnull
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "readRSAPublicKey") flag FINAL dispid 4
+  method
+   refid "com.hurlant.util.der:PEM/readRSAPublicKey"
+   param QName(PackageNamespace("", "#0"), "String")
+   returns QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey")
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+     setlocal            4
+
+     findpropstrict      QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "extractBinary")
+     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PUBLIC_KEY_HEADER")
+     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PUBLIC_KEY_FOOTER")
+     getlocal1
+     callproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "extractBinary"), 3
+     coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+     setlocal2
+
+     getlocal2
+     pushnull
+     ifne                L17
+
+     pushnull
+     returnvalue
+
+L17:
+     getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+     getlocal2
+     callproperty        QName(PackageNamespace("", "#0"), "parse"), 1
+     coerce_a
+     setlocal3
+
+     getlocal3
+     getlex              QName(PackageNamespace("", "#0"), "Array")
+     istypelate
+     iffalse             L92
+
+     getlocal3
+     getlex              QName(PackageNamespace("", "#0"), "Array")
+     astypelate
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+     dup
+     setlocal            4
+
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     callproperty        Multiname("toString", [PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")]), 0
+     getlex              QName(PackageNamespace("com.hurlant.util.der"), "OID")
+     getproperty         QName(PackageNamespace("", "#0"), "RSA_ENCRYPTION")
+     ifeq                L42
+
+     pushnull
+     returnvalue
+
+L42:
+     getlocal            4
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     getlocal            4
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     getproperty         Multiname("position", [PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     pushbyte            0
+     ifne                L65
+
+     getlocal            4
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     dup
+     setlocal            5
+
+     getproperty         Multiname("position", [PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     increment
+     setlocal            6
+
+     getlocal            5
+     getlocal            6
+     setproperty         Multiname("position", [PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+
+     kill                6
+     kill                5
+L65:
+     getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+     getlocal            4
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     callproperty        QName(PackageNamespace("", "#0"), "parse"), 1
+     coerce_a
+     setlocal3
+
+     getlocal3
+     getlex              QName(PackageNamespace("", "#0"), "Array")
+     istypelate
+     iffalse             L90
+
+     getlocal3
+     getlex              QName(PackageNamespace("", "#0"), "Array")
+     astypelate
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+     setlocal            4
+
+     findpropstrict      QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey")
+     getlocal            4
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     getlocal            4
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Sw"), StaticProtectedNs("_-Sw")])
+     constructprop       QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey"), 2
+     returnvalue
+
+L90:
+     pushnull
+     returnvalue
+
+L92:
+     pushnull
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "readCertIntoArray") flag FINAL dispid 5
+  method
+   refid "com.hurlant.util.der:PEM/readCertIntoArray"
+   param QName(PackageNamespace("", "#0"), "String")
+   returns QName(PackageNamespace("flash.utils"), "ByteArray")
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "extractBinary")
+     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "CERTIFICATE_HEADER")
+     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "CERTIFICATE_FOOTER")
+     getlocal1
+     callproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "extractBinary"), 3
+     coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+     setlocal2
+
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "extractBinary") flag FINAL dispid 6
+  method
+   refid "com.hurlant.util.der:PEM/extractBinary"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   returns QName(PackageNamespace("flash.utils"), "ByteArray")
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal3
+     getlocal1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     convert_i
+     dup
+     setlocal            4
+
+     pushbyte            255
+     ifne                L12
+
+     pushnull
+     returnvalue
+
+L12:
+     getlocal            4
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "length")
+     add
+     convert_i
+     setlocal            4
+
+     getlocal3
+     getlocal2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     convert_i
+     dup
+     setlocal            5
+
+     pushbyte            255
+     ifne                L28
+
+     pushnull
+     returnvalue
+
+L28:
+     getlocal3
+     getlocal            4
+     getlocal            5
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+     coerce_s
+     dup
+     setlocal            6
+
+     getlex              QName(PackageNamespace("", "#0"), "RegExp")
+     pushstring          "\\s"
+     pushstring          "mg"
+     construct           2
+     pushstring          ""
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+     coerce_s
+     setlocal            6
+
+     getlex              QName(PackageNamespace("com.hurlant.util"), "Base64")
+     getlocal            6
+     callproperty        QName(PackageNamespace("", "#0"), "decodeToByteArray"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

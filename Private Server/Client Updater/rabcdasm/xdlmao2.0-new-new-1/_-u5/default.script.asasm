@@ -1,0 +1,29 @@
+script ; 1429
+ sinit
+  refid "_-u5:default.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("default", [PackageNamespace("_-u5")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-u5:default"
+    popscope
+    initproperty        QName(PackageNamespace("_-u5"), "default")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-u5"), "default")
+  #include "default.class.asasm"
+ end ; trait
+end ; script

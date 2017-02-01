@@ -1,0 +1,202 @@
+class
+ refid "com.company.assembleegameclient.objects:FortuneTeller"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "FortuneTeller")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "Character")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0u-")
+  iinit
+   refid "com.company.assembleegameclient.objects:FortuneTeller/iinit"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     inclocal            2
+     inclocal_i          2
+     lessthan
+     getlocal0
+     kill                2
+     inclocal_i          2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L18
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "draw") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:FortuneTeller/draw"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-18q")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 6
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal            3
+      getlocal3
+      negate_i
+      declocal_i          3
+      bitand
+      lessequals
+L10:
+      setlocal            4
+
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      dup
+      iftrue              L20
+
+      pop
+      getlocal3
+      convert_b
+L20:
+      iffalse             L31
+
+      getlex              QName(PackageNamespace("_-QC"), "_-0Ew")
+      getproperty         QName(PackageNamespace("", "#0"), "_-05m")
+      iffalse             L31
+
+      getlocal            4
+      iftrue              L31
+
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callsupervoid       QName(PackageNamespace("", "#0"), "draw"), 3
+L31:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "drawShadow") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:FortuneTeller/drawShadow"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-18q")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 6
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      greaterequals
+      add
+      inclocal            3
+      setlocal            4
+
+      inclocal_i          4
+      bitnot
+L10:
+      setlocal            4
+
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      jump                L22
+
+      nextvalue
+      declocal_i          4
+      setlocal2
+
+      convert_s
+      inclocal_i          3
+      setlocal            4
+
+L22:
+      dup
+      iftrue              L27
+
+      pop
+      getlocal1
+      convert_b
+L27:
+      iffalse             L43
+
+      getlex              QName(PackageNamespace("_-QC"), "_-0Ew")
+      getproperty         QName(PackageNamespace("", "#0"), "_-05m")
+      iffalse             L43
+
+      getlocal            4
+      dup
+      iffalse             L37
+
+      pop
+      getlocal2
+      convert_b
+L37:
+      iftrue              L43
+
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callsupervoid       QName(PackageNamespace("", "#0"), "drawShadow"), 3
+L43:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:FortuneTeller/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

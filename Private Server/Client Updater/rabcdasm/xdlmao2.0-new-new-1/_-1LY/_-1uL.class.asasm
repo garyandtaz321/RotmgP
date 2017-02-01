@@ -1,0 +1,171 @@
+class
+ refid "_-1LY:_-1uL"
+ instance QName(PackageNamespace("_-1LY"), "_-1uL")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Cq")
+  iinit
+   refid "_-1LY:_-1uL/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     negate_i
+     greaterthan
+     negate_i
+     add_i
+     convert_d
+     rshift
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iffalse             L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "account") flag METADATA type QName(PackageNamespace("_-1PE"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-nU") flag METADATA type QName(PackageNamespace("_-Nj"), "_-M4")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "execute")
+   method
+    refid "_-1LY:_-1uL/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      declocal            2
+      strictequals
+      astypelate
+      increment_i
+      add
+      declocal_i          2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal1
+
+      getlocal2
+      dup
+      iftrue              L29
+
+      pop
+      jump                L27
+
+      pushtrue
+      declocal            2
+      declocal_i          2
+      decrement_i
+      multiply
+      declocal_i          2
+L27:
+      getlocal3
+      convert_b
+L29:
+      iffalse             L41
+
+      getlocal0
+      jump                L38
+
+      pushscope
+
+      inclocal_i          2
+      inclocal_i          2
+      inclocal_i          2
+      getlocal2
+      nextname
+L38:
+      getproperty         QName(PackageNamespace("", "#0"), "account")
+      callproperty        QName(Namespace("_-1lo"), "_-vD"), 0
+      iffalse             L53
+
+L41:
+      findpropstrict      QName(PackageNamespace("_-0Mc"), "NewChooseNameFrame")
+      constructprop       QName(PackageNamespace("_-0Mc"), "NewChooseNameFrame"), 0
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal1
+
+      getlocal2
+      dup
+      iftrue              L51
+
+      pop
+      getlocal3
+      convert_b
+L51:
+      iffalse             L61
+
+      jump                L57
+
+L53:
+      findpropstrict      QName(PackageNamespace("_-07g"), "ChooseNameRegisterDialog")
+      constructprop       QName(PackageNamespace("_-07g"), "ChooseNameRegisterDialog"), 0
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal1
+
+L57:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-nU")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+L61:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1LY:_-1uL/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

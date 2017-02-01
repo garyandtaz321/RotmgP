@@ -1,0 +1,94 @@
+class
+ refid "com.google.analytics.data:UTMX"
+ instance QName(PackageNamespace("com.google.analytics.data"), "UTMX")
+  extends QName(PackageNamespace("com.google.analytics.data"), "UTMCookie")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.data:UTMX")
+  iinit
+   refid "com.google.analytics.data:UTMX/iinit"
+   body
+    maxstack 5
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     pushstring          "utmx"
+     pushstring          "__utmx"
+     pushstring          "value"
+     newarray            1
+     pushbyte            0
+     constructsuper      4
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMX"), "_value")
+     pushstring          "-"
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMX"), "_value")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait getter QName(PackageNamespace("", "#0"), "value")
+   method
+    refid "com.google.analytics.data:UTMX/value/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMX"), "_value")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.data:UTMX"), "_value") type QName(PackageNamespace("", "#0"), "String") end
+  trait setter QName(PackageNamespace("", "#0"), "value")
+   method
+    refid "com.google.analytics.data:UTMX/value/setter"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMX"), "_value")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMX"), "_value")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.data:UTMX/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

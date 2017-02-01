@@ -1,0 +1,112 @@
+class
+ refid "com.company.assembleegameclient.objects:FortuneGround"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "FortuneGround")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  implements Multiname("_-Rk", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1me")
+  iinit
+   refid "com.company.assembleegameclient.objects:FortuneGround/iinit"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     setlocal2
+
+     inclocal            2
+     strictequals
+     kill                2
+     declocal_i          2
+     bitand
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iffalse             L29
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal3
+     dup
+     iftrue              L25
+
+     pop
+     getlocal0
+     convert_b
+L25:
+     iffalse             L29
+
+     findproperty        QName(PackageNamespace("", "#0"), "_-11k")
+     pushtrue
+     initproperty        QName(PackageNamespace("", "#0"), "_-11k")
+
+L29:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "getPanel")
+   method
+    refid "com.company.assembleegameclient.objects:FortuneGround/getPanel"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace("_-1f4"), "Panel")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-0no"), "FortuneGroundPanel")
+      jump                L10
+
+      convert_b
+      modulo
+      urshift
+      lshift
+      newactivation
+      checkfilter
+L10:
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "objectType_")
+      constructprop       QName(PackageNamespace("_-0no"), "FortuneGroundPanel"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:FortuneGround/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

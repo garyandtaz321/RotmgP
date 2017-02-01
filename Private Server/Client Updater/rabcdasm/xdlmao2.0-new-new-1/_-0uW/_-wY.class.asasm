@@ -1,0 +1,94 @@
+class
+ refid "_-0uW:_-wY"
+ instance QName(PackageNamespace("_-0uW"), "_-wY")
+  extends QName(PackageNamespace("_-0uW"), "_-0hu")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0CK")
+  iinit
+   refid "_-0uW:_-wY/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "Array")
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "int")
+   body
+    maxstack 8
+    localcount 7
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal            5
+
+     jump                L10
+
+     getglobalscope
+     increment
+     negate_i
+     declocal_i          5
+     bitnot
+     convert_i
+L10:
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     jump                L20
+
+     pushtrue
+     kill                3
+     bitxor
+     inclocal            3
+     hasnext
+     istypelate
+L20:
+     getlocal            6
+     iftrue              L39
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     pushfalse
+     pushnull
+     constructsuper      5
+
+     getlocal            6
+     dup
+     iffalse             L35
+
+     pop
+     getlocal3
+     convert_b
+L35:
+     iftrue              L39
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace("", "#0"), "order")
+
+L39:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "order") type QName(PackageNamespace("", "#0"), "int") end
+ end ; instance
+ cinit
+  refid "_-0uW:_-wY/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,154 @@
+class
+ refid "_-0tk:_-1k5"
+ instance QName(PackageNamespace("_-0tk"), "_-1k5")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1f3")
+  iinit
+   refid "_-0tk:_-1k5/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     setlocal2
+
+     bitnot
+     declocal            2
+     declocal            2
+     increment_i
+     divide
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L19
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L19:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-0tk:_-1k5/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    getlocal0
+    instanceof
+    convert_o
+    divide
+    pushfalse
+    getglobalscope
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace("", "#0"), "UNDO_COMMAND_EVENT")
+    pushstring          "UNDO_COMMAND_EVENT"
+    initproperty        QName(PackageNamespace("", "#0"), "UNDO_COMMAND_EVENT")
+
+    findproperty        QName(PackageNamespace("", "#0"), "REDO_COMMAND_EVENT")
+    pushstring          "REDO_COMMAND_EVENT"
+    initproperty        QName(PackageNamespace("", "#0"), "REDO_COMMAND_EVENT")
+
+    getlocal1
+    dup
+    jump                L28
+
+    add_i
+    modulo
+    strictequals
+    lessequals
+    typeof
+    pushnull
+L28:
+    iftrue              L39
+
+    pop
+    getlocal1
+    convert_b
+    jump                L39
+
+    getlocal2
+    getlocal2
+    decrement
+    nextvalue
+    greaterthan
+    bitand
+L39:
+    iffalse             L46
+
+    findproperty        QName(PackageNamespace("", "#0"), "CLEAR_COMMAND_EVENT")
+    pushstring          "CLEAR_COMMAND_EVENT"
+    initproperty        QName(PackageNamespace("", "#0"), "CLEAR_COMMAND_EVENT")
+
+    findproperty        QName(PackageNamespace("", "#0"), "LOAD_COMMAND_EVENT")
+    pushstring          "LOAD_COMMAND_EVENT"
+    initproperty        QName(PackageNamespace("", "#0"), "LOAD_COMMAND_EVENT")
+
+L46:
+    findproperty        QName(PackageNamespace("", "#0"), "SAVE_COMMAND_EVENT")
+    pushstring          "SAVE_COMMAND_EVENT"
+    initproperty        QName(PackageNamespace("", "#0"), "SAVE_COMMAND_EVENT")
+
+    getlocal1
+    dup
+    iftrue              L55
+
+    pop
+    getlocal0
+    convert_b
+L55:
+    iffalse             L59
+
+    findproperty        QName(PackageNamespace("", "#0"), "TEST_COMMAND_EVENT")
+    pushstring          "TEST_COMMAND_EVENT"
+    initproperty        QName(PackageNamespace("", "#0"), "TEST_COMMAND_EVENT")
+
+L59:
+    findproperty        QName(PackageNamespace("", "#0"), "SELECT_COMMAND_EVENT")
+    pushstring          "SELECT_COMMAND_EVENT"
+    initproperty        QName(PackageNamespace("", "#0"), "SELECT_COMMAND_EVENT")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "UNDO_COMMAND_EVENT") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("UNDO_COMMAND_EVENT") end
+ trait const QName(PackageNamespace("", "#0"), "REDO_COMMAND_EVENT") slotid 2 type QName(PackageNamespace("", "#0"), "String") value Utf8("REDO_COMMAND_EVENT") end
+ trait const QName(PackageNamespace("", "#0"), "CLEAR_COMMAND_EVENT") slotid 3 type QName(PackageNamespace("", "#0"), "String") value Utf8("CLEAR_COMMAND_EVENT") end
+ trait const QName(PackageNamespace("", "#0"), "LOAD_COMMAND_EVENT") slotid 4 type QName(PackageNamespace("", "#0"), "String") value Utf8("LOAD_COMMAND_EVENT") end
+ trait const QName(PackageNamespace("", "#0"), "SAVE_COMMAND_EVENT") slotid 5 type QName(PackageNamespace("", "#0"), "String") value Utf8("SAVE_COMMAND_EVENT") end
+ trait const QName(PackageNamespace("", "#0"), "TEST_COMMAND_EVENT") slotid 6 type QName(PackageNamespace("", "#0"), "String") value Utf8("TEST_COMMAND_EVENT") end
+ trait const QName(PackageNamespace("", "#0"), "SELECT_COMMAND_EVENT") slotid 7 type QName(PackageNamespace("", "#0"), "String") value Utf8("SELECT_COMMAND_EVENT") end
+end ; class

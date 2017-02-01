@@ -1,0 +1,149 @@
+class
+ refid "_-0yE:_-110"
+ instance QName(PackageNamespace("_-0yE"), "_-110")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0IA")
+  iinit
+   refid "_-0yE:_-110/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("_-0yE"), "_-J6")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     pushwith
+     setlocal3
+
+     inclocal            2
+     convert_i
+     setlocal2
+
+     getlocal2
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     iffalse             L27
+
+     getlocal0
+     getlocal1
+     pushtrue
+     constructsuper      2
+
+     getlocal            4
+     dup
+     iftrue              L26
+
+     pop
+     getlocal1
+     convert_b
+L26:
+     iffalse             L30
+
+L27:
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "tile")
+
+L30:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "tile") type QName(PackageNamespace("_-0yE"), "_-J6") end
+ end ; instance
+ cinit
+  refid "_-0yE:_-110/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    lessthan
+    lessequals
+    coerce_a
+    increment_i
+    pushfalse
+    getlocal2
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace("", "#0"), "ITEM_MOVE")
+    jump                L22
+
+    setlocal2
+
+    dup
+    modulo
+    pushscope
+
+    decrement
+    bitor
+L22:
+    pushstring          "ITEM_MOVE"
+    initproperty        QName(PackageNamespace("", "#0"), "ITEM_MOVE")
+
+    findproperty        QName(PackageNamespace("", "#0"), "ITEM_DOUBLE_CLICK")
+    pushstring          "ITEM_DOUBLE_CLICK"
+    initproperty        QName(PackageNamespace("", "#0"), "ITEM_DOUBLE_CLICK")
+
+    findproperty        QName(PackageNamespace("", "#0"), "ITEM_SHIFT_CLICK")
+    pushstring          "ITEM_SHIFT_CLICK"
+    initproperty        QName(PackageNamespace("", "#0"), "ITEM_SHIFT_CLICK")
+
+    getlocal2
+    iffalse             L37
+
+    findproperty        QName(PackageNamespace("", "#0"), "ITEM_CLICK")
+    pushstring          "ITEM_CLICK"
+    initproperty        QName(PackageNamespace("", "#0"), "ITEM_CLICK")
+
+    getlocal2
+    iffalse             L40
+
+L37:
+    findproperty        QName(PackageNamespace("", "#0"), "ITEM_HOTKEY_PRESS")
+    pushstring          "ITEM_HOTKEY_PRESS"
+    initproperty        QName(PackageNamespace("", "#0"), "ITEM_HOTKEY_PRESS")
+
+L40:
+    findproperty        QName(PackageNamespace("", "#0"), "ITEM_CTRL_CLICK")
+    pushstring          "ITEM_CTRL_CLICK"
+    initproperty        QName(PackageNamespace("", "#0"), "ITEM_CTRL_CLICK")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "ITEM_MOVE") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("ITEM_MOVE") end
+ trait const QName(PackageNamespace("", "#0"), "ITEM_DOUBLE_CLICK") slotid 2 type QName(PackageNamespace("", "#0"), "String") value Utf8("ITEM_DOUBLE_CLICK") end
+ trait const QName(PackageNamespace("", "#0"), "ITEM_SHIFT_CLICK") slotid 3 type QName(PackageNamespace("", "#0"), "String") value Utf8("ITEM_SHIFT_CLICK") end
+ trait const QName(PackageNamespace("", "#0"), "ITEM_CLICK") slotid 4 type QName(PackageNamespace("", "#0"), "String") value Utf8("ITEM_CLICK") end
+ trait const QName(PackageNamespace("", "#0"), "ITEM_HOTKEY_PRESS") slotid 5 type QName(PackageNamespace("", "#0"), "String") value Utf8("ITEM_HOTKEY_PRESS") end
+ trait const QName(PackageNamespace("", "#0"), "ITEM_CTRL_CLICK") slotid 6 type QName(PackageNamespace("", "#0"), "String") value Utf8("ITEM_CTRL_CLICK") end
+end ; class

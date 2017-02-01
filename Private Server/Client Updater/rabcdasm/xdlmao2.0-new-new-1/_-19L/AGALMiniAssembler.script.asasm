@@ -1,0 +1,65 @@
+script ; 1432
+ sinit
+  refid "_-19L:AGALMiniAssembler.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("AGALMiniAssembler", [PackageNamespace("_-19L")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-19L:AGALMiniAssembler"
+    popscope
+    initproperty        QName(PackageNamespace("_-19L"), "AGALMiniAssembler")
+
+    findpropstrict      Multiname("OpCode", [PrivateNamespace("*", "_-19L:AGALMiniAssembler#1")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-19L:AGALMiniAssembler/OpCode"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-19L:AGALMiniAssembler#1"), "OpCode")
+
+    findpropstrict      Multiname("Register", [PrivateNamespace("*", "_-19L:AGALMiniAssembler#1")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-19L:AGALMiniAssembler/Register"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-19L:AGALMiniAssembler#1"), "Register")
+
+    findpropstrict      Multiname("Sampler", [PrivateNamespace("*", "_-19L:AGALMiniAssembler#1")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-19L:AGALMiniAssembler/Sampler"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-19L:AGALMiniAssembler#1"), "Sampler")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-19L"), "AGALMiniAssembler")
+  #include "AGALMiniAssembler.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-19L:AGALMiniAssembler#1"), "OpCode")
+  #include "AGALMiniAssembler/OpCode.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-19L:AGALMiniAssembler#1"), "Register")
+  #include "AGALMiniAssembler/Register.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-19L:AGALMiniAssembler#1"), "Sampler")
+  #include "AGALMiniAssembler/Sampler.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,29 @@
+script ; 1433
+ sinit
+  refid "in :Graphic3D.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Graphic3D", [PackageNamespace("in ")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "in :Graphic3D"
+    popscope
+    initproperty        QName(PackageNamespace("in "), "Graphic3D")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("in "), "Graphic3D")
+  #include "Graphic3D.class.asasm"
+ end ; trait
+end ; script

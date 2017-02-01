@@ -1,0 +1,370 @@
+class
+ refid "_-0no:NameChangerPanelMediator"
+ instance QName(PackageNamespace("_-0no"), "NameChangerPanelMediator")
+  extends QName(PackageNamespace("_-r7"), "_-17v")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1zU")
+  iinit
+   refid "_-0no:NameChangerPanelMediator/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     convert_s
+     greaterthan
+     greaterthan
+     swap
+     nextname
+     add_i
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "account") flag METADATA type QName(PackageNamespace("_-1PE"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "view") flag METADATA type QName(PackageNamespace("_-0no"), "NameChangerPanel")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-nU") flag METADATA type QName(PackageNamespace("_-Nj"), "_-M4")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-LY") flag METADATA type QName(PackageNamespace("_-0MO"), "_-0WQ")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "initialize") flag OVERRIDE
+   method
+    refid "_-0no:NameChangerPanelMediator/initialize"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      bitnot
+      negate
+      dxnslate
+      bitnot
+      lshift
+      getlocal0
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L26
+
+      jump                L23
+
+      hasnext
+      increment_i
+      decrement_i
+      setlocal3
+
+      convert_u
+      pushnan
+L23:
+      pop
+      getlocal1
+      convert_b
+L26:
+      iftrue              L40
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "view")
+      getproperty         QName(PackageNamespace("", "#0"), "chooseName")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:NameChangerPanelMediator"), "_-1aM")
+      callpropvoid        QName(PackageNamespace("", "#0"), "add"), 1
+
+      getlocal2
+      dup
+      iffalse             L39
+
+      pop
+      getlocal0
+      convert_b
+L39:
+      iftrue              L45
+
+L40:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-LY")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:NameChangerPanelMediator"), "_-19j")
+      callpropvoid        QName(PackageNamespace("", "#0"), "add"), 1
+
+L45:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "destroy") flag OVERRIDE
+   method
+    refid "_-0no:NameChangerPanelMediator/destroy"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      setlocal2
+
+      popscope
+      convert_o
+      dxnslate
+      subtract
+      setlocal2
+
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L28
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "view")
+      getproperty         QName(PackageNamespace("", "#0"), "chooseName")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:NameChangerPanelMediator"), "_-1aM")
+      callpropvoid        QName(PackageNamespace("", "#0"), "remove"), 1
+
+      getlocal2
+      iftrue              L28
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-LY")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0no:NameChangerPanelMediator"), "_-19j")
+      callpropvoid        QName(PackageNamespace("", "#0"), "remove"), 1
+
+L28:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0no:NameChangerPanelMediator"), "_-1aM")
+   method
+    refid "_-0no:NameChangerPanelMediator/_-1aM"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      getlocal2
+      lessequals
+      rshift
+      add
+      convert_u
+      multiply_i
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iftrue              L19
+
+      pop
+      getlocal0
+      convert_b
+L19:
+      iffalse             L60
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "account")
+      callproperty        QName(Namespace("_-1lo"), "_-vD"), 0
+      iffalse             L61
+
+      jump                L31
+
+      popscope
+      greaterequals
+      convert_u
+      getlocal2
+      lessequals
+      pushnull
+L31:
+      getlocal2
+      iftrue              L68
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-nU")
+      getlocal1
+      dup
+      iftrue              L48
+
+      jump                L45
+
+      add_i
+      getlocal3
+      multiply_i
+      bitand
+      bitor
+      swap
+L45:
+      pop
+      getlocal2
+      convert_b
+L48:
+      iffalse             L63
+
+      findpropstrict      QName(PackageNamespace("_-0Mc"), "_-0ng")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "view")
+      getproperty         QName(PackageNamespace("", "#0"), "gs_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "view")
+      getproperty         QName(PackageNamespace("", "#0"), "_-10p")
+      constructprop       QName(PackageNamespace("_-0Mc"), "_-0ng"), 2
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+      getlocal2
+      iftrue              L68
+
+L60:
+      jump                L68
+
+L61:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-nU")
+L63:
+      findpropstrict      QName(PackageNamespace("_-04g"), "_-GE")
+      getlex              QName(PackageNamespace("_-6u"), "_-TG")
+      getproperty         QName(PackageNamespace("", "#0"), "_-s")
+      constructprop       QName(PackageNamespace("_-04g"), "_-GE"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+L68:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0no:NameChangerPanelMediator"), "_-19j")
+   method
+    refid "_-0no:NameChangerPanelMediator/_-19j"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      greaterthan
+      declocal_i          2
+      istypelate
+      inclocal_i          2
+      setlocal2
+
+      kill                2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iftrue              L20
+
+      pop
+      getlocal2
+      convert_b
+L20:
+      iffalse             L25
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "view")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-Cy"), 1
+
+L25:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0no:NameChangerPanelMediator/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

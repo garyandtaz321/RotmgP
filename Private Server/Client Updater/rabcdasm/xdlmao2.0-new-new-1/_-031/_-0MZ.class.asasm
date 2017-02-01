@@ -1,0 +1,190 @@
+class
+ refid "_-031:_-0MZ"
+ instance QName(PackageNamespace("_-031"), "_-0MZ")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-8X")
+  iinit
+   refid "_-031:_-0MZ/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     subtract_i
+     pushundefined
+     not
+     istypelate
+     istypelate
+     typeof
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal1
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-03O") flag METADATA type QName(PackageNamespace("", "#0"), "XML")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "account") flag METADATA type QName(PackageNamespace("_-1PE"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "execute")
+   method
+    refid "_-031:_-0MZ/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      urshift
+      setlocal3
+
+      kill                3
+      declocal            2
+      inclocal            2
+      pushnan
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("", "#0"), "XML")
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "account")
+      getlex              QName(PackageNamespace("_-1fj"), "_-0Iw")
+      astypelate
+      coerce              QName(PackageNamespace("_-1fj"), "_-0Iw")
+      setlocal1
+
+      getlocal3
+      dup
+      iffalse             L36
+
+      jump                L33
+
+      inclocal_i          3
+      declocal_i          3
+      hasnext
+      bitor
+      bitor
+      getlocal3
+L33:
+      pop
+      getlocal3
+      convert_b
+L36:
+      iftrue              L42
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-03O")
+      pushstring          "KabamPaymentInfo"
+      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "_-031:_-0MZ/execute#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-031:_-0MZ/execute#1"), PackageNamespace("_-031"), PackageInternalNs("_-031"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-8X"), StaticProtectedNs("_-8X")]), 1
+      iffalse             L73
+
+L42:
+      findpropstrict      QName(PackageNamespace("", "#0"), "XML")
+      jump                L50
+
+      multiply
+      subtract_i
+      declocal            2
+      negate_i
+      declocal_i          3
+      kill                2
+L50:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-03O")
+      getproperty         Multiname("KabamPaymentInfo", [PrivateNamespace("*", "_-031:_-0MZ/execute#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-031:_-0MZ/execute#1"), PackageNamespace("_-031"), PackageInternalNs("_-031"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-8X"), StaticProtectedNs("_-8X")])
+      callproperty        QName(PackageNamespace("", "#0"), "XML"), 1
+      coerce              QName(PackageNamespace("", "#0"), "XML")
+      setlocal2
+
+      getlocal3
+      dup
+      iffalse             L62
+
+      pop
+      getlocal3
+      convert_b
+L62:
+      iftrue              L69
+
+      getlocal1
+      getlocal2
+      getproperty         Multiname("signedRequest", [PrivateNamespace("*", "_-031:_-0MZ/execute#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-031:_-0MZ/execute#1"), PackageNamespace("_-031"), PackageInternalNs("_-031"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-8X"), StaticProtectedNs("_-8X")])
+      setproperty         QName(PackageNamespace("", "#0"), "signedRequest")
+
+      getlocal            4
+      iffalse             L73
+
+L69:
+      getlocal1
+      getlocal2
+      getproperty         Multiname("naid", [PrivateNamespace("*", "_-031:_-0MZ/execute#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "_-031:_-0MZ/execute#1"), PackageNamespace("_-031"), PackageInternalNs("_-031"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-8X"), StaticProtectedNs("_-8X")])
+      setproperty         QName(PackageNamespace("", "#0"), "_-19n")
+
+L73:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-031:_-0MZ/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

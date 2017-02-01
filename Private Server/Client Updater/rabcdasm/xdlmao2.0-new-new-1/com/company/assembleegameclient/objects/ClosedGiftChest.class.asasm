@@ -1,0 +1,197 @@
+class
+ refid "com.company.assembleegameclient.objects:ClosedGiftChest"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "ClosedGiftChest")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  implements Multiname("_-Rk", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-OW")
+  iinit
+   refid "com.company.assembleegameclient.objects:ClosedGiftChest/iinit"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     declocal            2
+     hasnext
+     divide
+     declocal            2
+     convert_i
+     inclocal_i          2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     jump                L22
+
+     getlocal0
+     greaterequals
+     inclocal            2
+     inclocal_i          2
+     multiply_i
+     convert_i
+L22:
+     iftrue              L26
+
+     pop
+     getlocal1
+     convert_b
+L26:
+     iffalse             L32
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal3
+     iftrue              L43
+
+L32:
+     findproperty        QName(PackageNamespace("", "#0"), "_-11k")
+     pushtrue
+     initproperty        QName(PackageNamespace("", "#0"), "_-11k")
+
+     getlocal3
+     iftrue              L43
+
+     getlocal0
+     getlex              QName(PackageNamespace("_-0CT"), "_-8w")
+     callproperty        QName(PackageNamespace("", "#0"), "_-1Sz"), 0
+     getlex              QName(PackageNamespace("_-1d9"), "_-145")
+     callproperty        QName(PackageNamespace("", "#0"), "getInstance"), 1
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:ClosedGiftChest"), "_-3p")
+
+L43:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:ClosedGiftChest"), "_-3p") type QName(PackageNamespace("_-1d9"), "_-145") end
+  trait method QName(PackageNamespace("", "#0"), "getTooltip")
+   method
+    refid "com.company.assembleegameclient.objects:ClosedGiftChest/getTooltip"
+    returns QName(PackageNamespace("_-Z0"), "_-0lC")
+    body
+     maxstack 8
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-Z0"), "_-0BS")
+      jump                L10
+
+      increment_i
+      newactivation
+      swap
+      add_i
+      pushnan
+      getlocal2
+L10:
+      pushint             3552822
+      pushint             10197915
+      getlex              QName(PackageNamespace("_-6u"), "_-TG")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Yp")
+      getlex              QName(PackageNamespace("_-6u"), "_-TG")
+      getproperty         QName(PackageNamespace("", "#0"), "_-042")
+      pushshort           200
+      constructprop       QName(PackageNamespace("_-Z0"), "_-0BS"), 5
+      coerce              QName(PackageNamespace("_-Z0"), "_-0lC")
+      setlocal1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getPanel")
+   method
+    refid "com.company.assembleegameclient.objects:ClosedGiftChest/getPanel"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace("_-1f4"), "Panel")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal            2
+      pushscope
+
+      setlocal2
+
+      newactivation
+      inclocal            2
+      setlocal3
+
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L20
+
+      pop
+      getlocal3
+      convert_b
+L20:
+      iftrue              L26
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:ClosedGiftChest"), "_-3p")
+      getlex              QName(PackageNamespace("_-6u"), "_-TG")
+      getproperty         QName(PackageNamespace("", "#0"), "_-042")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+L26:
+      findpropstrict      QName(PackageNamespace("_-0no"), "TextPanel")
+      getlocal1
+      constructprop       QName(PackageNamespace("_-0no"), "TextPanel"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:ClosedGiftChest/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,181 @@
+class
+ refid "_-fL:_-0lk"
+ instance QName(PackageNamespace("_-fL"), "_-0lk")
+  extends QName(PackageNamespace("_-fL"), "_-1b1")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-v6")
+  iinit
+   refid "_-fL:_-0lk/iinit"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "Function")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     increment_i
+     dxnslate
+     multiply
+     strictequals
+     bitor
+     getlocal2
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iffalse             L19
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+L19:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "time_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "bulletId_") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PackageNamespace("", "#0"), "objectId_") type QName(PackageNamespace("", "#0"), "int") end
+  trait method QName(PackageNamespace("", "#0"), "writeToOutput") flag OVERRIDE
+   method
+    refid "_-fL:_-0lk/writeToOutput"
+    param QName(PackageNamespace("flash.utils"), "IDataOutput")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      modulo
+      setlocal2
+
+      getlocal2
+      inclocal            2
+      declocal_i          2
+      kill                2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      jump                L22
+
+      pushscope
+
+      decrement
+      decrement_i
+      setlocal2
+
+      declocal_i          2
+      declocal            2
+L22:
+      dup
+      iftrue              L27
+
+      pop
+      getlocal0
+      convert_b
+L27:
+      iffalse             L44
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "time_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
+
+      getlocal3
+      iffalse             L40
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bulletId_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeByte"), 1
+
+      getlocal2
+      iftrue              L44
+
+L40:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "objectId_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
+
+L44:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString") flag OVERRIDE
+   method
+    refid "_-fL:_-0lk/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 7
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-0rE"), "formatToString")
+      jump                L10
+
+      subtract
+      nextname
+      equals
+      pushnan
+      convert_u
+      pop
+L10:
+      pushstring          "SQUAREHIT"
+      pushstring          "time_"
+      pushstring          "bulletId_"
+      pushstring          "objectId_"
+      callproperty        QName(ProtectedNamespace("_-0rE"), "formatToString"), 4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-fL:_-0lk/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

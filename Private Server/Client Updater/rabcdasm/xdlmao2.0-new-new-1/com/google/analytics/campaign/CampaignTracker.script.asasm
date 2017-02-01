@@ -1,0 +1,29 @@
+script ; 2060
+ sinit
+  refid "com.google.analytics.campaign:CampaignTracker.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("CampaignTracker", [PackageNamespace("com.google.analytics.campaign")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.google.analytics.campaign:CampaignTracker"
+    popscope
+    initproperty        QName(PackageNamespace("com.google.analytics.campaign"), "CampaignTracker")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.google.analytics.campaign"), "CampaignTracker")
+  #include "CampaignTracker.class.asasm"
+ end ; trait
+end ; script

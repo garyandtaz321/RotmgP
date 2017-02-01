@@ -1,0 +1,29 @@
+script ; 1919
+ sinit
+  refid "com.hurlant.crypto.hash:MAC.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("MAC", [PackageNamespace("com.hurlant.crypto.hash")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.hurlant.crypto.hash:MAC"
+    popscope
+    initproperty        QName(PackageNamespace("com.hurlant.crypto.hash"), "MAC")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.hurlant.crypto.hash"), "MAC")
+  #include "MAC.class.asasm"
+ end ; trait
+end ; script

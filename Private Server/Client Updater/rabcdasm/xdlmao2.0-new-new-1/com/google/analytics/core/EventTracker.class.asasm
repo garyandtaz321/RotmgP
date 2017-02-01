@@ -1,0 +1,84 @@
+class
+ refid "com.google.analytics.core:EventTracker"
+ instance QName(PackageNamespace("com.google.analytics.core"), "EventTracker")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.core:EventTracker")
+  iinit
+   refid "com.google.analytics.core:EventTracker/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("com.google.analytics.v4"), "GoogleAnalyticsAPI")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "name")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:EventTracker"), "_parent")
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:EventTracker"), "_parent")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:EventTracker"), "_parent") type QName(PackageNamespace("com.google.analytics.v4"), "GoogleAnalyticsAPI") end
+  trait slot QName(PackageNamespace("", "#0"), "name") type QName(PackageNamespace("", "#0"), "String") end
+  trait method QName(PackageNamespace("", "#0"), "trackEvent")
+   method
+    refid "com.google.analytics.core:EventTracker/trackEvent"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional Double(nan)
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:EventTracker"), "_parent")
+      getlex              QName(PackageNamespace("", "#0"), "name")
+      getlocal1
+      getlocal2
+      getlocal3
+      callproperty        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "trackEvent"), 4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.core:EventTracker/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

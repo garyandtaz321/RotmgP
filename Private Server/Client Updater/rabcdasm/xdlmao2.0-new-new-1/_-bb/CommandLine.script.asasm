@@ -1,0 +1,61 @@
+script ; 2001
+ sinit
+  refid "_-bb:CommandLine.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("CommandLine", [PackageNamespace("_-bb")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-bb"), "_-1b6")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-bb"), "_-1b6")
+    newclass            "_-bb:CommandLine"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-bb"), "CommandLine")
+
+    findpropstrict      Multiname("FakeFunction", [PrivateNamespace("*", "_-bb:CommandLine#1")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-bb:CommandLine/FakeFunction"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-bb:CommandLine#1"), "FakeFunction")
+
+    findpropstrict      Multiname("SlashCommand", [PrivateNamespace("*", "_-bb:CommandLine#1")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-bb:CommandLine/SlashCommand"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-bb:CommandLine#1"), "SlashCommand")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-bb"), "CommandLine")
+  #include "CommandLine.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-bb:CommandLine#1"), "FakeFunction")
+  #include "CommandLine/FakeFunction.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-bb:CommandLine#1"), "SlashCommand")
+  #include "CommandLine/SlashCommand.class.asasm"
+ end ; trait
+end ; script

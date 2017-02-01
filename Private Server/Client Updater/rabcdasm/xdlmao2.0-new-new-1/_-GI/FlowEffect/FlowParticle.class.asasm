@@ -1,0 +1,275 @@
+class
+ refid "_-GI:FlowEffect/FlowParticle"
+ instance QName(PrivateNamespace("*", "_-GI:FlowEffect"), "FlowParticle")
+  extends QName(PackageNamespace("_-GI"), "Particle")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("FlowEffect.as$1981:FlowParticle")
+  iinit
+   refid "_-GI:FlowEffect/FlowParticle/iinit"
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("flash.geom"), "Point")
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+   body
+    maxstack 4
+    localcount 10
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal3
+     getlocal1
+     getlocal2
+     constructsuper      3
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace("", "#0"), "start_")
+
+     getlocal0
+     getlocal            5
+     initproperty        QName(PackageNamespace("", "#0"), "go_")
+
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlex              QName(PackageNamespace("", "#0"), "x_")
+     getlex              QName(PackageNamespace("", "#0"), "y_")
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            6
+
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "go_")
+     getproperty         QName(PackageNamespace("", "#0"), "x_")
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "go_")
+     getproperty         QName(PackageNamespace("", "#0"), "y_")
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            7
+
+     getlocal0
+     getlex              QName(PackageNamespace("flash.geom"), "Point")
+     getlocal            6
+     getlocal            7
+     callproperty        QName(PackageNamespace("", "#0"), "distance"), 2
+     initproperty        QName(PackageNamespace("", "#0"), "maxDist_")
+
+     getlocal0
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+     pushbyte            5
+     multiply
+     initproperty        QName(PackageNamespace("", "#0"), "flowSpeed_")
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "total_")
+     dup
+     setlocal            8
+
+     getproperty         QName(PackageNamespace("", "#0"), "total_")
+     increment_i
+     setlocal            9
+
+     getlocal            8
+     getlocal            9
+     setproperty         QName(PackageNamespace("", "#0"), "total_")
+
+     kill                9
+     kill                8
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "start_") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace("", "#0"), "go_") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject") end
+  trait slot QName(PackageNamespace("", "#0"), "maxDist_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "flowSpeed_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "_-GI:FlowEffect/FlowParticle/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 4
+     localcount 12
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            8
+      convert_d
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            4
+
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go_")
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go_")
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            5
+
+      getlex              QName(PackageNamespace("flash.geom"), "Point")
+      getlocal            4
+      getlocal            5
+      callproperty        QName(PackageNamespace("", "#0"), "distance"), 2
+      convert_d
+      dup
+      setlocal            6
+
+      pushdouble          0.5
+      ifnlt               L43
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "total_")
+      dup
+      setlocal            10
+
+      getproperty         QName(PackageNamespace("", "#0"), "total_")
+      decrement_i
+      setlocal            11
+
+      getlocal            10
+      getlocal            11
+      setproperty         QName(PackageNamespace("", "#0"), "total_")
+
+      kill                11
+      kill                10
+      pushfalse
+      returnvalue
+
+L43:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "flowSpeed_")
+      getlocal3
+      getlocal2
+      multiply
+      pushshort           1000
+      divide
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "flowSpeed_")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "maxDist_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "flowSpeed_")
+      getlocal2
+      multiply
+      pushshort           1000
+      divide
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "maxDist_")
+
+      getlocal            6
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "flowSpeed_")
+      getlocal2
+      multiply
+      pushshort           1000
+      divide
+      subtract
+      convert_d
+      dup
+      setlocal            7
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "maxDist_")
+      ifngt               L82
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "maxDist_")
+      convert_d
+      setlocal            7
+
+L82:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go_")
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      subtract
+      convert_d
+      setlocal            8
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go_")
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      subtract
+      convert_d
+      setlocal            9
+
+      getlocal            8
+      getlocal            7
+      getlocal            6
+      divide
+      multiply
+      convert_d
+      setlocal            8
+
+      getlocal            9
+      getlocal            7
+      getlocal            6
+      divide
+      multiply
+      convert_d
+      setlocal            9
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "moveTo")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go_")
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      getlocal            8
+      subtract
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "go_")
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      getlocal            9
+      subtract
+      callpropvoid        QName(PackageNamespace("", "#0"), "moveTo"), 2
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-GI:FlowEffect/FlowParticle/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace("", "#0"), "total_")
+    pushbyte            0
+    setproperty         QName(PackageNamespace("", "#0"), "total_")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace("", "#0"), "total_") slotid 1 type QName(PackageNamespace("", "#0"), "int") value Integer(0) end
+end ; class

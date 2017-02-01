@@ -1,0 +1,61 @@
+script ; 1679
+ sinit
+  refid "_-GI:StreamEffect.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("StreamEffect", [PackageNamespace("_-GI")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "_-1S9")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "_-1S9")
+    newclass            "_-GI:StreamEffect"
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-GI"), "StreamEffect")
+
+    findpropstrict      Multiname("StreamParticle", [PrivateNamespace("*", "_-GI:StreamEffect")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "Particle")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "Particle")
+    newclass            "_-GI:StreamEffect/StreamParticle"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-GI:StreamEffect"), "StreamParticle")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-GI"), "StreamEffect")
+  #include "StreamEffect.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-GI:StreamEffect"), "StreamParticle")
+  #include "StreamEffect/StreamParticle.class.asasm"
+ end ; trait
+end ; script

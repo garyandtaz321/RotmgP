@@ -1,0 +1,173 @@
+class
+ refid "_-7T:_-V9"
+ instance QName(PackageNamespace("_-7T"), "_-V9")
+  extends QName(PackageNamespace("_-7T"), "_-0CZ")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1sy")
+  iinit
+   refid "_-7T:_-V9/iinit"
+   param QName(PackageNamespace("", "#0"), "int")
+   body
+    maxstack 7
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     inclocal            2
+     lessequals
+     pushnan
+     rshift
+     declocal            2
+     getlocal2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L24
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace("", "#0"), "_-1qg")
+     pushstring          ""
+     initproperty        QName(PackageNamespace("", "#0"), "_-1qg")
+
+     findproperty        QName(PackageNamespace("", "#0"), "linkDetail")
+     pushstring          "https://forums.wildshadow.com/"
+     initproperty        QName(PackageNamespace("", "#0"), "linkDetail")
+
+L24:
+     findproperty        QName(PackageNamespace("", "#0"), "_-Qn")
+     getlocal2
+     dup
+     iffalse             L31
+
+     pop
+     getlocal2
+     convert_b
+L31:
+     iftrue              L36
+
+     getlocal1
+     pushbyte            0
+     equals
+     iffalse             L52
+
+L36:
+     pushstring          "Realm Forums and Wiki"
+     getlocal3
+     dup
+     jump                L46
+
+     coerce_a
+     inclocal            2
+     lessequals
+     bitor
+     setlocal2
+
+     declocal_i          2
+L46:
+     iftrue              L50
+
+     pop
+     getlocal1
+     convert_b
+L50:
+     iffalse             L53
+
+     jump                L53
+
+L52:
+     pushstring          "Forums"
+L53:
+     initproperty        QName(PackageNamespace("", "#0"), "_-Qn")
+
+     getlocal2
+     iftrue              L79
+
+     findproperty        QName(PackageNamespace("", "#0"), "_-1ph")
+     findpropstrict      QName(PackageNamespace("", "#0"), "Date")
+     constructprop       QName(PackageNamespace("", "#0"), "Date"), 0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "getTime"), 0
+     pushint             1000000000
+     subtract
+     initproperty        QName(PackageNamespace("", "#0"), "_-1ph")
+
+     getlocal2
+     iftrue              L98
+
+     findproperty        QName(PackageNamespace("", "#0"), "_-0Gs")
+     findpropstrict      QName(PackageNamespace("", "#0"), "Date")
+     constructprop       QName(PackageNamespace("", "#0"), "Date"), 0
+     jump                L75
+
+     inclocal_i          2
+     pushundefined
+     urshift
+     bitnot
+     increment_i
+     add_i
+L75:
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "getTime"), 0
+     pushint             1000000000
+     add
+     initproperty        QName(PackageNamespace("", "#0"), "_-0Gs")
+
+L79:
+     findproperty        QName(PackageNamespace("", "#0"), "_-0")
+     pushstring          "kabam.com"
+     pushstring          "kongregate"
+     pushstring          "steam"
+     pushstring          "rotmg"
+     newarray            4
+     initproperty        QName(PackageNamespace("", "#0"), "_-0")
+
+     findproperty        QName(PackageNamespace("", "#0"), "linkType")
+     getlex              QName(PackageNamespace("_-7T"), "_-0-l")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0rm")
+     initproperty        QName(PackageNamespace("", "#0"), "linkType")
+
+     findproperty        QName(PackageNamespace("", "#0"), "priority")
+     pushint             999999
+     initproperty        QName(PackageNamespace("", "#0"), "priority")
+
+     getlocal2
+     iftrue              L98
+
+     findproperty        QName(PackageNamespace("", "#0"), "slot")
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "slot")
+
+L98:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-7T:_-V9/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

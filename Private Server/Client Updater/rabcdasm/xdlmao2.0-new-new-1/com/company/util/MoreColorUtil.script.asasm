@@ -1,0 +1,41 @@
+script ; 801
+ sinit
+  refid "com.company.util:MoreColorUtil.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("MoreColorUtil", [PackageNamespace("com.company.util")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.company.util:MoreColorUtil"
+    popscope
+    initproperty        QName(PackageNamespace("com.company.util"), "MoreColorUtil")
+
+    findpropstrict      Multiname("StaticEnforcer", [PrivateNamespace("*", "com.company.util:MoreColorUtil")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.company.util:MoreColorUtil/StaticEnforcer"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "com.company.util:MoreColorUtil"), "StaticEnforcer")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.company.util"), "MoreColorUtil")
+  #include "MoreColorUtil.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "com.company.util:MoreColorUtil"), "StaticEnforcer")
+  #include "MoreColorUtil/StaticEnforcer.class.asasm"
+ end ; trait
+end ; script

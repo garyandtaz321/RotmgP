@@ -1,0 +1,332 @@
+class
+ refid "com.hurlant.crypto.hash:HMAC"
+ instance QName(PackageNamespace("com.hurlant.crypto.hash"), "HMAC")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("IHMAC", [PackageNamespace("com.hurlant.crypto.hash")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0mh")
+  iinit
+   refid "com.hurlant.crypto.hash:HMAC/iinit"
+   param QName(PackageNamespace("com.hurlant.crypto.hash"), "IHash")
+   param QName(PackageNamespace("", "#0"), "uint")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "hash")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "bits")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "hash") type QName(PackageNamespace("com.hurlant.crypto.hash"), "IHash") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "bits") type QName(PackageNamespace("", "#0"), "uint") end
+  trait method QName(PackageNamespace("", "#0"), "getHashSize")
+   method
+    refid "com.hurlant.crypto.hash:HMAC/getHashSize"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "bits")
+      pushbyte            0
+      ifeq                L11
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "bits")
+      pushbyte            8
+      divide
+      returnvalue
+
+L11:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "hash")
+      callproperty        QName(Namespace("_-2M"), "getHashSize"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "compute")
+   method
+    refid "com.hurlant.crypto.hash:HMAC/compute"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    body
+     maxstack 4
+     localcount 9
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal3
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "hash")
+      callproperty        QName(Namespace("_-2M"), "getInputSize"), 0
+      ifngt               L18
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "hash")
+      getlocal1
+      callproperty        QName(Namespace("_-2M"), "hash"), 1
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal3
+
+      jump                L25
+
+L18:
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal3
+
+      getlocal3
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBytes"), 1
+
+L25:
+      jump                L32
+
+L26:
+      label
+      getlocal3
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            0
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), PackageNamespace("com.hurlant.crypto.hash"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC/compute"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0mh"), StaticProtectedNs("_-0mh")])
+
+L32:
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "hash")
+      callproperty        QName(Namespace("_-2M"), "getInputSize"), 0
+      iflt                L26
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal            4
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      jump                L71
+
+L50:
+      label
+      getlocal            4
+      getlocal            6
+      getlocal3
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), PackageNamespace("com.hurlant.crypto.hash"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC/compute"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0mh"), StaticProtectedNs("_-0mh")])
+      pushbyte            54
+      bitxor
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), PackageNamespace("com.hurlant.crypto.hash"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC/compute"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0mh"), StaticProtectedNs("_-0mh")])
+
+      getlocal            5
+      getlocal            6
+      getlocal3
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), PackageNamespace("com.hurlant.crypto.hash"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC/compute"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0mh"), StaticProtectedNs("_-0mh")])
+      pushbyte            92
+      bitxor
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), PackageNamespace("com.hurlant.crypto.hash"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC/compute"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0mh"), StaticProtectedNs("_-0mh")])
+
+      getlocal            6
+      increment
+      convert_u
+      setlocal            6
+
+L71:
+      getlocal            6
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L50
+
+      getlocal            4
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      setproperty         QName(PackageNamespace("", "#0"), "position")
+
+      getlocal            4
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBytes"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "hash")
+      getlocal            4
+      callproperty        QName(Namespace("_-2M"), "hash"), 1
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal            7
+
+      getlocal            5
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      setproperty         QName(PackageNamespace("", "#0"), "position")
+
+      getlocal            5
+      getlocal            7
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBytes"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "hash")
+      getlocal            5
+      callproperty        QName(Namespace("_-2M"), "hash"), 1
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal            8
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "bits")
+      pushbyte            0
+      greaterthan
+      dup
+      iffalse             L115
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "bits")
+      pushbyte            8
+      getlocal            8
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      multiply
+      lessthan
+L115:
+      iffalse             L122
+
+      getlocal            8
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "bits")
+      pushbyte            8
+      divide
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+L122:
+      getlocal            8
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "dispose")
+   method
+    refid "com.hurlant.crypto.hash:HMAC/dispose"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "hash")
+
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "bits")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "com.hurlant.crypto.hash:HMAC/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "hmac-"
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "bits")
+      pushbyte            0
+      greaterthan
+      iffalse             L14
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "bits")
+      pushstring          "-"
+      add
+      coerce_a
+      jump                L16
+
+L14:
+      pushstring          ""
+      coerce_a
+L16:
+      add
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.hash:HMAC"), "hash")
+      callproperty        QName(Namespace("_-2M"), "toString"), 0
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.crypto.hash:HMAC/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

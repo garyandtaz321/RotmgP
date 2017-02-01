@@ -1,0 +1,141 @@
+class
+ refid "_-Nf:JSON"
+ instance QName(PackageNamespace("_-Nf"), "JSON")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0vJ")
+  iinit
+   refid "_-Nf:JSON/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     subtract_i
+     bitxor
+     istypelate
+     add
+     modulo
+     bitand
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L20
+
+     pop
+     getlocal0
+     convert_b
+L20:
+     iffalse             L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-Nf:JSON/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace("", "#0"), "encode") flag FINAL dispid 3
+  method
+   refid "_-Nf:JSON/encode"
+   param QName(PackageNamespace("", "#0"), "Object")
+   returns QName(PackageNamespace("", "#0"), "String")
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("_-Nf"), "_-1zp")
+     jump                L10
+
+     nextvalue
+     checkfilter
+     pushscope
+
+     convert_s
+     coerce_a
+     pushnan
+L10:
+     getlocal1
+     constructprop       QName(PackageNamespace("_-Nf"), "_-1zp"), 1
+     coerce              QName(PackageNamespace("_-Nf"), "_-1zp")
+     setlocal2
+
+     getlocal2
+     callproperty        QName(PackageNamespace("", "#0"), "getString"), 0
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "decode") flag FINAL dispid 4
+  method
+   refid "_-Nf:JSON/decode"
+   param QName(PackageNamespace("", "#0"), "String")
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("_-Nf"), "_-04-")
+     jump                L10
+
+     getlocal0
+     strictequals
+     negate_i
+     bitxor
+     pushnan
+     divide
+L10:
+     getlocal1
+     constructprop       QName(PackageNamespace("_-Nf"), "_-04-"), 1
+     coerce              QName(PackageNamespace("_-Nf"), "_-04-")
+     setlocal2
+
+     getlocal2
+     callproperty        QName(PackageNamespace("", "#0"), "getValue"), 0
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

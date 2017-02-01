@@ -1,0 +1,113 @@
+class
+ refid "com.hurlant.util.der:Set"
+ instance QName(PackageNamespace("com.hurlant.util.der"), "Set")
+  extends QName(PackageNamespace("com.hurlant.util.der"), "Sequence")
+  implements Multiname("IAsn1Type", [PackageNamespace("com.hurlant.util.der")])
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1qe")
+  iinit
+   refid "com.hurlant.util.der:Set/iinit"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "uint")
+   flag HAS_OPTIONAL
+   optional Integer(49)
+   optional Integer(0)
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "toString") flag OVERRIDE
+   method
+    refid "com.hurlant.util.der:Set/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal1
+
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+      getproperty         QName(PackageNamespace("", "#0"), "indent")
+      coerce_s
+      setlocal1
+
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+      getproperty         QName(PackageNamespace("", "#0"), "indent")
+      pushstring          "    "
+      add
+      setproperty         QName(PackageNamespace("", "#0"), "indent")
+
+      findpropstrict      QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join")
+      pushstring          "\n"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      coerce_s
+      setlocal2
+
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+      getlocal1
+      setproperty         QName(PackageNamespace("", "#0"), "indent")
+
+      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
+      getproperty         QName(PackageNamespace("", "#0"), "indent")
+      pushstring          "Set["
+      add
+      getlex              QName(ProtectedNamespace("_-0Pt"), "type")
+      add
+      pushstring          "]["
+      add
+      getlex              QName(ProtectedNamespace("_-0Pt"), "len")
+      add
+      pushstring          "][\n"
+      add
+      getlocal2
+      add
+      pushstring          "\n"
+      add
+      getlocal1
+      add
+      pushstring          "]"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.util.der:Set/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

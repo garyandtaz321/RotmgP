@@ -1,0 +1,29 @@
+script ; 1410
+ sinit
+  refid "_-tb:_-EM.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-EM", [PackageNamespace("_-tb")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-tb:_-EM"
+    popscope
+    initproperty        QName(PackageNamespace("_-tb"), "_-EM")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-tb"), "_-EM")
+  #include "_-EM.class.asasm"
+ end ; trait
+end ; script

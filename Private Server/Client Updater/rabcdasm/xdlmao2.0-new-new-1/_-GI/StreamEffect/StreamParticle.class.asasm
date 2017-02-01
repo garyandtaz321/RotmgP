@@ -1,0 +1,267 @@
+class
+ refid "_-GI:StreamEffect/StreamParticle"
+ instance QName(PrivateNamespace("*", "_-GI:StreamEffect"), "StreamParticle")
+  extends QName(PackageNamespace("_-GI"), "Particle")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("StreamEffect.as$1988:StreamParticle")
+  iinit
+   refid "_-GI:StreamEffect/StreamParticle/iinit"
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("flash.geom"), "Point")
+   param QName(PackageNamespace("flash.geom"), "Point")
+   body
+    maxstack 4
+    localcount 11
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+     constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 0
+     initproperty        QName(ProtectedNamespace("StreamEffect.as$1988:StreamParticle"), "moveVec_")
+
+     getlocal0
+     getlocal3
+     getlocal1
+     getlocal2
+     constructsuper      3
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("StreamEffect.as$1988:StreamParticle"), "moveVec_")
+     getlocal            5
+     setproperty         QName(PackageNamespace("", "#0"), "z")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace("", "#0"), "timeLeft_")
+
+     getlocal0
+     getlocal            6
+     initproperty        QName(PackageNamespace("", "#0"), "start_")
+
+     getlocal0
+     getlocal            7
+     initproperty        QName(PackageNamespace("", "#0"), "end_")
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "end_")
+     getproperty         QName(PackageNamespace("", "#0"), "x")
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "start_")
+     getproperty         QName(PackageNamespace("", "#0"), "x")
+     subtract
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "timeLeft_")
+     divide
+     initproperty        QName(PackageNamespace("", "#0"), "dx_")
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "end_")
+     getproperty         QName(PackageNamespace("", "#0"), "y")
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "start_")
+     getproperty         QName(PackageNamespace("", "#0"), "y")
+     subtract
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "timeLeft_")
+     divide
+     initproperty        QName(PackageNamespace("", "#0"), "dy_")
+
+     getlex              QName(PackageNamespace("flash.geom"), "Point")
+     getlocal            6
+     getlocal            7
+     callproperty        QName(PackageNamespace("", "#0"), "distance"), 2
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "timeLeft_")
+     divide
+     convert_d
+     setlocal            8
+
+     pushdouble          0.25
+     convert_d
+     setlocal            9
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "dy_")
+     getlocal            8
+     divide
+     getlocal            9
+     multiply
+     initproperty        QName(PackageNamespace("", "#0"), "xDeflect_")
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "dx_")
+     negate
+     getlocal            8
+     divide
+     getlocal            9
+     multiply
+     initproperty        QName(PackageNamespace("", "#0"), "yDeflect_")
+
+     getlocal0
+     findproperty        QName(PackageNamespace("", "#0"), "x_")
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "start_")
+     getproperty         QName(PackageNamespace("", "#0"), "x")
+     dup
+     setlocal            10
+
+     initproperty        QName(PackageNamespace("", "#0"), "x_")
+
+     getlocal            10
+     kill                10
+     initproperty        QName(PackageNamespace("", "#0"), "pathX_")
+
+     getlocal0
+     findproperty        QName(PackageNamespace("", "#0"), "y_")
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "start_")
+     getproperty         QName(PackageNamespace("", "#0"), "y")
+     dup
+     setlocal            10
+
+     initproperty        QName(PackageNamespace("", "#0"), "y_")
+
+     getlocal            10
+     kill                10
+     initproperty        QName(PackageNamespace("", "#0"), "pathY_")
+
+     getlocal0
+     pushdouble          0.25
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+     pushdouble          0.5
+     multiply
+     add
+     initproperty        QName(PackageNamespace("", "#0"), "period_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "timeLeft_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(ProtectedNamespace("StreamEffect.as$1988:StreamParticle"), "moveVec_") type QName(PackageNamespace("flash.geom"), "Vector3D") end
+  trait slot QName(PackageNamespace("", "#0"), "start_") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace("", "#0"), "end_") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PackageNamespace("", "#0"), "dx_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "dy_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "pathX_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "pathY_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "xDeflect_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "yDeflect_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "period_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "_-GI:StreamEffect/StreamParticle/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "timeLeft_")
+      getlocal2
+      subtract
+      initproperty        QName(PackageNamespace("", "#0"), "timeLeft_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "timeLeft_")
+      pushbyte            0
+      ifnle               L14
+
+      pushfalse
+      returnvalue
+
+L14:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "pathX_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "dx_")
+      getlocal2
+      multiply
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "pathX_")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "pathY_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "dy_")
+      getlocal2
+      multiply
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "pathY_")
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "timeLeft_")
+      pushshort           1000
+      divide
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "period_")
+      divide
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      convert_d
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "moveTo")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "pathX_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "xDeflect_")
+      getlocal3
+      multiply
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "pathY_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "yDeflect_")
+      getlocal3
+      multiply
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "moveTo"), 2
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-GI:StreamEffect/StreamParticle/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

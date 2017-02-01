@@ -1,0 +1,315 @@
+class
+ refid "_-058:StarBackground/Star"
+ instance QName(PrivateNamespace("*", "_-058:StarBackground#0"), "Star")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("StarBackground.as$764:Star")
+  iinit
+   refid "_-058:StarBackground/Star/iinit"
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("flash.display"), "BitmapData")
+   returns QName(PackageNamespace("", "#0"), "void")
+   body
+    maxstack 6
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsBitmapFill")
+     pushnull
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+     constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
+     pushfalse
+     pushfalse
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsBitmapFill"), 4
+     initproperty        QName(ProtectedNamespace("StarBackground.as$764:Star"), "bitmapFill_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsPath")
+     getlex              QName(StaticProtectedNs("StarBackground.as$764:Star"), "sqCommands")
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-058:StarBackground#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_-058:StarBackground/Star"), StaticProtectedNs("StarBackground.as$764:Star"), ProtectedNamespace("StarBackground.as$764:Star")])
+     getlex              QName(PackageNamespace("", "#0"), "Number")
+     applytype           1
+     construct           0
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsPath"), 2
+     initproperty        QName(ProtectedNamespace("StarBackground.as$764:Star"), "path_")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "x_")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "y_")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace("", "#0"), "scale_")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace("", "#0"), "bitmap_")
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "bitmap_")
+     getproperty         QName(PackageNamespace("", "#0"), "width")
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "scale_")
+     multiply
+     initproperty        QName(PrivateNamespace("*", "_-058:StarBackground/Star"), "w_")
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "bitmap_")
+     getproperty         QName(PackageNamespace("", "#0"), "height")
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "scale_")
+     multiply
+     initproperty        QName(PrivateNamespace("*", "_-058:StarBackground/Star"), "h_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "x_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "y_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "scale_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "bitmap_") type QName(PackageNamespace("flash.display"), "BitmapData") end
+  trait slot QName(PrivateNamespace("*", "_-058:StarBackground/Star"), "w_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PrivateNamespace("*", "_-058:StarBackground/Star"), "h_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(ProtectedNamespace("StarBackground.as$764:Star"), "bitmapFill_") type QName(PackageNamespace("flash.display"), "GraphicsBitmapFill") end
+  trait slot QName(ProtectedNamespace("StarBackground.as$764:Star"), "path_") type QName(PackageNamespace("flash.display"), "GraphicsPath") end
+  trait method QName(PackageNamespace("", "#0"), "draw")
+   method
+    refid "_-058:StarBackground/Star/draw"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-18q")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 10
+     localcount 9
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "angleRad_")
+      negate
+      callproperty        QName(PackageNamespace("", "#0"), "cos"), 1
+      multiply
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "angleRad_")
+      negate
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      multiply
+      subtract
+      convert_d
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "angleRad_")
+      negate
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      multiply
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "angleRad_")
+      negate
+      callproperty        QName(PackageNamespace("", "#0"), "cos"), 1
+      multiply
+      add
+      convert_d
+      setlocal            5
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("StarBackground.as$764:Star"), "bitmapFill_")
+      getproperty         QName(PackageNamespace("", "#0"), "matrix")
+      coerce              QName(PackageNamespace("flash.geom"), "Matrix")
+      dup
+      setlocal            6
+
+      callpropvoid        QName(PackageNamespace("", "#0"), "identity"), 0
+
+      getlocal            6
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bitmap_")
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      negate
+      pushbyte            2
+      divide
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bitmap_")
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      negate
+      pushbyte            2
+      divide
+      callpropvoid        QName(PackageNamespace("", "#0"), "translate"), 2
+
+      getlocal            6
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "scale_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "scale_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "scale"), 2
+
+      getlocal            6
+      getlocal            4
+      getlocal            5
+      callpropvoid        QName(PackageNamespace("", "#0"), "translate"), 2
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("StarBackground.as$764:Star"), "bitmapFill_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "bitmap_")
+      setproperty         QName(PackageNamespace("", "#0"), "bitmapData")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("StarBackground.as$764:Star"), "path_")
+      getproperty         QName(PackageNamespace("", "#0"), "data")
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      getlocal            4
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-058:StarBackground/Star"), "w_")
+      pushbyte            2
+      divide
+      subtract
+      convert_d
+      setlocal            7
+
+      getlocal            5
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-058:StarBackground/Star"), "h_")
+      pushbyte            2
+      divide
+      subtract
+      convert_d
+      setlocal            8
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("StarBackground.as$764:Star"), "path_")
+      getproperty         QName(PackageNamespace("", "#0"), "data")
+      getlocal            7
+      getlocal            8
+      getlocal            7
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-058:StarBackground/Star"), "w_")
+      add
+      getlocal            8
+      getlocal            7
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-058:StarBackground/Star"), "w_")
+      add
+      getlocal            8
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-058:StarBackground/Star"), "h_")
+      add
+      getlocal            7
+      getlocal            8
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-058:StarBackground/Star"), "h_")
+      add
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 8
+
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("StarBackground.as$764:Star"), "bitmapFill_")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("StarBackground.as$764:Star"), "path_")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      getlex              QName(StaticProtectedNs("StarBackground.as$764:Star"), "END_FILL")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-058:StarBackground/Star/cinit"
+  body
+   maxstack 5
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(StaticProtectedNs("StarBackground.as$764:Star"), "sqCommands")
+    findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+    getproperty         Multiname("Vector", [PrivateNamespace("*", "_-058:StarBackground#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_-058:StarBackground/Star"), StaticProtectedNs("StarBackground.as$764:Star"), ProtectedNamespace("StarBackground.as$764:Star")])
+    getlex              QName(PackageNamespace("", "#0"), "int")
+    applytype           1
+    pushbyte            4
+    construct           1
+    dup
+    pushbyte            0
+    getlex              QName(PackageNamespace("flash.display"), "GraphicsPathCommand")
+    getproperty         QName(PackageNamespace("", "#0"), "MOVE_TO")
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            1
+    getlex              QName(PackageNamespace("flash.display"), "GraphicsPathCommand")
+    getproperty         QName(PackageNamespace("", "#0"), "LINE_TO")
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            2
+    getlex              QName(PackageNamespace("flash.display"), "GraphicsPathCommand")
+    getproperty         QName(PackageNamespace("", "#0"), "LINE_TO")
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    dup
+    pushbyte            3
+    getlex              QName(PackageNamespace("flash.display"), "GraphicsPathCommand")
+    getproperty         QName(PackageNamespace("", "#0"), "LINE_TO")
+    setproperty         MultinameL([PackageNamespace("", "#0")])
+
+    initproperty        QName(StaticProtectedNs("StarBackground.as$764:Star"), "sqCommands")
+
+    findproperty        QName(StaticProtectedNs("StarBackground.as$764:Star"), "END_FILL")
+    findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsEndFill")
+    constructprop       QName(PackageNamespace("flash.display"), "GraphicsEndFill"), 0
+    initproperty        QName(StaticProtectedNs("StarBackground.as$764:Star"), "END_FILL")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(StaticProtectedNs("StarBackground.as$764:Star"), "sqCommands") slotid 1 type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "int")>) end
+ trait const QName(StaticProtectedNs("StarBackground.as$764:Star"), "END_FILL") slotid 2 type QName(PackageNamespace("flash.display"), "GraphicsEndFill") end
+end ; class

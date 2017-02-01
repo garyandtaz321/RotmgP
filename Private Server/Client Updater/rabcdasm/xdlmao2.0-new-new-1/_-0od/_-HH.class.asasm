@@ -1,0 +1,337 @@
+class
+ refid "_-0od:_-HH"
+ instance QName(PackageNamespace("_-0od"), "_-HH")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1WR")
+  iinit
+   refid "_-0od:_-HH/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     hasnext
+     dup
+     negate_i
+     bitor
+     subtract
+     greaterequals
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iffalse             L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "getHeight")
+   method
+    refid "_-0od:_-HH/getHeight"
+    returns QName(PackageNamespace("", "#0"), "Number")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-1WR"), "_-pe")
+   method
+    refid "_-0od:_-HH/_-1WR:_-pe"
+    param QName(PackageNamespace("com.company.ui"), "_-V2")
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 10
+     localcount 8
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      pushundefined
+      kill                6
+      setlocal3
+
+      declocal            5
+      declocal_i          6
+      dxnslate
+L10:
+      setlocal            6
+
+      setlocal            7
+
+      getlocal0
+      pushscope
+
+      getlocal            6
+      iftrue              L18
+
+      getlocal            4
+      iffalse             L30
+
+L18:
+      getlex              QName(StaticProtectedNs("_-1WR"), "_-0GY")
+      getlocal            6
+      iftrue              L42
+
+      convert_u
+      getlocal            6
+      dup
+      iffalse             L28
+
+      pop
+      getlocal2
+      convert_b
+L28:
+      iftrue              L33
+
+      jump                L41
+
+L30:
+      getlex              QName(StaticProtectedNs("_-1WR"), "_-xi")
+      getlocal            6
+      iftrue              L42
+
+L33:
+      convert_u
+      getlocal            6
+      dup
+      iffalse             L40
+
+      pop
+      getlocal2
+      convert_b
+L40:
+      iftrue              L42
+
+L41:
+      convert_u
+L42:
+      setlocal            5
+
+      getlocal            7
+      iffalse             L115
+
+      getlex              QName(PackageNamespace("", "#0"), "graphics")
+      pushbyte            2
+      getlocal            5
+      pushbyte            1
+      pushfalse
+      jump                L57
+
+      modulo
+      inclocal            4
+      inclocal_i          3
+      inclocal_i          5
+      pop
+      swap
+L57:
+      getlex              QName(PackageNamespace("flash.display"), "LineScaleMode")
+      getproperty         QName(PackageNamespace("", "#0"), "NORMAL")
+      getlex              QName(PackageNamespace("flash.display"), "CapsStyle")
+      getproperty         QName(PackageNamespace("", "#0"), "ROUND")
+      getlex              QName(PackageNamespace("flash.display"), "JointStyle")
+      getproperty         QName(PackageNamespace("", "#0"), "ROUND")
+      callpropvoid        QName(PackageNamespace("", "#0"), "lineStyle"), 7
+
+      getlocal            6
+      dup
+      iffalse             L70
+
+      pop
+      getlocal2
+      convert_b
+L70:
+      iftrue              L121
+
+      getlex              QName(PackageNamespace("", "#0"), "graphics")
+      getlex              QName(StaticProtectedNs("_-1WR"), "_-1QI")
+      pushbyte            1
+      callpropvoid        QName(PackageNamespace("", "#0"), "beginFill"), 2
+
+      getlocal            7
+      iffalse             L115
+
+      getlex              QName(PackageNamespace("", "#0"), "graphics")
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal2
+      subtract
+      pushbyte            5
+      subtract
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      getlocal3
+      subtract
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "width")
+      getlocal2
+      jump                L98
+
+      subtract_i
+      getlocal2
+      getlocal2
+      pushnan
+      getlocal3
+      inclocal_i          4
+L98:
+      pushbyte            2
+      multiply
+      add
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "height")
+      getlocal3
+      pushbyte            2
+      multiply
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "drawRect"), 4
+
+      getlocal            7
+      dup
+      iftrue              L114
+
+      pop
+      getlocal3
+      convert_b
+L114:
+      iffalse             L119
+
+L115:
+      getlex              QName(PackageNamespace("", "#0"), "graphics")
+      callpropvoid        QName(PackageNamespace("", "#0"), "endFill"), 0
+
+      getlocal            6
+      iftrue              L121
+
+L119:
+      getlex              QName(PackageNamespace("", "#0"), "graphics")
+      callpropvoid        QName(PackageNamespace("", "#0"), "lineStyle"), 0
+
+L121:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0od:_-HH/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    strictequals
+    popscope
+    convert_b
+    astypelate
+    dxnslate
+    greaterthan
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    iftrue              L50
+
+    findproperty        QName(StaticProtectedNs("_-1WR"), "_-1QI")
+    pushint             3355443
+    initproperty        QName(StaticProtectedNs("_-1WR"), "_-1QI")
+
+    jump                L25
+
+    typeof
+    convert_u
+    astypelate
+    setlocal3
+
+    add
+    increment
+L25:
+    getlocal1
+    dup
+    iftrue              L31
+
+    pop
+    getlocal0
+    convert_b
+L31:
+    iffalse             L47
+
+    findproperty        QName(StaticProtectedNs("_-1WR"), "_-0GY")
+    pushint             16549442
+    initproperty        QName(StaticProtectedNs("_-1WR"), "_-0GY")
+
+    getlocal2
+    iftrue              L47
+
+    findproperty        QName(StaticProtectedNs("_-1WR"), "_-xi")
+    pushint             4539717
+    initproperty        QName(StaticProtectedNs("_-1WR"), "_-xi")
+
+    getlocal1
+    dup
+    iftrue              L46
+
+    pop
+    getlocal1
+    convert_b
+L46:
+    iffalse             L50
+
+L47:
+    findproperty        QName(StaticProtectedNs("_-1WR"), "_-0Qo")
+    pushint             11776947
+    initproperty        QName(StaticProtectedNs("_-1WR"), "_-0Qo")
+
+L50:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(StaticProtectedNs("_-1WR"), "_-1QI") slotid 1 type QName(PackageNamespace("", "#0"), "uint") value Integer(3355443) end
+ trait const QName(StaticProtectedNs("_-1WR"), "_-0GY") slotid 2 type QName(PackageNamespace("", "#0"), "uint") value Integer(16549442) end
+ trait const QName(StaticProtectedNs("_-1WR"), "_-xi") slotid 3 type QName(PackageNamespace("", "#0"), "uint") value Integer(4539717) end
+ trait const QName(StaticProtectedNs("_-1WR"), "_-0Qo") slotid 4 type QName(PackageNamespace("", "#0"), "uint") value Integer(11776947) end
+end ; class

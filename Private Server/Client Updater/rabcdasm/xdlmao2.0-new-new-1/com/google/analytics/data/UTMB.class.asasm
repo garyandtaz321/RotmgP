@@ -1,0 +1,267 @@
+class
+ refid "com.google.analytics.data:UTMB"
+ instance QName(PackageNamespace("com.google.analytics.data"), "UTMB")
+  extends QName(PackageNamespace("com.google.analytics.data"), "UTMCookie")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.data:UTMB")
+  iinit
+   refid "com.google.analytics.data:UTMB/iinit"
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   flag HAS_OPTIONAL
+   optional Double(nan)
+   optional Double(nan)
+   optional Double(nan)
+   optional Double(nan)
+   body
+    maxstack 7
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     pushstring          "utmb"
+     pushstring          "__utmb"
+     pushstring          "domainHash"
+     pushstring          "trackCount"
+     pushstring          "token"
+     pushstring          "lastTime"
+     newarray            4
+     getlex              QName(PackageNamespace("", "#0"), "defaultTimespan")
+     pushshort           1000
+     multiply
+     constructsuper      4
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "domainHash")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "trackCount")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace("", "#0"), "token")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace("", "#0"), "lastTime")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait setter QName(PackageNamespace("", "#0"), "token")
+   method
+    refid "com.google.analytics.data:UTMB/token/setter"
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMB"), "_token")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMB"), "_token")
+
+      findpropstrict      QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "update")
+      callpropvoid        QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "update"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.data:UTMB"), "_trackCount") type QName(PackageNamespace("", "#0"), "Number") end
+  trait setter QName(PackageNamespace("", "#0"), "trackCount")
+   method
+    refid "com.google.analytics.data:UTMB/trackCount/setter"
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMB"), "_trackCount")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMB"), "_trackCount")
+
+      findpropstrict      QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "update")
+      callpropvoid        QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "update"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.data:UTMB"), "_lastTime") type QName(PackageNamespace("", "#0"), "Number") end
+  trait getter QName(PackageNamespace("", "#0"), "lastTime")
+   method
+    refid "com.google.analytics.data:UTMB/lastTime/getter"
+    returns QName(PackageNamespace("", "#0"), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMB"), "_lastTime")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace("", "#0"), "domainHash")
+   method
+    refid "com.google.analytics.data:UTMB/domainHash/setter"
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMB"), "_domainHash")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMB"), "_domainHash")
+
+      findpropstrict      QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "update")
+      callpropvoid        QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "update"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace("", "#0"), "lastTime")
+   method
+    refid "com.google.analytics.data:UTMB/lastTime/setter"
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMB"), "_lastTime")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMB"), "_lastTime")
+
+      findpropstrict      QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "update")
+      callpropvoid        QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "update"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.data:UTMB"), "_domainHash") type QName(PackageNamespace("", "#0"), "Number") end
+  trait getter QName(PackageNamespace("", "#0"), "domainHash")
+   method
+    refid "com.google.analytics.data:UTMB/domainHash/getter"
+    returns QName(PackageNamespace("", "#0"), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMB"), "_domainHash")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "token")
+   method
+    refid "com.google.analytics.data:UTMB/token/getter"
+    returns QName(PackageNamespace("", "#0"), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMB"), "_token")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.data:UTMB"), "_token") type QName(PackageNamespace("", "#0"), "Number") end
+  trait getter QName(PackageNamespace("", "#0"), "trackCount")
+   method
+    refid "com.google.analytics.data:UTMB/trackCount/getter"
+    returns QName(PackageNamespace("", "#0"), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMB"), "_trackCount")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.data:UTMB/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace("", "#0"), "defaultTimespan")
+    getlex              QName(PackageNamespace("com.google.analytics.utils"), "Timespan")
+    getproperty         QName(PackageNamespace("", "#0"), "thirtyminutes")
+    setproperty         QName(PackageNamespace("", "#0"), "defaultTimespan")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace("", "#0"), "defaultTimespan") slotid 1 type QName(PackageNamespace("", "#0"), "Number") end
+end ; class

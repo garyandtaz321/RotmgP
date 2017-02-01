@@ -1,0 +1,25 @@
+script ; 790
+ sinit
+  refid "_-1PE:Account.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Account", [PackageNamespace("_-1PE")])
+    pushnull
+    newclass            "_-1PE:Account"
+    initproperty        QName(PackageNamespace("_-1PE"), "Account")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-1PE"), "Account")
+  #include "Account.class.asasm"
+ end ; trait
+end ; script

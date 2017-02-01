@@ -1,0 +1,149 @@
+class
+ refid "_-0ld:_-1r"
+ instance QName(PackageNamespace("_-0ld"), "_-1r")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1im")
+  iinit
+   refid "_-0ld:_-1r/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     getglobalscope
+     pushundefined
+     convert_s
+     checkfilter
+     convert_d
+     add_i
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-BY") flag METADATA type QName(PackageNamespace("_-0Sj"), "_-0mW")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "create")
+   method
+    refid "_-0ld:_-1r/create"
+    param QName(PackageNamespace("_-1L3"), "_-1FO")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("_-0ld"), "_-wb")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            5
+
+      jump                L10
+
+      inclocal            2
+      declocal            3
+      convert_o
+      popscope
+      kill                5
+      getlocal3
+L10:
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-0ld"), "_-wb")
+      constructprop       QName(PackageNamespace("_-0ld"), "_-wb"), 0
+      coerce              QName(PackageNamespace("_-0ld"), "_-wb")
+      setlocal3
+
+      jump                L24
+
+      inclocal_i          3
+      lshift
+      setlocal            5
+
+      kill                2
+      declocal            3
+      declocal            5
+L24:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-BY")
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace("", "#0"), "create"), 2
+      coerce              QName(PackageNamespace("_-0Sj"), "_-1vA")
+      setlocal            4
+
+      getlocal            6
+      iftrue              L38
+
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-Nv"), 1
+
+      getlocal            5
+      iffalse             L43
+
+L38:
+      getlocal3
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "setSize"), 1
+
+      getlocal            5
+      iffalse             L47
+
+L43:
+      getlocal3
+      getlex              QName(PackageNamespace("_-0ld"), "_-wb")
+      getproperty         QName(PackageNamespace("", "#0"), "_-1PU")
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-yI"), 1
+
+L47:
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0ld:_-1r/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,93 @@
+class
+ refid "com.company.googleanalytics:GA"
+ instance QName(PackageNamespace("com.company.googleanalytics"), "GA")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0UV")
+  iinit
+   refid "com.company.googleanalytics:GA/iinit"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "Error")
+     pushstring          "Don't instance this class"
+     constructprop       QName(PackageNamespace("", "#0"), "Error"), 1
+     throw
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.googleanalytics:GA/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "com.company.googleanalytics:GA"), "tracker")
+    pushnull
+    setproperty         QName(PrivateNamespace("*", "com.company.googleanalytics:GA"), "tracker")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace("*", "com.company.googleanalytics:GA"), "tracker") slotid 1 type QName(PackageNamespace("com.google.analytics"), "GATracker") value Null() end
+ trait method QName(PackageNamespace("", "#0"), "global") flag FINAL dispid 3
+  method
+   refid "com.company.googleanalytics:GA/global"
+   returns QName(PackageNamespace("com.google.analytics"), "GATracker")
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace("*", "com.company.googleanalytics:GA"), "tracker")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "setTracker") flag FINAL dispid 4
+  method
+   refid "com.company.googleanalytics:GA/setTracker"
+   param QName(PackageNamespace("com.google.analytics"), "GATracker")
+   returns QName(PackageNamespace("", "#0"), "void")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getglobalscope
+     getslot             1
+     getlocal1
+     setproperty         QName(PrivateNamespace("*", "com.company.googleanalytics:GA"), "tracker")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

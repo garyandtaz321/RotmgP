@@ -1,0 +1,264 @@
+class
+ refid "com.hurlant.util:Hex"
+ instance QName(PackageNamespace("com.hurlant.util"), "Hex")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-zn")
+  iinit
+   refid "com.hurlant.util:Hex/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.hurlant.util:Hex/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace("", "#0"), "toArray") flag FINAL dispid 3
+  method
+   refid "com.hurlant.util:Hex/toArray"
+   param QName(PackageNamespace("", "#0"), "String")
+   returns QName(PackageNamespace("flash.utils"), "ByteArray")
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     getlex              QName(PackageNamespace("", "#0"), "RegExp")
+     pushstring          "\\s|:"
+     pushstring          "gm"
+     construct           2
+     pushstring          ""
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+     coerce_s
+     setlocal1
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+     constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+     coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+     setlocal2
+
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "length")
+     pushbyte            1
+     dup
+     equals
+     bitand
+     iffalse             L27
+
+     pushstring          "0"
+     getlocal1
+     add
+     coerce_s
+     setlocal1
+
+L27:
+     pushbyte            0
+     convert_u
+     setlocal3
+
+     jump                L49
+
+L31:
+     label
+     getlocal2
+     getlocal3
+     pushbyte            2
+     divide
+     findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+     getlocal1
+     getlocal3
+     pushbyte            2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     pushbyte            16
+     callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 2
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Hex#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.hurlant.util:Hex#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), ProtectedNamespace("_-zn"), StaticProtectedNs("_-zn")])
+
+     getlocal3
+     pushbyte            2
+     add
+     convert_u
+     setlocal3
+
+L49:
+     getlocal3
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "length")
+     iflt                L31
+
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "fromArray") flag FINAL dispid 4
+  method
+   refid "com.hurlant.util:Hex/fromArray"
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   returns QName(PackageNamespace("", "#0"), "String")
+   flag HAS_OPTIONAL
+   optional False()
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushstring          ""
+     setlocal3
+
+     pushbyte            0
+     convert_u
+     setlocal            4
+
+     jump                L38
+
+L8:
+     label
+     getlocal3
+     pushstring          "0"
+     getlocal1
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Hex#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.hurlant.util:Hex#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), ProtectedNamespace("_-zn"), StaticProtectedNs("_-zn")])
+     pushbyte            16
+     callproperty        Multiname("toString", [PrivateNamespace("*", "com.hurlant.util:Hex#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.hurlant.util:Hex#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), ProtectedNamespace("_-zn"), StaticProtectedNs("_-zn")]), 1
+     add
+     pushbyte            254
+     pushbyte            2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     add
+     coerce_s
+     setlocal3
+
+     getlocal2
+     iffalse             L34
+
+     getlocal            4
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "length")
+     decrement
+     ifnlt               L34
+
+     getlocal3
+     pushstring          ":"
+     add
+     setlocal3
+
+L34:
+     getlocal            4
+     increment
+     convert_u
+     setlocal            4
+
+L38:
+     getlocal            4
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "length")
+     iflt                L8
+
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "toString") flag FINAL dispid 5
+  method
+   refid "com.hurlant.util:Hex/toString"
+   param QName(PackageNamespace("", "#0"), "String")
+   returns QName(PackageNamespace("", "#0"), "String")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "toArray")
+     getlocal1
+     callproperty        QName(PackageNamespace("", "#0"), "toArray"), 1
+     coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+     setlocal2
+
+     getlocal2
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "length")
+     callproperty        QName(PackageNamespace("", "#0"), "readUTFBytes"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "fromString") flag FINAL dispid 6
+  method
+   refid "com.hurlant.util:Hex/fromString"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   returns QName(PackageNamespace("", "#0"), "String")
+   flag HAS_OPTIONAL
+   optional False()
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+     constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+     coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+     setlocal3
+
+     getlocal3
+     getlocal1
+     callpropvoid        QName(PackageNamespace("", "#0"), "writeUTFBytes"), 1
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "fromArray")
+     getlocal3
+     getlocal2
+     callproperty        QName(PackageNamespace("", "#0"), "fromArray"), 2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

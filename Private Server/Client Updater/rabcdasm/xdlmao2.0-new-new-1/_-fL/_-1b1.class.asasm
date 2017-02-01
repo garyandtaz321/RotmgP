@@ -1,0 +1,102 @@
+class
+ refid "_-fL:_-1b1"
+ instance QName(PackageNamespace("_-fL"), "_-1b1")
+  extends QName(PackageNamespace("_-Qu"), "_-cx")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1AU")
+  iinit
+   refid "_-fL:_-1b1/iinit"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "Function")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     add
+     setlocal3
+
+     typeof
+     kill                2
+     inclocal            2
+     swap
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L20
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+L20:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "parseFromInput") flag FINAL flag OVERRIDE
+   method
+    refid "_-fL:_-1b1/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "Error")
+      jump                L10
+
+      getglobalscope
+      dxnslate
+      typeof
+      negate_i
+      negate_i
+      multiply
+L10:
+      pushstring          "Client should not receive "
+      getlex              QName(PackageNamespace("", "#0"), "id")
+      add
+      pushstring          " messages"
+      add
+      constructprop       QName(PackageNamespace("", "#0"), "Error"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-fL:_-1b1/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

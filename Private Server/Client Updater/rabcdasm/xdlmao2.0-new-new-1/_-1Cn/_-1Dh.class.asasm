@@ -1,0 +1,257 @@
+class
+ refid "_-1Cn:_-1Dh"
+ instance QName(PackageNamespace("_-1Cn"), "_-1Dh")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0ja")
+  iinit
+   refid "_-1Cn:_-1Dh/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace("_-nj"), "_-0XC")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Null()
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal            2
+     inclocal_i          3
+     kill                2
+     subtract_i
+     inclocal            2
+     getlocal2
+L10:
+     setlocal            4
+
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     getlocal            5
+     dup
+     jump                L23
+
+     pushwith
+     convert_o
+     convert_o
+     declocal            4
+     convert_u
+     getlocal            4
+L23:
+     iftrue              L27
+
+     pop
+     getlocal2
+     convert_b
+L27:
+     iffalse             L46
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal            4
+     dup
+     iffalse             L37
+
+     pop
+     getlocal0
+     convert_b
+L37:
+     iftrue              L43
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-1Cn:_-1Dh"), "_-1Wj")
+
+     getlocal            4
+     iftrue              L46
+
+L43:
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace("*", "_-1Cn:_-1Dh"), "_handler")
+
+L46:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-1Cn:_-1Dh"), "_-1Wj") type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
+  trait getter QName(PackageNamespace("", "#0"), "container")
+   method
+    refid "_-1Cn:_-1Dh/container/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1Cn:_-1Dh"), "_-1Wj")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "_-1Cn:_-1Dh"), "_handler") type QName(PackageNamespace("_-nj"), "_-0XC") end
+  trait getter QName(PackageNamespace("", "#0"), "handler")
+   method
+    refid "_-1Cn:_-1Dh/handler/getter"
+    returns QName(PackageNamespace("_-nj"), "_-0XC")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1Cn:_-1Dh"), "_handler")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "clone") flag OVERRIDE
+   method
+    refid "_-1Cn:_-1Dh/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-1Cn"), "_-1Dh")
+      jump                L10
+
+      instanceof
+      lshift
+      astypelate
+      divide
+      subtract
+      multiply_i
+L10:
+      getlex              QName(PackageNamespace("", "#0"), "type")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1Cn:_-1Dh"), "_-1Wj")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1Cn:_-1Dh"), "_handler")
+      constructprop       QName(PackageNamespace("_-1Cn"), "_-1Dh"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1Cn:_-1Dh/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    subtract
+    pop
+    pushtrue
+    bitor
+    increment
+    negate_i
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    dup
+    iffalse             L27
+
+    pop
+    getlocal0
+    jump                L26
+
+    convert_b
+    decrement_i
+    convert_i
+    pushnan
+    increment_i
+    istypelate
+L26:
+    convert_b
+L27:
+    iftrue              L43
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-1Ko")
+    pushstring          "containerAdd"
+    initproperty        QName(PackageNamespace("", "#0"), "_-1Ko")
+
+    getlocal2
+    iffalse             L43
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-yv")
+    pushstring          "containerRemove"
+    initproperty        QName(PackageNamespace("", "#0"), "_-yv")
+
+    getlocal2
+    dup
+    iftrue              L42
+
+    pop
+    getlocal2
+    convert_b
+L42:
+    iffalse             L48
+
+L43:
+    findproperty        QName(PackageNamespace("", "#0"), "_-0XU")
+    pushstring          "handlerAdd"
+    initproperty        QName(PackageNamespace("", "#0"), "_-0XU")
+
+    getlocal2
+    iffalse             L51
+
+L48:
+    findproperty        QName(PackageNamespace("", "#0"), "_-1pk")
+    pushstring          "handlerRemove"
+    initproperty        QName(PackageNamespace("", "#0"), "_-1pk")
+
+L51:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-1Ko") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("containerAdd") end
+ trait const QName(PackageNamespace("", "#0"), "_-yv") slotid 2 type QName(PackageNamespace("", "#0"), "String") value Utf8("containerRemove") end
+ trait const QName(PackageNamespace("", "#0"), "_-0XU") slotid 3 type QName(PackageNamespace("", "#0"), "String") value Utf8("handlerAdd") end
+ trait const QName(PackageNamespace("", "#0"), "_-1pk") slotid 4 type QName(PackageNamespace("", "#0"), "String") value Utf8("handlerRemove") end
+end ; class

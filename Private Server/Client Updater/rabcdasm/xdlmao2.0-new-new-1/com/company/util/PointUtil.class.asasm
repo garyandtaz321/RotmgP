@@ -1,0 +1,614 @@
+class
+ refid "com.company.util:PointUtil"
+ instance QName(PackageNamespace("com.company.util"), "PointUtil")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-fr")
+  iinit
+   refid "com.company.util:PointUtil/iinit"
+   param QName(PrivateNamespace("*", "com.company.util:PointUtil"), "StaticEnforcer")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     newactivation
+     kill                2
+     declocal_i          2
+     declocal_i          2
+     newactivation
+     typeof
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.util:PointUtil/cinit"
+  body
+   maxstack 6
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    swap
+    bitand
+    decrement
+    add
+    pushscope
+
+    coerce_s
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    iftrue              L22
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-0Q4")
+    findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+    pushbyte            0
+    dup
+    constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+    initproperty        QName(PackageNamespace("", "#0"), "_-0Q4")
+
+L22:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-0Q4") slotid 1 type QName(PackageNamespace("flash.geom"), "Point") end
+ trait method QName(PackageNamespace("", "#0"), "_-1Mj") flag FINAL dispid 3
+  method
+   refid "com.company.util:PointUtil/_-1Mj"
+   param QName(PackageNamespace("flash.geom"), "Point")
+   returns QName(PackageNamespace("flash.geom"), "Point")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal_i          2
+     lshift
+     modulo
+     bitand
+     getlocal3
+     declocal            2
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     jump                L21
+
+     inclocal            2
+     subtract
+     convert_o
+     increment
+     declocal_i          3
+     typeof
+L21:
+     getlocal1
+     callproperty        QName(PackageNamespace("", "#0"), "clone"), 0
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal2
+
+     getlocal            4
+     iffalse             L41
+
+     getlocal2
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "x")
+     callproperty        QName(PackageNamespace("", "#0"), "round"), 1
+     setproperty         QName(PackageNamespace("", "#0"), "x")
+
+     getlocal            4
+     iffalse             L41
+
+     getlocal2
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "y")
+     callproperty        QName(PackageNamespace("", "#0"), "round"), 1
+     setproperty         QName(PackageNamespace("", "#0"), "y")
+
+L41:
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "_-nK") flag FINAL dispid 4
+  method
+   refid "com.company.util:PointUtil/_-nK"
+   param QName(PackageNamespace("flash.geom"), "Point")
+   param QName(PackageNamespace("flash.geom"), "Point")
+   returns QName(PackageNamespace("", "#0"), "Number")
+   body
+    maxstack 7
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "_-Fw")
+     jump                L10
+
+     pushfalse
+     popscope
+     bitand
+     getglobalscope
+     lessequals
+     increment_i
+L10:
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "x")
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "y")
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "x")
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "y")
+     callproperty        QName(PackageNamespace("", "#0"), "_-Fw"), 4
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "_-Fw") flag FINAL dispid 5
+  method
+   refid "com.company.util:PointUtil/_-Fw"
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   returns QName(PackageNamespace("", "#0"), "Number")
+   body
+    maxstack 5
+    localcount 9
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     setlocal            7
+
+     jump                L10
+
+     declocal            4
+     kill                4
+     swap
+     lessequals
+     pushwith
+     declocal_i          4
+L10:
+     setlocal            8
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     getlocal            8
+     iftrue              L26
+
+     getlocal1
+     subtract
+     getlocal            7
+     dup
+     iftrue              L24
+
+     pop
+     getlocal0
+     convert_b
+L24:
+     iffalse             L26
+
+     convert_d
+L26:
+     setlocal            5
+
+     getlocal            4
+     getlocal            8
+     dup
+     jump                L37
+
+     inclocal_i          6
+     dxnslate
+     strictequals
+     kill                4
+     inclocal            6
+     getlocal2
+L37:
+     iffalse             L41
+
+     pop
+     getlocal1
+     convert_b
+L41:
+     iftrue              L58
+
+     getlocal2
+     subtract
+     getlocal            8
+     dup
+     iffalse             L57
+
+     pop
+     getlocal1
+     convert_b
+     jump                L57
+
+     inclocal_i          7
+     getglobalscope
+     astypelate
+     getlocal            4
+     increment_i
+     lessthan
+L57:
+     iftrue              L59
+
+L58:
+     convert_d
+L59:
+     setlocal            6
+
+     getlocal            5
+     getlocal            7
+     iffalse             L69
+
+     getlocal            5
+     getlocal            7
+     iffalse             L79
+
+     multiply
+     getlocal            7
+     iffalse             L80
+
+L69:
+     getlocal            6
+     getlocal            8
+     dup
+     iffalse             L76
+
+     pop
+     getlocal2
+     convert_b
+L76:
+     iftrue              L79
+
+     getlocal            6
+     multiply
+L79:
+     add
+L80:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "_-1Ar") flag FINAL dispid 6
+  method
+   refid "com.company.util:PointUtil/_-1Ar"
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   returns QName(PackageNamespace("", "#0"), "Number")
+   body
+    maxstack 6
+    localcount 9
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     setlocal            7
+
+     jump                L10
+
+     multiply_i
+     declocal_i          3
+     kill                5
+     greaterequals
+     inclocal            3
+     modulo
+L10:
+     setlocal            8
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     getlocal            7
+     iffalse             L32
+
+     getlocal1
+     subtract
+     getlocal            7
+     dup
+     iftrue              L31
+
+     pop
+     jump                L29
+
+     rshift
+     setlocal2
+
+     declocal            5
+     getlocal            4
+     declocal            7
+     dup
+L29:
+     getlocal2
+     convert_b
+L31:
+     iffalse             L33
+
+L32:
+     convert_d
+L33:
+     setlocal            5
+
+     jump                L41
+
+     hasnext
+     setlocal            5
+
+     pushnull
+     setlocal            4
+
+     decrement_i
+     declocal            2
+L41:
+     getlocal            4
+     getlocal            8
+     iftrue              L54
+
+     getlocal2
+     subtract
+     getlocal            7
+     dup
+     iftrue              L52
+
+     pop
+     getlocal1
+     convert_b
+L52:
+     iffalse             L54
+
+     convert_d
+L54:
+     setlocal            6
+
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     getlocal            5
+     getlocal            5
+     multiply
+     getlocal            6
+     getlocal            6
+     multiply
+     add
+     callproperty        QName(PackageNamespace("", "#0"), "sqrt"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "_-ig") flag FINAL dispid 7
+  method
+   refid "com.company.util:PointUtil/_-ig"
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   returns QName(PackageNamespace("flash.geom"), "Point")
+   body
+    maxstack 7
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     jump                L10
+
+     setlocal2
+
+     getlocal            4
+     dup
+     pushundefined
+     kill                2
+     getlocal2
+L10:
+     getlocal1
+     getlocal3
+     getlocal1
+     subtract
+     getlocal            5
+     multiply
+     add
+     getlocal2
+     getlocal            4
+     getlocal2
+     subtract
+     getlocal            5
+     multiply
+     add
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "_-1Y5") flag FINAL dispid 8
+  method
+   refid "com.company.util:PointUtil/_-1Y5"
+   param QName(PackageNamespace("flash.geom"), "Point")
+   param QName(PackageNamespace("flash.geom"), "Point")
+   returns QName(PackageNamespace("", "#0"), "Number")
+   body
+    maxstack 6
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     jump                L10
+
+     swap
+     coerce_a
+     getlocal2
+     pushnull
+     pushnull
+     increment_i
+L10:
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "y")
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "y")
+     subtract
+     getlocal2
+     getproperty         QName(PackageNamespace("", "#0"), "x")
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "x")
+     subtract
+     callproperty        QName(PackageNamespace("", "#0"), "atan2"), 2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "_-1D8") flag FINAL dispid 9
+  method
+   refid "com.company.util:PointUtil/_-1D8"
+   param QName(PackageNamespace("flash.geom"), "Point")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   returns QName(PackageNamespace("flash.geom"), "Point")
+   body
+    maxstack 7
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     setlocal            5
+
+     jump                L10
+
+     getlocal3
+     decrement_i
+     inclocal_i          5
+     declocal_i          5
+     strictequals
+     bitor
+L10:
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 0
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     dup
+     setlocal            4
+
+     getlocal1
+     jump                L26
+
+     inclocal_i          2
+     lessequals
+     strictequals
+     declocal_i          5
+     pushfalse
+     getlocal0
+L26:
+     getproperty         QName(PackageNamespace("", "#0"), "x")
+     getlocal3
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     getlocal2
+     callproperty        QName(PackageNamespace("", "#0"), "cos"), 1
+     multiply
+     add
+     setproperty         QName(PackageNamespace("", "#0"), "x")
+
+     getlocal            5
+     dup
+     iftrue              L40
+
+     pop
+     getlocal0
+     convert_b
+L40:
+     iffalse             L51
+
+     getlocal            4
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "y")
+     getlocal3
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     getlocal2
+     callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+     multiply
+     add
+     setproperty         QName(PackageNamespace("", "#0"), "y")
+
+L51:
+     getlocal            4
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,167 @@
+class
+ refid "_-12-:_-kv"
+ instance QName(PackageNamespace("_-12-"), "_-kv")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-w")
+  iinit
+   refid "_-12-:_-kv/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     getlocal2
+     strictequals
+     increment
+     convert_i
+     modulo
+     coerce_s
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-0sy") flag METADATA type QName(PackageNamespace("_-FT"), "_-0Rf")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-f-")
+   method
+    refid "_-12-:_-kv/_-f-"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      coerce_a
+      convert_u
+      getlocal0
+      instanceof
+      pushnull
+      multiply
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      iftrue              L26
+
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      getproperty         QName(PackageNamespace("", "#0"), "available")
+      iffalse             L31
+
+      getlocal2
+      dup
+      iftrue              L25
+
+      pop
+      getlocal2
+      convert_b
+L25:
+      iffalse             L31
+
+L26:
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      pushstring          "updatePlayerCredits"
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-12-:_-kv"), "updatePlayerCredits")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addCallback"), 2
+
+L31:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-12-:_-kv"), "updatePlayerCredits")
+   method
+    refid "_-12-:_-kv/updatePlayerCredits"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      subtract_i
+      istypelate
+      strictequals
+      pushfalse
+      getlocal1
+      setlocal2
+
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L18
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0sy")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 0
+
+L18:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-12-:_-kv/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,33 @@
+script ; 1807
+ sinit
+  refid "com.google.analytics.events:AnalyticsEvent.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("AnalyticsEvent", [PackageNamespace("com.google.analytics.events")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    newclass            "com.google.analytics.events:AnalyticsEvent"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.google.analytics.events"), "AnalyticsEvent")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.google.analytics.events"), "AnalyticsEvent")
+  #include "AnalyticsEvent.class.asasm"
+ end ; trait
+end ; script

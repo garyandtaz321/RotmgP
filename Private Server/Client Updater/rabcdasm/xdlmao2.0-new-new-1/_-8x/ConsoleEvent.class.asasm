@@ -1,0 +1,180 @@
+class
+ refid "_-8x:ConsoleEvent"
+ instance QName(PackageNamespace("_-8x"), "ConsoleEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag FINAL
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-lm")
+  iinit
+   refid "_-8x:ConsoleEvent/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   flag HAS_OPTIONAL
+   optional Utf8("")
+   body
+    maxstack 6
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     setlocal3
+
+     bitnot
+     inclocal_i          3
+     multiply
+     getlocal2
+     declocal_i          2
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     jump                L22
+
+     increment
+     inclocal_i          3
+     inclocal_i          3
+     setlocal2
+
+     convert_i
+     setlocal2
+
+L22:
+     dup
+     iftrue              L27
+
+     pop
+     getlocal2
+     convert_b
+L27:
+     iffalse             L40
+
+     getlocal0
+     getlocal1
+     pushfalse
+     pushfalse
+     constructsuper      3
+
+     getlocal            4
+     dup
+     iftrue              L39
+
+     pop
+     getlocal0
+     convert_b
+L39:
+     iffalse             L43
+
+L40:
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "data")
+
+L43:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "data") type QName(PackageNamespace("", "#0"), "String") end
+ end ; instance
+ cinit
+  refid "_-8x:ConsoleEvent/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    nextname
+    add
+    divide
+    greaterthan
+    pop
+    subtract
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    iffalse             L43
+
+    findproperty        QName(PackageNamespace("", "#0"), "INPUT")
+    pushstring          "ConsoleEvent.INPUT"
+    initproperty        QName(PackageNamespace("", "#0"), "INPUT")
+
+    jump                L26
+
+    pushscope
+
+    getlocal0
+    add
+    add
+    nextname
+    lshift
+L26:
+    getlocal1
+    dup
+    iffalse             L32
+
+    pop
+    getlocal0
+    convert_b
+L32:
+    iftrue              L48
+
+    findproperty        QName(PackageNamespace("", "#0"), "GET_PREVIOUS")
+    pushstring          "ConsoleEvent.GET_PREVIOUS"
+    initproperty        QName(PackageNamespace("", "#0"), "GET_PREVIOUS")
+
+    getlocal1
+    dup
+    iffalse             L42
+
+    pop
+    getlocal1
+    convert_b
+L42:
+    iftrue              L48
+
+L43:
+    findproperty        QName(PackageNamespace("", "#0"), "GET_NEXT")
+    pushstring          "ConsoleEvent.GET_NEXT"
+    initproperty        QName(PackageNamespace("", "#0"), "GET_NEXT")
+
+    getlocal1
+    iftrue              L51
+
+L48:
+    findproperty        QName(PackageNamespace("", "#0"), "OUTPUT")
+    pushstring          "ConsoleEvent.OUTPUT"
+    initproperty        QName(PackageNamespace("", "#0"), "OUTPUT")
+
+L51:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "INPUT") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("ConsoleEvent.INPUT") end
+ trait const QName(PackageNamespace("", "#0"), "GET_PREVIOUS") slotid 2 type QName(PackageNamespace("", "#0"), "String") value Utf8("ConsoleEvent.GET_PREVIOUS") end
+ trait const QName(PackageNamespace("", "#0"), "GET_NEXT") slotid 3 type QName(PackageNamespace("", "#0"), "String") value Utf8("ConsoleEvent.GET_NEXT") end
+ trait const QName(PackageNamespace("", "#0"), "OUTPUT") slotid 4 type QName(PackageNamespace("", "#0"), "String") value Utf8("ConsoleEvent.OUTPUT") end
+end ; class

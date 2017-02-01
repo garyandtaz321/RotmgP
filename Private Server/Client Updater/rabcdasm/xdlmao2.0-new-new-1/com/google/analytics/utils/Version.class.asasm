@@ -1,0 +1,833 @@
+class
+ refid "com.google.analytics.utils:Version"
+ instance QName(PackageNamespace("com.google.analytics.utils"), "Version")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.utils:Version")
+  iinit
+   refid "com.google.analytics.utils:Version/iinit"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "uint")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Integer(0)
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 2
+    localcount 6
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("com.google.analytics.utils"), "Version")
+     setlocal            5
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_maxMajor")
+     greaterthan
+     dup
+     iffalse             L16
+
+     pop
+     getlocal2
+     pushbyte            0
+     equals
+L16:
+     dup
+     iffalse             L22
+
+     pop
+     getlocal3
+     pushbyte            0
+     equals
+L22:
+     dup
+     iffalse             L28
+
+     pop
+     getlocal            4
+     pushbyte            0
+     equals
+L28:
+     iffalse             L50
+
+     getlex              QName(PackageNamespace("com.google.analytics.utils"), "Version")
+     getlocal1
+     callproperty        QName(PackageNamespace("", "#0"), "fromNumber"), 1
+     coerce              QName(PackageNamespace("com.google.analytics.utils"), "Version")
+     dup
+     setlocal            5
+
+     getproperty         QName(PackageNamespace("", "#0"), "major")
+     convert_u
+     setlocal1
+
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "minor")
+     convert_u
+     setlocal2
+
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "build")
+     convert_u
+     setlocal3
+
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "revision")
+     convert_u
+     setlocal            4
+
+L50:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "major")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "minor")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace("", "#0"), "build")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace("", "#0"), "revision")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_revision") type QName(PackageNamespace("", "#0"), "uint") end
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "com.google.analytics.utils:Version/toString"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "String")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal2
+
+      getlocal1
+      pushbyte            0
+      lessequals
+      dup
+      iftrue              L14
+
+      pop
+      getlocal1
+      pushbyte            4
+      greaterthan
+L14:
+      iffalse             L19
+
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "getFields")
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "getFields"), 0
+      convert_i
+      setlocal1
+
+L19:
+      jump                L51
+
+L20:
+      label
+      getlex              QName(PackageNamespace("", "#0"), "major")
+      newarray            1
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal2
+
+      jump                L79
+
+L26:
+      label
+      getlex              QName(PackageNamespace("", "#0"), "major")
+      getlex              QName(PackageNamespace("", "#0"), "minor")
+      newarray            2
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal2
+
+      jump                L79
+
+L33:
+      label
+      getlex              QName(PackageNamespace("", "#0"), "major")
+      getlex              QName(PackageNamespace("", "#0"), "minor")
+      getlex              QName(PackageNamespace("", "#0"), "build")
+      newarray            3
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal2
+
+      jump                L79
+
+L41:
+      label
+L42:
+      label
+      getlex              QName(PackageNamespace("", "#0"), "major")
+      getlex              QName(PackageNamespace("", "#0"), "minor")
+      getlex              QName(PackageNamespace("", "#0"), "build")
+      getlex              QName(PackageNamespace("", "#0"), "revision")
+      newarray            4
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal2
+
+      jump                L79
+
+L51:
+      getlocal1
+      setlocal3
+
+      pushbyte            1
+      getlocal3
+      ifstrictne          L58
+
+      pushbyte            0
+      jump                L77
+
+L58:
+      pushbyte            2
+      getlocal3
+      ifstrictne          L63
+
+      pushbyte            1
+      jump                L77
+
+L63:
+      pushbyte            3
+      getlocal3
+      ifstrictne          L68
+
+      pushbyte            2
+      jump                L77
+
+L68:
+      pushbyte            4
+      getlocal3
+      ifstrictne          L73
+
+      pushbyte            3
+      jump                L77
+
+L73:
+      jump                L76
+
+      pushbyte            4
+      jump                L77
+
+L76:
+      pushbyte            4
+L77:
+      kill                3
+      lookupswitch        L42, [L20, L26, L33, L41, L42]
+
+L79:
+      getlocal2
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_separator")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace("", "#0"), "revision")
+   method
+    refid "com.google.analytics.utils:Version/revision/setter"
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_revision")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal1
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_maxRevision")
+      callproperty        QName(PackageNamespace("", "#0"), "min"), 2
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_revision")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_maxBuild") type QName(PackageNamespace("", "#0"), "uint") value Integer(255) end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_maxMinor") type QName(PackageNamespace("", "#0"), "uint") value Integer(15) end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_maxMajor") type QName(PackageNamespace("", "#0"), "uint") value Integer(15) end
+  trait getter QName(PackageNamespace("", "#0"), "revision")
+   method
+    refid "com.google.analytics.utils:Version/revision/getter"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_revision")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace("", "#0"), "build")
+   method
+    refid "com.google.analytics.utils:Version/build/setter"
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_build")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal1
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_maxBuild")
+      callproperty        QName(PackageNamespace("", "#0"), "min"), 2
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_build")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_separator") type QName(PackageNamespace("", "#0"), "String") value Utf8(".") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_maxRevision") type QName(PackageNamespace("", "#0"), "uint") value Integer(65535) end
+  trait setter QName(PackageNamespace("", "#0"), "minor")
+   method
+    refid "com.google.analytics.utils:Version/minor/setter"
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_minor")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal1
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_maxMinor")
+      callproperty        QName(PackageNamespace("", "#0"), "min"), 2
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_minor")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "build")
+   method
+    refid "com.google.analytics.utils:Version/build/getter"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_build")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_build") type QName(PackageNamespace("", "#0"), "uint") end
+  trait setter QName(PackageNamespace("", "#0"), "major")
+   method
+    refid "com.google.analytics.utils:Version/major/setter"
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_major")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal1
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_maxMajor")
+      callproperty        QName(PackageNamespace("", "#0"), "min"), 2
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_major")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "minor")
+   method
+    refid "com.google.analytics.utils:Version/minor/getter"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_minor")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "getFields")
+   method
+    refid "com.google.analytics.utils:Version/getFields"
+    returns QName(PackageNamespace("", "#0"), "int")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            4
+      setlocal1
+
+      getlex              QName(PackageNamespace("", "#0"), "revision")
+      pushbyte            0
+      ifne                L10
+
+      getlocal1
+      decrement_i
+      setlocal1
+
+L10:
+      getlocal1
+      pushbyte            3
+      equals
+      dup
+      iffalse             L19
+
+      pop
+      getlex              QName(PackageNamespace("", "#0"), "build")
+      pushbyte            0
+      equals
+L19:
+      iffalse             L23
+
+      getlocal1
+      decrement_i
+      setlocal1
+
+L23:
+      getlocal1
+      pushbyte            2
+      equals
+      dup
+      iffalse             L32
+
+      pop
+      getlex              QName(PackageNamespace("", "#0"), "minor")
+      pushbyte            0
+      equals
+L32:
+      iffalse             L36
+
+      getlocal1
+      decrement_i
+      setlocal1
+
+L36:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "valueOf")
+   method
+    refid "com.google.analytics.utils:Version/valueOf"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "major")
+      pushbyte            28
+      lshift
+      getlex              QName(PackageNamespace("", "#0"), "minor")
+      pushbyte            24
+      lshift
+      bitor
+      getlex              QName(PackageNamespace("", "#0"), "build")
+      pushbyte            16
+      lshift
+      bitor
+      getlex              QName(PackageNamespace("", "#0"), "revision")
+      bitor
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "major")
+   method
+    refid "com.google.analytics.utils:Version/major/getter"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_major")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_major") type QName(PackageNamespace("", "#0"), "uint") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_minor") type QName(PackageNamespace("", "#0"), "uint") end
+  trait method QName(PackageNamespace("", "#0"), "equals")
+   method
+    refid "com.google.analytics.utils:Version/equals"
+    param null
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.google.analytics.utils"), "Version")
+      istypelate
+      iftrue              L8
+
+      pushfalse
+      returnvalue
+
+L8:
+      getlocal1
+      getproperty         Multiname("major", [PrivateNamespace("*", "com.google.analytics.utils:Version#0"), PackageNamespace("", "#0"), PackageNamespace("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.utils:Version#1"), PackageInternalNs("com.google.analytics.utils"), ProtectedNamespace("com.google.analytics.utils:Version"), StaticProtectedNs("com.google.analytics.utils:Version"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("", "#0"), "major")
+      equals
+      dup
+      iffalse             L19
+
+      pop
+      getlocal1
+      getproperty         Multiname("minor", [PrivateNamespace("*", "com.google.analytics.utils:Version#0"), PackageNamespace("", "#0"), PackageNamespace("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.utils:Version#1"), PackageInternalNs("com.google.analytics.utils"), ProtectedNamespace("com.google.analytics.utils:Version"), StaticProtectedNs("com.google.analytics.utils:Version"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("", "#0"), "minor")
+      equals
+L19:
+      dup
+      iffalse             L26
+
+      pop
+      getlocal1
+      getproperty         Multiname("build", [PrivateNamespace("*", "com.google.analytics.utils:Version#0"), PackageNamespace("", "#0"), PackageNamespace("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.utils:Version#1"), PackageInternalNs("com.google.analytics.utils"), ProtectedNamespace("com.google.analytics.utils:Version"), StaticProtectedNs("com.google.analytics.utils:Version"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("", "#0"), "build")
+      equals
+L26:
+      dup
+      iffalse             L33
+
+      pop
+      getlocal1
+      getproperty         Multiname("revision", [PrivateNamespace("*", "com.google.analytics.utils:Version#0"), PackageNamespace("", "#0"), PackageNamespace("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.utils:Version#1"), PackageInternalNs("com.google.analytics.utils"), ProtectedNamespace("com.google.analytics.utils:Version"), StaticProtectedNs("com.google.analytics.utils:Version"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("", "#0"), "revision")
+      equals
+L33:
+      iffalse             L36
+
+      pushtrue
+      returnvalue
+
+L36:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.utils:Version/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace("", "#0"), "fromString") flag FINAL dispid 3
+  method
+   refid "com.google.analytics.utils:Version/fromString"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   returns QName(PackageNamespace("com.google.analytics.utils"), "Version")
+   flag HAS_OPTIONAL
+   optional Utf8("")
+   optional Utf8(".")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+     setlocal            4
+
+     getlocal0
+     construct           0
+     coerce              QName(PackageNamespace("com.google.analytics.utils"), "Version")
+     setlocal3
+
+     getlocal1
+     pushstring          ""
+     equals
+     dup
+     iftrue              L18
+
+     pop
+     getlocal1
+     pushnull
+     equals
+L18:
+     iffalse             L21
+
+     getlocal3
+     returnvalue
+
+L21:
+     getlocal1
+     getlocal2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     pushbyte            255
+     ifngt               L60
+
+     getlocal1
+     getlocal2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+     setlocal            4
+
+     getlocal3
+     findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+     getlocal            4
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Version#0"), PackageNamespace("", "#0"), PackageNamespace("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.utils:Version#1"), PackageInternalNs("com.google.analytics.utils"), ProtectedNamespace("com.google.analytics.utils:Version"), StaticProtectedNs("com.google.analytics.utils:Version"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 1
+     setproperty         QName(PackageNamespace("", "#0"), "major")
+
+     getlocal3
+     findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+     getlocal            4
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Version#0"), PackageNamespace("", "#0"), PackageNamespace("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.utils:Version#1"), PackageInternalNs("com.google.analytics.utils"), ProtectedNamespace("com.google.analytics.utils:Version"), StaticProtectedNs("com.google.analytics.utils:Version"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 1
+     setproperty         QName(PackageNamespace("", "#0"), "minor")
+
+     getlocal3
+     findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+     getlocal            4
+     pushbyte            2
+     getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Version#0"), PackageNamespace("", "#0"), PackageNamespace("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.utils:Version#1"), PackageInternalNs("com.google.analytics.utils"), ProtectedNamespace("com.google.analytics.utils:Version"), StaticProtectedNs("com.google.analytics.utils:Version"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 1
+     setproperty         QName(PackageNamespace("", "#0"), "build")
+
+     getlocal3
+     findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+     getlocal            4
+     pushbyte            3
+     getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Version#0"), PackageNamespace("", "#0"), PackageNamespace("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.utils:Version#1"), PackageInternalNs("com.google.analytics.utils"), ProtectedNamespace("com.google.analytics.utils:Version"), StaticProtectedNs("com.google.analytics.utils:Version"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 1
+     setproperty         QName(PackageNamespace("", "#0"), "revision")
+
+     jump                L65
+
+L60:
+     getlocal3
+     findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+     getlocal1
+     callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 1
+     setproperty         QName(PackageNamespace("", "#0"), "major")
+
+L65:
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "fromNumber") flag FINAL dispid 4
+  method
+   refid "com.google.analytics.utils:Version/fromNumber"
+   param QName(PackageNamespace("", "#0"), "Number")
+   returns QName(PackageNamespace("com.google.analytics.utils"), "Version")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     construct           0
+     coerce              QName(PackageNamespace("com.google.analytics.utils"), "Version")
+     setlocal2
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "isNaN")
+     getlocal1
+     callproperty        QName(PackageNamespace("", "#0"), "isNaN"), 1
+     convert_b
+     dup
+     iftrue              L16
+
+     pop
+     getlocal1
+     pushbyte            0
+     equals
+L16:
+     dup
+     iftrue              L22
+
+     pop
+     getlocal1
+     pushbyte            0
+     lessthan
+L22:
+     dup
+     iftrue              L29
+
+     pop
+     getlocal1
+     getlex              QName(PackageNamespace("", "#0"), "Number")
+     getproperty         QName(PackageNamespace("", "#0"), "MAX_VALUE")
+     equals
+L29:
+     dup
+     iftrue              L36
+
+     pop
+     getlocal1
+     getlex              QName(PackageNamespace("", "#0"), "Number")
+     getproperty         QName(PackageNamespace("", "#0"), "POSITIVE_INFINITY")
+     equals
+L36:
+     dup
+     iftrue              L43
+
+     pop
+     getlocal1
+     getlex              QName(PackageNamespace("", "#0"), "Number")
+     getproperty         QName(PackageNamespace("", "#0"), "NEGATIVE_INFINITY")
+     equals
+L43:
+     iffalse             L46
+
+     getlocal2
+     returnvalue
+
+L46:
+     getlocal2
+     getlocal1
+     pushbyte            28
+     urshift
+     setproperty         QName(PackageNamespace("", "#0"), "major")
+
+     getlocal2
+     getlocal1
+     pushint             251658240
+     bitand
+     pushbyte            24
+     urshift
+     setproperty         QName(PackageNamespace("", "#0"), "minor")
+
+     getlocal2
+     getlocal1
+     pushint             16711680
+     bitand
+     pushbyte            16
+     urshift
+     setproperty         QName(PackageNamespace("", "#0"), "build")
+
+     getlocal2
+     getlocal1
+     pushint             65535
+     bitand
+     setproperty         QName(PackageNamespace("", "#0"), "revision")
+
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

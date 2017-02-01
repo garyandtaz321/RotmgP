@@ -1,0 +1,127 @@
+class
+ refid "com.company.assembleegameclient.objects:ReskinVendor"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "ReskinVendor")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  implements Multiname("_-Rk", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1Y4")
+  iinit
+   refid "com.company.assembleegameclient.objects:ReskinVendor/iinit"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     inclocal            2
+     declocal            2
+     declocal            2
+     negate
+     coerce_a
+     declocal_i          2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     jump                L21
+
+     lessequals
+     add_i
+     multiply
+     setlocal2
+
+     inclocal_i          2
+     typeof
+L21:
+     getlocal2
+     dup
+     iffalse             L27
+
+     pop
+     getlocal0
+     convert_b
+L27:
+     iftrue              L41
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal2
+     dup
+     iffalse             L37
+
+     pop
+     getlocal3
+     convert_b
+L37:
+     iftrue              L41
+
+     findproperty        QName(PackageNamespace("", "#0"), "_-11k")
+     pushtrue
+     initproperty        QName(PackageNamespace("", "#0"), "_-11k")
+
+L41:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "getPanel")
+   method
+    refid "com.company.assembleegameclient.objects:ReskinVendor/getPanel"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace("_-1f4"), "Panel")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-0JD"), "ReskinPanel")
+      jump                L10
+
+      istypelate
+      decrement
+      lessthan
+      subtract
+      subtract_i
+      typeof
+L10:
+      getlocal1
+      constructprop       QName(PackageNamespace("_-0JD"), "ReskinPanel"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:ReskinVendor/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,255 @@
+class
+ refid "com.company.assembleegameclient.objects:ArenaPortal"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "ArenaPortal")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "Portal")
+  implements Multiname("_-Rk", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1aR")
+  iinit
+   refid "com.company.assembleegameclient.objects:ArenaPortal/iinit"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     declocal            2
+     pushtrue
+     declocal            2
+     increment
+     getlocal2
+     setlocal2
+
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L26
+
+     pop
+     getlocal2
+     jump                L25
+
+     nextname
+     setlocal2
+
+     pushnan
+     negate
+     inclocal            2
+     decrement
+L25:
+     convert_b
+L26:
+     iffalse             L37
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal3
+     dup
+     iffalse             L36
+
+     pop
+     getlocal0
+     convert_b
+L36:
+     iftrue              L47
+
+L37:
+     findproperty        QName(PackageNamespace("", "#0"), "_-11k")
+     pushtrue
+     initproperty        QName(PackageNamespace("", "#0"), "_-11k")
+
+     getlocal3
+     dup
+     iffalse             L46
+
+     pop
+     getlocal0
+     convert_b
+L46:
+     iftrue              L50
+
+L47:
+     findproperty        QName(PackageNamespace("", "#0"), "name_")
+     pushstring          ""
+     initproperty        QName(PackageNamespace("", "#0"), "name_")
+
+L50:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "getPanel") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:ArenaPortal/getPanel"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace("_-1f4"), "Panel")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-1f4"), "ArenaPortalPanel")
+      jump                L10
+
+      convert_b
+      pushundefined
+      getglobalscope
+      convert_i
+      not
+      setlocal2
+
+L10:
+      getlocal1
+      getlocal0
+      constructprop       QName(PackageNamespace("_-1f4"), "ArenaPortalPanel"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "draw") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:ArenaPortal/draw"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-18q")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 6
+     localcount 6
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      kill                4
+      kill                3
+      divide
+      divide
+      declocal            3
+      setlocal2
+
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      dup
+      iffalse             L19
+
+      pop
+      getlocal1
+      convert_b
+L19:
+      iftrue              L27
+
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callsupervoid       QName(PackageNamespace("", "#0"), "draw"), 3
+      getlocal            5
+      iftrue              L31
+
+L27:
+      findpropstrict      QName(PackageNamespace("", "#0"), "_-9J")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-9J"), 2
+
+L31:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-1aR"), "makeNameBitmapData") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:ArenaPortal/_-1aR:makeNameBitmapData"
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 9
+     localcount 3
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-0Mr"), "_-1M")
+      jump                L10
+
+      modulo
+      divide
+      popscope
+      lshift
+      swap
+      astypelate
+L10:
+      getlex              QName(PackageNamespace("", "#0"), "name_")
+      constructprop       QName(PackageNamespace("_-0Mr"), "_-1M"), 1
+      coerce              QName(PackageNamespace("_-0Mr"), "_-1vN")
+      setlocal1
+
+      getlex              QName(PackageNamespace("_-0CT"), "_-8w")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1Sz"), 0
+      getlex              QName(PackageNamespace("_-0y9"), "_-JP")
+      callproperty        QName(PackageNamespace("", "#0"), "getInstance"), 1
+      coerce              QName(PackageNamespace("_-0y9"), "_-JP")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      pushbyte            16
+      pushint             16777215
+      pushtrue
+      getlex              QName(StaticProtectedNs("_-0QL"), "_-2h")
+      pushtrue
+      callproperty        QName(PackageNamespace("", "#0"), "make"), 6
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:ArenaPortal/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

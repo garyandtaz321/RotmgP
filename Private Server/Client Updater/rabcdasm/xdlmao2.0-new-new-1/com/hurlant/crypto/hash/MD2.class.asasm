@@ -1,0 +1,693 @@
+class
+ refid "com.hurlant.crypto.hash:MD2"
+ instance QName(PackageNamespace("com.hurlant.crypto.hash"), "MD2")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("IHash", [PackageNamespace("com.hurlant.crypto.hash")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0UT")
+  iinit
+   refid "com.hurlant.crypto.hash:MD2/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "pad_size") type QName(PackageNamespace("", "#0"), "int") value Integer(48) end
+  trait method QName(PackageNamespace("", "#0"), "getInputSize")
+   method
+    refid "com.hurlant.crypto.hash:MD2/getInputSize"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            16
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getPadSize")
+   method
+    refid "com.hurlant.crypto.hash:MD2/getPadSize"
+    returns QName(PackageNamespace("", "#0"), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "pad_size")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getHashSize")
+   method
+    refid "com.hurlant.crypto.hash:MD2/getHashSize"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "HASH_SIZE")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "hash")
+   method
+    refid "com.hurlant.crypto.hash:MD2/hash"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    body
+     maxstack 7
+     localcount 12
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            8
+
+      pushbyte            0
+      convert_u
+      setlocal            9
+
+      pushbyte            0
+      convert_u
+      setlocal            10
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      convert_u
+      setlocal2
+
+      pushbyte            16
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            16
+      modulo
+      subtract
+      convert_u
+      dup
+      iftrue              L27
+
+      pop
+      pushbyte            16
+      convert_u
+L27:
+      convert_u
+      setlocal3
+
+      jump                L31
+
+L30:
+      label
+L31:
+      getlocal1
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      getlocal3
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:MD2/hash"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0UT"), StaticProtectedNs("_-0UT")])
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            16
+      modulo
+      pushbyte            0
+      ifne                L30
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      convert_u
+      setlocal            4
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      jump                L97
+
+L57:
+      label
+      pushbyte            0
+      convert_u
+      setlocal            8
+
+      jump                L89
+
+L62:
+      label
+      getlocal            5
+      getlocal            8
+      getlocal            5
+      getlocal            8
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:MD2/hash"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0UT"), StaticProtectedNs("_-0UT")])
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), "S")
+      getlocal1
+      getlocal3
+      getlocal            8
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:MD2/hash"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0UT"), StaticProtectedNs("_-0UT")])
+      getlocal            6
+      bitxor
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:MD2/hash"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0UT"), StaticProtectedNs("_-0UT")])
+      bitxor
+      dup
+      setlocal            11
+
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:MD2/hash"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0UT"), StaticProtectedNs("_-0UT")])
+
+      getlocal            11
+      kill                11
+      convert_u
+      setlocal            6
+
+      getlocal            8
+      increment
+      convert_u
+      setlocal            8
+
+L89:
+      getlocal            8
+      pushbyte            16
+      iflt                L62
+
+      getlocal3
+      pushbyte            16
+      add
+      convert_u
+      setlocal3
+
+L97:
+      getlocal3
+      getlocal            4
+      iflt                L57
+
+      getlocal1
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      setproperty         QName(PackageNamespace("", "#0"), "position")
+
+      getlocal1
+      getlocal            5
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBytes"), 1
+
+      getlocal            4
+      pushbyte            16
+      add
+      convert_u
+      setlocal            4
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal            7
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      jump                L211
+
+L120:
+      label
+      pushbyte            0
+      convert_u
+      setlocal            8
+
+      jump                L153
+
+L125:
+      label
+      getlocal            7
+      pushbyte            32
+      getlocal            8
+      add
+      getlocal            7
+      pushbyte            16
+      getlocal            8
+      add
+      getlocal1
+      getlocal3
+      getlocal            8
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:MD2/hash"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0UT"), StaticProtectedNs("_-0UT")])
+      dup
+      setlocal            11
+
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:MD2/hash"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0UT"), StaticProtectedNs("_-0UT")])
+
+      getlocal            11
+      kill                11
+      getlocal            7
+      getlocal            8
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:MD2/hash"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0UT"), StaticProtectedNs("_-0UT")])
+      bitxor
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:MD2/hash"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0UT"), StaticProtectedNs("_-0UT")])
+
+      getlocal            8
+      increment
+      convert_u
+      setlocal            8
+
+L153:
+      getlocal            8
+      pushbyte            16
+      iflt                L125
+
+      pushbyte            0
+      convert_u
+      setlocal            9
+
+      pushbyte            0
+      convert_u
+      setlocal            8
+
+      jump                L203
+
+L163:
+      label
+      pushbyte            0
+      convert_u
+      setlocal            10
+
+      jump                L189
+
+L168:
+      label
+      getlocal            7
+      getlocal            10
+      getlocal            7
+      getlocal            10
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:MD2/hash"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0UT"), StaticProtectedNs("_-0UT")])
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), "S")
+      getlocal            9
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:MD2/hash"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0UT"), StaticProtectedNs("_-0UT")])
+      bitxor
+      dup
+      setlocal            11
+
+      convert_u
+      setlocal            9
+
+      getlocal            11
+      kill                11
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.hash:MD2/hash"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0UT"), StaticProtectedNs("_-0UT")])
+
+      getlocal            10
+      increment
+      convert_u
+      setlocal            10
+
+L189:
+      getlocal            10
+      pushbyte            48
+      iflt                L168
+
+      getlocal            9
+      getlocal            8
+      add
+      pushshort           255
+      bitand
+      convert_u
+      setlocal            9
+
+      getlocal            8
+      increment
+      convert_u
+      setlocal            8
+
+L203:
+      getlocal            8
+      pushbyte            18
+      iflt                L163
+
+      getlocal3
+      pushbyte            16
+      add
+      convert_u
+      setlocal3
+
+L211:
+      getlocal3
+      getlocal            4
+      iflt                L120
+
+      getlocal            7
+      pushbyte            16
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      getlocal1
+      getlocal2
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      getlocal            7
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "com.hurlant.crypto.hash:MD2/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "md2"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.crypto.hash:MD2/cinit"
+  body
+   maxstack 257
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace("", "#0"), "HASH_SIZE")
+    pushbyte            16
+    initproperty        QName(PackageNamespace("", "#0"), "HASH_SIZE")
+
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), "S")
+    pushbyte            41
+    pushbyte            46
+    pushbyte            67
+    pushshort           201
+    pushshort           162
+    pushshort           216
+    pushbyte            124
+    pushbyte            1
+    pushbyte            61
+    pushbyte            54
+    pushbyte            84
+    pushshort           161
+    pushshort           236
+    pushshort           240
+    pushbyte            6
+    pushbyte            19
+    pushbyte            98
+    pushshort           167
+    pushbyte            5
+    pushshort           243
+    pushshort           192
+    pushshort           199
+    pushbyte            115
+    pushshort           140
+    pushshort           152
+    pushshort           147
+    pushbyte            43
+    pushshort           217
+    pushshort           188
+    pushbyte            76
+    pushshort           130
+    pushshort           202
+    pushbyte            30
+    pushshort           155
+    pushbyte            87
+    pushbyte            60
+    pushshort           253
+    pushshort           212
+    pushshort           224
+    pushbyte            22
+    pushbyte            103
+    pushbyte            66
+    pushbyte            111
+    pushbyte            24
+    pushshort           138
+    pushbyte            23
+    pushshort           229
+    pushbyte            18
+    pushshort           190
+    pushbyte            78
+    pushshort           196
+    pushshort           214
+    pushshort           218
+    pushshort           158
+    pushshort           222
+    pushbyte            73
+    pushshort           160
+    pushshort           251
+    pushshort           245
+    pushshort           142
+    pushshort           187
+    pushbyte            47
+    pushshort           238
+    pushbyte            122
+    pushshort           169
+    pushbyte            104
+    pushbyte            121
+    pushshort           145
+    pushbyte            21
+    pushshort           178
+    pushbyte            7
+    pushbyte            63
+    pushshort           148
+    pushshort           194
+    pushbyte            16
+    pushshort           137
+    pushbyte            11
+    pushbyte            34
+    pushbyte            95
+    pushbyte            33
+    pushshort           128
+    pushbyte            127
+    pushbyte            93
+    pushshort           154
+    pushbyte            90
+    pushshort           144
+    pushbyte            50
+    pushbyte            39
+    pushbyte            53
+    pushbyte            62
+    pushshort           204
+    pushshort           231
+    pushshort           191
+    pushshort           247
+    pushshort           151
+    pushbyte            3
+    pushshort           255
+    pushbyte            25
+    pushbyte            48
+    pushshort           179
+    pushbyte            72
+    pushshort           165
+    pushshort           181
+    pushshort           209
+    pushshort           215
+    pushbyte            94
+    pushshort           146
+    pushbyte            42
+    pushshort           172
+    pushbyte            86
+    pushshort           170
+    pushshort           198
+    pushbyte            79
+    pushshort           184
+    pushbyte            56
+    pushshort           210
+    pushshort           150
+    pushshort           164
+    pushbyte            125
+    pushshort           182
+    pushbyte            118
+    pushshort           252
+    pushbyte            107
+    pushshort           226
+    pushshort           156
+    pushbyte            116
+    pushbyte            4
+    pushshort           241
+    pushbyte            69
+    pushshort           157
+    pushbyte            112
+    pushbyte            89
+    pushbyte            100
+    pushbyte            113
+    pushshort           135
+    pushbyte            32
+    pushshort           134
+    pushbyte            91
+    pushshort           207
+    pushbyte            101
+    pushshort           230
+    pushbyte            45
+    pushshort           168
+    pushbyte            2
+    pushbyte            27
+    pushbyte            96
+    pushbyte            37
+    pushshort           173
+    pushshort           174
+    pushshort           176
+    pushshort           185
+    pushshort           246
+    pushbyte            28
+    pushbyte            70
+    pushbyte            97
+    pushbyte            105
+    pushbyte            52
+    pushbyte            64
+    pushbyte            126
+    pushbyte            15
+    pushbyte            85
+    pushbyte            71
+    pushshort           163
+    pushbyte            35
+    pushshort           221
+    pushbyte            81
+    pushshort           175
+    pushbyte            58
+    pushshort           195
+    pushbyte            92
+    pushshort           249
+    pushshort           206
+    pushshort           186
+    pushshort           197
+    pushshort           234
+    pushbyte            38
+    pushbyte            44
+    pushbyte            83
+    pushbyte            13
+    pushbyte            110
+    pushshort           133
+    pushbyte            40
+    pushshort           132
+    pushbyte            9
+    pushshort           211
+    pushshort           223
+    pushshort           205
+    pushshort           244
+    pushbyte            65
+    pushshort           129
+    pushbyte            77
+    pushbyte            82
+    pushbyte            106
+    pushshort           220
+    pushbyte            55
+    pushshort           200
+    pushbyte            108
+    pushshort           193
+    pushshort           171
+    pushshort           250
+    pushbyte            36
+    pushshort           225
+    pushbyte            123
+    pushbyte            8
+    pushbyte            12
+    pushshort           189
+    pushshort           177
+    pushbyte            74
+    pushbyte            120
+    pushshort           136
+    pushshort           149
+    pushshort           139
+    pushshort           227
+    pushbyte            99
+    pushshort           232
+    pushbyte            109
+    pushshort           233
+    pushshort           203
+    pushshort           213
+    pushshort           254
+    pushbyte            59
+    pushbyte            0
+    pushbyte            29
+    pushbyte            57
+    pushshort           242
+    pushshort           239
+    pushshort           183
+    pushbyte            14
+    pushbyte            102
+    pushbyte            88
+    pushshort           208
+    pushshort           228
+    pushshort           166
+    pushbyte            119
+    pushbyte            114
+    pushshort           248
+    pushshort           235
+    pushbyte            117
+    pushbyte            75
+    pushbyte            10
+    pushbyte            49
+    pushbyte            68
+    pushbyte            80
+    pushshort           180
+    pushshort           143
+    pushshort           237
+    pushbyte            31
+    pushbyte            26
+    pushshort           219
+    pushshort           153
+    pushshort           141
+    pushbyte            51
+    pushshort           159
+    pushbyte            17
+    pushshort           131
+    pushbyte            20
+    newarray            256
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), "S")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "HASH_SIZE") slotid 1 type QName(PackageNamespace("", "#0"), "int") value Integer(16) end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD2"), "S") slotid 2 type QName(PackageNamespace("", "#0"), "Array") end
+end ; class

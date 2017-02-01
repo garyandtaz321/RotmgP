@@ -1,0 +1,29 @@
+script ; 809
+ sinit
+  refid "_-0oL:Server.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Server", [PackageNamespace("_-0oL")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-0oL:Server"
+    popscope
+    initproperty        QName(PackageNamespace("_-0oL"), "Server")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-0oL"), "Server")
+  #include "Server.class.asasm"
+ end ; trait
+end ; script

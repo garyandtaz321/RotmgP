@@ -1,0 +1,31 @@
+method
+ refid "com.company.assembleegameclient.tutorial:doneAction"
+ param QName(PackageNamespace("com.company.assembleegameclient.game"), "_-0p2")
+ param QName(PackageNamespace("", "#0"), "String")
+ returns QName(PackageNamespace("", "#0"), "void")
+ body
+  maxstack 2
+  localcount 3
+  initscopedepth 1
+  maxscopedepth 2
+  code
+   getlocal0
+   pushscope
+
+   getlocal1
+   getproperty         QName(PackageNamespace("", "#0"), "tutorial_")
+   pushnull
+   ifne                L7
+
+   returnvoid
+
+L7:
+   getlocal1
+   getproperty         QName(PackageNamespace("", "#0"), "tutorial_")
+   getlocal2
+   callpropvoid        QName(PackageInternalNs("com.company.assembleegameclient.tutorial"), "doneAction"), 1
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

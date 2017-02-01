@@ -1,0 +1,61 @@
+script ; 1852
+ sinit
+  refid "_-GI:FountainEffect.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("FountainEffect", [PackageNamespace("_-GI")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "_-1S9")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "_-1S9")
+    newclass            "_-GI:FountainEffect"
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-GI"), "FountainEffect")
+
+    findpropstrict      Multiname("FountainParticle", [PrivateNamespace("*", "_-GI:FountainEffect")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "Particle")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-GI"), "Particle")
+    newclass            "_-GI:FountainEffect/FountainParticle"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-GI:FountainEffect"), "FountainParticle")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-GI"), "FountainEffect")
+  #include "FountainEffect.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-GI:FountainEffect"), "FountainParticle")
+  #include "FountainEffect/FountainParticle.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,169 @@
+class
+ refid "_-1iA:_-1BJ"
+ instance QName(PackageNamespace("_-1iA"), "_-1BJ")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-G2")
+  iinit
+   refid "_-1iA:_-1BJ/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     typeof
+     astypelate
+     increment
+     hasnext
+     subtract_i
+     bitxor
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal2
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-1iA:_-1BJ/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace("", "#0"), "toArray") flag FINAL dispid 3
+  method
+   refid "_-1iA:_-1BJ/toArray"
+   param QName(PackageNamespace("", "#0"), "Object")
+   returns QName(PackageNamespace("", "#0"), "Array")
+   body
+    maxstack 4
+    localcount 8
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     kill                5
+     inclocal            6
+     dup
+     checkfilter
+     declocal_i          2
+     convert_d
+L10:
+     setlocal            6
+
+     setlocal            7
+
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("", "#0"), "Object")
+     setlocal3
+
+     newarray            0
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+     setlocal2
+
+     jump                L27
+
+     astypelate
+     kill                3
+     inclocal_i          4
+     multiply_i
+     setlocal            5
+
+     kill                2
+L27:
+     pushbyte            0
+     setlocal            4
+
+     getlocal1
+     coerce_a
+     jump                L38
+
+     swap
+     convert_b
+     setlocal3
+
+     not
+     getlocal2
+     declocal            2
+L38:
+     setlocal            5
+
+     jump                L56
+
+L40:
+     label
+     getlocal            5
+     getlocal            4
+     nextvalue
+     coerce              QName(PackageNamespace("", "#0"), "Object")
+     setlocal3
+
+     getlocal            6
+     dup
+     iffalse             L52
+
+     pop
+     getlocal0
+     convert_b
+L52:
+     iftrue              L56
+
+     getlocal2
+     getlocal3
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L56:
+     hasnext2            5, 4
+     iftrue              L40
+
+     kill                5
+     kill                4
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

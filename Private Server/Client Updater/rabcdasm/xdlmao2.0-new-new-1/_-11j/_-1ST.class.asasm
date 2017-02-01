@@ -1,0 +1,290 @@
+class
+ refid "_-11j:_-1ST"
+ instance QName(PackageNamespace("_-11j"), "_-1ST")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0pi")
+  iinit
+   refid "_-11j:_-1ST/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     nextname
+     negate_i
+     nextname
+     getlocal2
+     greaterequals
+     pushtrue
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iftrue              L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "x_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "y_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait method QName(PackageNamespace("", "#0"), "_-1Ab")
+   method
+    refid "_-11j:_-1ST/_-1Ab"
+    returns QName(PackageNamespace("flash.geom"), "Point")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+      jump                L10
+
+      astypelate
+      newactivation
+      equals
+      pushfalse
+      coerce_s
+      decrement_i
+L10:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "parseFromInput")
+   method
+    refid "_-11j:_-1ST/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      istypelate
+      declocal_i          2
+      declocal_i          2
+      astypelate
+      declocal            2
+      instanceof
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L30
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readFloat"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "x_")
+
+      getlocal2
+      dup
+      iftrue              L25
+
+      pop
+      getlocal3
+      convert_b
+L25:
+      iffalse             L30
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readFloat"), 0
+      initproperty        QName(PackageNamespace("", "#0"), "y_")
+
+L30:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "writeToOutput")
+   method
+    refid "_-11j:_-1ST/writeToOutput"
+    param QName(PackageNamespace("flash.utils"), "IDataOutput")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      convert_d
+      getlocal2
+      modulo
+      hasnext
+      bitnot
+      declocal            2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L19
+
+      pop
+      getlocal2
+      convert_b
+L19:
+      iftrue              L26
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeFloat"), 1
+
+      getlocal3
+      iftrue              L30
+
+L26:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeFloat"), 1
+
+L30:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "_-11j:_-1ST/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      equals
+      not
+      convert_d
+      greaterthan
+      newactivation
+      pushscope
+
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      pushstring          "x_: "
+      jump                L22
+
+      lessthan
+      decrement_i
+      pushundefined
+      popscope
+      setlocal3
+
+      negate
+L22:
+      getlocal1
+      iftrue              L43
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "x_")
+      getlocal1
+      iftrue              L42
+
+      add
+      getlocal2
+      iffalse             L40
+
+      pushstring          " y_: "
+      add
+      getlocal1
+      dup
+      iffalse             L39
+
+      pop
+      getlocal2
+      convert_b
+L39:
+      iftrue              L43
+
+L40:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "y_")
+L42:
+      add
+L43:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-11j:_-1ST/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

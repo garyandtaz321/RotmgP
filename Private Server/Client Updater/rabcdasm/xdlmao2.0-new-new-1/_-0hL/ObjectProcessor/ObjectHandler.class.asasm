@@ -1,0 +1,88 @@
+class
+ refid "_-0hL:ObjectProcessor/ObjectHandler"
+ instance QName(PrivateNamespace("*", "_-0hL:ObjectProcessor#0"), "ObjectHandler")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("ObjectProcessor.as$57:ObjectHandler")
+  iinit
+   refid "_-0hL:ObjectProcessor/ObjectHandler/iinit"
+   param QName(PackageNamespace("_-1fY"), "_-1rS")
+   param QName(PackageNamespace("", "#0"), "Function")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-0hL:ObjectProcessor/ObjectHandler"), "_matcher")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-0hL:ObjectProcessor/ObjectHandler"), "_handler")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-0hL:ObjectProcessor/ObjectHandler"), "_matcher") type QName(PackageNamespace("_-1fY"), "_-1rS") end
+  trait slot QName(PrivateNamespace("*", "_-0hL:ObjectProcessor/ObjectHandler"), "_handler") type QName(PackageNamespace("", "#0"), "Function") end
+  trait method QName(PackageNamespace("", "#0"), "handle")
+   method
+    refid "_-0hL:ObjectProcessor/ObjectHandler/handle"
+    param QName(PackageNamespace("", "#0"), "Object")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0hL:ObjectProcessor/ObjectHandler"), "_matcher")
+      getlocal1
+      callproperty        QName(Namespace("_-Q4"), "matches"), 1
+      coerce_a
+      dup
+      iffalse             L14
+
+      pop
+      getlocal0
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "_-0hL:ObjectProcessor/ObjectHandler"), "_handler"), 1
+      coerce_a
+L14:
+      pop
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0hL:ObjectProcessor/ObjectHandler/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

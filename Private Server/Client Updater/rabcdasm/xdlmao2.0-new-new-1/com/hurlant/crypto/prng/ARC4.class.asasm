@@ -1,0 +1,466 @@
+class
+ refid "com.hurlant.crypto.prng:ARC4"
+ instance QName(PackageNamespace("com.hurlant.crypto.prng"), "ARC4")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("IPRNG", [PackageNamespace("com.hurlant.crypto.prng")])
+  implements Multiname("IStreamCipher", [PackageNamespace("com.hurlant.crypto.symmetric")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1pi")
+  iinit
+   refid "com.hurlant.crypto.prng:ARC4/iinit"
+   param QName(PackageNamespace("flash.utils"), "ByteArray")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+     constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+     initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+
+     getlocal1
+     iffalse             L13
+
+     getlocal0
+     getlocal1
+     callpropvoid        QName(PackageNamespace("", "#0"), "init"), 1
+
+L13:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "i") type QName(PackageNamespace("", "#0"), "int") value Integer(0) end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "j") type QName(PackageNamespace("", "#0"), "int") value Integer(0) end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S") type QName(PackageNamespace("flash.utils"), "ByteArray") end
+  trait const QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "psize") type QName(PackageNamespace("", "#0"), "uint") value Integer(256) end
+  trait method QName(PackageNamespace("", "#0"), "getPoolSize")
+   method
+    refid "com.hurlant.crypto.prng:ARC4/getPoolSize"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "psize")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "init")
+   method
+    refid "com.hurlant.crypto.prng:ARC4/init"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      pushbyte            0
+      setlocal2
+
+      jump                L18
+
+L11:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      getlocal2
+      getlocal2
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+
+      inclocal_i          2
+L18:
+      getlocal2
+      pushshort           256
+      iflt                L11
+
+      pushbyte            0
+      setlocal3
+
+      pushbyte            0
+      setlocal2
+
+      jump                L63
+
+L26:
+      label
+      getlocal3
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+      add
+      getlocal1
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      modulo
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+      add
+      pushshort           255
+      bitand
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+      convert_i
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      getlocal3
+      getlocal            4
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+
+      inclocal_i          2
+L63:
+      getlocal2
+      pushshort           256
+      iflt                L26
+
+      getlocal0
+      pushbyte            0
+      setproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "i")
+
+      getlocal0
+      pushbyte            0
+      setproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "j")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "next")
+   method
+    refid "com.hurlant.crypto.prng:ARC4/next"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal1
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "i")
+      pushbyte            1
+      add
+      pushshort           255
+      bitand
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "i")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "j")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "i")
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+      add
+      pushshort           255
+      bitand
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "j")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "i")
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+      convert_i
+      setlocal1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "i")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "j")
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "j")
+      getlocal1
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "i")
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+      add
+      pushshort           255
+      bitand
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "getBlockSize")
+   method
+    refid "com.hurlant.crypto.prng:ARC4/getBlockSize"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "encrypt")
+   method
+    refid "com.hurlant.crypto.prng:ARC4/encrypt"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      jump                L24
+
+L6:
+      label
+      getlocal1
+      getlocal2
+      convert_d
+      dup
+      increment
+      convert_u
+      setlocal2
+
+      setlocal3
+
+      getlocal3
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+      getlocal0
+      callproperty        QName(PackageNamespace("", "#0"), "next"), 0
+      bitxor
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+
+      kill                3
+L24:
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L6
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "decrypt")
+   method
+    refid "com.hurlant.crypto.prng:ARC4/decrypt"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "encrypt"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "dispose")
+   method
+    refid "com.hurlant.crypto.prng:ARC4/dispose"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      pushnull
+      ifeq                L38
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      jump                L26
+
+L13:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      pushshort           256
+      multiply
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#1"), PackageNamespace("com.hurlant.crypto.prng"), PackageInternalNs("com.hurlant.crypto.prng"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1pi"), StaticProtectedNs("_-1pi")])
+
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+L26:
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L13
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "S")
+
+L38:
+      getlocal0
+      pushbyte            0
+      setproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "i")
+
+      getlocal0
+      pushbyte            0
+      setproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.prng:ARC4#0"), "j")
+
+      getlex              QName(PackageNamespace("com.hurlant.util"), "Memory")
+      callpropvoid        QName(PackageNamespace("", "#0"), "gc"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "com.hurlant.crypto.prng:ARC4/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "rc4"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.crypto.prng:ARC4/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,166 @@
+class
+ refid "_-tb:_-EM"
+ instance QName(PackageNamespace("_-tb"), "_-EM")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0j6")
+  iinit
+   refid "_-tb:_-EM/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     bitor
+     swap
+     convert_d
+     hasnext
+     popscope
+     multiply_i
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iftrue              L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "account") flag METADATA type QName(PackageNamespace("_-1PE"), "Account")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-C-") flag METADATA type QName(PackageNamespace("_-0SK"), "_-Qo")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-nU") flag METADATA type QName(PackageNamespace("_-Nj"), "_-M4")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "execute")
+   method
+    refid "_-tb:_-EM/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      getlocal2
+      bitnot
+      bitxor
+      hasnext
+      greaterthan
+      rshift
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L50
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "account")
+      jump                L25
+
+      convert_b
+      lshift
+      urshift
+      typeof
+      convert_u
+      getlocal3
+L25:
+      callproperty        QName(Namespace("_-1lo"), "_-vD"), 0
+      iffalse             L47
+
+      getlocal1
+      dup
+      iffalse             L33
+
+      pop
+      getlocal2
+      convert_b
+L33:
+      iftrue              L50
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-nU")
+      findpropstrict      QName(PackageNamespace("_-0SK"), "KongregateAccountDetailDialog")
+      constructprop       QName(PackageNamespace("_-0SK"), "KongregateAccountDetailDialog"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+      getlocal2
+      dup
+      iftrue              L45
+
+      pop
+      getlocal2
+      convert_b
+L45:
+      iffalse             L50
+
+      jump                L50
+
+L47:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-C-")
+      callpropvoid        QName(Namespace("_-1NL"), "_-O2"), 0
+
+L50:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-tb:_-EM/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

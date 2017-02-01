@@ -1,0 +1,157 @@
+class
+ refid "_-70:_-dG"
+ instance QName(PackageNamespace("_-70"), "_-dG")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0jM")
+  iinit
+   refid "_-70:_-dG/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     negate_i
+     getlocal0
+     getlocal0
+     pushundefined
+     getlocal2
+     greaterthan
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iftrue              L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-nU") flag METADATA type QName(PackageNamespace("_-Nj"), "_-M4")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-1vM") flag METADATA type QName(PackageNamespace("_-Nj"), "_-1HT")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-1TT") flag METADATA type QName(PackageNamespace("_-1PM"), "_-1YQ")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "execute")
+   method
+    refid "_-70:_-dG/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      subtract_i
+      equals
+      typeof
+      setlocal3
+
+      pushwith
+      coerce_a
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L49
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1TT")
+      pushstring          "Zombify Player"
+      jump                L25
+
+      pushfalse
+      bitor
+      nextname
+      add
+      greaterthan
+      negate_i
+L25:
+      callpropvoid        QName(Namespace("_-g2"), "info"), 1
+
+      getlocal2
+      dup
+      iffalse             L32
+
+      pop
+      getlocal2
+      convert_b
+L32:
+      iftrue              L49
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-nU")
+      findpropstrict      QName(PackageNamespace("_-1kP"), "ZombifyDialog")
+      constructprop       QName(PackageNamespace("_-1kP"), "ZombifyDialog"), 0
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+      getlocal2
+      dup
+      iffalse             L44
+
+      pop
+      getlocal2
+      convert_b
+L44:
+      iftrue              L49
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1vM")
+      pushshort           13056
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 1
+
+L49:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-70:_-dG/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

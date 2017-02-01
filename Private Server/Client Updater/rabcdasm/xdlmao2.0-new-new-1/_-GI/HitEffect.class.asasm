@@ -1,0 +1,366 @@
+class
+ refid "_-GI:HitEffect"
+ instance QName(PackageNamespace("_-GI"), "HitEffect")
+  extends QName(PackageNamespace("_-GI"), "_-1S9")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1PQ")
+  iinit
+   refid "_-GI:HitEffect/iinit"
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "uint")>)
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "Number")
+   param QName(PackageNamespace("", "#0"), "Number")
+   body
+    maxstack 4
+    localcount 8
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     pushtrue
+     setlocal3
+
+     convert_u
+     greaterthan
+     popscope
+     declocal_i          4
+L10:
+     setlocal            6
+
+     setlocal            7
+
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal            6
+     dup
+     jump                L25
+
+     kill                3
+     getlocal0
+     nextvalue
+     getlocal2
+     astypelate
+     inclocal            5
+L25:
+     iffalse             L29
+
+     pop
+     getlocal1
+     convert_b
+L29:
+     iftrue              L38
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "_-oc")
+
+     findproperty        QName(PackageNamespace("", "#0"), "size_")
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "size_")
+
+     getlocal            7
+     iffalse             L46
+
+L38:
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace("", "#0"), "_-1iX")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace("", "#0"), "angle_")
+
+     getlocal            7
+     iffalse             L49
+
+L46:
+     getlocal0
+     getlocal            5
+     initproperty        QName(PackageNamespace("", "#0"), "speed_")
+
+L49:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-oc") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "uint")>) end
+  trait slot QName(PackageNamespace("", "#0"), "_-1iX") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "angle_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "speed_") type QName(PackageNamespace("", "#0"), "Number") end
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "_-GI:HitEffect/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 11
+     localcount 10
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      setlocal            8
+
+      jump                L10
+
+      typeof
+      inclocal            2
+      setlocal            7
+
+      declocal            6
+      getlocal3
+      inclocal            7
+L10:
+      setlocal            9
+
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace("_-GI"), "Particle")
+      setlocal            7
+
+      getlocal            8
+      dup
+      iftrue              L25
+
+      pop
+      getlocal1
+      convert_b
+L25:
+      iffalse             L33
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-oc")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            0
+      ifne                L35
+
+      getlocal            9
+      iftrue              L35
+
+L33:
+      pushfalse
+      returnvalue
+
+L35:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "speed_")
+      getlocal            9
+      iftrue              L58
+
+      pushshort           600
+      divide
+      getlocal            9
+      dup
+      iffalse             L47
+
+      pop
+      getlocal2
+      convert_b
+L47:
+      iftrue              L58
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "angle_")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      add
+      callproperty        QName(PackageNamespace("", "#0"), "cos"), 1
+      multiply
+      getlocal            8
+      iffalse             L59
+
+L58:
+      convert_d
+L59:
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "speed_")
+      getlocal            8
+      dup
+      iftrue              L68
+
+      pop
+      getlocal0
+      convert_b
+L68:
+      iffalse             L73
+
+      pushshort           600
+      divide
+      getlocal            8
+      iffalse             L95
+
+L73:
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "angle_")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      add
+      jump                L86
+
+      declocal_i          2
+      equals
+      instanceof
+      declocal_i          6
+      lessthan
+      getlocal            8
+L86:
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      multiply
+      getlocal            8
+      dup
+      iftrue              L94
+
+      pop
+      getlocal1
+      convert_b
+L94:
+      iffalse             L96
+
+L95:
+      convert_d
+L96:
+      setlocal            4
+
+      pushbyte            0
+      setlocal            5
+
+      jump                L173
+
+L100:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-oc")
+      findpropstrict      QName(PackageNamespace("", "#0"), "int")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-oc")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      multiply
+      callproperty        QName(PackageNamespace("", "#0"), "int"), 1
+      getproperty         MultinameL([PrivateNamespace("*", "_-GI:HitEffect/update"), PackageNamespace("", "#0"), PackageNamespace("_-GI"), PrivateNamespace("*", "_-GI:HitEffect"), PackageInternalNs("_-GI"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1PQ"), StaticProtectedNs("_-1PQ"), StaticProtectedNs("_-1vW"), StaticProtectedNs("_-0QL"), StaticProtectedNs("_-1mW")])
+      convert_u
+      setlocal            6
+
+      getlocal            9
+      iftrue              L177
+
+      findpropstrict      QName(PrivateNamespace("*", "_-GI:HitEffect"), "HitParticle")
+      getlocal            6
+      pushdouble          0.5
+      getlex              QName(PackageNamespace("", "#0"), "size_")
+      pushshort           200
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      pushbyte            100
+      multiply
+      add
+      getlocal3
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      pushdouble          0.5
+      subtract
+      pushdouble          0.4
+      multiply
+      add
+      getlocal            4
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      pushdouble          0.5
+      subtract
+      pushdouble          0.4
+      multiply
+      add
+      pushbyte            0
+      constructprop       QName(PrivateNamespace("*", "_-GI:HitEffect"), "HitParticle"), 7
+      coerce              QName(PackageNamespace("_-GI"), "Particle")
+      setlocal            7
+
+      getlocal            9
+      dup
+      jump                L155
+
+      coerce_a
+      multiply_i
+      multiply
+      declocal_i          8
+      inclocal            7
+      negate_i
+L155:
+      iffalse             L159
+
+      pop
+      getlocal2
+      convert_b
+L159:
+      iftrue              L173
+
+      getlex              QName(PackageNamespace("", "#0"), "map_")
+      getlocal            7
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addObj"), 3
+
+      getlocal            8
+      dup
+      iftrue              L171
+
+      pop
+      getlocal3
+      convert_b
+L171:
+      iffalse             L173
+
+      inclocal_i          5
+L173:
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1iX")
+      iflt                L100
+
+L177:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-GI:HitEffect/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

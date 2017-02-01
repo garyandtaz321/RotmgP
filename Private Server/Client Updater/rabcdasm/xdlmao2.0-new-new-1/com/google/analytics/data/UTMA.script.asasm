@@ -1,0 +1,33 @@
+script ; 1965
+ sinit
+  refid "com.google.analytics.data:UTMA.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("UTMA", [PackageNamespace("com.google.analytics.data")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.google.analytics.data"), "UTMCookie")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.google.analytics.data"), "UTMCookie")
+    newclass            "com.google.analytics.data:UTMA"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.google.analytics.data"), "UTMA")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.google.analytics.data"), "UTMA")
+  #include "UTMA.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,25 @@
+script ; 10
+ sinit
+  refid "_-1PM:_-1rc.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-1rc", [PackageNamespace("_-1PM")])
+    pushnull
+    newclass            "_-1PM:_-1rc"
+    initproperty        QName(PackageNamespace("_-1PM"), "_-1rc")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-1PM"), "_-1rc")
+  #include "_-1rc.class.asasm"
+ end ; trait
+end ; script

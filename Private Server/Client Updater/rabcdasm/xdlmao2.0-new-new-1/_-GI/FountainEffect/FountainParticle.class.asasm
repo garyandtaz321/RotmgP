@@ -1,0 +1,263 @@
+class
+ refid "_-GI:FountainEffect/FountainParticle"
+ instance QName(PrivateNamespace("*", "_-GI:FountainEffect"), "FountainParticle")
+  extends QName(PackageNamespace("_-GI"), "Particle")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("FountainEffect.as$1242:FountainParticle")
+  iinit
+   refid "_-GI:FountainEffect/FountainParticle/iinit"
+   body
+    maxstack 4
+    localcount 1
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+     constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 0
+     initproperty        QName(ProtectedNamespace("FountainEffect.as$1242:FountainParticle"), "moveVec_")
+
+     getlocal0
+     pushint             4285909
+     getlex              QName(PrivateNamespace("*", "_-GI:FountainEffect/FountainParticle"), "ZI")
+     pushbyte            100
+     constructsuper      3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "startTime_") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(ProtectedNamespace("FountainEffect.as$1242:FountainParticle"), "moveVec_") type QName(PackageNamespace("flash.geom"), "Vector3D") end
+  trait method QName(PackageNamespace("", "#0"), "restart")
+   method
+    refid "_-GI:FountainEffect/FountainParticle/restart"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            4
+
+      pushbyte            2
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getproperty         QName(PackageNamespace("", "#0"), "PI")
+      multiply
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      multiply
+      convert_d
+      setlocal3
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("FountainEffect.as$1242:FountainParticle"), "moveVec_")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal3
+      callproperty        QName(PackageNamespace("", "#0"), "cos"), 1
+      setproperty         QName(PackageNamespace("", "#0"), "x")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("FountainEffect.as$1242:FountainParticle"), "moveVec_")
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal3
+      callproperty        QName(PackageNamespace("", "#0"), "sin"), 1
+      setproperty         QName(PackageNamespace("", "#0"), "y")
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace("", "#0"), "startTime_")
+
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "startTime_")
+      subtract
+      convert_i
+      setlocal            4
+
+      findproperty        QName(PackageNamespace("", "#0"), "x_")
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("FountainEffect.as$1242:FountainParticle"), "moveVec_")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal            4
+      multiply
+      pushdouble          0.0008
+      multiply
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "x_")
+
+      findproperty        QName(PackageNamespace("", "#0"), "y_")
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("FountainEffect.as$1242:FountainParticle"), "moveVec_")
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      getlocal            4
+      multiply
+      pushdouble          0.0008
+      multiply
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "y_")
+
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "startTime_")
+      subtract
+      pushshort           1000
+      divide
+      convert_d
+      setlocal            5
+
+      findproperty        QName(PackageNamespace("", "#0"), "z_")
+      pushdouble          0.75
+      getlex              QName(PrivateNamespace("*", "_-GI:FountainEffect/FountainParticle"), "VI")
+      getlocal            5
+      multiply
+      add
+      getlex              QName(PrivateNamespace("*", "_-GI:FountainEffect/FountainParticle"), "G")
+      getlocal            5
+      getlocal            5
+      multiply
+      multiply
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "z_")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "removeFromMap") flag OVERRIDE
+   method
+    refid "_-GI:FountainEffect/FountainParticle/removeFromMap"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace("", "#0"), "removeFromMap"), 0
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0CH")
+      getlocal0
+      callpropvoid        QName(PackageNamespace("", "#0"), "_-0Ez"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "update") flag OVERRIDE
+   method
+    refid "_-GI:FountainEffect/FountainParticle/update"
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "startTime_")
+      subtract
+      pushshort           1000
+      divide
+      convert_d
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "moveTo")
+      getlex              QName(PackageNamespace("", "#0"), "x_")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("FountainEffect.as$1242:FountainParticle"), "moveVec_")
+      getproperty         QName(PackageNamespace("", "#0"), "x")
+      getlocal2
+      multiply
+      pushdouble          0.0008
+      multiply
+      add
+      getlex              QName(PackageNamespace("", "#0"), "y_")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("FountainEffect.as$1242:FountainParticle"), "moveVec_")
+      getproperty         QName(PackageNamespace("", "#0"), "y")
+      getlocal2
+      multiply
+      pushdouble          0.0008
+      multiply
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "moveTo"), 2
+
+      findproperty        QName(PackageNamespace("", "#0"), "z_")
+      pushdouble          0.75
+      getlex              QName(PrivateNamespace("*", "_-GI:FountainEffect/FountainParticle"), "VI")
+      getlocal3
+      multiply
+      add
+      getlex              QName(PrivateNamespace("*", "_-GI:FountainEffect/FountainParticle"), "G")
+      getlocal3
+      getlocal3
+      multiply
+      multiply
+      add
+      initproperty        QName(PackageNamespace("", "#0"), "z_")
+
+      getlex              QName(PackageNamespace("", "#0"), "z_")
+      pushdouble          0
+      greaterthan
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-GI:FountainEffect/FountainParticle/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "_-GI:FountainEffect/FountainParticle"), "G")
+    pushdouble          -4.9
+    initproperty        QName(PrivateNamespace("*", "_-GI:FountainEffect/FountainParticle"), "G")
+
+    findproperty        QName(PrivateNamespace("*", "_-GI:FountainEffect/FountainParticle"), "VI")
+    pushdouble          6.5
+    initproperty        QName(PrivateNamespace("*", "_-GI:FountainEffect/FountainParticle"), "VI")
+
+    findproperty        QName(PrivateNamespace("*", "_-GI:FountainEffect/FountainParticle"), "ZI")
+    pushdouble          0.75
+    initproperty        QName(PrivateNamespace("*", "_-GI:FountainEffect/FountainParticle"), "ZI")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_-GI:FountainEffect/FountainParticle"), "G") slotid 1 type QName(PackageNamespace("", "#0"), "Number") value Double(-4.9) end
+ trait const QName(PrivateNamespace("*", "_-GI:FountainEffect/FountainParticle"), "VI") slotid 2 type QName(PackageNamespace("", "#0"), "Number") value Double(6.5) end
+ trait const QName(PrivateNamespace("*", "_-GI:FountainEffect/FountainParticle"), "ZI") slotid 3 type QName(PackageNamespace("", "#0"), "Number") value Double(0.75) end
+end ; class

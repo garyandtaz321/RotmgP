@@ -1,0 +1,110 @@
+class
+ refid "_-1L3:_-1Nl"
+ instance QName(PackageNamespace("_-1L3"), "_-1Nl")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("_-0qB", [PackageNamespace("_-1L3")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0RS")
+  iinit
+   refid "_-1L3:_-1Nl/iinit"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal            4
+
+     jump                L10
+
+     inclocal_i          4
+     coerce_s
+     nextvalue
+     inclocal_i          3
+     setlocal3
+
+     subtract_i
+L10:
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     getlocal            5
+     iftrue              L31
+
+     jump                L22
+
+     declocal            2
+     setlocal2
+
+     typeof
+     kill                3
+     setlocal3
+
+     declocal_i          2
+L22:
+     getlocal0
+     constructsuper      0
+
+     getlocal            5
+     dup
+     iffalse             L30
+
+     pop
+     getlocal2
+     convert_b
+L30:
+     iftrue              L41
+
+L31:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "_-0Su")
+
+     getlocal            4
+     iffalse             L41
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "_-0X4")
+
+     getlocal            4
+     iffalse             L44
+
+L41:
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace("", "#0"), "_-0Pd")
+
+L44:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-0Su") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-0X4") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-0Pd") type QName(PackageNamespace("", "#0"), "int") end
+ end ; instance
+ cinit
+  refid "_-1L3:_-1Nl/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

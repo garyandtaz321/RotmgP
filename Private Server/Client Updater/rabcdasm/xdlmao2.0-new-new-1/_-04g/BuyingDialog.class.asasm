@@ -1,0 +1,69 @@
+class
+ refid "_-04g:BuyingDialog"
+ instance QName(PackageNamespace("_-04g"), "BuyingDialog")
+  extends QName(PackageNamespace("_-Vb"), "Dialog")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-uf")
+  iinit
+   refid "_-04g:BuyingDialog/iinit"
+   body
+    maxstack 8
+    localcount 3
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     subtract
+     getlocal2
+     convert_s
+     add
+     setlocal3
+
+     convert_u
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L24
+
+     getlocal0
+     pushnull
+     getlex              QName(PackageNamespace("_-6u"), "_-TG")
+     getproperty         QName(PackageNamespace("", "#0"), "_-4c")
+     pushnull
+     pushnull
+     pushstring          "/buyingCharSlot"
+     constructsuper      5
+
+L24:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-04g:BuyingDialog/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

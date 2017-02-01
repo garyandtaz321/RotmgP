@@ -1,0 +1,132 @@
+class
+ refid "_-1LY:_-14h"
+ instance QName(PackageNamespace("_-1LY"), "_-14h")
+  extends QName(PackageNamespace("_-0tk"), "Command")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0K0")
+  iinit
+   refid "_-1LY:_-14h/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     newactivation
+     increment_i
+     add_i
+     bitand
+     strictequals
+     greaterthan
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iftrue              L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iffalse             L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-1-P") flag METADATA type QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "model") flag METADATA type QName(PackageNamespace("_-1Fr"), "_-qf")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "_-1fy") flag METADATA type QName(PackageNamespace("_-0MO"), "_-gs")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "execute") flag OVERRIDE
+   method
+    refid "_-1LY:_-14h/execute"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      strictequals
+      pushfalse
+      bitor
+      swap
+      not
+      setlocal3
+
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      iftrue              L26
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "model")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1-P")
+      setproperty         QName(PackageNamespace("", "#0"), "_-1-P")
+
+      getlocal2
+      iffalse             L26
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1fy")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispatch"), 0
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1LY:_-14h/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

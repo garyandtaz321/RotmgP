@@ -1,0 +1,29 @@
+script ; 2059
+ sinit
+  refid "com.google.analytics.ecommerce:Item.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Item", [PackageNamespace("com.google.analytics.ecommerce")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.google.analytics.ecommerce:Item"
+    popscope
+    initproperty        QName(PackageNamespace("com.google.analytics.ecommerce"), "Item")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.google.analytics.ecommerce"), "Item")
+  #include "Item.class.asasm"
+ end ; trait
+end ; script

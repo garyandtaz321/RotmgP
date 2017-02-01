@@ -1,0 +1,371 @@
+class
+ refid "com.google.analytics.core:Utils"
+ instance QName(PackageNamespace("com.google.analytics.core"), "Utils")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.core:Utils")
+  iinit
+   refid "com.google.analytics.core:Utils/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.google.analytics.core:Utils/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace("", "#0"), "trim") flag FINAL dispid 5
+  method
+   refid "com.google.analytics.core:Utils/trim"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   returns QName(PackageNamespace("", "#0"), "String")
+   flag HAS_OPTIONAL
+   optional False()
+   body
+    maxstack 4
+    localcount 8
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal            5
+
+     pushbyte            0
+     setlocal            6
+
+     pushbyte            0
+     setlocal            7
+
+     getlocal1
+     pushstring          ""
+     ifne                L13
+
+     pushstring          ""
+     returnvalue
+
+L13:
+     pushstring          " "
+     pushstring          "\n"
+     pushstring          "\r"
+     pushstring          "\x09"
+     newarray            4
+     coerce              QName(PackageNamespace("", "#0"), "Array")
+     setlocal3
+
+     getlocal1
+     coerce_s
+     setlocal            4
+
+     getlocal2
+     iffalse             L55
+
+     pushbyte            0
+     setlocal            5
+
+     jump                L39
+
+L28:
+     label
+     getlocal            4
+     getlocal3
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Utils/trim#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Utils/trim#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Utils"), StaticProtectedNs("com.google.analytics.core:Utils"), StaticProtectedNs("Object")])
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     pushstring          ""
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+     coerce_s
+     setlocal            4
+
+     inclocal_i          5
+L39:
+     getlocal            5
+     getlocal3
+     getproperty         QName(PackageNamespace("", "#0"), "length")
+     lessthan
+     dup
+     iffalse             L53
+
+     pop
+     getlocal            4
+     getlocal3
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Utils/trim#0"), PackageNamespace("", "#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:Utils/trim#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:Utils"), StaticProtectedNs("com.google.analytics.core:Utils"), StaticProtectedNs("Object")])
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     pushbyte            255
+     greaterthan
+L53:
+     iftrue              L28
+
+     jump                L112
+
+L55:
+     pushbyte            0
+     setlocal            6
+
+     jump                L60
+
+L58:
+     label
+     inclocal_i          6
+L60:
+     getlocal            6
+     getlocal            4
+     getproperty         QName(PackageNamespace("", "#0"), "length")
+     lessthan
+     dup
+     iffalse             L74
+
+     pop
+     getlocal3
+     getlocal            4
+     getlocal            6
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     pushbyte            255
+     greaterthan
+L74:
+     iftrue              L58
+
+     getlocal            4
+     getlocal            6
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+     coerce_s
+     dup
+     setlocal            4
+
+     getproperty         QName(PackageNamespace("", "#0"), "length")
+     decrement
+     convert_i
+     setlocal            7
+
+     jump                L90
+
+L86:
+     label
+     getlocal            7
+     decrement_i
+     setlocal            7
+
+L90:
+     getlocal            7
+     pushbyte            0
+     greaterequals
+     dup
+     iffalse             L103
+
+     pop
+     getlocal3
+     getlocal            4
+     getlocal            7
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     pushbyte            255
+     greaterthan
+L103:
+     iftrue              L86
+
+     getlocal            4
+     pushbyte            0
+     getlocal            7
+     pushbyte            1
+     add
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+     coerce_s
+     setlocal            4
+
+L112:
+     getlocal            4
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "generateHash") flag FINAL dispid 4
+  method
+   refid "com.google.analytics.core:Utils/generateHash"
+   param QName(PackageNamespace("", "#0"), "String")
+   returns QName(PackageNamespace("", "#0"), "int")
+   body
+    maxstack 3
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal            4
+
+     pushbyte            0
+     setlocal            5
+
+     pushbyte            1
+     setlocal2
+
+     pushbyte            0
+     setlocal3
+
+     getlocal1
+     pushnull
+     equals
+     not
+     dup
+     iffalse             L21
+
+     pop
+     getlocal1
+     pushstring          ""
+     equals
+     not
+L21:
+     iffalse             L68
+
+     pushbyte            0
+     setlocal2
+
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "length")
+     decrement
+     convert_i
+     setlocal            4
+
+     jump                L65
+
+L30:
+     label
+     getlocal1
+     getlocal            4
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+     convert_i
+     setlocal            5
+
+     getlocal2
+     pushbyte            6
+     lshift
+     pushint             268435455
+     bitand
+     getlocal            5
+     add
+     getlocal            5
+     pushbyte            14
+     lshift
+     add
+     convert_i
+     setlocal2
+
+     getlocal2
+     pushint             266338304
+     bitand
+     setlocal3
+
+     getlocal3
+     pushbyte            0
+     ifeq                L62
+
+     getlocal2
+     getlocal3
+     pushbyte            21
+     rshift
+     bitxor
+     setlocal2
+
+L62:
+     getlocal            4
+     decrement_i
+     setlocal            4
+
+L65:
+     getlocal            4
+     pushbyte            0
+     ifge                L30
+
+L68:
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "generate32bitRandom") flag FINAL dispid 3
+  method
+   refid "com.google.analytics.core:Utils/generate32bitRandom"
+   returns QName(PackageNamespace("", "#0"), "int")
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     getlex              QName(PackageNamespace("", "#0"), "Math")
+     callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+     pushint             2147483647
+     multiply
+     callproperty        QName(PackageNamespace("", "#0"), "round"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "validateAccount") flag FINAL dispid 6
+  method
+   refid "com.google.analytics.core:Utils/validateAccount"
+   param QName(PackageNamespace("", "#0"), "String")
+   returns QName(PackageNamespace("", "#0"), "Boolean")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("", "#0"), "RegExp")
+     pushstring          "^UA-[0-9]*-[0-9]*$"
+     construct           1
+     coerce              QName(PackageNamespace("", "#0"), "RegExp")
+     setlocal2
+
+     getlocal2
+     getlocal1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "test"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

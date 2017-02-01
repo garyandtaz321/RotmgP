@@ -1,0 +1,134 @@
+class
+ refid "_-SW:_-12Q"
+ instance QName(PackageNamespace("_-SW"), "_-12Q")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("_-1z5", [PackageNamespace("_-SW")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Tf")
+  iinit
+   refid "_-SW:_-12Q/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     popscope
+     pushundefined
+     coerce_a
+     negate_i
+     urshift
+     coerce_s
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L20
+
+     pop
+     getlocal2
+     convert_b
+L20:
+     iffalse             L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "stringify")
+   method
+    refid "_-SW:_-12Q/stringify"
+    param QName(PackageNamespace("", "#0"), "Object")
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("_-Nf"), "JSON")
+      jump                L10
+
+      getlocal3
+      pushscope
+
+      subtract_i
+      lessequals
+      setlocal2
+
+      multiply
+L10:
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "encode"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "parse")
+   method
+    refid "_-SW:_-12Q/parse"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "Object")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("_-Nf"), "JSON")
+      jump                L10
+
+      hasnext
+      getlocal1
+      convert_i
+      subtract_i
+      newactivation
+      dxnslate
+L10:
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "decode"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-SW:_-12Q/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

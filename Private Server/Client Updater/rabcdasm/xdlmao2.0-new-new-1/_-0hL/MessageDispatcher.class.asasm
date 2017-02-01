@@ -1,0 +1,516 @@
+class
+ refid "_-0hL:MessageDispatcher"
+ instance QName(PackageNamespace("_-0hL"), "MessageDispatcher")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  implements Multiname("_-0L0", [PackageNamespace("_-1PM")])
+  flag SEALED
+  flag FINAL
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-2p")
+  iinit
+   refid "_-0hL:MessageDispatcher/iinit"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     greaterthan
+     convert_i
+     dup
+     setlocal3
+
+     nextname
+     urshift
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L20
+
+     pop
+     getlocal2
+     convert_b
+L20:
+     iffalse             L29
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+     initproperty        QName(PrivateNamespace("*", "_-0hL:MessageDispatcher#1"), "_handlers")
+
+     getlocal1
+     iftrue              L29
+
+     getlocal0
+     constructsuper      0
+
+L29:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PrivateNamespace("*", "_-0hL:MessageDispatcher#1"), "_handlers") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait method QName(PackageNamespace("", "#0"), "_-0eZ")
+   method
+    refid "_-0hL:MessageDispatcher/_-0eZ"
+    param QName(PackageNamespace("", "#0"), "Object")
+    param QName(PackageNamespace("", "#0"), "Function")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      convert_i
+      astypelate
+      increment_i
+      strictequals
+      inclocal            2
+      declocal_i          4
+L10:
+      setlocal            4
+
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0hL:MessageDispatcher#1"), "_handlers")
+      getlocal1
+      getproperty         MultinameL([PackageNamespace("", "#0"), PrivateNamespace("*", "_-0hL:MessageDispatcher#0"), PackageNamespace("_-0hL"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-0hL:MessageDispatcher#1"), PackageInternalNs("_-0hL"), ProtectedNamespace("_-2p"), StaticProtectedNs("_-2p")])
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal3
+
+      getlocal            5
+      dup
+      iftrue              L33
+
+      pop
+      jump                L31
+
+      bitnot
+      pushnan
+      declocal_i          4
+      declocal            3
+      inclocal_i          2
+      inclocal            2
+L31:
+      getlocal2
+      convert_b
+L33:
+      iffalse             L69
+
+      getlocal3
+      iffalse             L63
+
+      getlocal            5
+      dup
+      iftrue              L49
+
+      jump                L46
+
+      convert_s
+      pushwith
+      multiply
+      nextvalue
+      kill                3
+      getlocal2
+L46:
+      pop
+      getlocal2
+      convert_b
+L49:
+      iffalse             L69
+
+      getlocal3
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            255
+      ifne                L62
+
+      getlocal            4
+      iftrue              L62
+
+      getlocal3
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            5
+      iffalse             L69
+
+L62:
+      jump                L69
+
+L63:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0hL:MessageDispatcher#1"), "_handlers")
+      getlocal1
+      getlocal2
+      newarray            1
+      setproperty         MultinameL([PackageNamespace("", "#0"), PrivateNamespace("*", "_-0hL:MessageDispatcher#0"), PackageNamespace("_-0hL"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-0hL:MessageDispatcher#1"), PackageInternalNs("_-0hL"), ProtectedNamespace("_-2p"), StaticProtectedNs("_-2p")])
+
+L69:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-12w")
+   method
+    refid "_-0hL:MessageDispatcher/_-12w"
+    param QName(PackageNamespace("", "#0"), "Object")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      coerce_a
+      pushwith
+      popscope
+      convert_b
+      convert_o
+      convert_i
+L10:
+      getproperty         QName(PrivateNamespace("*", "_-0hL:MessageDispatcher#1"), "_handlers")
+      getlocal1
+      getproperty         MultinameL([PackageNamespace("", "#0"), PrivateNamespace("*", "_-0hL:MessageDispatcher#0"), PackageNamespace("_-0hL"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-0hL:MessageDispatcher#1"), PackageInternalNs("_-0hL"), ProtectedNamespace("_-2p"), StaticProtectedNs("_-2p")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-1XR")
+   method
+    refid "_-0hL:MessageDispatcher/_-1XR"
+    param QName(PackageNamespace("", "#0"), "Object")
+    param QName(PackageNamespace("", "#0"), "Function")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      modulo
+      convert_s
+      modulo
+      instanceof
+      declocal            4
+      declocal            3
+L10:
+      setlocal            5
+
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0hL:MessageDispatcher#1"), "_handlers")
+      getlocal1
+      getproperty         MultinameL([PackageNamespace("", "#0"), PrivateNamespace("*", "_-0hL:MessageDispatcher#0"), PackageNamespace("_-0hL"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-0hL:MessageDispatcher#1"), PackageInternalNs("_-0hL"), ProtectedNamespace("_-2p"), StaticProtectedNs("_-2p")])
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal3
+
+      getlocal            5
+      iftrue              L27
+
+      getlocal3
+      iffalse             L46
+
+L27:
+      getlocal3
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      convert_i
+      getlocal            6
+      dup
+      iftrue              L44
+
+      pop
+      jump                L42
+
+      setlocal2
+
+      inclocal            2
+      getlocal            5
+      inclocal_i          2
+      divide
+      bitand
+L42:
+      getlocal2
+      convert_b
+L44:
+      iffalse             L54
+
+      jump                L54
+
+L46:
+      pushbyte            255
+      getlocal            6
+      dup
+      iftrue              L53
+
+      pop
+      getlocal2
+      convert_b
+L53:
+      iffalse             L55
+
+L54:
+      convert_i
+L55:
+      dup
+      setlocal            4
+
+      pushbyte            255
+      ifeq                L90
+
+      getlocal            6
+      jump                L67
+
+      typeof
+      declocal            3
+      pushnull
+      getlocal            5
+      multiply
+      increment
+L67:
+      iffalse             L90
+
+      getlocal3
+      getlocal            4
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      getlocal            6
+      dup
+      iftrue              L78
+
+      pop
+      getlocal1
+      convert_b
+L78:
+      iffalse             L85
+
+      getlocal3
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      pushbyte            0
+      ifne                L90
+
+      getlocal            6
+      iffalse             L90
+
+L85:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0hL:MessageDispatcher#1"), "_handlers")
+      getlocal1
+      deleteproperty      MultinameL([PackageNamespace("", "#0"), PrivateNamespace("*", "_-0hL:MessageDispatcher#0"), PackageNamespace("_-0hL"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-0hL:MessageDispatcher#1"), PackageInternalNs("_-0hL"), ProtectedNamespace("_-2p"), StaticProtectedNs("_-2p")])
+      pop
+L90:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-1d7")
+   method
+    refid "_-0hL:MessageDispatcher/_-1d7"
+    param QName(PackageNamespace("", "#0"), "Object")
+    param QName(PackageNamespace("", "#0"), "Function")
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional False()
+    body
+     maxstack 6
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            5
+
+      jump                L10
+
+      inclocal_i          3
+      bitand
+      declocal            4
+      pop
+      setlocal3
+
+      setlocal2
+
+L10:
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0hL:MessageDispatcher#1"), "_handlers")
+      getlocal1
+      getproperty         MultinameL([PackageNamespace("", "#0"), PrivateNamespace("*", "_-0hL:MessageDispatcher#0"), PackageNamespace("_-0hL"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-0hL:MessageDispatcher#1"), PackageInternalNs("_-0hL"), ProtectedNamespace("_-2p"), StaticProtectedNs("_-2p")])
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      dup
+      setlocal            4
+
+      iffalse             L73
+
+      getlocal            5
+      iffalse             L90
+
+      getlocal            4
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
+      coerce              QName(PackageNamespace("", "#0"), "Array")
+      setlocal            4
+
+      getlocal            5
+      dup
+      iftrue              L33
+
+      pop
+      getlocal0
+      convert_b
+L33:
+      iffalse             L48
+
+      getlocal3
+      jump                L42
+
+      convert_i
+      pushscope
+
+      inclocal_i          4
+      swap
+      getlocal3
+      inclocal            4
+L42:
+      coerce_a
+      dup
+      iftrue              L51
+
+      pop
+      getlocal            6
+      iftrue              L59
+
+L48:
+      getlocal            4
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "reverse"), 0
+      coerce_a
+L51:
+      pop
+      getlocal            6
+      dup
+      iffalse             L58
+
+      pop
+      getlocal3
+      convert_b
+L58:
+      iftrue              L72
+
+L59:
+      findpropstrict      QName(PrivateNamespace("*", "_-0hL:MessageDispatcher#0"), "MessageRunner")
+      jump                L67
+
+      pushtrue
+      add
+      lshift
+      coerce_a
+      declocal            4
+      kill                5
+L67:
+      getlocal1
+      getlocal            4
+      getlocal2
+      constructprop       QName(PrivateNamespace("*", "_-0hL:MessageDispatcher#0"), "MessageRunner"), 3
+      callpropvoid        QName(PackageNamespace("", "#0"), "run"), 0
+
+L72:
+      jump                L90
+
+L73:
+      getlocal2
+      coerce_a
+      dup
+      iffalse             L89
+
+      pop
+      getlocal            6
+      dup
+      iffalse             L84
+
+      pop
+      getlocal3
+      convert_b
+L84:
+      iftrue              L90
+
+      findpropstrict      QName(PackageNamespace("_-0hL"), "safelyCallBack")
+      getlocal2
+      callproperty        QName(PackageNamespace("_-0hL"), "safelyCallBack"), 1
+      coerce_a
+L89:
+      pop
+L90:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0hL:MessageDispatcher/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

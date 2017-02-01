@@ -1,0 +1,705 @@
+class
+ refid "_-0oL:Server"
+ instance QName(PackageNamespace("_-0oL"), "Server")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1we")
+  iinit
+   refid "_-0oL:Server/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     rshift
+     convert_s
+     lessthan
+     bitor
+     istypelate
+     greaterthan
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "name") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "address") type QName(PackageNamespace("", "#0"), "String") end
+  trait slot QName(PackageNamespace("", "#0"), "port") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "_-0Gg") type QName(PackageNamespace("_-0oL"), "_-1uM") end
+  trait slot QName(PackageNamespace("", "#0"), "_-1Dw") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "_-1Yx") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait method QName(PackageNamespace("", "#0"), "setName")
+   method
+    refid "_-0oL:Server/setName"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("_-0oL"), "Server")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      swap
+      kill                2
+      pushfalse
+      declocal            2
+      getglobalscope
+      lessequals
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L18
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PackageNamespace("", "#0"), "name")
+
+L18:
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setAddress")
+   method
+    refid "_-0oL:Server/setAddress"
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("_-0oL"), "Server")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      pushtrue
+      strictequals
+      declocal_i          2
+      greaterequals
+      convert_u
+      inclocal_i          2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L18
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PackageNamespace("", "#0"), "address")
+
+L18:
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setPort")
+   method
+    refid "_-0oL:Server/setPort"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("_-0oL"), "Server")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal_i          2
+      getlocal2
+      hasnext
+      lessthan
+      negate_i
+      convert_i
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L20
+
+      pop
+      getlocal3
+      convert_b
+L20:
+      iftrue              L24
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PackageNamespace("", "#0"), "port")
+
+L24:
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setLatLong")
+   method
+    refid "_-0oL:Server/setLatLong"
+    param QName(PackageNamespace("", "#0"), "Number")
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("_-0oL"), "Server")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      setlocal2
+
+      getlocal3
+      setlocal2
+
+      getlocal3
+      getlocal3
+      greaterequals
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      dup
+      iftrue              L20
+
+      pop
+      getlocal1
+      convert_b
+L20:
+      iffalse             L27
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("_-0oL"), "_-1uM")
+      getlocal1
+      getlocal2
+      constructprop       QName(PackageNamespace("_-0oL"), "_-1uM"), 2
+      setproperty         QName(PackageNamespace("", "#0"), "_-0Gg")
+
+L27:
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setUsage")
+   method
+    refid "_-0oL:Server/setUsage"
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("_-0oL"), "Server")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      declocal_i          2
+      convert_b
+      negate_i
+      inclocal_i          2
+      pushfalse
+      decrement_i
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L19
+
+      pop
+      getlocal0
+      convert_b
+L19:
+      iftrue              L23
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PackageNamespace("", "#0"), "_-1Dw")
+
+L23:
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "setIsAdminOnly")
+   method
+    refid "_-0oL:Server/setIsAdminOnly"
+    param QName(PackageNamespace("", "#0"), "Boolean")
+    returns QName(PackageNamespace("_-0oL"), "Server")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      getlocal2
+      inclocal_i          2
+      inclocal_i          2
+      newactivation
+      pushscope
+
+      rshift
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L18
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PackageNamespace("", "#0"), "_-1Yx")
+
+L18:
+      getlocal0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "priority")
+   method
+    refid "_-0oL:Server/priority"
+    returns QName(PackageNamespace("", "#0"), "int")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      pop
+      swap
+      getlocal0
+      popscope
+      popscope
+      increment_i
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L19
+
+      pop
+      getlocal0
+      convert_b
+L19:
+      iftrue              L34
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1Yx")
+      getlocal1
+      jump                L30
+
+      getlocal3
+      strictequals
+      pushtrue
+      add
+      pushwith
+      not
+L30:
+      iffalse             L54
+
+      iffalse             L52
+
+      getlocal1
+      iffalse             L52
+
+L34:
+      pushbyte            2
+      getlocal1
+      iffalse             L67
+
+      jump                L44
+
+      convert_u
+      bitxor
+      add_i
+      popscope
+      hasnext
+      subtract
+L44:
+      returnvalue
+
+      getlocal2
+      dup
+      iffalse             L51
+
+      pop
+      getlocal0
+      convert_b
+L51:
+      iftrue              L57
+
+L52:
+      getlocal0
+      callproperty        QName(PackageNamespace("", "#0"), "_-1kX"), 0
+L54:
+      iffalse             L66
+
+      getlocal1
+      iffalse             L66
+
+L57:
+      pushbyte            1
+      getlocal2
+      dup
+      iffalse             L64
+
+      pop
+      getlocal1
+      convert_b
+L64:
+      iftrue              L67
+
+      returnvalue
+
+L66:
+      pushbyte            0
+L67:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-1kX")
+   method
+    refid "_-0oL:Server/_-1kX"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      getlocal2
+      convert_b
+      checkfilter
+      bitor
+      dxnslate
+      decrement
+L10:
+      getproperty         QName(PackageNamespace("", "#0"), "_-1Dw")
+      pushdouble          0.66
+      greaterequals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "_-1or")
+   method
+    refid "_-0oL:Server/_-1or"
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      pushwith
+      dxnslate
+      instanceof
+      modulo
+      setlocal2
+
+      popscope
+L10:
+      getproperty         QName(PackageNamespace("", "#0"), "_-1Dw")
+      pushbyte            1
+      greaterequals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "_-0oL:Server/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      convert_i
+      nextname
+      convert_u
+      convert_d
+      pushscope
+
+      coerce_a
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      pushstring          "["
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "name")
+      getlocal2
+      dup
+      iffalse             L22
+
+      pop
+      getlocal0
+      convert_b
+L22:
+      iftrue              L44
+
+      add
+      getlocal1
+      dup
+      iftrue              L30
+
+      pop
+      getlocal1
+      convert_b
+L30:
+      iffalse             L42
+
+      pushstring          ": "
+      getlocal1
+      iffalse             L67
+
+      add
+      getlocal2
+      dup
+      iffalse             L41
+
+      pop
+      getlocal0
+      convert_b
+L41:
+      iftrue              L45
+
+L42:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "address")
+L44:
+      add
+L45:
+      pushstring          ":"
+      getlocal1
+      jump                L54
+
+      strictequals
+      nextvalue
+      setlocal2
+
+      nextvalue
+      convert_u
+      equals
+L54:
+      iffalse             L67
+
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "port")
+      add
+      pushstring          ":"
+      getlocal1
+      dup
+      iftrue              L66
+
+      pop
+      getlocal0
+      convert_b
+L66:
+      iffalse             L114
+
+L67:
+      add
+      getlocal2
+      iftrue              L110
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Gg")
+      add
+      getlocal1
+      dup
+      iftrue              L79
+
+      pop
+      getlocal0
+      convert_b
+L79:
+      iffalse             L115
+
+      pushstring          ":"
+      getlocal1
+      dup
+      iftrue              L94
+
+      pop
+      jump                L92
+
+      nextvalue
+      hasnext
+      not
+      bitxor
+      convert_d
+      nextvalue
+L92:
+      getlocal2
+      convert_b
+L94:
+      iffalse             L114
+
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1Dw")
+      add
+      getlocal1
+      iffalse             L115
+
+      pushstring          ":"
+      getlocal1
+      dup
+      iftrue              L108
+
+      pop
+      getlocal0
+      convert_b
+L108:
+      iffalse             L114
+
+      add
+L110:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1Yx")
+      add
+      pushstring          "]"
+L114:
+      add
+L115:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0oL:Server/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

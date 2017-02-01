@@ -1,0 +1,606 @@
+class
+ refid "com.google.analytics.v4:Configuration"
+ instance QName(PackageNamespace("com.google.analytics.v4"), "Configuration")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.v4:Configuration")
+  iinit
+   refid "com.google.analytics.v4:Configuration/iinit"
+   param QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 5
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_organic")
+     findpropstrict      QName(PackageNamespace("com.google.analytics.core"), "Organic")
+     constructprop       QName(PackageNamespace("com.google.analytics.core"), "Organic"), 0
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_organic")
+
+     findproperty        QName(PackageNamespace("", "#0"), "conversionTimeout")
+     getlex              QName(PackageNamespace("com.google.analytics.utils"), "Timespan")
+     getproperty         QName(PackageNamespace("", "#0"), "sixmonths")
+     initproperty        QName(PackageNamespace("", "#0"), "conversionTimeout")
+
+     findproperty        QName(PackageNamespace("", "#0"), "sessionTimeout")
+     getlex              QName(PackageNamespace("com.google.analytics.utils"), "Timespan")
+     getproperty         QName(PackageNamespace("", "#0"), "thirtyminutes")
+     initproperty        QName(PackageNamespace("", "#0"), "sessionTimeout")
+
+     findproperty        QName(PackageNamespace("", "#0"), "campaignKey")
+     findpropstrict      QName(PackageNamespace("com.google.analytics.campaign"), "CampaignKey")
+     constructprop       QName(PackageNamespace("com.google.analytics.campaign"), "CampaignKey"), 0
+     initproperty        QName(PackageNamespace("", "#0"), "campaignKey")
+
+     findproperty        QName(PackageNamespace("", "#0"), "serverMode")
+     getlex              QName(PackageNamespace("com.google.analytics.core"), "ServerOperationMode")
+     getproperty         QName(PackageNamespace("", "#0"), "remote")
+     initproperty        QName(PackageNamespace("", "#0"), "serverMode")
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_debug")
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_debug")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_domain")
+     findpropstrict      QName(PackageNamespace("com.google.analytics.core"), "Domain")
+     getlex              QName(PackageNamespace("com.google.analytics.core"), "DomainNameMode")
+     getproperty         QName(PackageNamespace("", "#0"), "auto")
+     pushstring          ""
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_debug")
+     constructprop       QName(PackageNamespace("com.google.analytics.core"), "Domain"), 3
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_domain")
+
+     findproperty        QName(PackageNamespace("", "#0"), "serverMode")
+     getlex              QName(PackageNamespace("com.google.analytics.core"), "ServerOperationMode")
+     getproperty         QName(PackageNamespace("", "#0"), "remote")
+     initproperty        QName(PackageNamespace("", "#0"), "serverMode")
+
+     findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_initOrganicSources")
+     callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_initOrganicSources"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait getter QName(PackageNamespace("", "#0"), "organic")
+   method
+    refid "com.google.analytics.v4:Configuration/organic/getter"
+    returns QName(PackageNamespace("com.google.analytics.core"), "Organic")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_organic")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "serverMode") type QName(PackageNamespace("com.google.analytics.core"), "ServerOperationMode") end
+  trait slot QName(PackageNamespace("", "#0"), "detectFlash") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "hasSiteOverlay") type QName(PackageNamespace("", "#0"), "Boolean") value False() end
+  trait slot QName(PackageNamespace("", "#0"), "allowLocalTracking") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "secureRemoteGIFpath") type QName(PackageNamespace("", "#0"), "String") value Utf8("https://ssl.google-analytics.com/__utm.gif") end
+  trait getter QName(PackageNamespace("", "#0"), "cookieName")
+   method
+    refid "com.google.analytics.v4:Configuration/cookieName/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_cookieName")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_version") type QName(PackageNamespace("", "#0"), "String") value Utf8("4.3as") end
+  trait slot QName(PackageNamespace("", "#0"), "allowDomainHash") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "detectClientInfo") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait getter QName(PackageNamespace("", "#0"), "trackingLimitPerSession")
+   method
+    refid "com.google.analytics.v4:Configuration/trackingLimitPerSession/getter"
+    returns QName(PackageNamespace("", "#0"), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_trackingLimitPerSession")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "idleLoop") type QName(PackageNamespace("", "#0"), "Number") value Integer(30) end
+  trait method QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_initOrganicSources")
+   method
+    refid "com.google.analytics.v4:Configuration/_initOrganicSources"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      getlex              QName(PackageNamespace("", "#0"), "google")
+      getlex              QName(PackageNamespace("", "#0"), "googleSearchParam")
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "yahoo"
+      pushstring          "p"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "msn"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "aol"
+      pushstring          "query"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "aol"
+      pushstring          "encquery"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "lycos"
+      pushstring          "query"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "ask"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "altavista"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "netscape"
+      pushstring          "query"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "cnn"
+      pushstring          "query"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "looksmart"
+      pushstring          "qt"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "about"
+      pushstring          "terms"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "mamma"
+      pushstring          "query"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "alltheweb"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "gigablast"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "voila"
+      pushstring          "rdata"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "virgilio"
+      pushstring          "qs"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "live"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "baidu"
+      pushstring          "wd"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "alice"
+      pushstring          "qs"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "yandex"
+      pushstring          "text"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "najdi"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "aol"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "club-internet"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "mama"
+      pushstring          "query"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "seznam"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "search"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "wp"
+      pushstring          "szukaj"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "onet"
+      pushstring          "qt"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "netsprint"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "google.interia"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "szukacz"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "yam"
+      pushstring          "k"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "pchome"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "kvasir"
+      pushstring          "searchExpr"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "sesam"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "ozu"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "terra"
+      pushstring          "query"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "nostrum"
+      pushstring          "query"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "mynet"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "ekolay"
+      pushstring          "q"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "addOrganicSource")
+      pushstring          "search.ilse"
+      pushstring          "search_for"
+      callpropvoid        QName(PackageNamespace("", "#0"), "addOrganicSource"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "isTrackOutboundSubdomains") type QName(PackageNamespace("", "#0"), "Boolean") value False() end
+  trait slot QName(PackageNamespace("", "#0"), "cookiePath") type QName(PackageNamespace("", "#0"), "String") value Utf8("/") end
+  trait getter QName(PackageNamespace("", "#0"), "sampleRate")
+   method
+    refid "com.google.analytics.v4:Configuration/sampleRate/getter"
+    returns QName(PackageNamespace("", "#0"), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_sampleRate")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "transactionFieldDelim") type QName(PackageNamespace("", "#0"), "String") value Utf8("|") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_organic") type QName(PackageNamespace("com.google.analytics.core"), "Organic") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_cookieName") type QName(PackageNamespace("", "#0"), "String") value Utf8("analytics") end
+  trait slot QName(PackageNamespace("", "#0"), "campaignKey") type QName(PackageNamespace("com.google.analytics.campaign"), "CampaignKey") end
+  trait slot QName(PackageNamespace("", "#0"), "google") type QName(PackageNamespace("", "#0"), "String") value Utf8("google") end
+  trait slot QName(PackageNamespace("", "#0"), "googleCsePath") type QName(PackageNamespace("", "#0"), "String") value Utf8("cse") end
+  trait slot QName(PackageNamespace("", "#0"), "bucketCapacity") type QName(PackageNamespace("", "#0"), "Number") value Integer(10) end
+  trait method QName(PackageNamespace("", "#0"), "addOrganicSource")
+   method
+    refid "com.google.analytics.v4:Configuration/addOrganicSource"
+    param QName(PackageNamespace("", "#0"), "String")
+    param QName(PackageNamespace("", "#0"), "String")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal3
+
+      pushscope
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getscopeobject      1
+      getlocal2
+      setslot             2
+
+L12:
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_organic")
+      getscopeobject      1
+      getslot             1
+      getscopeobject      1
+      getslot             2
+      callpropvoid        QName(PackageNamespace("", "#0"), "addSource"), 2
+
+L18:
+      jump                L46
+
+L19:
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_debug")
+      convert_b
+      dup
+      iffalse             L38
+
+      pop
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_debug")
+      getproperty         QName(PackageNamespace("", "#0"), "active")
+      convert_b
+L38:
+      iffalse             L44
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_debug")
+      getscopeobject      2
+      getslot             1
+      getproperty         QName(PackageNamespace("", "#0"), "message")
+      callpropvoid        QName(PackageNamespace("", "#0"), "warning"), 1
+
+L44:
+      popscope
+      kill                4
+L46:
+      returnvoid
+     end ; code
+     try from L12 to L18 target L19 type QName(PackageNamespace("", "#0"), "Error") name QName(PackageNamespace("", "#0"), "e") end
+     trait slot QName(PackageInternalNs("com.google.analytics.v4"), "keyword") slotid 2 type QName(PackageNamespace("", "#0"), "String") end
+     trait slot QName(PackageInternalNs("com.google.analytics.v4"), "engine") slotid 1 type QName(PackageNamespace("", "#0"), "String") end
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_sampleRate") type QName(PackageNamespace("", "#0"), "Number") value Integer(1) end
+  trait slot QName(PackageNamespace("", "#0"), "remoteGIFpath") type QName(PackageNamespace("", "#0"), "String") value Utf8("http://www.google-analytics.com/__utm.gif") end
+  trait getter QName(PackageNamespace("", "#0"), "domain")
+   method
+    refid "com.google.analytics.v4:Configuration/domain/getter"
+    returns QName(PackageNamespace("com.google.analytics.core"), "Domain")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_domain")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "googleSearchParam") type QName(PackageNamespace("", "#0"), "String") value Utf8("q") end
+  trait slot QName(PackageNamespace("", "#0"), "allowLinker") type QName(PackageNamespace("", "#0"), "Boolean") value False() end
+  trait slot QName(PackageNamespace("", "#0"), "maxOutboundLinkExamined") type QName(PackageNamespace("", "#0"), "Number") value Integer(1000) end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
+  trait setter QName(PackageNamespace("", "#0"), "sampleRate")
+   method
+    refid "com.google.analytics.v4:Configuration/sampleRate/setter"
+    param QName(PackageNamespace("", "#0"), "Number")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            0
+      ifnle               L8
+
+      pushdouble          0.1
+      convert_d
+      setlocal1
+
+L8:
+      getlocal1
+      pushbyte            1
+      ifngt               L14
+
+      pushbyte            1
+      convert_d
+      setlocal1
+
+L14:
+      findpropstrict      QName(PackageNamespace("", "#0"), "Number")
+      getlocal1
+      pushbyte            2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toFixed"), 1
+      callproperty        QName(PackageNamespace("", "#0"), "Number"), 1
+      convert_d
+      setlocal1
+
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_sampleRate")
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_sampleRate")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace("", "#0"), "allowAnchor") type QName(PackageNamespace("", "#0"), "Boolean") value False() end
+  trait getter QName(PackageNamespace("", "#0"), "version")
+   method
+    refid "com.google.analytics.v4:Configuration/version/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_version")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_domain") type QName(PackageNamespace("com.google.analytics.core"), "Domain") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Configuration"), "_trackingLimitPerSession") type QName(PackageNamespace("", "#0"), "int") value Integer(500) end
+  trait slot QName(PackageNamespace("", "#0"), "tokenCliff") type QName(PackageNamespace("", "#0"), "int") value Integer(10) end
+  trait slot QName(PackageNamespace("", "#0"), "sessionTimeout") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "idleTimeout") type QName(PackageNamespace("", "#0"), "Number") value Integer(60) end
+  trait slot QName(PackageNamespace("", "#0"), "campaignTracking") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "domainName") type QName(PackageNamespace("", "#0"), "String") value Utf8("") end
+  trait slot QName(PackageNamespace("", "#0"), "detectTitle") type QName(PackageNamespace("", "#0"), "Boolean") value True() end
+  trait slot QName(PackageNamespace("", "#0"), "tokenRate") type QName(PackageNamespace("", "#0"), "Number") value Double(0.2) end
+  trait slot QName(PackageNamespace("", "#0"), "conversionTimeout") type QName(PackageNamespace("", "#0"), "Number") end
+  trait slot QName(PackageNamespace("", "#0"), "localGIFpath") type QName(PackageNamespace("", "#0"), "String") value Utf8("/__utm.gif") end
+ end ; instance
+ cinit
+  refid "com.google.analytics.v4:Configuration/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

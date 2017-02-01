@@ -1,0 +1,431 @@
+class
+ refid "_-0pG:Animations"
+ instance QName(PackageNamespace("_-0pG"), "Animations")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-3M")
+  iinit
+   refid "_-0pG:Animations/iinit"
+   param QName(PackageNamespace("_-0pG"), "_-Qq")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal            2
+     getlocal2
+     declocal            2
+     kill                2
+     setlocal2
+
+     swap
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iffalse             L25
+
+     getlocal0
+     constructsuper      0
+
+     getlocal3
+     dup
+     iftrue              L24
+
+     pop
+     getlocal1
+     convert_b
+L24:
+     iffalse             L28
+
+L25:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "_-on")
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-on") type QName(PackageNamespace("_-0pG"), "_-Qq") end
+  trait slot QName(PackageNamespace("", "#0"), "_-1NI") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("", "#0"), "int")>) value Null() end
+  trait slot QName(PackageNamespace("", "#0"), "_-0Jh") type QName(PrivateNamespace("*", "_-0pG:Animations"), "RunningAnimation") value Null() end
+  trait method QName(PackageNamespace("", "#0"), "getTexture")
+   method
+    refid "_-0pG:Animations/getTexture"
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 6
+     localcount 10
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            8
+
+      jump                L10
+
+      pushwith
+      bitxor
+      convert_d
+      convert_u
+      multiply
+      inclocal            7
+L10:
+      setlocal            9
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_-0pG"), "_-y-")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal            4
+
+      pushbyte            0
+      setlocal            5
+
+      getlocal            9
+      iftrue              L29
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1NI")
+      pushnull
+      ifne                L68
+
+      getlocal            8
+      iffalse             L35
+
+L29:
+      getlocal0
+      getlex              Multiname("Vector", [PrivateNamespace("*", "_-0pG:Animations/getTexture"), PackageNamespace("", "#0"), PackageNamespace("_-0pG"), PrivateNamespace("*", "_-0pG:Animations"), PackageInternalNs("_-0pG"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3M"), StaticProtectedNs("_-3M"), PackageNamespace("__AS3__.vec")])
+      getlex              QName(PackageNamespace("", "#0"), "int")
+      applytype           1
+      construct           0
+      initproperty        QName(PackageNamespace("", "#0"), "_-1NI")
+
+L35:
+      pushbyte            0
+      setlocal            6
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-on")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Ry")
+      coerce_a
+      setlocal            7
+
+      jump                L62
+
+L43:
+      label
+      getlocal            7
+      getlocal            6
+      nextvalue
+      coerce              QName(PackageNamespace("_-0pG"), "_-y-")
+      setlocal2
+
+      getlocal            8
+      dup
+      iftrue              L55
+
+      pop
+      getlocal2
+      convert_b
+L55:
+      iffalse             L62
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1NI")
+      getlocal2
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-163"), 1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L62:
+      hasnext2            7, 6
+      iftrue              L43
+
+      kill                7
+      kill                6
+      getlocal            9
+      iftrue              L74
+
+L68:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Jh")
+      getlocal            8
+      iffalse             L76
+
+      pushnull
+      ifeq                L97
+
+L74:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Jh")
+L76:
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "getTexture"), 1
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      dup
+      setlocal            4
+
+      pushnull
+      ifeq                L94
+
+      getlocal            9
+      iftrue              L94
+
+      getlocal            4
+      returnvalue
+
+      getlocal            9
+      dup
+      iffalse             L93
+
+      pop
+      getlocal2
+      convert_b
+L93:
+      iftrue              L97
+
+L94:
+      getlocal0
+      pushnull
+      initproperty        QName(PackageNamespace("", "#0"), "_-0Jh")
+
+L97:
+      pushbyte            0
+      setlocal3
+
+      getlocal            8
+      iffalse             L231
+
+      jump                L231
+
+L102:
+      label
+      getlocal1
+      getlocal            9
+      dup
+      iffalse             L117
+
+      pop
+      jump                L115
+
+      getlocal3
+      setlocal            7
+
+      rshift
+      declocal_i          7
+      add
+      inclocal_i          6
+L115:
+      getlocal1
+      convert_b
+L117:
+      iftrue              L137
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1NI")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("*", "_-0pG:Animations/getTexture"), PackageNamespace("", "#0"), PackageNamespace("_-0pG"), PrivateNamespace("*", "_-0pG:Animations"), PackageInternalNs("_-0pG"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3M"), StaticProtectedNs("_-3M")])
+      ifngt               L223
+
+      getlocal            8
+      iffalse             L236
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1NI")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("*", "_-0pG:Animations/getTexture"), PackageNamespace("", "#0"), PackageNamespace("_-0pG"), PrivateNamespace("*", "_-0pG:Animations"), PackageInternalNs("_-0pG"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3M"), StaticProtectedNs("_-3M")])
+      convert_i
+      getlocal            8
+      dup
+      iftrue              L136
+
+      pop
+      getlocal3
+      convert_b
+L136:
+      iffalse             L232
+
+L137:
+      setlocal            5
+
+      getlocal            8
+      iffalse             L231
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-on")
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Ry")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("*", "_-0pG:Animations/getTexture"), PackageNamespace("", "#0"), PackageNamespace("_-0pG"), PrivateNamespace("*", "_-0pG:Animations"), PackageInternalNs("_-0pG"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3M"), StaticProtectedNs("_-3M")])
+      coerce              QName(PackageNamespace("_-0pG"), "_-y-")
+      setlocal2
+
+      getlocal            9
+      iftrue              L218
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1NI")
+      getlocal3
+      getlocal2
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-im"), 1
+      setproperty         MultinameL([PrivateNamespace("*", "_-0pG:Animations/getTexture"), PackageNamespace("", "#0"), PackageNamespace("_-0pG"), PrivateNamespace("*", "_-0pG:Animations"), PackageInternalNs("_-0pG"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3M"), StaticProtectedNs("_-3M")])
+
+      getlocal            9
+      dup
+      iffalse             L162
+
+      pop
+      getlocal0
+      convert_b
+L162:
+      iftrue              L223
+
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "_-UU")
+      pushbyte            1
+      equals
+      getlocal            9
+      iftrue              L194
+
+      not
+      getlocal            8
+      iffalse             L194
+
+      dup
+      iffalse             L194
+
+      getlocal            8
+      dup
+      iftrue              L180
+
+      pop
+      getlocal3
+      convert_b
+L180:
+      iffalse             L194
+
+      pop
+      getlocal            8
+      dup
+      iftrue              L188
+
+      pop
+      getlocal1
+      convert_b
+L188:
+      iffalse             L218
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      callproperty        QName(PackageNamespace("", "#0"), "random"), 0
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "_-UU")
+      greaterthan
+L194:
+      iffalse             L198
+
+      getlocal            9
+      iftrue              L218
+
+      jump                L223
+
+L198:
+      getlocal0
+      findpropstrict      QName(PrivateNamespace("*", "_-0pG:Animations"), "RunningAnimation")
+      getlocal2
+      getlocal            5
+      constructprop       QName(PrivateNamespace("*", "_-0pG:Animations"), "RunningAnimation"), 2
+      initproperty        QName(PackageNamespace("", "#0"), "_-0Jh")
+
+      getlocal            9
+      dup
+      iffalse             L217
+
+      jump                L214
+
+      convert_b
+      getlocal3
+      setlocal            5
+
+      inclocal_i          5
+      kill                2
+      greaterthan
+L214:
+      pop
+      getlocal0
+      convert_b
+L217:
+      iftrue              L223
+
+L218:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-0Jh")
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "getTexture"), 1
+      returnvalue
+
+L223:
+      inclocal_i          3
+      getlocal            8
+      dup
+      iftrue              L230
+
+      pop
+      getlocal1
+      convert_b
+L230:
+      iffalse             L236
+
+L231:
+      getlocal3
+L232:
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-1NI")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L102
+
+L236:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0pG:Animations/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

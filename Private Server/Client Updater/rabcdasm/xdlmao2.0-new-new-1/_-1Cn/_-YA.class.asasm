@@ -1,0 +1,157 @@
+class
+ refid "_-1Cn:_-YA"
+ instance QName(PackageNamespace("_-1Cn"), "_-YA")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-LV")
+  iinit
+   refid "_-1Cn:_-YA/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("flash.display"), "DisplayObject")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 6
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal            2
+     newactivation
+     declocal_i          2
+     inclocal            2
+     kill                3
+     bitxor
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     iffalse             L23
+
+     getlocal0
+     getlocal1
+     pushtrue
+     pushtrue
+     constructsuper      3
+
+     getlocal3
+     iftrue              L26
+
+L23:
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-1Cn:_-YA"), "_-0Eu")
+
+L26:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-1Cn:_-YA"), "_-0Eu") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait getter QName(PackageNamespace("", "#0"), "view")
+   method
+    refid "_-1Cn:_-YA/view/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1Cn:_-YA"), "_-0Eu")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "clone") flag OVERRIDE
+   method
+    refid "_-1Cn:_-YA/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-1Cn"), "_-YA")
+      jump                L10
+
+      increment_i
+      convert_u
+      greaterthan
+      hasnext
+      increment_i
+      convert_i
+L10:
+      getlex              QName(PackageNamespace("", "#0"), "type")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1Cn:_-YA"), "_-0Eu")
+      constructprop       QName(PackageNamespace("_-1Cn"), "_-YA"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1Cn:_-YA/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    coerce_a
+    setlocal2
+
+    nextvalue
+    bitxor
+    pushscope
+
+    popscope
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    iftrue              L19
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-ER")
+    pushstring          "configureView"
+    initproperty        QName(PackageNamespace("", "#0"), "_-ER")
+
+L19:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-ER") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("configureView") end
+end ; class

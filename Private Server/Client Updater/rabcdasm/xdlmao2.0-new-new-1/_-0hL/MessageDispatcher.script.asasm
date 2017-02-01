@@ -1,0 +1,41 @@
+script ; 1789
+ sinit
+  refid "_-0hL:MessageDispatcher.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("MessageDispatcher", [PackageNamespace("_-0hL")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-0hL:MessageDispatcher"
+    popscope
+    initproperty        QName(PackageNamespace("_-0hL"), "MessageDispatcher")
+
+    findpropstrict      Multiname("MessageRunner", [PrivateNamespace("*", "_-0hL:MessageDispatcher#0")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "_-0hL:MessageDispatcher/MessageRunner"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-0hL:MessageDispatcher#0"), "MessageRunner")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-0hL"), "MessageDispatcher")
+  #include "MessageDispatcher.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-0hL:MessageDispatcher#0"), "MessageRunner")
+  #include "MessageDispatcher/MessageRunner.class.asasm"
+ end ; trait
+end ; script

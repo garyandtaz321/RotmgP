@@ -1,0 +1,1811 @@
+class
+ refid "com.hurlant.crypto.rsa:RSAKey"
+ instance QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1c6")
+  iinit
+   refid "com.hurlant.crypto.rsa:RSAKey/iinit"
+   param QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+   param QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+   param QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+   param QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+   param QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+   param QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Null()
+   optional Null()
+   optional Null()
+   optional Null()
+   optional Null()
+   body
+    maxstack 3
+    localcount 9
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "n")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "e")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace("", "#0"), "d")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace("", "#0"), "p")
+
+     getlocal0
+     getlocal            5
+     initproperty        QName(PackageNamespace("", "#0"), "q")
+
+     getlocal0
+     getlocal            6
+     initproperty        QName(PackageNamespace("", "#0"), "dmp1")
+
+     getlocal0
+     getlocal            7
+     initproperty        QName(PackageNamespace("", "#0"), "dmq1")
+
+     getlocal0
+     getlocal            8
+     initproperty        QName(PackageNamespace("", "#0"), "coeff")
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "n")
+     pushnull
+     equals
+     not
+     dup
+     iffalse             L42
+
+     pop
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "e")
+     pushbyte            0
+     equals
+     not
+L42:
+     initproperty        QName(ProtectedNamespace("_-1c6"), "canEncrypt")
+
+     getlocal0
+     getlocal0
+     getproperty         QName(ProtectedNamespace("_-1c6"), "canEncrypt")
+     convert_b
+     dup
+     iffalse             L55
+
+     pop
+     getlocal0
+     getproperty         QName(PackageNamespace("", "#0"), "d")
+     pushnull
+     equals
+     not
+L55:
+     initproperty        QName(ProtectedNamespace("_-1c6"), "canDecrypt")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "e") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "n") type QName(PackageNamespace("com.hurlant.math"), "_-1wH") end
+  trait slot QName(PackageNamespace("", "#0"), "d") type QName(PackageNamespace("com.hurlant.math"), "_-1wH") end
+  trait slot QName(PackageNamespace("", "#0"), "p") type QName(PackageNamespace("com.hurlant.math"), "_-1wH") end
+  trait slot QName(PackageNamespace("", "#0"), "q") type QName(PackageNamespace("com.hurlant.math"), "_-1wH") end
+  trait slot QName(PackageNamespace("", "#0"), "dmp1") type QName(PackageNamespace("com.hurlant.math"), "_-1wH") end
+  trait slot QName(PackageNamespace("", "#0"), "dmq1") type QName(PackageNamespace("com.hurlant.math"), "_-1wH") end
+  trait slot QName(PackageNamespace("", "#0"), "coeff") type QName(PackageNamespace("com.hurlant.math"), "_-1wH") end
+  trait slot QName(ProtectedNamespace("_-1c6"), "canDecrypt") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait slot QName(ProtectedNamespace("_-1c6"), "canEncrypt") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait method QName(PackageNamespace("", "#0"), "getBlockSize")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/getBlockSize"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "n")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1Q-"), 0
+      pushbyte            7
+      add
+      pushbyte            8
+      divide
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "dispose")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/dispose"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PackageNamespace("", "#0"), "e")
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "n")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispose"), 0
+
+      getlocal0
+      pushnull
+      initproperty        QName(PackageNamespace("", "#0"), "n")
+
+      getlex              QName(PackageNamespace("com.hurlant.util"), "Memory")
+      callpropvoid        QName(PackageNamespace("", "#0"), "gc"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "encrypt")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/encrypt"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "Function")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-1c6"), "doPublic")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      pushbyte            2
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "_encrypt"), 6
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "decrypt")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/decrypt"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "Function")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-1c6"), "doPrivate2")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      pushbyte            2
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "_decrypt"), 6
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "sign")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/sign"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "Function")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-1c6"), "doPrivate2")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      pushbyte            1
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "_encrypt"), 6
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "verify")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/verify"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "Function")
+    returns QName(PackageNamespace("", "#0"), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-1c6"), "doPublic")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      pushbyte            1
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "_decrypt"), 6
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "_encrypt")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/_encrypt"
+    param QName(PackageNamespace("", "#0"), "Function")
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "Function")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 7
+     localcount 11
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      setlocal            9
+
+      pushnull
+      coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      setlocal            10
+
+      getlocal            5
+      pushnull
+      ifne                L15
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "pkcs1pad")
+      coerce              QName(PackageNamespace("", "#0"), "Function")
+      setlocal            5
+
+L15:
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "position")
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      ifnge               L23
+
+      getlocal2
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "position")
+
+L23:
+      getlocal0
+      callproperty        QName(PackageNamespace("", "#0"), "getBlockSize"), 0
+      convert_u
+      setlocal            7
+
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "position")
+      getlocal            4
+      add
+      convert_i
+      setlocal            8
+
+      jump                L57
+
+L34:
+      label
+      findpropstrict      QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      getlocal            5
+      getglobalscope
+      getlocal2
+      getlocal            8
+      getlocal            7
+      getlocal            6
+      call                4
+      getlocal            7
+      pushtrue
+      constructprop       QName(PackageNamespace("com.hurlant.math"), "_-1wH"), 3
+      coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      setlocal            9
+
+      getlocal1
+      getglobalscope
+      getlocal            9
+      call                1
+      coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      dup
+      setlocal            10
+
+      getlocal3
+      callpropvoid        QName(PackageNamespace("", "#0"), "toArray"), 1
+
+L57:
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "position")
+      getlocal            8
+      iflt                L34
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "_decrypt")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/_decrypt"
+    param QName(PackageNamespace("", "#0"), "Function")
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "Function")
+    param QName(PackageNamespace("", "#0"), "int")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 12
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      setlocal            9
+
+      pushnull
+      coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      setlocal            10
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal            11
+
+      getlocal            5
+      pushnull
+      ifne                L18
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "pkcs1unpad")
+      coerce              QName(PackageNamespace("", "#0"), "Function")
+      setlocal            5
+
+L18:
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "position")
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      ifnge               L26
+
+      getlocal2
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "position")
+
+L26:
+      getlocal0
+      callproperty        QName(PackageNamespace("", "#0"), "getBlockSize"), 0
+      convert_u
+      setlocal            7
+
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "position")
+      getlocal            4
+      add
+      convert_i
+      setlocal            8
+
+      jump                L71
+
+L37:
+      label
+      findpropstrict      QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      getlocal2
+      getlocal            7
+      pushtrue
+      constructprop       QName(PackageNamespace("com.hurlant.math"), "_-1wH"), 3
+      coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      setlocal            9
+
+      getlocal1
+      getglobalscope
+      getlocal            9
+      call                1
+      coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      setlocal            10
+
+      getlocal            5
+      getglobalscope
+      getlocal            10
+      getlocal            7
+      getlocal            6
+      call                3
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      dup
+      setlocal            11
+
+      pushnull
+      ifne                L68
+
+      findpropstrict      QName(PackageNamespace("com.hurlant.crypto.tls"), "TLSError")
+      pushstring          "Decrypt error - padding function returned null!"
+      getlex              QName(PackageNamespace("com.hurlant.crypto.tls"), "TLSError")
+      getproperty         QName(PackageNamespace("", "#0"), "decode_error")
+      constructprop       QName(PackageNamespace("com.hurlant.crypto.tls"), "TLSError"), 2
+      throw
+L68:
+      getlocal3
+      getlocal            11
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBytes"), 1
+
+L71:
+      getlocal2
+      getproperty         QName(PackageNamespace("", "#0"), "position")
+      getlocal            8
+      iflt                L37
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "pkcs1pad")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/pkcs1pad"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    flag HAS_OPTIONAL
+    optional Integer(2)
+    body
+     maxstack 5
+     localcount 13
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.hurlant.crypto.prng"), "Random")
+      setlocal            8
+
+      pushbyte            0
+      setlocal            9
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal            5
+
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "position")
+      convert_u
+      setlocal            6
+
+      getlex              QName(PackageNamespace("", "#0"), "Math")
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      getlocal            6
+      getlocal3
+      add
+      pushbyte            11
+      subtract
+      callproperty        QName(PackageNamespace("", "#0"), "min"), 3
+      convert_i
+      setlocal2
+
+      getlocal1
+      getlocal2
+      setproperty         QName(PackageNamespace("", "#0"), "position")
+
+      getlocal2
+      decrement
+      convert_i
+      setlocal            7
+
+      jump                L52
+
+L35:
+      label
+      getlocal            5
+      getlocal3
+      decrement
+      dup
+      convert_u
+      setlocal3
+
+      dup
+      setlocal            10
+
+      getlocal1
+      getlocal            7
+      dup
+      decrement_i
+      setlocal            7
+
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-1c6"), ProtectedNamespace("_-1c6"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-1c6"), ProtectedNamespace("_-1c6"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      kill                10
+L52:
+      getlocal            7
+      getlocal            6
+      greaterequals
+      dup
+      iffalse             L61
+
+      pop
+      getlocal3
+      pushbyte            11
+      greaterthan
+L61:
+      iftrue              L35
+
+      getlocal            5
+      getlocal3
+      decrement
+      dup
+      convert_u
+      setlocal3
+
+      dup
+      setlocal            10
+
+      pushbyte            0
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-1c6"), ProtectedNamespace("_-1c6"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlocal            4
+      pushbyte            2
+      ifne                L107
+
+      findpropstrict      QName(PackageNamespace("com.hurlant.crypto.prng"), "Random")
+      constructprop       QName(PackageNamespace("com.hurlant.crypto.prng"), "Random"), 0
+      coerce              QName(PackageNamespace("com.hurlant.crypto.prng"), "Random")
+      setlocal            8
+
+      pushbyte            0
+      setlocal            9
+
+      jump                L103
+
+L82:
+      label
+      jump                L85
+
+L84:
+      label
+L85:
+      getlocal            8
+      callproperty        QName(PackageNamespace("", "#0"), "nextByte"), 0
+      convert_i
+      dup
+      setlocal            9
+
+      pushbyte            0
+      ifeq                L84
+
+      getlocal            5
+      getlocal3
+      decrement
+      dup
+      convert_u
+      setlocal3
+
+      dup
+      setlocal            11
+
+      getlocal            9
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-1c6"), ProtectedNamespace("_-1c6"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      kill                11
+L103:
+      getlocal3
+      pushbyte            2
+      ifgt                L82
+
+      jump                L123
+
+L107:
+      jump                L120
+
+L108:
+      label
+      getlocal            5
+      getlocal3
+      decrement
+      dup
+      convert_u
+      setlocal3
+
+      dup
+      setlocal            11
+
+      pushshort           255
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-1c6"), ProtectedNamespace("_-1c6"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      kill                11
+L120:
+      getlocal3
+      pushbyte            2
+      ifgt                L108
+
+L123:
+      getlocal            5
+      getlocal3
+      decrement
+      dup
+      convert_u
+      setlocal3
+
+      dup
+      setlocal            11
+
+      getlocal            4
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-1c6"), ProtectedNamespace("_-1c6"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlocal            5
+      getlocal3
+      decrement
+      dup
+      convert_u
+      setlocal3
+
+      dup
+      setlocal            12
+
+      pushbyte            0
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-1c6"), ProtectedNamespace("_-1c6"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+
+      getlocal            5
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "pkcs1unpad")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/pkcs1unpad"
+    param QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    flag HAS_OPTIONAL
+    optional Integer(2)
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-0B8"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal            4
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal            5
+
+      getlocal            4
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "position")
+
+      pushbyte            0
+      setlocal            6
+
+      jump                L18
+
+L16:
+      label
+      inclocal_i          6
+L18:
+      getlocal            6
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      lessthan
+      dup
+      iffalse             L30
+
+      pop
+      getlocal            4
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-1c6"), ProtectedNamespace("_-1c6"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pushbyte            0
+      equals
+L30:
+      iftrue              L16
+
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      getlocal            6
+      subtract
+      getlocal2
+      decrement
+      equals
+      not
+      dup
+      iftrue              L48
+
+      pop
+      getlocal            4
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-1c6"), ProtectedNamespace("_-1c6"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getlocal3
+      equals
+      not
+L48:
+      iffalse             L68
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "trace")
+      pushstring          "PKCS#1 unpad: i="
+      getlocal            6
+      add
+      pushstring          ", expected b[i]=="
+      add
+      getlocal3
+      add
+      pushstring          ", got b[i]="
+      add
+      getlocal            4
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-1c6"), ProtectedNamespace("_-1c6"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pushbyte            16
+      callproperty        Multiname("toString", [PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-1c6"), ProtectedNamespace("_-1c6"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")]), 1
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "trace"), 1
+
+      pushnull
+      returnvalue
+
+L68:
+      inclocal_i          6
+      jump                L97
+
+L70:
+      label
+      getlocal            6
+      increment_i
+      dup
+      convert_i
+      setlocal            6
+
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      ifnge               L97
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "trace")
+      pushstring          "PKCS#1 unpad: i="
+      getlocal            6
+      add
+      pushstring          ", b[i-1]!=0 (="
+      add
+      getlocal            4
+      getlocal            6
+      decrement
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-1c6"), ProtectedNamespace("_-1c6"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pushbyte            16
+      callproperty        Multiname("toString", [PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-1c6"), ProtectedNamespace("_-1c6"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")]), 1
+      add
+      pushstring          ")"
+      add
+      callpropvoid        QName(PackageNamespace("", "#0"), "trace"), 1
+
+      pushnull
+      returnvalue
+
+L97:
+      getlocal            4
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-1c6"), ProtectedNamespace("_-1c6"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      pushbyte            0
+      ifne                L70
+
+      jump                L109
+
+L103:
+      label
+      getlocal            5
+      getlocal            4
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace("", "#0"), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-1c6"), ProtectedNamespace("_-1c6"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeByte"), 1
+
+L109:
+      getlocal            6
+      increment_i
+      dup
+      convert_i
+      setlocal            6
+
+      getlocal            4
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L103
+
+      getlocal            5
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "position")
+
+      getlocal            5
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "rawpad")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/rawpad"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("", "#0"), "int")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 1
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "rawunpad")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/rawunpad"
+    param QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+    param QName(PackageNamespace("", "#0"), "uint")
+    param QName(PackageNamespace("", "#0"), "uint")
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 1
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "_-0B8"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "toString")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/toString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "rsa"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "dump")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/dump"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "N="
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "n")
+      pushbyte            16
+      callproperty        QName(PackageNamespace("", "#0"), "toString"), 1
+      add
+      pushstring          "\n"
+      add
+      pushstring          "E="
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "e")
+      pushbyte            16
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+      add
+      pushstring          "\n"
+      add
+      setlocal1
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-1c6"), "canDecrypt")
+      iffalse             L109
+
+      getlocal1
+      pushstring          "D="
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "d")
+      pushbyte            16
+      callproperty        QName(PackageNamespace("", "#0"), "toString"), 1
+      add
+      pushstring          "\n"
+      add
+      add
+      coerce_s
+      setlocal1
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p")
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L48
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "q")
+      pushnull
+      equals
+      not
+L48:
+      iffalse             L109
+
+      getlocal1
+      pushstring          "P="
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p")
+      pushbyte            16
+      callproperty        QName(PackageNamespace("", "#0"), "toString"), 1
+      add
+      pushstring          "\n"
+      add
+      add
+      coerce_s
+      setlocal1
+
+      getlocal1
+      pushstring          "Q="
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "q")
+      pushbyte            16
+      callproperty        QName(PackageNamespace("", "#0"), "toString"), 1
+      add
+      pushstring          "\n"
+      add
+      add
+      coerce_s
+      setlocal1
+
+      getlocal1
+      pushstring          "DMP1="
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "dmp1")
+      pushbyte            16
+      callproperty        QName(PackageNamespace("", "#0"), "toString"), 1
+      add
+      pushstring          "\n"
+      add
+      add
+      coerce_s
+      setlocal1
+
+      getlocal1
+      pushstring          "DMQ1="
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "dmq1")
+      pushbyte            16
+      callproperty        QName(PackageNamespace("", "#0"), "toString"), 1
+      add
+      pushstring          "\n"
+      add
+      add
+      coerce_s
+      setlocal1
+
+      getlocal1
+      pushstring          "IQMP="
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "coeff")
+      pushbyte            16
+      callproperty        QName(PackageNamespace("", "#0"), "toString"), 1
+      add
+      pushstring          "\n"
+      add
+      add
+      coerce_s
+      setlocal1
+
+L109:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-1c6"), "doPublic")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/_-1c6:doPublic"
+    param QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+    returns QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "e")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "n")
+      callproperty        QName(PackageNamespace("", "#0"), "_-yw"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-1c6"), "doPrivate2")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/_-1c6:doPrivate2"
+    param QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+    returns QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p")
+      pushnull
+      equals
+      dup
+      iffalse             L13
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "q")
+      pushnull
+      equals
+L13:
+      iffalse             L21
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "d")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "n")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1yJ"), 2
+      returnvalue
+
+L21:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p")
+      callproperty        QName(PackageNamespace("", "#0"), "_-Qi"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "dmp1")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1yJ"), 2
+      coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      setlocal2
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "q")
+      callproperty        QName(PackageNamespace("", "#0"), "_-Qi"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "dmq1")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "q")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1yJ"), 2
+      coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      setlocal3
+
+      jump                L51
+
+L44:
+      label
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p")
+      callproperty        QName(PackageNamespace("", "#0"), "add"), 1
+      coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      setlocal2
+
+L51:
+      getlocal2
+      getlocal3
+      callproperty        QName(PackageNamespace("", "#0"), "_-0JO"), 1
+      pushbyte            0
+      iflt                L44
+
+      getlocal2
+      getlocal3
+      callproperty        QName(PackageNamespace("", "#0"), "_-Sr"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "coeff")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1go"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p")
+      callproperty        QName(PackageNamespace("", "#0"), "_-Qi"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "q")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1go"), 1
+      getlocal3
+      callproperty        QName(PackageNamespace("", "#0"), "add"), 1
+      coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      dup
+      setlocal            4
+
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-1c6"), "doPrivate")
+   method
+    refid "com.hurlant.crypto.rsa:RSAKey/_-1c6:doPrivate"
+    param QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+    returns QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p")
+      pushnull
+      equals
+      dup
+      iftrue              L13
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "q")
+      pushnull
+      equals
+L13:
+      iffalse             L21
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "d")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "n")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1yJ"), 2
+      returnvalue
+
+L21:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p")
+      callproperty        QName(PackageNamespace("", "#0"), "_-Qi"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "dmp1")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1yJ"), 2
+      coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      setlocal2
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "q")
+      callproperty        QName(PackageNamespace("", "#0"), "_-Qi"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "dmq1")
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "q")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1yJ"), 2
+      coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      setlocal3
+
+      jump                L51
+
+L44:
+      label
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p")
+      callproperty        QName(PackageNamespace("", "#0"), "add"), 1
+      coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+      setlocal2
+
+L51:
+      getlocal2
+      getlocal3
+      callproperty        QName(PackageNamespace("", "#0"), "_-0JO"), 1
+      pushbyte            0
+      iflt                L44
+
+      getlocal2
+      getlocal3
+      callproperty        QName(PackageNamespace("", "#0"), "_-Sr"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "coeff")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1go"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "p")
+      callproperty        QName(PackageNamespace("", "#0"), "_-Qi"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "q")
+      callproperty        QName(PackageNamespace("", "#0"), "_-1go"), 1
+      getlocal3
+      callproperty        QName(PackageNamespace("", "#0"), "add"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.crypto.rsa:RSAKey/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace("", "#0"), "parsePublicKey") flag FINAL dispid 3
+  method
+   refid "com.hurlant.crypto.rsa:RSAKey/parsePublicKey"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   returns QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey")
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getlocal1
+     pushbyte            16
+     pushtrue
+     constructprop       QName(PackageNamespace("com.hurlant.math"), "_-1wH"), 3
+     findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+     getlocal2
+     pushbyte            16
+     callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 2
+     construct           2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "parsePrivateKey") flag FINAL dispid 4
+  method
+   refid "com.hurlant.crypto.rsa:RSAKey/parsePrivateKey"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("", "#0"), "String")
+   returns QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Null()
+   optional Null()
+   optional Null()
+   optional Null()
+   body
+    maxstack 12
+    localcount 9
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal            4
+     pushnull
+     ifne                L22
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getlocal1
+     pushbyte            16
+     pushtrue
+     constructprop       QName(PackageNamespace("com.hurlant.math"), "_-1wH"), 3
+     findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+     getlocal2
+     pushbyte            16
+     callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 2
+     findpropstrict      QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getlocal3
+     pushbyte            16
+     pushtrue
+     constructprop       QName(PackageNamespace("com.hurlant.math"), "_-1wH"), 3
+     construct           3
+     returnvalue
+
+L22:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getlocal1
+     pushbyte            16
+     pushtrue
+     constructprop       QName(PackageNamespace("com.hurlant.math"), "_-1wH"), 3
+     findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+     getlocal2
+     pushbyte            16
+     callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 2
+     findpropstrict      QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getlocal3
+     pushbyte            16
+     pushtrue
+     constructprop       QName(PackageNamespace("com.hurlant.math"), "_-1wH"), 3
+     findpropstrict      QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getlocal            4
+     pushbyte            16
+     pushtrue
+     constructprop       QName(PackageNamespace("com.hurlant.math"), "_-1wH"), 3
+     findpropstrict      QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getlocal            5
+     pushbyte            16
+     pushtrue
+     constructprop       QName(PackageNamespace("com.hurlant.math"), "_-1wH"), 3
+     findpropstrict      QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getlocal            6
+     pushbyte            16
+     pushtrue
+     constructprop       QName(PackageNamespace("com.hurlant.math"), "_-1wH"), 3
+     findpropstrict      QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getlocal            7
+     pushbyte            16
+     pushtrue
+     constructprop       QName(PackageNamespace("com.hurlant.math"), "_-1wH"), 3
+     findpropstrict      QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getlocal            8
+     pushbyte            16
+     pushtrue
+     constructprop       QName(PackageNamespace("com.hurlant.math"), "_-1wH"), 3
+     construct           8
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace("", "#0"), "generate") flag FINAL dispid 5
+  method
+   refid "com.hurlant.crypto.rsa:RSAKey/generate"
+   param QName(PackageNamespace("", "#0"), "uint")
+   param QName(PackageNamespace("", "#0"), "String")
+   returns QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey")
+   body
+    maxstack 4
+    localcount 11
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     setlocal            7
+
+     pushnull
+     coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     setlocal            8
+
+     pushnull
+     coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     setlocal            9
+
+     pushnull
+     coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     setlocal            10
+
+     findpropstrict      QName(PackageNamespace("com.hurlant.crypto.prng"), "Random")
+     constructprop       QName(PackageNamespace("com.hurlant.crypto.prng"), "Random"), 0
+     coerce              QName(PackageNamespace("com.hurlant.crypto.prng"), "Random")
+     setlocal3
+
+     getlocal1
+     pushbyte            1
+     rshift
+     convert_u
+     setlocal            4
+
+     getlocal0
+     pushnull
+     pushbyte            0
+     pushnull
+     construct           3
+     coerce              QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey")
+     dup
+     setlocal            5
+
+     findpropstrict      QName(PackageNamespace("", "#0"), "parseInt")
+     getlocal2
+     pushbyte            16
+     callproperty        QName(PackageNamespace("", "#0"), "parseInt"), 2
+     setproperty         QName(PackageNamespace("", "#0"), "e")
+
+     findpropstrict      QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getlocal2
+     pushbyte            16
+     pushtrue
+     constructprop       QName(PackageNamespace("com.hurlant.math"), "_-1wH"), 3
+     coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     setlocal            6
+
+     jump                L186
+
+L44:
+     label
+     jump                L77
+
+L46:
+     label
+     getlocal            5
+     findpropstrict      QName(StaticProtectedNs("_-1c6"), "bigRandom")
+     getlocal1
+     getlocal            4
+     subtract
+     getlocal3
+     callproperty        QName(StaticProtectedNs("_-1c6"), "bigRandom"), 2
+     setproperty         QName(PackageNamespace("", "#0"), "p")
+
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "p")
+     getlex              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getproperty         QName(PackageNamespace("", "#0"), "_-t3")
+     callproperty        QName(PackageNamespace("", "#0"), "_-Sr"), 1
+     getlocal            6
+     callproperty        QName(PackageNamespace("", "#0"), "_-1ZN"), 1
+     getlex              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getproperty         QName(PackageNamespace("", "#0"), "_-t3")
+     callproperty        QName(PackageNamespace("", "#0"), "_-0JO"), 1
+     pushbyte            0
+     equals
+     dup
+     iffalse             L75
+
+     pop
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "p")
+     pushbyte            10
+     callproperty        QName(PackageNamespace("", "#0"), "_-0D0"), 1
+     convert_b
+L75:
+     iffalse             L77
+
+     jump                L78
+
+L77:
+     jump                L46
+
+L78:
+     jump                L108
+
+L79:
+     label
+     getlocal            5
+     findpropstrict      QName(StaticProtectedNs("_-1c6"), "bigRandom")
+     getlocal            4
+     getlocal3
+     callproperty        QName(StaticProtectedNs("_-1c6"), "bigRandom"), 2
+     setproperty         QName(PackageNamespace("", "#0"), "q")
+
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "q")
+     getlex              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getproperty         QName(PackageNamespace("", "#0"), "_-t3")
+     callproperty        QName(PackageNamespace("", "#0"), "_-Sr"), 1
+     getlocal            6
+     callproperty        QName(PackageNamespace("", "#0"), "_-1ZN"), 1
+     getlex              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getproperty         QName(PackageNamespace("", "#0"), "_-t3")
+     callproperty        QName(PackageNamespace("", "#0"), "_-0JO"), 1
+     pushbyte            0
+     equals
+     dup
+     iffalse             L106
+
+     pop
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "q")
+     pushbyte            10
+     callproperty        QName(PackageNamespace("", "#0"), "_-0D0"), 1
+     convert_b
+L106:
+     iffalse             L108
+
+     jump                L109
+
+L108:
+     jump                L79
+
+L109:
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "p")
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "q")
+     callproperty        QName(PackageNamespace("", "#0"), "_-0JO"), 1
+     pushbyte            0
+     ifnle               L127
+
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "p")
+     coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     setlocal            10
+
+     getlocal            5
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "q")
+     setproperty         QName(PackageNamespace("", "#0"), "p")
+
+     getlocal            5
+     getlocal            10
+     setproperty         QName(PackageNamespace("", "#0"), "q")
+
+L127:
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "p")
+     getlex              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getproperty         QName(PackageNamespace("", "#0"), "_-t3")
+     callproperty        QName(PackageNamespace("", "#0"), "_-Sr"), 1
+     coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     setlocal            7
+
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "q")
+     getlex              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getproperty         QName(PackageNamespace("", "#0"), "_-t3")
+     callproperty        QName(PackageNamespace("", "#0"), "_-Sr"), 1
+     coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     setlocal            8
+
+     getlocal            7
+     getlocal            8
+     callproperty        QName(PackageNamespace("", "#0"), "_-1go"), 1
+     coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     dup
+     setlocal            9
+
+     getlocal            6
+     callproperty        QName(PackageNamespace("", "#0"), "_-1ZN"), 1
+     getlex              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getproperty         QName(PackageNamespace("", "#0"), "_-t3")
+     callproperty        QName(PackageNamespace("", "#0"), "_-0JO"), 1
+     pushbyte            0
+     ifne                L186
+
+     getlocal            5
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "p")
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "q")
+     callproperty        QName(PackageNamespace("", "#0"), "_-1go"), 1
+     setproperty         QName(PackageNamespace("", "#0"), "n")
+
+     getlocal            5
+     getlocal            6
+     getlocal            9
+     callproperty        QName(PackageNamespace("", "#0"), "_-cV"), 1
+     setproperty         QName(PackageNamespace("", "#0"), "d")
+
+     getlocal            5
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "d")
+     getlocal            7
+     callproperty        QName(PackageNamespace("", "#0"), "_-Qi"), 1
+     setproperty         QName(PackageNamespace("", "#0"), "dmp1")
+
+     getlocal            5
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "d")
+     getlocal            8
+     callproperty        QName(PackageNamespace("", "#0"), "_-Qi"), 1
+     setproperty         QName(PackageNamespace("", "#0"), "dmq1")
+
+     getlocal            5
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "q")
+     getlocal            5
+     getproperty         QName(PackageNamespace("", "#0"), "p")
+     callproperty        QName(PackageNamespace("", "#0"), "_-cV"), 1
+     setproperty         QName(PackageNamespace("", "#0"), "coeff")
+
+     jump                L187
+
+L186:
+     jump                L44
+
+L187:
+     getlocal            5
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(StaticProtectedNs("_-1c6"), "bigRandom") flag FINAL dispid 6
+  method
+   refid "com.hurlant.crypto.rsa:RSAKey/_-1c6:bigRandom"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("com.hurlant.crypto.prng"), "Random")
+   returns QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     pushbyte            2
+     ifnlt               L9
+
+     getlex              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     pushbyte            1
+     callproperty        QName(PackageNamespace("", "#0"), "_-0j-"), 1
+     returnvalue
+
+L9:
+     findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+     constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+     coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+     setlocal3
+
+     getlocal2
+     getlocal3
+     getlocal1
+     pushbyte            3
+     rshift
+     callpropvoid        QName(PackageNamespace("", "#0"), "nextBytes"), 2
+
+     getlocal3
+     pushbyte            0
+     setproperty         QName(PackageNamespace("", "#0"), "position")
+
+     findpropstrict      QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     getlocal3
+     pushbyte            0
+     pushtrue
+     constructprop       QName(PackageNamespace("com.hurlant.math"), "_-1wH"), 3
+     coerce              QName(PackageNamespace("com.hurlant.math"), "_-1wH")
+     dup
+     setlocal            4
+
+     getlocal1
+     pushbyte            1
+     callpropvoid        QName(PackageNamespace("", "#0"), "_-OJ"), 2
+
+     getlocal            4
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

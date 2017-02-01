@@ -1,0 +1,179 @@
+class
+ refid "_-1fY:_-1gE"
+ instance QName(PackageNamespace("_-1fY"), "_-1gE")
+  extends QName(PackageNamespace("_-1fY"), "_-0d1")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0qS")
+  iinit
+   refid "_-1fY:_-1gE/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     increment_i
+     swap
+     instanceof
+     getlocal1
+     strictequals
+     nextvalue
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal2
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "describeMismatch") flag OVERRIDE
+   method
+    refid "_-1fY:_-1gE/describeMismatch"
+    param QName(PackageNamespace("", "#0"), "Object")
+    param QName(PackageNamespace("_-1fY"), "Description")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      convert_b
+      getlocal2
+      setlocal3
+
+      subtract
+      dup
+      bitand
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L20
+
+      findpropstrict      QName(ProtectedNamespace("_-0qS"), "matchesOrDescribesMismatch")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("_-0qS"), "matchesOrDescribesMismatch"), 2
+
+L20:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-0qS"), "matchesOrDescribesMismatch")
+   method
+    refid "_-1fY:_-1gE/_-0qS:matchesOrDescribesMismatch"
+    param QName(PackageNamespace("", "#0"), "Object")
+    param QName(PackageNamespace("_-1fY"), "Description")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
+      jump                L10
+
+      swap
+      urshift
+      pushfalse
+      lshift
+      newactivation
+      multiply
+L10:
+      pushstring          "DiagnosingMatcher#matches is abstract and must be overriden in a subclass"
+      constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "matches") flag OVERRIDE
+   method
+    refid "_-1fY:_-1gE/matches"
+    param QName(PackageNamespace("", "#0"), "Object")
+    returns QName(PackageNamespace("", "#0"), "Boolean")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-0qS"), "matchesOrDescribesMismatch")
+      jump                L10
+
+      coerce_s
+      convert_i
+      coerce_s
+      pushundefined
+      increment_i
+      instanceof
+L10:
+      getlocal1
+      findpropstrict      QName(PackageNamespace("_-1fY"), "_-0rl")
+      constructprop       QName(PackageNamespace("_-1fY"), "_-0rl"), 0
+      callproperty        QName(ProtectedNamespace("_-0qS"), "matchesOrDescribesMismatch"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1fY:_-1gE/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

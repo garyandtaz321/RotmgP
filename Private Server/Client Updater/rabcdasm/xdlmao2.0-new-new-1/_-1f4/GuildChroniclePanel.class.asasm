@@ -1,0 +1,135 @@
+class
+ refid "_-1f4:GuildChroniclePanel"
+ instance QName(PackageNamespace("_-1f4"), "GuildChroniclePanel")
+  extends QName(PackageNamespace("_-1f4"), "_-0l2")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-k5")
+  iinit
+   refid "_-1f4:GuildChroniclePanel/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     astypelate
+     pushwith
+     kill                2
+     declocal            2
+     pushscope
+
+     declocal_i          2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iftrue              L20
+
+     pop
+     getlocal3
+     convert_b
+L20:
+     iffalse             L28
+
+     getlocal0
+     getlocal1
+     getlex              QName(PackageNamespace("_-6u"), "_-TG")
+     getproperty         QName(PackageNamespace("", "#0"), "_-0h")
+     getlex              QName(PackageNamespace("_-6u"), "_-TG")
+     getproperty         QName(PackageNamespace("", "#0"), "_-15i")
+     constructsuper      3
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(ProtectedNamespace("_-k5"), "onButtonClick") flag OVERRIDE
+   method
+    refid "_-1f4:GuildChroniclePanel/_-k5:onButtonClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal_i          2
+      getlocal2
+      popscope
+      inclocal            2
+      declocal            2
+      nextvalue
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iftrue              L20
+
+      pop
+      getlocal0
+      convert_b
+L20:
+      iffalse             L31
+
+      getlex              QName(PackageNamespace("", "#0"), "gs_")
+      getproperty         QName(PackageNamespace("", "#0"), "mui_")
+      callpropvoid        QName(PackageNamespace("", "#0"), "clearInput"), 0
+
+      getlocal3
+      iffalse             L31
+
+      getlex              QName(PackageNamespace("", "#0"), "gs_")
+      findpropstrict      QName(PackageNamespace("_-2-t"), "_-b")
+      getlex              QName(PackageNamespace("", "#0"), "gs_")
+      constructprop       QName(PackageNamespace("_-2-t"), "_-b"), 1
+      callpropvoid        QName(PackageNamespace("", "#0"), "addChild"), 1
+
+L31:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1f4:GuildChroniclePanel/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

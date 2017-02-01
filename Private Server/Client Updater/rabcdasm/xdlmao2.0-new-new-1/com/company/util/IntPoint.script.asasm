@@ -1,0 +1,41 @@
+script ; 1512
+ sinit
+  refid "com.company.util:IntPoint.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("IntPoint", [PackageNamespace("com.company.util")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.company.util:IntPoint"
+    popscope
+    initproperty        QName(PackageNamespace("com.company.util"), "IntPoint")
+
+    findpropstrict      Multiname("UnitTest", [PrivateNamespace("*", "com.company.util:IntPoint")])
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("", "#0"), "Object")
+    newclass            "com.company.util:IntPoint/UnitTest"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "com.company.util:IntPoint"), "UnitTest")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.company.util"), "IntPoint")
+  #include "IntPoint.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "com.company.util:IntPoint"), "UnitTest")
+  #include "IntPoint/UnitTest.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,100 @@
+class
+ refid "_-1E1:Size"
+ instance QName(PackageNamespace("_-1E1"), "Size")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1rW")
+  iinit
+   refid "_-1E1:Size/iinit"
+   param QName(PackageNamespace("", "#0"), "int")
+   param QName(PackageNamespace("", "#0"), "int")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     kill                2
+     convert_i
+     getlocal2
+     increment_i
+     convert_u
+     pop
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     jump                L20
+
+     equals
+     astypelate
+     declocal_i          2
+     getlocal2
+     coerce_s
+     inclocal_i          2
+L20:
+     getlocal            4
+     iftrue              L26
+
+     getlocal0
+     constructsuper      0
+
+     getlocal            4
+     iftrue              L36
+
+L26:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "width")
+
+     getlocal            4
+     dup
+     iffalse             L35
+
+     pop
+     getlocal0
+     convert_b
+L35:
+     iftrue              L39
+
+L36:
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace("", "#0"), "height")
+
+L39:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "width") type QName(PackageNamespace("", "#0"), "int") end
+  trait slot QName(PackageNamespace("", "#0"), "height") type QName(PackageNamespace("", "#0"), "int") end
+ end ; instance
+ cinit
+  refid "_-1E1:Size/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

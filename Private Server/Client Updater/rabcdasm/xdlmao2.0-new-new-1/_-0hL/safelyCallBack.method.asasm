@@ -1,0 +1,54 @@
+method
+ refid "_-0hL:safelyCallBack"
+ param QName(PackageNamespace("", "#0"), "Function")
+ param QName(PackageNamespace("", "#0"), "Object")
+ param QName(PackageNamespace("", "#0"), "Object")
+ returns QName(PackageNamespace("", "#0"), "void")
+ flag HAS_OPTIONAL
+ optional Null()
+ optional Null()
+ body
+  maxstack 4
+  localcount 4
+  initscopedepth 1
+  maxscopedepth 2
+  code
+   getlocal0
+   pushscope
+
+   getlocal1
+   getproperty         QName(PackageNamespace("", "#0"), "length")
+   pushbyte            0
+   ifne                L11
+
+   getlocal1
+   getglobalscope
+   call                0
+   pop
+   jump                L27
+
+L11:
+   getlocal1
+   getproperty         QName(PackageNamespace("", "#0"), "length")
+   pushbyte            1
+   ifne                L21
+
+   getlocal1
+   getglobalscope
+   getlocal2
+   call                1
+   pop
+   jump                L27
+
+L21:
+   getlocal1
+   getglobalscope
+   getlocal2
+   getlocal3
+   call                2
+   pop
+L27:
+   returnvoid
+  end ; code
+ end ; body
+end ; method

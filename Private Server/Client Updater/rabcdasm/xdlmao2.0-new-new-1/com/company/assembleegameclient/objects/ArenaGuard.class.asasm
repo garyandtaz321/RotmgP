@@ -1,0 +1,129 @@
+class
+ refid "com.company.assembleegameclient.objects:ArenaGuard"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "ArenaGuard")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  implements Multiname("_-Rk", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-9t")
+  iinit
+   refid "com.company.assembleegameclient.objects:ArenaGuard/iinit"
+   param QName(PackageNamespace("", "#0"), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     inclocal_i          2
+     bitnot
+     declocal            2
+     inclocal            2
+     coerce_s
+     kill                2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     jump                L21
+
+     inclocal_i          2
+     setlocal2
+
+     getlocal2
+     setlocal2
+
+     divide
+     nextname
+L21:
+     getlocal3
+     dup
+     iftrue              L27
+
+     pop
+     getlocal3
+     convert_b
+L27:
+     iffalse             L41
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal2
+     dup
+     iffalse             L37
+
+     pop
+     getlocal3
+     convert_b
+L37:
+     iftrue              L41
+
+     findproperty        QName(PackageNamespace("", "#0"), "_-11k")
+     pushtrue
+     initproperty        QName(PackageNamespace("", "#0"), "_-11k")
+
+L41:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace("", "#0"), "getPanel")
+   method
+    refid "com.company.assembleegameclient.objects:ArenaGuard/getPanel"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace("_-1f4"), "Panel")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-1EG"), "ArenaQueryPanel")
+      jump                L10
+
+      negate_i
+      convert_d
+      dxnslate
+      bitand
+      add
+      dxnslate
+L10:
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "objectType_")
+      constructprop       QName(PackageNamespace("_-1EG"), "ArenaQueryPanel"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:ArenaGuard/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,400 @@
+class
+ refid "com.hurlant.crypto.symmetric:IVMode"
+ instance QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IVMode")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-bN")
+  iinit
+   refid "com.hurlant.crypto.symmetric:IVMode/iinit"
+   param QName(PackageNamespace("com.hurlant.crypto.symmetric"), "ISymmetricKey")
+   param QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IPad")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(ProtectedNamespace("_-bN"), "key")
+
+     getlocal0
+     getlocal1
+     callproperty        QName(Namespace("_-10u"), "getBlockSize"), 0
+     initproperty        QName(ProtectedNamespace("_-bN"), "blockSize")
+
+     getlocal2
+     pushnull
+     ifne                L21
+
+     findpropstrict      QName(PackageNamespace("com.hurlant.crypto.symmetric"), "PKCS5")
+     getlocal0
+     getproperty         QName(ProtectedNamespace("_-bN"), "blockSize")
+     constructprop       QName(PackageNamespace("com.hurlant.crypto.symmetric"), "PKCS5"), 1
+     coerce              QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IPad")
+     setlocal2
+
+     jump                L25
+
+L21:
+     getlocal2
+     getlocal0
+     getproperty         QName(ProtectedNamespace("_-bN"), "blockSize")
+     callpropvoid        QName(Namespace("_-vb"), "setBlockSize"), 1
+
+L25:
+     getlocal0
+     getlocal2
+     initproperty        QName(ProtectedNamespace("_-bN"), "padding")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.hurlant.crypto.prng"), "Random")
+     constructprop       QName(PackageNamespace("com.hurlant.crypto.prng"), "Random"), 0
+     initproperty        QName(ProtectedNamespace("_-bN"), "prng")
+
+     getlocal0
+     pushnull
+     initproperty        QName(ProtectedNamespace("_-bN"), "iv")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+     constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+     initproperty        QName(ProtectedNamespace("_-bN"), "lastIV")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("_-bN"), "key") type QName(PackageNamespace("com.hurlant.crypto.symmetric"), "ISymmetricKey") end
+  trait slot QName(ProtectedNamespace("_-bN"), "padding") type QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IPad") end
+  trait slot QName(ProtectedNamespace("_-bN"), "prng") type QName(PackageNamespace("com.hurlant.crypto.prng"), "Random") end
+  trait slot QName(ProtectedNamespace("_-bN"), "iv") type QName(PackageNamespace("flash.utils"), "ByteArray") end
+  trait slot QName(ProtectedNamespace("_-bN"), "lastIV") type QName(PackageNamespace("flash.utils"), "ByteArray") end
+  trait slot QName(ProtectedNamespace("_-bN"), "blockSize") type QName(PackageNamespace("", "#0"), "uint") end
+  trait method QName(PackageNamespace("", "#0"), "getBlockSize")
+   method
+    refid "com.hurlant.crypto.symmetric:IVMode/getBlockSize"
+    returns QName(PackageNamespace("", "#0"), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "key")
+      callproperty        QName(Namespace("_-10u"), "getBlockSize"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "dispose")
+   method
+    refid "com.hurlant.crypto.symmetric:IVMode/dispose"
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "iv")
+      pushnull
+      ifeq                L37
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      jump                L25
+
+L13:
+      label
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "iv")
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "prng")
+      callproperty        QName(PackageNamespace("", "#0"), "nextByte"), 0
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:IVMode/dispose#0"), ProtectedNamespace("_-bN"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:IVMode/dispose#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-bN")])
+
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+L25:
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "iv")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L13
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "iv")
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      getlocal0
+      pushnull
+      initproperty        QName(ProtectedNamespace("_-bN"), "iv")
+
+L37:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "lastIV")
+      pushnull
+      ifeq                L69
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      jump                L57
+
+L45:
+      label
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "lastIV")
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "prng")
+      callproperty        QName(PackageNamespace("", "#0"), "nextByte"), 0
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:IVMode/dispose#0"), ProtectedNamespace("_-bN"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.hurlant.crypto.symmetric:IVMode/dispose#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-bN")])
+
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+L57:
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "iv")
+      getproperty         QName(PackageNamespace("", "#0"), "length")
+      iflt                L45
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "lastIV")
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      getlocal0
+      pushnull
+      initproperty        QName(ProtectedNamespace("_-bN"), "lastIV")
+
+L69:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "key")
+      callpropvoid        QName(Namespace("_-10u"), "dispose"), 0
+
+      getlocal0
+      pushnull
+      initproperty        QName(ProtectedNamespace("_-bN"), "key")
+
+      getlocal0
+      pushnull
+      initproperty        QName(ProtectedNamespace("_-bN"), "padding")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "prng")
+      callpropvoid        QName(PackageNamespace("", "#0"), "dispose"), 0
+
+      getlocal0
+      pushnull
+      initproperty        QName(ProtectedNamespace("_-bN"), "prng")
+
+      getlex              QName(PackageNamespace("com.hurlant.util"), "Memory")
+      callpropvoid        QName(PackageNamespace("", "#0"), "gc"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace("", "#0"), "IV")
+   method
+    refid "com.hurlant.crypto.symmetric:IVMode/IV/setter"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace("", "#0"), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("_-bN"), "iv")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "lastIV")
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "lastIV")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "iv")
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBytes"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "IV")
+   method
+    refid "com.hurlant.crypto.symmetric:IVMode/IV/getter"
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "lastIV")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-bN"), "getIV4e")
+   method
+    refid "com.hurlant.crypto.symmetric:IVMode/_-bN:getIV4e"
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal1
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "iv")
+      iffalse             L14
+
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "iv")
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBytes"), 1
+
+      jump                L20
+
+L14:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "prng")
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "blockSize")
+      callpropvoid        QName(PackageNamespace("", "#0"), "nextBytes"), 2
+
+L20:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "lastIV")
+      pushbyte            0
+      setproperty         QName(PackageNamespace("", "#0"), "length")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "lastIV")
+      getlocal1
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBytes"), 1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-bN"), "getIV4d")
+   method
+    refid "com.hurlant.crypto.symmetric:IVMode/_-bN:getIV4d"
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal1
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "iv")
+      iffalse             L14
+
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_-bN"), "iv")
+      callpropvoid        QName(PackageNamespace("", "#0"), "writeBytes"), 1
+
+      jump                L18
+
+L14:
+      findpropstrict      QName(PackageNamespace("", "#0"), "Error")
+      pushstring          "an IV must be set before calling decrypt()"
+      constructprop       QName(PackageNamespace("", "#0"), "Error"), 1
+      throw
+L18:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.hurlant.crypto.symmetric:IVMode/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

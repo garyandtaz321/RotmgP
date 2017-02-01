@@ -1,0 +1,167 @@
+class
+ refid "com.google.analytics.core:EventInfo"
+ instance QName(PackageNamespace("com.google.analytics.core"), "EventInfo")
+  extends QName(PackageNamespace("", "#0"), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.google.analytics.core:EventInfo")
+  iinit
+   refid "com.google.analytics.core:EventInfo/iinit"
+   param QName(PackageNamespace("", "#0"), "Boolean")
+   param QName(PackageNamespace("com.google.analytics.data"), "X10")
+   param QName(PackageNamespace("com.google.analytics.data"), "X10")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 2
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:EventInfo"), "_isEventHit")
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:EventInfo"), "_isEventHit")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:EventInfo"), "_x10")
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:EventInfo"), "_x10")
+
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:EventInfo"), "_ext10")
+     getlocal3
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:EventInfo"), "_ext10")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:EventInfo"), "_ext10") type QName(PackageNamespace("com.google.analytics.data"), "X10") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:EventInfo"), "_isEventHit") type QName(PackageNamespace("", "#0"), "Boolean") end
+  trait method QName(PackageNamespace("", "#0"), "toURLString")
+   method
+    refid "com.google.analytics.core:EventInfo/toURLString"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("", "#0"), "toVariables")
+      callproperty        QName(PackageNamespace("", "#0"), "toVariables"), 0
+      coerce              QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+      setlocal1
+
+      getlocal1
+      callproperty        QName(PackageNamespace("", "#0"), "toString"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "utmt")
+   method
+    refid "com.google.analytics.core:EventInfo/utmt/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "event"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace("", "#0"), "utme")
+   method
+    refid "com.google.analytics.core:EventInfo/utme/getter"
+    returns QName(PackageNamespace("", "#0"), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:EventInfo"), "_x10")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:EventInfo"), "_ext10")
+      callproperty        QName(PackageNamespace("", "#0"), "renderMergedUrlString"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:EventInfo"), "_x10") type QName(PackageNamespace("com.google.analytics.data"), "X10") end
+  trait method QName(PackageNamespace("", "#0"), "toVariables")
+   method
+    refid "com.google.analytics.core:EventInfo/toVariables"
+    returns QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+      constructprop       QName(PackageNamespace("com.google.analytics.utils"), "Variables"), 0
+      coerce              QName(PackageNamespace("com.google.analytics.utils"), "Variables")
+      setlocal1
+
+      getlocal1
+      pushtrue
+      setproperty         QName(PackageNamespace("", "#0"), "URIencode")
+
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:EventInfo"), "_isEventHit")
+      iffalse             L14
+
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "utmt")
+      setproperty         Multiname("utmt", [PrivateNamespace("*", "com.google.analytics.core:EventInfo"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.core:EventInfo/toVariables"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:EventInfo"), StaticProtectedNs("com.google.analytics.core:EventInfo"), StaticProtectedNs("Object")])
+
+L14:
+      getlocal1
+      getlex              QName(PackageNamespace("", "#0"), "utme")
+      setproperty         Multiname("utme", [PrivateNamespace("*", "com.google.analytics.core:EventInfo"), PackageNamespace("", "#0"), PrivateNamespace("*", "com.google.analytics.core:EventInfo/toVariables"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:EventInfo"), StaticProtectedNs("com.google.analytics.core:EventInfo"), StaticProtectedNs("Object")])
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.google.analytics.core:EventInfo/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,133 @@
+class
+ refid "_-00U:_-0qK"
+ instance QName(PackageNamespace("_-00U"), "_-0qK")
+  extends QName(PackageNamespace("_-00U"), "_-7W")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Qx")
+  iinit
+   refid "_-00U:_-0qK/iinit"
+   param QName(PackageNamespace("_-0cA"), "_-0bz")
+   param QName(PackageNamespace("_-00U"), "_-06U")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     pushnan
+     multiply
+     negate
+     declocal_i          2
+     inclocal            3
+     add
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     jump                L21
+
+     getlocal0
+     setlocal3
+
+     nextname
+     inclocal            3
+     instanceof
+     getlocal3
+L21:
+     getlocal            4
+     dup
+     iftrue              L27
+
+     pop
+     getlocal1
+     convert_b
+L27:
+     iffalse             L41
+
+     getlocal0
+     getlocal2
+     constructsuper      1
+
+     getlocal            4
+     dup
+     iftrue              L37
+
+     pop
+     getlocal0
+     convert_b
+L37:
+     iffalse             L41
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace("", "#0"), "_-sk")
+
+L41:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace("", "#0"), "_-sk") type QName(PackageNamespace("_-0cA"), "_-0bz") end
+  trait method QName(PackageNamespace("", "#0"), "apply") flag OVERRIDE
+   method
+    refid "_-00U:_-0qK/apply"
+    param QName(PackageNamespace("", "#0"), "Class")
+    param QName(PackageNamespace("_-0cA"), "_-0bz")
+    param QName(PackageNamespace("flash.utils"), "Dictionary")
+    returns QName(PackageNamespace("", "#0"), "Object")
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("", "#0"), "provider")
+      jump                L10
+
+      declocal            2
+      inclocal            2
+      declocal_i          2
+      decrement
+      add
+      declocal_i          2
+L10:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace("", "#0"), "_-sk")
+      getlocal3
+      callproperty        QName(Namespace("_-1mw"), "apply"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-00U:_-0qK/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

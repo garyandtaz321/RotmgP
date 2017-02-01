@@ -1,0 +1,216 @@
+class
+ refid "_-1Cn:_-0NX"
+ instance QName(PackageNamespace("_-1Cn"), "_-0NX")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0eH")
+  iinit
+   refid "_-1Cn:_-0NX/iinit"
+   param QName(PackageNamespace("", "#0"), "String")
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     coerce_s
+     coerce_s
+     dup
+     setlocal3
+
+     getlocal1
+     declocal            2
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L24
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal            4
+     iffalse             L24
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-1Cn:_-0NX"), "_-1Wj")
+
+L24:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-1Cn:_-0NX"), "_-1Wj") type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
+  trait getter QName(PackageNamespace("", "#0"), "container")
+   method
+    refid "_-1Cn:_-0NX/container/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1Cn:_-0NX"), "_-1Wj")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace("", "#0"), "clone") flag OVERRIDE
+   method
+    refid "_-1Cn:_-0NX/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-1Cn"), "_-0NX")
+      jump                L10
+
+      convert_u
+      not
+      add
+      add_i
+      convert_o
+      subtract
+L10:
+      getlex              QName(PackageNamespace("", "#0"), "type")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1Cn:_-0NX"), "_-1Wj")
+      constructprop       QName(PackageNamespace("_-1Cn"), "_-0NX"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1Cn:_-0NX/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    getlocal1
+    instanceof
+    typeof
+    strictequals
+    getlocal0
+    instanceof
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L19
+
+    pop
+    getlocal1
+    convert_b
+L19:
+    iftrue              L59
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-1Ko")
+    jump                L28
+
+    setlocal3
+
+    nextvalue
+    convert_i
+    checkfilter
+    pushfalse
+    pushundefined
+L28:
+    pushstring          "containerAdd"
+    initproperty        QName(PackageNamespace("", "#0"), "_-1Ko")
+
+    getlocal2
+    iftrue              L62
+
+    jump                L39
+
+    convert_i
+    getlocal0
+    pop
+    nextvalue
+    pushscope
+
+    add
+L39:
+    findproperty        QName(PackageNamespace("", "#0"), "_-yv")
+    pushstring          "containerRemove"
+    initproperty        QName(PackageNamespace("", "#0"), "_-yv")
+
+    getlocal1
+    dup
+    iftrue              L48
+
+    pop
+    getlocal1
+    convert_b
+L48:
+    iffalse             L59
+
+    findproperty        QName(PackageNamespace("", "#0"), "_-0dn")
+    pushstring          "rootContainerAdd"
+    initproperty        QName(PackageNamespace("", "#0"), "_-0dn")
+
+    getlocal1
+    dup
+    iftrue              L58
+
+    pop
+    getlocal0
+    convert_b
+L58:
+    iffalse             L62
+
+L59:
+    findproperty        QName(PackageNamespace("", "#0"), "_-9r")
+    pushstring          "rootContainerRemove"
+    initproperty        QName(PackageNamespace("", "#0"), "_-9r")
+
+L62:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace("", "#0"), "_-1Ko") slotid 1 type QName(PackageNamespace("", "#0"), "String") value Utf8("containerAdd") end
+ trait const QName(PackageNamespace("", "#0"), "_-yv") slotid 2 type QName(PackageNamespace("", "#0"), "String") value Utf8("containerRemove") end
+ trait const QName(PackageNamespace("", "#0"), "_-0dn") slotid 3 type QName(PackageNamespace("", "#0"), "String") value Utf8("rootContainerAdd") end
+ trait const QName(PackageNamespace("", "#0"), "_-9r") slotid 4 type QName(PackageNamespace("", "#0"), "String") value Utf8("rootContainerRemove") end
+end ; class

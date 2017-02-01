@@ -1,0 +1,144 @@
+class
+ refid "_-1T:_-fv"
+ instance QName(PackageNamespace("_-1T"), "_-fv")
+  extends QName(PackageNamespace("_-19L"), "AGALMiniAssembler")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-vr")
+  iinit
+   refid "_-1T:_-fv/iinit"
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     coerce_s
+     kill                2
+     kill                2
+     kill                2
+     getlocal2
+     getlocal2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L20
+
+     pop
+     getlocal3
+     convert_b
+L20:
+     iftrue              L30
+
+     jump                L28
+
+     inclocal            2
+     multiply
+     greaterthan
+     inclocal_i          2
+     setlocal2
+
+     getglobalscope
+L28:
+     getlocal0
+     constructsuper      0
+
+L30:
+     findpropstrict      QName(PackageNamespace("_-19L"), "AGALMiniAssembler")
+     constructprop       QName(PackageNamespace("_-19L"), "AGALMiniAssembler"), 0
+     coerce              QName(PackageNamespace("_-19L"), "AGALMiniAssembler")
+     jump                L40
+
+     setlocal2
+
+     modulo
+     increment_i
+     multiply_i
+     kill                2
+     coerce_s
+L40:
+     setlocal1
+
+     getlocal2
+     iftrue              L63
+
+     getlocal1
+     getlex              QName(PackageNamespace("flash.display3D"), "Context3DProgramType")
+     getproperty         QName(PackageNamespace("", "#0"), "VERTEX")
+     pushstring          "m44 op, va0, vc0\n"
+     pushstring          "add vt1, va1, vc4\n"
+     add
+     pushstring          "mov v0, vt1"
+     add
+     callpropvoid        QName(PackageNamespace("", "#0"), "_-14D"), 2
+
+     getlocal3
+     dup
+     iftrue              L58
+
+     pop
+     getlocal1
+     convert_b
+L58:
+     iffalse             L63
+
+     getlocal0
+     getlocal1
+     getproperty         QName(PackageNamespace("", "#0"), "_-qE")
+     initproperty        QName(PrivateNamespace("*", "_-1T:_-fv"), "_-1eU")
+
+L63:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-1T:_-fv"), "_-1eU") type QName(PackageNamespace("flash.utils"), "ByteArray") end
+  trait method QName(PackageNamespace("", "#0"), "getVertexProgram")
+   method
+    refid "_-1T:_-fv/getVertexProgram"
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-1T:_-fv"), "_-1eU")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-1T:_-fv/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class
